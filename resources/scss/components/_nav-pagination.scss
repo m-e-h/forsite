@@ -1,0 +1,31 @@
+////
+/// Pagination component.
+///
+/// @group  Components
+/// @author Marty Helmick <info@martyhelmick.com>
+/// @link   https://github.com/m-e-h/forsite
+////
+
+.pagination {
+
+	// Header/Title element.
+	&__title {}
+
+	// The list of items.
+	&__items {}
+
+	// Individual items.
+	&__item {
+		&--prev {}
+		&--next {}
+		&--current {}
+		&--dots {}
+	}
+
+	// The link or span element.
+	&__anchor {
+		&--link {}
+		&--current {}
+		&--dots {}
+	}
+}

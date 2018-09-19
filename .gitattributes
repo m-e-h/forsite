@@ -1,0 +1,17 @@
+# Handle line endings.
+# See https://help.github.com/articles/dealing-with-line-endings/
+
+* text eol=lf
+*.gif binary
+*.ico binary
+*.jpg binary
+*.png binary
+
+
+## DO NOT EXPORT
+*.map          		export-ignore
+.git                export-ignore
+.gitignore     		export-ignore
+.gitattributes     	export-ignore
+yarn.lock  			export-ignore
+.editorconfig       export-ignore

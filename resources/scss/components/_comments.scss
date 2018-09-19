@@ -1,0 +1,27 @@
+////
+/// Comments component.
+///
+/// This component wraps the entire comments section.
+///
+/// @group  Components
+/// @author Marty Helmick <info@martyhelmick.com>
+/// @link   https://github.com/m-e-h/forsite
+////
+
+.comments {
+
+	// Header/title for the comments section.
+	&__title {}
+
+	// Comments list wrapper.
+	&__list {
+
+		// Children lists (note that WP doesn't have a filter -- the
+		// only way to change this class is with a custom Walker).
+		// @link https://core.trac.wordpress.org/ticket/44923
+		.children {}
+	}
+
+	// Comments closed message.
+	&__closed {}
+}
