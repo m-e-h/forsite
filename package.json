@@ -1,6 +1,6 @@
 {
 	"name": "forsite",
-	"version": "1.0.0",
+	"version": "0.1.1",
 	"description": "A started starter theme for WordPress",
 	"author": "Marty Helmick",
 	"license": "GPL-2.0+",
@@ -25,10 +25,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/meh/forsite.git"
+		"url": "git+https://github.com/m-e-h/forsite.git"
 	},
 	"bugs": {
-		"url": "https://github.com/meh/forsite/issues"
+		"url": "https://github.com/m-e-h/forsite/issues"
 	},
 	"devDependencies": {
 		"browser-sync": "^2.24.7",
