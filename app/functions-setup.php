@@ -77,22 +77,22 @@ add_action( 'after_setup_theme', function() {
 	// `resources/scss/settings/_colors.scss` file.
 	add_theme_support( 'editor-color-palette', [
 		[
-			'name'  => __( 'Charcoal' ),
+			'name'  => __( 'Charcoal', 'forsite' ),
 			'slug'  => 'charcoal',
 			'color' => '#282c34'
 		],
 		[
-			'name'  => __( 'Regent' ),
+			'name'  => __( 'Regent', 'forsite' ),
 			'slug'  => 'regent',
 			'color' => '#8c97a7',
 		],
 		[
-			'name'  => __( 'Husk' ),
+			'name'  => __( 'Husk', 'forsite' ),
 			'slug'  => 'husk',
 			'color' => '#B9A364',
 		],
 		[
-			'name'  => __( 'Red Stage' ),
+			'name'  => __( 'Red Stage', 'forsite' ),
 			'slug'  => 'red-stage',
 			'color' => '#b15330',
 		]
@@ -102,26 +102,26 @@ add_action( 'after_setup_theme', function() {
 	// `resources/scss/settings/_fonts.scss` file.
 	add_theme_support( 'editor-font-sizes', [
 		[
-			'name'      => __( 'Small' ),
-			'shortName' => __( 'S' ),
+			'name'      => __( 'Small', 'forsite' ),
+			'shortName' => __( 'S', 'forsite' ),
 			'size'      => 12,
 			'slug'      => 'small'
 		],
 		[
-			'name'      => __( 'Regular' ),
-			'shortName' => __( 'M' ),
+			'name'      => __( 'Regular', 'forsite' ),
+			'shortName' => __( 'M', 'forsite' ),
 			'size'      => 16,
 			'slug'      => 'regular'
 		],
 		[
-			'name'      => __( 'Large' ),
-			'shortName' => __( 'L' ),
+			'name'      => __( 'Large', 'forsite' ),
+			'shortName' => __( 'L', 'forsite' ),
 			'size'      => 36,
 			'slug'      => 'large'
 		],
 		[
-			'name'      => __( 'Larger' ),
-			'shortName' => __( 'XL' ),
+			'name'      => __( 'Larger', 'forsite' ),
+			'shortName' => __( 'XL', 'forsite' ),
 			'size'      => 48,
 			'slug'      => 'larger'
 		]
@@ -201,7 +201,7 @@ add_action( 'after_setup_theme', function() {
 add_action( 'init', function() {
 
 	register_nav_menus( [
-		'primary' => esc_html_x( 'Primary', 'nav menu location' )
+		'primary' => esc_html_x( 'Primary', 'nav menu location', 'forsite' )
 	] );
 
 }, 5 );
@@ -248,7 +248,7 @@ add_action( 'widgets_init', function() {
 
 	register_sidebar( [
 		'id'   => 'primary',
-		'name' => esc_html_x( 'Primary', 'sidebar' )
+		'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' )
 	] + $args );
 
 }, 5 );

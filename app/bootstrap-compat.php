@@ -34,7 +34,7 @@ function forsite_compat_message() {
 
 		return sprintf(
 			// Translators: 1 is the required WordPress version and 2 is the user's current version.
-			__( 'Forsite requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.' ),
+			__( 'Forsite requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'forsite' ),
 			'4.9.6',
 			$GLOBALS['wp_version']
 		);
@@ -43,7 +43,7 @@ function forsite_compat_message() {
 
 		return sprintf(
 			// Translators: 1 is the required PHP version and 2 is the user's current version.
-			__( 'Forsite requires at least PHP version %1$s. You are running version %2$s. Please upgrade and try again.' ),
+			__( 'Forsite requires at least PHP version %1$s. You are running version %2$s. Please upgrade and try again.', 'forsite' ),
 			'5.6',
 			PHP_VERSION
 		);
