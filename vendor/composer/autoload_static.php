@@ -4,17 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit167b29698195f164ba203d61d3535c2c
+class ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb
 {
     public static $files = array (
         '77c7b76f4dcd3556a40cd339441c5cce' => __DIR__ . '/..' . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PHPCompatibility\\' => 17,
-        ),
         'H' => 
         array (
             'Hybrid\\' => 7,
@@ -23,10 +19,6 @@ class ComposerStaticInit167b29698195f164ba203d61d3535c2c
         array (
             'Forsite\\' => 8,
         ),
-        'D' => 
-        array (
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
-        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -34,10 +26,6 @@ class ComposerStaticInit167b29698195f164ba203d61d3535c2c
     );
 
     public static $prefixDirsPsr4 = array (
-        'PHPCompatibility\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpcompatibility/php-compatibility/PHPCompatibility',
-        ),
         'Hybrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/justintadlock/hybrid-core/src',
@@ -45,10 +33,6 @@ class ComposerStaticInit167b29698195f164ba203d61d3535c2c
         'Forsite\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
-        ),
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
         ),
         'Composer\\Installers\\' => 
         array (
@@ -59,8 +43,8 @@ class ComposerStaticInit167b29698195f164ba203d61d3535c2c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit167b29698195f164ba203d61d3535c2c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit167b29698195f164ba203d61d3535c2c::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

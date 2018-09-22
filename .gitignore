@@ -1,6 +1,7 @@
 /node_modules
 # /vendor/bin
-/composer.lock
-/yarn.lock
 /phpcs.xml
 /.phpcs.xml
+*.map
+*.lock
+package-lock.json

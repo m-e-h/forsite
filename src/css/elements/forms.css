@@ -1,0 +1,126 @@
+/* -------------------------------------------------------------
+# Forms
+-------------------------------------------------------------- */
+
+form {
+	margin-bottom: $base-space;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	resize: vertical;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+	max-width: 100%;
+	min-height: $form-element-min-height;
+	border-radius: $border-radius;
+	border-width: 1px;
+	border-color: color(red a(90%));
+	padding: 0.5em 0.625em;
+	line-height: 1.5;
+	background-color: $form-element-background-color;
+	color: $color-text;
+	vertical-align: baseline;
+	font-size: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	overflow-wrap: break-word;
+
+	&:focus {
+		background-color: color(#fff alpha(95%));
+		border-color: color(black alpha(70%));
+	}
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+	box-shadow: inset 0 0 0 0.063rem $red5 !important;
+}
+
+legend {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	line-height: inherit;
+}
+
+label {
+	font-size: 0.875rem;
+	font-weight: 700;
+	display: block;
+	margin: 0.15rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 $space-1 0 0;
+	width: 1rem;
+	height: 1rem;
+}
+
+input[type="number"] {
+	width: auto; /* Firefox 36+ */
+}
+
+input[type="search"] {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23495057' viewBox='0 0 24 24'%3E%3Cpath d='M21 19l-5.154-5.154C16.574 12.742 17 11.42 17 10c0-3.866-3.134-7-7-7s-7 3.134-7 7 3.134 7 7 7c1.42 0 2.742-.426 3.846-1.154L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-size: 1.5rem;
+	background-position: calc(100% - 0.625em), center;
+	padding-right: 2rem !important;
+}
+
+.search-form .search-submit {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	min-height: 0;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+input:disabled,
+input[readonly],
+select:disabled,
+textarea:disabled,
+textarea[readonly],
+input[readonly]:focus,
+textarea[readonly]:focus {
+	pointer-events: none;
+	border-color: transparent !important;
+	background-color: $form-element-background-color !important;
+	cursor: default;
+	opacity: 0.5;
+}
+
+/* https://github.com/jonathantneal/js-focus-ring */
+a:not([js-focus-ring]),
+[js-focus]:not([js-focus-ring]) {
+	outline-width: 0;
+}

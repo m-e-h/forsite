@@ -1,0 +1,41 @@
+code,
+kbd,
+pre,
+samp {
+	font-family: $monospace-font-family;
+}
+
+code {
+	padding: 0.2em 0.3em;
+	margin: 0;
+	font-size: 85%;
+	background-color: $color-frost-3;
+	border-radius: $border-radius;
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: $base-space;
+	padding: $space-1;
+	overflow: auto;
+	background-color: $color-frost-3;
+	border-radius: $border-radius;
+	word-wrap: normal;
+	max-height: 60vh;
+	tab-size: 4;
+}
+
+pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	border: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+}

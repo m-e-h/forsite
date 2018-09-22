@@ -55,6 +55,9 @@ add_action( 'after_setup_theme', function() {
 	// `resources/scss/utilities/_alignment.scss` file.
 	add_theme_support( 'align-wide' );
 
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'dist/css/editor.css' );
+
 	// Outputs HTML5 markup for core features.
 	add_theme_support( 'html5', [
 		'caption',

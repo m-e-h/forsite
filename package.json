@@ -5,19 +5,20 @@
 	"author": "Marty Helmick",
 	"license": "GPL-2.0+",
 	"homepage": "https://github.com/m-e-h/forsite",
-	"main": "resources/js/app.js",
 	"scripts": {
-		"build": "npm run prod && npm run i18n && npm run export",
-		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"watch:sync": "cross-env sync=1 NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"hot": "cross-env sync=1 NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"export": "cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"lint": "npm run lint:styles && npm run lint:scripts && npm run lint:php",
-		"lint:styles": "cross-env stylelint './resources/scss/**/*.scss' --syntax scss",
-		"lint:scripts": "cross-env eslint './resources/js/**/*.js'",
-		"lint:php": "cross-env ./vendor/bin/phpcs .",
+		"build": "npm-run-all --sequential css js",
+		"dev": "npm-run-all --parallel dev:*",
+		"dev:css": "npm run compile:css --watch",
+		"dev:js": "webpack --module-bind js=babel-loader --mode development --watch",
+		"css": "npm-run-all --sequential compile:css lint:css",
+		"js": "webpack --module-bind js=babel-loader --mode production",
+		"compile:css": "postcss src/css/*.css -d dist/css --env development",
+		"compile:js": "webpack --module-bind js=babel-loader --mode development",
+		"lint": "npm-run-all lint:*",
+		"lint:css": "stylelint './src/css/**/*.css' --fix",
+		"lint:js": "eslint './src/js/**/*.js'",
+		"lint:php": "./vendor/bin/phpcs .",
+		"format:js": "prettier './src/js/**/*.js'",
 		"i18n": "npm run i18n:textdomain && npm run i18n:pot",
 		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
 		"i18n:pot": "npx wpi18n makepot",
@@ -27,24 +28,54 @@
 		"type": "git",
 		"url": "git+https://github.com/m-e-h/forsite.git"
 	},
-	"bugs": {
-		"url": "https://github.com/m-e-h/forsite/issues"
-	},
 	"devDependencies": {
+		"@babel/cli": "^7.1.0",
+		"@babel/core": "^7.1.0",
+		"@babel/plugin-transform-runtime": "^7.1.0",
+		"@babel/preset-env": "^7.1.0",
+		"babel-eslint": "^9.0.0",
+		"babel-loader": "8.0.2",
 		"browser-sync": "^2.24.7",
-		"browser-sync-webpack-plugin": "2.2.2",
-		"copy-webpack-plugin": "^4.5.2",
-		"cross-env": "^5.2.0",
+		"browserslist": "^4.1.1",
 		"eslint": "^5.6.0",
 		"eslint-config-wordpress": "^2.0.0",
-		"imagemin-mozjpeg": "^7.0.0",
-		"imagemin-webpack-plugin": "^2.2.0",
-		"laravel-mix": "^2.1.14",
 		"node-wp-i18n": "^1.2.1",
-		"postcss-preset-env": "^5.3.0",
-		"rimraf": "^2.6.2",
+		"npm-run-all": "^4.1.3",
+		"postcss-cli": "^6.0.0",
+		"postcss-color-function": "4.0.1",
+		"postcss-import": "12.0.0",
+		"postcss-preset-env": "^6.0.3",
+		"postcss-simple-vars": "5.0.1",
+		"prettier": "^1.14.3",
 		"stylelint": "^9.5.0",
 		"stylelint-config-wordpress": "^13.1.0",
+		"webpack": "^4.19.1",
+		"webpack-cli": "^3.1.0",
 		"theme-claim": "^0.1.11"
-	}
+	},
+	"babel": {
+		"presets": [
+			"@babel/env"
+		]
+	},
+	"stylelint": {
+		"defaultSeverity": "warning",
+		"extends": "stylelint-config-wordpress"
+	},
+	"eslintConfig": {
+		"extends": "wordpress",
+		"parser": "babel-eslint"
+	},
+	"browserslist": [
+		"> 1%",
+		"ie >= 11",
+		"last 1 Android versions",
+		"last 1 ChromeAndroid versions",
+		"last 2 Chrome versions",
+		"last 2 Firefox versions",
+		"last 2 Safari versions",
+		"last 2 iOS versions",
+		"last 2 Edge versions",
+		"last 2 Opera versions"
+	]
 }

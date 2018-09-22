@@ -6,9 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PHPCompatibility\\' => array($vendorDir . '/phpcompatibility/php-compatibility/PHPCompatibility'),
     'Hybrid\\' => array($vendorDir . '/justintadlock/hybrid-core/src'),
     'Forsite\\' => array($baseDir . '/app'),
-    'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => array($vendorDir . '/dealerdirect/phpcodesniffer-composer-installer/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

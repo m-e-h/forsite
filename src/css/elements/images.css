@@ -1,0 +1,21 @@
+/* #IMAGES
+\*------------------------------------ */
+
+/* specify the alignment of media elements */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+svg {
+	max-height: 100%;
+}

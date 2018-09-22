@@ -1,0 +1,37 @@
+/* #TABLES
+\*------------------------------------ */
+table {
+	max-width: 100%;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: $gutter;
+	text-align: left;
+}
+
+td,
+th {
+	vertical-align: middle;
+	padding: 0.5rem;
+	border-top: 1px solid $color-grey-ui-light;
+}
+
+thead th {
+	text-align: left;
+	font-weight: $font-bold;
+	border-top: none;
+}
+
+td > ul {
+	list-style: none;
+}
+
+thead {
+	font-weight: $font-bold;
+	vertical-align: bottom;
+	border-bottom: 2px solid $color-grey-ui;
+}
+
+tfoot {
+	font-weight: $font-bold;
+	border-top: 2px solid $color-grey-ui;
+}
