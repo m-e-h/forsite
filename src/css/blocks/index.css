@@ -1,4 +1,4 @@
-////
+/*
 /// Block imports.
 ///
 /// Styles for individual blocks in the block editor. All of the core WP blocks
@@ -8,11 +8,10 @@
 /// @group  Blocks
 /// @author Marty Helmick <info@martyhelmick.com>
 /// @link   https://github.com/m-e-h/forsite
-////
+*/
 
-	// Import core blocks.
+/* Import core blocks. */
 @import "core/audio";
-
 @import "core/button";
 @import "core/categories";
 @import "core/code";

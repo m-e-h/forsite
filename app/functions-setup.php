@@ -33,11 +33,11 @@ namespace Forsite;
 add_action( 'after_setup_theme', function() {
 
 	// Sets the theme content width. This variable is also set in the
-	// `resources/scss/settings/_dimensions.scss` file.
+	// `src/scss/settings/_dimensions.scss` file.
 	$GLOBALS['content_width'] = 750;
 
 	// Load theme translations.
-	load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'resources/lang' ) );
+	load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'src/lang' ) );
 
 	// Automatically add the `<title>` tag.
 	add_theme_support( 'title-tag' );
@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	// Wide and full alignment. The styles for alignment is housed in the
-	// `resources/scss/utilities/_alignment.scss` file.
+	// `src/scss/utilities/_alignment.scss` file.
 	add_theme_support( 'align-wide' );
 
 	add_theme_support( 'editor-styles' );
@@ -77,7 +77,7 @@ add_action( 'after_setup_theme', function() {
 	] );
 
 	// Editor color palette. These colors are also defined in the
-	// `resources/scss/settings/_colors.scss` file.
+	// `src/scss/settings/_colors.scss` file.
 	add_theme_support( 'editor-color-palette', [
 		[
 			'name'  => __( 'Charcoal', 'forsite' ),
@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', function() {
 	] );
 
 	// Editor block font sizes. These font sizes are also defined in the
-	// `resources/scss/settings/_fonts.scss` file.
+	// `src/scss/settings/_fonts.scss` file.
 	add_theme_support( 'editor-font-sizes', [
 		[
 			'name'      => __( 'Small', 'forsite' ),

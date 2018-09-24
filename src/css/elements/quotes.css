@@ -3,10 +3,8 @@
 
 blockquote {
 	padding: $space-1;
-	font-size: $h3;
-	line-height: 1.6;
+	font-size: $h5;
 	text-align: center;
-	font-style: italic;
 	margin: 0 0 1rem;
 }
 
@@ -19,5 +17,5 @@ cite {
 
 blockquote cite {
 	font-size: $h6;
-	font-style: normal;
+	font-style: italic;
 }

@@ -36,10 +36,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 
 	// Enqueue theme scripts.
-	wp_enqueue_script( 'forsite-app', asset( 'js/app.js' ), null, null, true );
+	wp_enqueue_script( 'forsite-mainJS', asset( 'js/main.js' ), null, null, true );
 
 	// Enqueue theme styles.
-	wp_enqueue_style( 'forsite-screen', asset( 'css/screen.css' ), null, null );
+	wp_enqueue_style( 'forsite-mainCSS', asset( 'css/main.css' ), null, null );
 
 } );
 

@@ -33,4 +33,13 @@ if ( version_compare( $GLOBALS['wp_version'], '4.9.6', '<' ) || version_compare(
 # any classes/functions are available that we might need.
 
 require_once( get_parent_theme_file_path( 'app/bootstrap-autoload.php' ) );
-require_once( get_parent_theme_file_path( 'app/bootstrap-app.php'      ) );
+require_once( get_parent_theme_file_path( 'app/bootstrap-app.php' ) );
+
+/**
+ * Move views/ to a top level folder.
+ */
+add_filter(
+	'hybrid/template/path', function( $path ) {
+		return 'views';
+	}
+);

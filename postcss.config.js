@@ -4,7 +4,7 @@ module.exports = ctx => ({
 		"postcss-import": {},
 		"postcss-simple-vars": {},
 		"postcss-color-function": {},
-		"postcss-preset-env": {},
-		cssnano: ctx.env === "production" ? {} : false
+		"postcss-preset-env": { stage: 0 },
+		cssnano: ctx.env === "production" ? { preset: "default" } : false
 	}
 });

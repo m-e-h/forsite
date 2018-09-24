@@ -3,6 +3,7 @@ kbd,
 pre,
 samp {
 	font-family: $monospace-font-family;
+	color: #586e75;
 }
 
 code {
@@ -11,6 +12,7 @@ code {
 	font-size: 85%;
 	background-color: $color-frost-3;
 	border-radius: $border-radius;
+	word-break: break-word;
 }
 
 pre {
@@ -18,11 +20,10 @@ pre {
 	margin-bottom: $base-space;
 	padding: $space-1;
 	overflow: auto;
-	background-color: $color-frost-3;
+	background-color: #fdf6e3;
 	border-radius: $border-radius;
 	word-wrap: normal;
 	max-height: 60vh;
-	tab-size: 4;
 }
 
 pre code {
@@ -34,8 +35,10 @@ pre code {
 	line-height: inherit;
 	word-wrap: normal;
 	border: 0;
-	font-size: 100%;
+	font-size: inherit;
 	word-break: normal;
 	white-space: pre;
 	background: transparent;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }

@@ -17,15 +17,23 @@ nav li {
 	margin: 0;
 }
 
+aside,
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: space-around;
+}
+
+nav li {
+	flex: 1 auto;
+}
+
 ol ol,
 ul ul,
 ol ul,
 ul ol {
 	margin-bottom: 0;
-}
-
-nav li a {
-	margin: 0;
 }
 
 dt {

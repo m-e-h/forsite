@@ -21,10 +21,6 @@ thead th {
 	border-top: none;
 }
 
-td > ul {
-	list-style: none;
-}
-
 thead {
 	font-weight: $font-bold;
 	vertical-align: bottom;

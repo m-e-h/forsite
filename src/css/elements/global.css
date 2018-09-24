@@ -2,39 +2,40 @@
 \*------------------------------------ */
 
 *,
-*::before,
-*::after {
+::before,
+::after {
+	background-repeat: no-repeat;
 	box-sizing: border-box;
 }
 
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
 html {
-	font-family: sans-serif;
+	cursor: default;
+	font-family: system-ui;
 	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	word-break: break-word;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
+main {
 	display: block;
 }
 
 body {
 	margin: 0;
-	font-family: system-ui;
+	overflow-x: hidden;
+	font-family: $root-font-family;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
-	color: #212529;
+	color: $root-color;
 	text-align: left;
 	background-color: #fff;
 }
@@ -43,8 +44,7 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 	border: 0;
 	border-top: 1px solid currentColor;
 	opacity: 0.4;
@@ -60,4 +60,27 @@ hr {
 	text-shadow: none;
 }
 
-/* specify the root styles of the document */
+[tabindex="-1"]:focus {
+	outline: 0 !important;
+}
+
+/*
+  * Add the correct display in Edge and IE.
+  */
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+	font-weight: bolder;
+}
+
+details[open] summary {
+	margin-bottom: 0.5em;
+}
+
+template {
+	display: none;
+}

@@ -7,7 +7,6 @@ a {
 	background-color: transparent;
 
 	&:hover,
-	&:active,
 	&:focus {
 		color: $color-links-hover;
 		text-decoration: underline;
@@ -17,4 +16,14 @@ a {
 a[class] {
 	color: inherit;
 	text-decoration: none;
+}
+
+nav a {
+	display: block;
+	padding: 0.5rem 1rem;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
 }
