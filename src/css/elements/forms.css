@@ -6,24 +6,42 @@ form {
 	margin-bottom: $base-space;
 }
 
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 2. Remove the default vertical scrollbar in IE.
+ * 3. Change the resize direction on textareas in all browsers (opinionated).
+ */
 textarea {
-	margin: 0;
+	margin: 0; /* 1 */
+	overflow: auto; /* 2 */
+	resize: vertical; /* 3 */
 	display: block;
 	width: 100%;
-	overflow: auto;
-	resize: vertical;
 }
 
+/**
+ * Show the overflow in Edge and IE.
+ */
+
+input,
+button {
+	overflow: visible;
+}
+
+/**
+ * 1. Remove the margin in Safari.
+ * 2. Remove the inheritance of text transform in Firefox.
+ */
 input,
 button,
 select,
 optgroup,
 textarea {
-	margin: 0;
+	margin: 0; /* 1 */
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
-	text-transform: none;
+	text-transform: none; /* 2 */
 }
 
 input,
@@ -194,7 +212,7 @@ dialog:not([open]) {
 
 :disabled,
 [readonly],
-[aria-disabled],
+[aria-disabled="true"],
 [disabled],
 [readonly]:focus {
 	cursor: not-allowed;

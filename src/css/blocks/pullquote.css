@@ -1,11 +1,17 @@
 /* ////
-/// Code block.
+/// Pullquote block.
 ///
 /// @group  Blocks
 /// @author Marty Helmick <info@martyhelmick.com>
 /// @link   https://github.com/m-e-h/forsite
 //// */
 
-.wp-block-code {
+.wp-block-pullquote {
+	padding: 3em 0;
+	text-align: center;
 
+	cite,
+	footer {
+		position: relative;
+	}
 }

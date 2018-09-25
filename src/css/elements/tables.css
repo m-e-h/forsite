@@ -31,3 +31,11 @@ tfoot {
 	font-weight: $font-bold;
 	border-top: 2px solid $color-grey-ui;
 }
+
+caption {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	color: #6c757d;
+	text-align: left;
+	caption-side: bottom;
+}

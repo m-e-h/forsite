@@ -50,13 +50,6 @@ header h1 {
 	margin: 0;
 }
 
-/* h1[class],
-h2[class],
-h3[class],
-h4[class] {
-	margin: 0;
-} */
-
 abbr[title],
 abbr[data-original-title] {
 	text-decoration: underline dotted;
@@ -95,10 +88,26 @@ sup {
 	top: -0.5em;
 }
 
-caption {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	color: #6c757d;
-	text-align: left;
-	caption-side: bottom;
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+	margin: 1rem 0;
+	border: 0;
+	border-top: 1px solid currentColor;
+	opacity: 0.4;
+}
+
+template {
+	display: none;
+}
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
 }

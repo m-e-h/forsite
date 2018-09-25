@@ -37,5 +37,10 @@
 		}
 	}
 
-	figcaption {}
+	figcaption {
+	}
+}
+
+img.emoji {
+	max-width: $h5;
 }

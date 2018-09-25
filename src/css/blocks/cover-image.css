@@ -17,12 +17,6 @@
 	justify-content: center;
 	align-items: center;
 
-	/* // Parallax images should have a fixed background so that the image
-	// stays in place while everything else scrolls. */
-	&.has-parallax {
-		background-attachment: fixed;
-	}
-
 	/* // Background dim. */
 	&.has-background-dim::before {
 		content: "";
@@ -35,14 +29,14 @@
 
 	/* // The background dim can be any number from 10-100. We're just running
 	// a simple loop to add a black background color over the element. */
-	@for $dim from 1 through 10 {
+	/* @for $dim from 1 through 10 {
 
 		&.has-background-dim-#{ $dim * 10 }
 
 		::before {
 			background-color: rgba( color( black ), $dim * 0.1 );
 		}
-	}
+	} */
 
 	/* // Left/Right text content. */
 	&.has-left-content {
@@ -51,13 +45,6 @@
 
 	&.has-right-content {
 		justify-content: flex-end;
-	}
-
-	/* // Floated left/right element. */
-	&.alignleft,
-	&.alignright {
-		max-width: content-width() / 2;
-		width: 100%;
 	}
 }
 
@@ -68,7 +55,7 @@
 	line-height: 1.25;
 	z-index: 1;
 	margin-bottom: 0;
-	max-width: content-width();
+	max-width: $container;
 	padding: 14px;
 	text-align: center;
 

@@ -4,29 +4,15 @@
 ul,
 ol,
 dl {
-	list-style-type: none;
+	list-style: none;
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
 
-/* specify the list style of nav lists */
-nav ol,
-nav ul,
-nav li {
-	padding: 0;
-	margin: 0;
-}
-
-aside,
-nav ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	justify-content: space-around;
-}
-
-nav li {
-	flex: 1 auto;
+article ul,
+article ol,
+article dl {
+	list-style: initial;
 }
 
 ol ol,
@@ -47,4 +33,29 @@ dd {
 
 dfn {
 	font-style: italic;
+}
+
+section ol,
+section ul,
+nav ol,
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+/*
+ * Add the correct display in Edge and IE.
+ */
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+	font-weight: bolder;
+}
+
+details[open] summary {
+	margin-bottom: 0.5em;
 }

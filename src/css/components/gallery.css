@@ -8,7 +8,7 @@
 
 .gallery {
 
-	@media ( min-width: break-small() ) {
+	/* @media ( min-width: break-small() ) {
 
 		@for $i from 1 through 10 {
 
@@ -16,7 +16,7 @@
 
 			&-item {}
 		}
-	}
+	} */
 
 	&-icon {
 

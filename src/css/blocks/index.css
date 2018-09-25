@@ -11,21 +11,21 @@
 */
 
 /* Import core blocks. */
-@import "core/audio";
-@import "core/button";
-@import "core/categories";
-@import "core/code";
-@import "core/columns";
-@import "core/cover-image";
-@import "core/embed";
-@import "core/file";
-@import "core/gallery";
-@import "core/image";
-@import "core/latest-posts";
-@import "core/preformatted";
-@import "core/pullquote";
-@import "core/quote";
-@import "core/separator";
-@import "core/subhead";
-@import "core/table";
-@import "core/verse";
+@import "audio";
+@import "button";
+@import "code";
+@import "categories";
+@import "columns";
+@import "cover-image";
+@import "embed";
+@import "file";
+@import "gallery";
+@import "image";
+@import "latest-posts";
+@import "preformatted";
+@import "pullquote";
+@import "quote";
+@import "separator";
+@import "subhead";
+@import "table";
+@import "verse";

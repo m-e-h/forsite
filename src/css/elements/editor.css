@@ -1,12 +1,12 @@
-@import "global";
-@import "layout";
+/* @import "global"; */
+/* @import "layout"; */
 @import "links";
 @import "typography";
 @import "code";
-@import "buttons";
+/* @import "buttons"; */
 @import "lists";
 @import "nav";
 @import "tables";
 @import "quotes";
-@import "forms";
+/* @import "forms"; */
 @import "images";

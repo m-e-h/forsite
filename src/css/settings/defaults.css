@@ -83,7 +83,7 @@ $min-font-size: 0.95rem;
 $max-font-size: 1.125rem;
 $form-element-background-color: $color-frost-4;
 $form-element-min-height: 2.5rem;
-$monospace-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$monospace-font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
 $paragraph-width: 64rem;
 $container: 70rem;
 $container-wide: 80rem;

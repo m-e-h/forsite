@@ -34,8 +34,7 @@
 	}
 }
 
-/* // Give the file block button some spacing to the left if there's another element
-// preceding it. */
+/* // Give the file block button some spacing to the left if there's another element preceding it. */
 * + .wp-block-file__button {
 	margin-left: 0.75em;
 }

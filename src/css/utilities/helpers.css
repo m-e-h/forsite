@@ -10,7 +10,7 @@
 /// these are the `.has-{$color}-color` and `.has-{$color}-background-color`
 /// classes added via Gutenberg. However, they are useful elsewhere. */
 
-@each $color-name, $color-value in block-colors() {
+/* @each $color-name, $color-value in block-colors() {
 
 	.has-#{ $color-name }
 
@@ -25,13 +25,13 @@
 
 		background-color: #{ $color-value };
 	}
-}
+} */
 
 /* /// Loops through the editor font sizes and adds utility classes for them. This
 /// handles the `.has-{$size}-font-size` classes added via Gutenberg, which may
 /// be useful elsewhere. */
 
-@each $font-size-name, $font-size-value in editor-font-sizes() {
+/* @each $font-size-name, $font-size-value in editor-font-sizes() {
 
 	.has-#{ $font-size-name }
 
@@ -39,4 +39,8 @@
 
 		font-size: #{ $font-size-value };
 	}
+} */
+
+.has-parallax {
+	background-attachment: fixed;
 }

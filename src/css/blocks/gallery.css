@@ -13,14 +13,6 @@
 	list-style-type: none;
 	padding: 0;
 	margin: 0 -8px 0 -8px;
-
-	/* // Left/right aligned gallery. Note that this refers to the entire
-	// gallery and not individual images. */
-	&.alignleft,
-	&.alignright {
-		max-width: content-width() / 2;
-		width: 100%;
-	}
 }
 
 /* // The wrapper for individual gallery images/figures. */
@@ -107,7 +99,7 @@
 }
 
 /* // 3-8 columns on larger screens. */
-@media ( min-width: break( small ) ) {
+/* @media ( min-width: break( small ) ) {
 
 	@for $i from 3 through 8 {
 
@@ -117,4 +109,4 @@
 			width: calc( 100% / #{ $i } - 16px );
 		}
 	}
-}
+} */

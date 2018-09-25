@@ -1,7 +1,15 @@
 /* ////
-/// Custom mixins.
+/// Code block.
 ///
-/// @group  Tools
+/// @group  Blocks
 /// @author Marty Helmick <info@martyhelmick.com>
 /// @link   https://github.com/m-e-h/forsite
 //// */
+
+div.wp-block-code {
+	@extend pre;
+}
+
+[aria-label="Code"] {
+	@extend code;
+}
