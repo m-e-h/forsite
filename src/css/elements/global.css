@@ -34,10 +34,23 @@ html {
 	cursor: default; /* 1 */
 	font-family: system-ui; /* 2 */
 	line-height: 1.15; /* 3 */
+	font-size: var(--min-font-size);
 	-ms-text-size-adjust: 100%; /* 4 */
 	-webkit-text-size-adjust: 100%; /* 4 */
 	overflow-wrap: break-word; /* 5 */
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (--sm) {
+	html {
+		font-size: var(--fluid-font);
+	}
+}
+
+@media (--xl) {
+	html {
+		font-size: var(--max-font-size);
+	}
 }
 
 body {

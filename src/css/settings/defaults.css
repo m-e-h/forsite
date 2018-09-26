@@ -5,6 +5,36 @@
 @custom-media --lg (width >= 64rem);
 @custom-media --xl (width >= 90rem);
 
+:root {
+	/* Fluid font = calc(minPX + (max - min) * ((100vw - sm-mqPX) / (xlMQ - sm-mq))) */
+	--fluid-font: calc(var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21rem) / (90 - 21)));
+	--min-font-size: 0.95rem;
+	--max-font-size: 1.125rem;
+
+	--opacity: 0.7;
+}
+
+$h0: 3.5rem;
+$h1: 2.5rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+$h6: 0.9rem;
+
+h1,
+h2 {
+	--fluid-font: calc(var(--min-font-size) + (2.5 - 1.75) * (100vw - 21rem) / (92 - 21));
+	--min-font-size: $h3;
+	--max-font-size: $h2;
+}
+
+h3 {
+	--fluid-font: calc(var(--min-font-size) + (2 - 1.5) * (100vw - 21rem) / (92 - 21));
+	--min-font-size: $h4;
+	--max-font-size: $h3;
+}
+
 /* mq for fluid font */
 $mq-xs: 20rem;
 $mq-sm: 21rem;
@@ -48,18 +78,18 @@ $color-grey-ui-dark: $gray5;
 $color-grey-char: $gray8;
 $color-grey-char-light: $gray7;
 $color-grey-char-dark: $gray9;
-$color-frost-1: color($color-grey-bg-light a(0.15));
-$color-frost-2: color($color-grey-bg-light a(0.3));
-$color-frost-3: color($color-grey-bg-light a(0.6));
-$color-frost-4: color($color-grey-bg-light a(0.9));
-$color-shade-1: color($color-grey-ui a(0.15));
-$color-shade-2: color($color-grey-ui a(0.3));
-$color-shade-3: color($color-grey-ui a(0.5));
-$color-shade-4: color($color-grey-ui a(0.9));
-$color-tint-1: color($color-grey-char-dark a(0.15));
-$color-tint-2: color($color-grey-char-dark a(0.3));
-$color-tint-3: color($color-grey-char-dark a(0.5));
-$color-tint-4: color($color-grey-char-dark a(0.9));
+$color-frost-1: color-mod($color-grey-bg-light a(0.15));
+$color-frost-2: color-mod($color-grey-bg-light a(0.3));
+$color-frost-3: color-mod($color-grey-bg-light a(0.6));
+$color-frost-4: color-mod($color-grey-bg-light a(0.9));
+$color-shade-1: color-mod($color-grey-ui a(0.15));
+$color-shade-2: color-mod($color-grey-ui a(0.3));
+$color-shade-3: color-mod($color-grey-ui a(0.5));
+$color-shade-4: color-mod($color-grey-ui a(0.9));
+$color-tint-1: color-mod($color-grey-char-dark a(0.15));
+$color-tint-2: color-mod($color-grey-char-dark a(0.3));
+$color-tint-3: color-mod($color-grey-char-dark a(0.5));
+$color-tint-4: color-mod($color-grey-char-dark a(0.9));
 
 /* Box Shadows */
 $shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
@@ -79,22 +109,12 @@ $shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 $root-color: #212629;
 $root-font-family: system-ui;
 $display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
-$min-font-size: 0.95rem;
-$max-font-size: 1.125rem;
 $form-element-background-color: $color-frost-4;
 $form-element-min-height: 2.5rem;
 $monospace-font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
 $paragraph-width: 64rem;
 $container: 70rem;
 $container-wide: 80rem;
-$h0-mobile: 2.5rem;
-$h0: 3.5rem;
-$h1: 2.5rem;
-$h2: 2rem;
-$h3: 1.75rem;
-$h4: 1.5rem;
-$h5: 1.25rem;
-$h6: 0.9rem;
 $space-05: 0.5rem;
 $space-1: 1rem;
 $space-15: 1.5rem;

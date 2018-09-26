@@ -1,74 +1,73 @@
-/* https://palx.jxnblk.com/2980b9
-*  ─────────────────────────────────── */
+:root{
+	--fluid-font:calc(var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21rem) / (90 - 21)));
+	--min-font-size:0.95rem;
+	--max-font-size:1.125rem;
 
-/* Custom media queries */
+	--opacity:0.7;
+}
 
-/* mq for fluid font */
+h1,
+h2{
+	--fluid-font:calc(var(--min-font-size) + (2.5 - 1.75) * (100vw - 21rem) / (92 - 21));
+	--min-font-size:1.75rem;
+	--max-font-size:2rem;
+}
 
-/* Grey */
+h3{
+	--fluid-font:calc(var(--min-font-size) + (2 - 1.5) * (100vw - 21rem) / (92 - 21));
+	--min-font-size:1.5rem;
+	--max-font-size:1.75rem;
+}
 
-/* Box Shadows */
-
-/* global vars */
-
-/* @import "global"; */
-
-/* @import "layout"; */
-
-/* #LINKS
-\*------------------------------------ */
-
-/**
- * 1. Remove the gray background on active links in IE 10.
- */
-
-a {
-	color: #1f2d8f;
-	text-decoration: none;
-	background-color: transparent /* 1 */
+a{
+	color:#1f2d8f;
+	text-decoration:none;
+	background-color:transparent;
+	word-wrap:break-word
 }
 
 a:hover,
-	a:focus {
-		color: #293ab9;
-		text-decoration: underline;
+	a:focus{
+		color:#293ab9;
+		text-decoration:underline;
 	}
 
-a[class] {
-	color: inherit;
-	text-decoration: none;
+a[class]{
+	color:inherit;
+	text-decoration:none
 }
 
-/* #TYPOGRAPHY
-\*------------------------------------ */
+a[class]:hover{
+		opacity:0.5;
+	}
 
-p {
-	margin-top: 0;
-	margin-bottom: 1rem;
+p{
+	margin-top:0;
+	margin-bottom:1rem;
 }
 
-h1 {
-	font-size: 2rem;
+h1{
+	font-size:2rem;
 }
 
-h2 {
-	font-size: 2rem;
+h2{
+	font-size:2rem;
 }
 
-h3 {
-	font-size: 1.75rem;
+h3{
+	font-size:1.75rem;
 }
 
-h4 {
-	font-size: 1.5rem;
+h4{
+	font-size:1.5rem;
 }
 
-h5 {
-	font-size: 1.25rem;
+h5{
+	font-size:1.25rem;
 }
 
-h6 {
-	font-size: 1.25rem;
+h6{
+	font-size:1.25rem;
 }
 
 h1,
@@ -76,1667 +75,775 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	font-weight: inherit;
-	line-height: 1.16;
-	margin: 0.6em 0
+h6{
+	font-weight:inherit;
+	line-height:1.16;
+	margin:0.6em 0
 }
 
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
-		color: inherit;
-		font-weight: inherit;
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a{
+		color:inherit;
+		font-weight:inherit;
 	}
 
-header h1 {
-	margin: 0;
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class]{
+	margin:0;
 }
 
 abbr[title],
-abbr[data-original-title] {
-	-webkit-text-decoration: underline dotted;
-	        text-decoration: underline dotted;
-	cursor: help;
-	border-bottom: 0;
+abbr[data-original-title]{
+	-webkit-text-decoration:underline dotted;
+	        text-decoration:underline dotted;
+	cursor:help;
+	border-bottom:0;
 }
 
-address {
-	margin-bottom: 1rem;
-	font-style: normal;
-	line-height: inherit;
+address{
+	margin-bottom:1rem;
+	font-style:normal;
+	line-height:inherit;
 }
 
 b,
-strong {
-	font-weight: bolder;
+strong{
+	font-weight:bolder;
 }
 
-small {
-	font-size: 80%;
+small{
+	font-size:80%;
 }
 
 sub,
-sup {
-	position: relative;
-	font-size: 75%;
-	line-height: 0;
-	vertical-align: baseline;
+sup{
+	position:relative;
+	font-size:75%;
+	line-height:0;
+	vertical-align:baseline;
 }
 
-sub {
-	bottom: -0.25em;
+sub{
+	bottom:-0.25em;
 }
 
-sup {
-	top: -0.5em;
+sup{
+	top:-0.5em;
 }
 
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-	margin: 1rem 0;
-	border: 0;
-	border-top: 1px solid currentColor;
-	opacity: 0.4;
+hr{
+	box-sizing:content-box;
+	height:0;
+	overflow:visible;
+	margin:1rem 0;
+	border:0;
+	border-top:1px solid currentColor;
+	opacity:0.4;
 }
 
-template {
-	display: none;
+template{
+	display:none;
 }
 
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
+::-moz-selection{
+	background:#b3d4fc;
+	text-shadow:none;
 }
 
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
+::selection{
+	background:#b3d4fc;
+	text-shadow:none;
 }
 
 code,
 kbd,
 pre,
-samp {
-	font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
-	color: #586e75;
+samp{
+	font-family:"SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
+	color:#586e75;
 }
 
-code {
-	padding: 0.2em 0.3em;
-	margin: 0;
-	font-size: 85%;
-	background-color: rgba(248, 249, 249, 0.6);
-	border-radius: 0.1rem;
-	word-break: break-word;
+code{
+	padding:0.2em 0.3em;
+	margin:0;
+	font-size:85%;
+	background-color:rgba(248, 249, 249, 0.6);
+	border-radius:0.1rem;
+	word-break:break-word;
 }
 
-pre {
-	margin-top: 0;
-	margin-bottom: 1.5rem;
-	padding: 1rem;
-	overflow: auto;
-	background-color: #fdf6e3;
-	border-radius: 0.1rem;
-	word-wrap: normal;
-	max-height: 60vh;
+pre{
+	margin-top:0;
+	margin-bottom:1.5rem;
+	padding:1rem;
+	overflow:auto;
+	background-color:#fdf6e3;
+	border-radius:0.1rem;
+	word-wrap:normal;
+	max-height:60vh;
 }
 
-pre code {
-	display: inline;
-	max-width: auto;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	border: 0;
-	font-size: inherit;
-	word-break: normal;
-	white-space: pre;
-	background: transparent;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	   tab-size: 4;
+pre code{
+	display:inline;
+	max-width:auto;
+	padding:0;
+	margin:0;
+	overflow:visible;
+	line-height:inherit;
+	word-wrap:normal;
+	border:0;
+	font-size:inherit;
+	word-break:normal;
+	white-space:pre;
+	background:transparent;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+	   tab-size:4;
 }
-
-/* @import "buttons"; */
-
-/* #LISTS
-\*------------------------------------ */
 
 ul,
 ol,
-dl {
-	list-style: none;
-	margin-top: 0;
-	margin-bottom: 1rem;
+dl{
+	list-style:none;
+	margin-top:0;
+	margin-bottom:1rem;
 }
 
 article ul,
 article ol,
-article dl {
-	list-style: disc outside none;
-	list-style: initial;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-	margin-bottom: 0;
-}
-
-dt {
-	font-weight: 700;
-}
-
-dd {
-	margin-bottom: 0.5rem;
-	margin-left: 0;
-}
-
-dfn {
-	font-style: italic;
+article dl{
+	list-style:disc outside none;
+	list-style:initial;
 }
 
 section ol,
 section ul,
 nav ol,
-nav ul {
-	padding: 0;
-	margin: 0;
+nav ul{
+	padding:0;
+	margin:0;
 }
 
-/*
- * Add the correct display in Edge and IE.
- */
-
-details {
-	display: block;
+ol ol,
+ul ul,
+ol ul,
+ul ol,
+ul:last-child,{
+	margin-bottom:0;
 }
 
-summary {
-	display: list-item;
-	font-weight: bolder;
+dt{
+	font-weight:700;
 }
 
-details[open] summary {
-	margin-bottom: 0.5em;
+dd{
+	margin-bottom:0.5rem;
+	margin-left:0;
 }
 
-/* #NAV
-\*------------------------------------ */
-
-nav li {
-	-ms-flex: 1 auto;
-	    flex: 1 auto;
+dfn{
+	font-style:italic;
 }
 
-nav a {
-	display: block;
-	padding: 0.5rem 1rem
+details{
+	display:block;
+}
+
+summary{
+	display:list-item;
+	font-weight:bolder;
+}
+
+details[open] summary{
+	margin-bottom:0.5em;
+}
+
+nav li{
+	-ms-flex:1 auto;
+	    flex:1 auto;
+}
+
+nav a{
+	display:block;
+	padding:0.5rem 1rem
 }
 
 nav a:hover,
-	nav a:focus {
-		text-decoration: none;
+	nav a:focus{
+		text-decoration:none;
 	}
 
-nav > ul {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	list-style: none;
-	-ms-flex-pack: distribute;
-	    justify-content: space-around;
+nav > ul{
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	list-style:none;
+	-ms-flex-pack:distribute;
+	    justify-content:space-around;
 }
 
-aside nav > ul {
-	-ms-flex-direction: column;
-	    flex-direction: column;
+aside nav > ul{
+	-ms-flex-direction:column;
+	    flex-direction:column;
 }
 
-nav li > ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	position: absolute;
-	z-index: 99999;
+nav li > ul{
+	box-shadow:0 3px 3px rgba(0, 0, 0, 0.2);
+	position:absolute;
+	z-index:99999;
 }
 
-nav li:not(:hover) > ul {
-	top: 100%;
-	left: -999em;
+nav li:not(:hover) > ul{
+	top:100%;
+	left:-999em;
 }
 
-/* #TABLES
-\*------------------------------------ */
-
-table {
-	max-width: 100%;
-	width: 100%;
-	border-collapse: collapse;
-	margin-bottom: 1.5rem;
-	text-align: left;
+table{
+	max-width:100%;
+	width:100%;
+	border-collapse:collapse;
+	margin-bottom:1.5rem;
+	text-align:left;
 }
 
 td,
-th {
-	vertical-align: middle;
-	padding: 0.5rem;
-	border-top: 1px solid #ced3d7;
+th{
+	vertical-align:middle;
+	padding:0.5rem;
+	border-top:1px solid #ced3d7;
 }
 
-thead th {
-	text-align: left;
-	font-weight: 600;
-	border-top: none;
+thead th{
+	text-align:left;
+	font-weight:600;
+	border-top:none;
 }
 
-thead {
-	font-weight: 600;
-	vertical-align: bottom;
-	border-bottom: 2px solid #bdc4c9;
+thead{
+	font-weight:600;
+	vertical-align:bottom;
+	border-bottom:2px solid #bdc4c9;
 }
 
-tfoot {
-	font-weight: 600;
-	border-top: 2px solid #bdc4c9;
+tfoot{
+	font-weight:600;
+	border-top:2px solid #bdc4c9;
 }
 
-caption {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	color: #6c757d;
-	text-align: left;
-	caption-side: bottom;
+caption{
+	padding-top:0.75rem;
+	padding-bottom:0.75rem;
+	color:#6c757d;
+	text-align:left;
+	caption-side:bottom;
 }
 
-/* #BLOCKQUOTE
-\*------------------------------------ */
-
-blockquote {
-	padding: 1rem;
-	font-size: 1.25rem;
-	text-align: center;
-	margin: 0 0 1rem;
+blockquote{
+	padding:1rem;
+	font-size:1.25rem;
+	text-align:center;
+	margin:0 0 1rem;
 }
 
-cite {
-	text-align: right;
-	width: 100%;
-	display: inline-block;
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+cite{
+	text-align:right;
+	width:100%;
+	display:inline-block;
+	font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 
-blockquote cite {
-	font-size: 0.9rem;
-	font-style: italic;
+blockquote cite{
+	font-size:0.9rem;
+	font-style:italic;
 }
-
-/* @import "forms"; */
-
-/* #IMAGES
-\*------------------------------------ */
-
-/* specify the alignment of media elements */
 
 audio,
 canvas,
 iframe,
 img,
 svg,
-video {
-	vertical-align: middle;
-	max-width: 100%;
+video{
+	vertical-align:middle;
+	max-width:100%;
 }
 
-img {
-	height: auto;
-	border-style: none;
+img{
+	height:auto;
+	border-style:none;
 }
 
-svg {
-	overflow: hidden;
-	max-height: 100%;
-	fill: currentColor;
+a > img{
+	transition:inherit;
+	-webkit-backface-visibility:hidden;
+	        backface-visibility:hidden;
 }
 
-figure {
-	display: inline-block;
-	margin: 0 0 1rem;
+svg{
+	overflow:hidden;
+	max-height:100%;
+	fill:currentColor;
 }
 
-figure img {
-	margin-bottom: 0.5rem;
-	line-height: 1;
+figure{
+	display:inline-block;
+	margin:0 0 1rem;
 }
 
-figcaption {
-	display: block;
-	font-size: 90%;
-	color: #6c757d;
+figure img{
+	margin-bottom:0.5rem;
+	line-height:1;
 }
 
-/* ////
-/// Component imports.
-///
-/// Components make up the bulk of the actual theme design. Nearly every piece
-/// of the design is some type of component, whether it's a one-off or reusable
-/// block of code.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-/* ////
-/// App component.
-///
-/// This is the wrapper for the entire page layout.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.app {
-
+figcaption{
+	display:block;
+	font-size:90%;
+	color:#6c757d;
 }
 
-/* ////
-/// App header component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.app-header {
-
-	/* // Wrapper around the title and description. */
-	&__branding {}
-
-	/* // Output from the `custom-logo` feature. */
-	&__logo {}
-
-	/* // Logo link. */
-	&__logo-link {}
-
-	/* // The site title. */
-	&__title {}
-
-	/* // Site title link. */
-	&__title-link {}
-
-	/* // The site description. */
-	&__description {}
-}
-
-/* ////
-/// App content component.
-///
-/// This component generally wraps the `<main>` section and the sidebar.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.app-content {
-
-}
-
-/* ////
-/// App main component.
-///
-/// Wraps the page's main output. This is generally the post list or a single
-/// post and its comments.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.app-main {
-
-}
-
-/* ////
-/// App footer component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.app-footer {
-
-	&__credit {}
-}
-
-/* ////
-/// Archive header component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.archive-header {
-
-	&__title {}
-
-	&__description {}
-}
-
-/* ////
-/// Comments component.
-///
-/// This component wraps the entire comments section.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.comments {
-
-	/* // Header/title for the comments section. */
-	&__title {}
-
-	/* // Comments list wrapper. */
-	&__list {
-
-		/* // Children lists (note that WP doesn't have a filter -- the
-		// only way to change this class is with a custom Walker).
-		// @link https://core.trac.wordpress.org/ticket/44923 */
-		.children {}
-	}
-
-	/* // Comments closed message. */
-	&__closed {}
-}
-
-/* ////
-/// Comment component.
-///
-/// This is the component for handling individual comments in a comments list.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.comment {
-
-	/* // Type of comment. */
-	&--type-comment {}
-
-	&--type-ping {}
-
-	/* // Comment status. */
-	&--status-unapproved {}
-
-	/* // Full comment text/content. */
-	&__content {}
-
-	/* // Comment under moderation message. */
-	&__moderation {}
-
-	/* // Metadata wrapper. */
-	&__meta {}
-
-	/* // Individual metadata items. */
-	&__avatar {}
-
-	&__author {}
-
-	&__permalink {}
-
-	&__date {}
-
-	&__time {}
-
-	&__edit {}
-
-	&__reply {}
-}
-
-/* ////
-/// Comment respond form component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.comment-respond {
-
-	/* // Header/title for the respond section. */
-	&__reply-title {}
-
-	/* // The comment form. */
-	&__form {}
-
-	/* // Note section at the top of form. */
-	&__notes {}
-
-	/* // Logged-in message at the top of the form. */
-	&__logged-in-as {}
-
-	/* // The wrapping element around individual form fields. */
-	&__field {
-
-		&--comment {}
-
-		&--author {}
-
-		&--email {}
-
-		&--url {}
-
-		&--cookies {}
-
-		&--submit {}
-	}
-
-	/* // Comments closed message. */
-	&__closed {}
-}
-
-/* ////
-/// Custom header component.
-///
-/// This handles the output of `the_custom_header_markup()` from core WP's
-/// `custom-header` feature.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-custom-header {
-
-	img {}
-
-	video {}
-
-	&-video-button {}
-
-	/* // Specific play/pause classes. Note that the button in core WP will have
-	// the state of what's happening with the video rather than what action
-	// the button performs.  The `*-play` class is applied to the "Pause"
-	// button and the `*-pause` class is applied to the "Play" button. */
-	&-video-play {}
-
-	&-video-pause {}
-}
-
-/* ////
-/// Entry component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.entry {
-
-	&--type-post {}
-
-	&--type-page {}
-
-	/* // Sticky posts. */
-}
-
-.entry.sticky {}
-
-.entry {
-
-	/* // Featured image. */
-	&__image {}
-
-	/* // Header wrapper. */
-	&__header {}
-
-	/* // Entry title. */
-	&__title {}
-
-	/* // Full entry content. */
-	&__content {}
-
-	/* // Summary/Excerpt. */
-	&__summary {}
-
-	/* // Meta wrappers. */
-	&__byline {}
-
-	&__footer {}
-
-	/* // Individual metadata items. */
-	&__author {}
-
-	&__published {}
-
-	&__comments {}
-
-	&__terms {}
-}
-
-/* ////
-/// Gallery (shortcode) component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.gallery {
-
-	/* @media ( min-width: break-small() ) {
-
-		@for $i from 1 through 10 {
-
-			&-columns-#{ $i }
-
-			&-item {}
-		}
-	} */
-
-	&-icon {
-
-		img {}
-	}
-
-	&-caption {}
-}
-
-/* ////
-/// Media meta component.
-///
-/// This component is shown on attachment pages and lists the metadata about
-/// the attachment's media file.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.media-meta {
-
-	/* // Section title. */
-	&__title {}
-
-	/* // List of meta. */
-	&__items {}
-
-	/* // Individual meta items. */
-	&__item {}
-
-	/* // Textual label. */
-	&__label {}
-
-	/* // Output of the data. */
-	&__data {}
-}
-
-/* ////
-/// Nav menu component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.menu {
-
-	/* // Specific nav menus. */
-	&--primary {}
-
-	/* // Menu title. */
-	&__title {}
-
-	/* // Menu items list. */
-	&__items {}
-
-	/* // Individual items. */
-	&__item {}
-
-	/* // Item link. */
-	&__link {}
-}
-
-/* ////
-/// Pagination component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.pagination {
-
-	/* // Header/Title element. */
-	&__title {}
-
-	/* // The list of items. */
-	&__items {}
-
-	/* // Individual items. */
-	&__item {
-
-		&--prev {}
-
-		&--next {}
-
-		&--current {}
-
-		&--dots {}
-	}
-
-	/* // The link or span element. */
-	&__anchor {
-
-		&--link {}
-
-		&--current {}
-
-		&--dots {}
+.wp-block-audio{
+	margin:0;
+
+	audio{
+		width:100%;
 	}
 }
 
-/* ////
-/// Sidebar component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.sidebar {
-
-	&--primary {}
-
-	&__title {}
+.wp-block-button{
+	margin-bottom:1.5em;
 }
 
-/* ////
-/// Widget component.
-///
-/// @group  Components
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.widget {
-
-	/* // Core widgets. */
-	&--archives {}
-
-	&--calendar {}
-
-	&--categories {}
-
-	&--custom-html {}
-
-	&--media-audio {}
-
-	&--media-gallery {}
-
-	&--media-image {}
-
-	&--media-video {}
-
-	&--meta {}
-
-	&--nav-menu {}
-
-	&--pages {}
-
-	&--recent-comments {}
-
-	&--recent-posts {}
-
-	&--rss {}
-
-	&--text {}
-
-	&--search {}
-
-	&--tag-cloud {}
-
-	/* // Widget titles. */
-	&__title {}
+div.wp-block-code{
+	font-family:"SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
+	color:#586e75;
+	margin-top:0;
+	margin-bottom:1.5rem;
+	padding:1rem;
+	overflow:auto;
+	background-color:#fdf6e3;
+	border-radius:0.1rem;
+	word-wrap:normal;
+	max-height:60vh;
 }
 
-/*
-/// Block imports.
-///
-/// Styles for individual blocks in the block editor. All of the core WP blocks
-/// are under the `/core` subfolder. Block styles for plugins should be in their
-/// own subfolders.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-*/
-
-/* Import core blocks. */
-
-/* // //
-// / Audio block.
-// /
-// / @group  Blocks
-// / @author Marty Helmick <info@martyhelmick.com > /// @link   https://github.com/m-e-h/forsite
-// // */
-
-.wp-block-audio {
-	margin: 0;
-
-	audio {
-		width: 100%;
-	}
+div.wp-block-code code{
+	display:inline;
+	max-width:auto;
+	padding:0;
+	margin:0;
+	overflow:visible;
+	line-height:inherit;
+	word-wrap:normal;
+	border:0;
+	font-size:inherit;
+	word-break:normal;
+	white-space:pre;
+	background:transparent;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+	tab-size:4;
 }
 
-/* // //
-// / Button block.
-// /
-// / @group  Blocks
-// / @author Marty Helmick <info@martyhelmick.com > /// @link   https://github.com/m-e-h/forsite
-// // */
-
-.wp-block-button {
-	margin-bottom: 1.5em;
+[aria-label="Code"]{
+	font-family:"SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
+	color:#586e75;
+	padding:0.2em 0.3em;
+	margin:0;
+	font-size:85%;
+	background-color:rgba(248, 249, 249, 0.6);
+	border-radius:0.1rem;
+	word-break:break-word;
 }
 
-.wp-block-button__link {
+pre [aria-label="Code"]{
+	display:inline;
+	max-width:auto;
+	padding:0;
+	margin:0;
+	overflow:visible;
+	line-height:inherit;
+	word-wrap:normal;
+	border:0;
+	font-size:inherit;
+	word-break:normal;
+	white-space:pre;
+	background:transparent;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+	tab-size:4;
 }
 
-/* ////
-/// Code block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-div.wp-block-code {
-	font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
-	color: #586e75;
-	margin-top: 0;
-	margin-bottom: 1.5rem;
-	padding: 1rem;
-	overflow: auto;
-	background-color: #fdf6e3;
-	border-radius: 0.1rem;
-	word-wrap: normal;
-	max-height: 60vh;
+div.wp-block-code [aria-label="Code"]{
+	display:inline;
+	max-width:auto;
+	padding:0;
+	margin:0;
+	overflow:visible;
+	line-height:inherit;
+	word-wrap:normal;
+	border:0;
+	font-size:inherit;
+	word-break:normal;
+	white-space:pre;
+	background:transparent;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+	tab-size:4;
 }
 
-div.wp-block-code code {
-	display: inline;
-	max-width: auto;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	border: 0;
-	font-size: inherit;
-	word-break: normal;
-	white-space: pre;
-	background: transparent;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+.wp-block-columns{
+	display:-ms-flexbox;
+	display:flex
 }
 
-[aria-label="Code"] {
-	font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo, Courier, monospace;
-	color: #586e75;
-	padding: 0.2em 0.3em;
-	margin: 0;
-	font-size: 85%;
-	background-color: rgba(248, 249, 249, 0.6);
-	border-radius: 0.1rem;
-	word-break: break-word;
+.wp-block-column{
+	-ms-flex:1;
+	    flex:1;
 }
 
-pre [aria-label="Code"] {
-	display: inline;
-	max-width: auto;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	border: 0;
-	font-size: inherit;
-	word-break: normal;
-	white-space: pre;
-	background: transparent;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+.editor-inner-blocks{
+	-ms-flex:1;
+	    flex:1;
 }
 
-div.wp-block-code [aria-label="Code"] {
-	display: inline;
-	max-width: auto;
-	padding: 0;
-	margin: 0;
-	overflow: visible;
-	line-height: inherit;
-	word-wrap: normal;
-	border: 0;
-	font-size: inherit;
-	word-break: normal;
-	white-space: pre;
-	background: transparent;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+.wp-block-cover-image{
+	position:relative;
+	background-size:cover;
+	background-position:50%;
+	min-height:430px;
+	width:100%;
+	margin:0 0 1.5em;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:center;
+	    justify-content:center;
+	-ms-flex-align:center;
+	    align-items:center
 }
 
-/* ////
-/// Categories block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-categories {
-
-	&-list {}
-
-	&-dropdown {}
-}
-
-/* ////
-/// Columns block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-columns {
-	display: -ms-flexbox;
-	display: flex
-
-	/* // Add styles based on the number of columns. Supports 2-6 columns. */
-}
-
-.wp-block-columns.has-2-columns {}
-
-/* // Individual columns. */
-
-.wp-block-column {
-	-ms-flex: 1;
-	    flex: 1;
-}
-
-/* // Editor specific styling. Make sure columns span correctly. */
-
-.editor-inner-blocks {
-	-ms-flex: 1;
-	    flex: 1;
-}
-
-/* ////
-/// Cover image block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-cover-image {
-	position: relative;
-	background-size: cover;
-	background-position: 50%;
-	min-height: 430px;
-	width: 100%;
-	margin: 0 0 1.5em;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-	    justify-content: center;
-	-ms-flex-align: center;
-	    align-items: center
-
-	/* // Background dim. */
-}
-
-.wp-block-cover-image.has-background-dim::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+.wp-block-cover-image.has-background-dim::before{
+		content:"";
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
 	}
 
-.wp-block-cover-image {
-
-	/* // The background dim can be any number from 10-100. We're just running
-	// a simple loop to add a black background color over the element. */
-	/* @for $dim from 1 through 10 {
-
-		&.has-background-dim-#{ $dim * 10 }
-
-		::before {
-			background-color: rgba( color( black ), $dim * 0.1 );
-		}
-	} */
-
-	/* // Left/Right text content. */
-}
-
-.wp-block-cover-image.has-left-content {
-		-ms-flex-pack: start;
-		    justify-content: flex-start;
+.wp-block-cover-image.has-left-content{
+		-ms-flex-pack:start;
+		    justify-content:flex-start;
 	}
 
-.wp-block-cover-image.has-right-content {
-		-ms-flex-pack: end;
-		    justify-content: flex-end;
+.wp-block-cover-image.has-right-content{
+		-ms-flex-pack:end;
+		    justify-content:flex-end;
 	}
 
-/* // Paragraph of text shown within the cover image element. */
-
-.wp-block-cover-image-text {
-	color: rgb(255, 255, 255);
-	font-size: 2em;
-	line-height: 1.25;
-	z-index: 1;
-	margin-bottom: 0;
-	max-width: 70rem;
-	padding: 14px;
-	text-align: center;
+.wp-block-cover-image-text{
+	color:rgb(255, 255, 255);
+	font-size:2em;
+	line-height:1.25;
+	z-index:1;
+	margin-bottom:0;
+	max-width:70rem;
+	padding:14px;
+	text-align:center;
 
 	a,
 	a:hover,
 	a:focus,
-	a:active {
-		color: rgb(255, 255, 255);
+	a:active{
+		color:rgb(255, 255, 255);
 	}
 }
 
-/* // Left-aligned text. */
-
-.has-left-content .wp-block-cover-image-text {
-	margin-left: 0;
-	text-align: left;
+.has-left-content .wp-block-cover-image-text{
+	margin-left:0;
+	text-align:left;
 }
 
-/* // Right-aligned text. */
-
-.has-right-content .wp-block-cover-image-text {
-	margin-right: 0;
-	text-align: right;
+.has-right-content .wp-block-cover-image-text{
+	margin-right:0;
+	text-align:right;
 }
 
-/* ////
-/// Embed block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-embed {
-
-	/* // Image embeds. */
-}
-
-.wp-block-embed.is-type-image {}
-
-.wp-block-embed {
-
-	/* // Audio embeds. */
-}
-
-.wp-block-embed.is-type-audio {}
-
-.wp-block-embed {
-
-	/* // Rich text embeds (text, Twitter, etc.) */
-}
-
-.wp-block-embed.is-type-rich {}
-
-.wp-block-embed {
-
-	/* // Video embeds. */
-}
-
-.wp-block-embed.is-type-video {}
-
-.wp-block-embed {
-
-	/* // Directly target iframes. */
-	iframe {}
-
-	/* // Caption below embedded content. */
-	figcaption {
-		margin-top: 0.5em;
-		text-align: center;
+.wp-block-embed{
+	figcaption{
+		margin-top:0.5em;
+		text-align:center;
 	}
 }
 
-/* ////
-/// File block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-file {
-	margin-bottom: 1.5em
+.wp-block-file{
+	margin-bottom:1.5em
 }
 
-.wp-block-file.aligncenter {
-		text-align: center;
+.wp-block-file.aligncenter{
+		text-align:center;
 	}
 
-.wp-block-file.alignright {
-		text-align: right;
+.wp-block-file.alignright{
+		text-align:right;
 	}
 
-.wp-block-file {
+.wp-block-file{
 
-	&__button {
-		background: rgb(0, 0, 0);
-		color: rgb(255, 255, 255);
-		padding: 0.5em 1em;
-		text-decoration: none
+	&__button{
+		background:rgb(0, 0, 0);
+		color:rgb(255, 255, 255);
+		padding:0.5em 1em;
+		text-decoration:none
 	}
 
 		&__button:hover,
 		&__button:visited,
 		&__button:focus,
-		&__button:active {
-			color: rgb(255, 255, 255);
-			opacity: 0.85;
-			text-decoration: none;
+		&__button:active{
+			color:rgb(255, 255, 255);
+			opacity:0.85;
+			text-decoration:none;
 		}
 }
 
-/* // Give the file block button some spacing to the left if there's another element preceding it. */
-
-* + .wp-block-file__button {
-	margin-left: 0.75em;
+* + .wp-block-file__button{
+	margin-left:0.75em;
 }
 
-/* ////
-/// Gallery block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-/* // The wrapper element for the entire gallery. */
-
-.wp-block-gallery {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	list-style-type: none;
-	padding: 0;
-	margin: 0 -8px 0 -8px;
+.wp-block-gallery{
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	list-style-type:none;
+	padding:0;
+	margin:0 -8px 0 -8px;
 }
 
-/* // The wrapper for individual gallery images/figures. */
-
-.blocks-gallery-item {
-	margin: 8px;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-pack: center;
-	    justify-content: center;
-	position: relative;
-
-	/* // Image figure. */
-	figure {
-		margin: 0;
-		height: 100%
-
-		/* // IE11 doesn't support flex and can't read this. */
+.blocks-gallery-item{
+	margin:8px;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-positive:1;
+	    flex-grow:1;
+	-ms-flex-direction:column;
+	    flex-direction:column;
+	-ms-flex-pack:center;
+	    justify-content:center;
+	position:relative;
+	figure{
+		margin:0;
+		height:100%
 	}
-		@supports((position: -webkit-sticky) or (position: sticky)) {
-	figure {
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-align: end;
-			    align-items: flex-end;
-			-ms-flex-pack: start;
-			    justify-content: flex-start
+		@supports((position: -webkit-sticky) or (position: sticky)){
+	figure{
+			display:-ms-flexbox;
+			display:flex;
+			-ms-flex-align:end;
+			    align-items:flex-end;
+			-ms-flex-pack:start;
+			    justify-content:flex-start
 	}
 		}
 
-	img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-
-		/* // Set an explicit width for IE. */
-		width: 100%
-
-		/* // IE11 can't read this. */
+	img{
+		display:block;
+		max-width:100%;
+		height:auto;
+		width:100%
 	}
-		@supports((position: -webkit-sticky) or (position: sticky)) {
+		@supports((position: -webkit-sticky) or (position: sticky)){
 
-	img {
-			width: auto
+	img{
+			width:auto
 	}
 		}
 
-	figcaption {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		max-height: 100%;
-		padding: 40px 10px 5px;
-		text-align: center;
-		color: rgb(255, 255, 255);
-		background: linear-gradient(
+	figcaption{
+		position:absolute;
+		bottom:0;
+		width:100%;
+		max-height:100%;
+		padding:40px 10px 5px;
+		text-align:center;
+		color:rgb(255, 255, 255);
+		background:linear-gradient(
 			0deg,
 			rgba( rgb(0, 0, 0), 0.7 ) 0,
 			rgba( rgb(0, 0, 0), 0.3 ) 60%,
 			transparent
 		);
 
-		img {
-			display: inline;
+		img{
+			display:inline;
 		}
 	}
 }
 
-.is-cropped .blocks-gallery-item {
+.is-cropped .blocks-gallery-item{
 
 	a,
-	img {
-		-ms-flex: 1;
-		    flex: 1;
-		width: 100%
-
-		/* // IE11 doesn't support object-fit. */
+	img{
+		-ms-flex:1;
+		    flex:1;
+		width:100%
 	}
-		@supports((position: -webkit-sticky) or (position: sticky)) {
+		@supports((position: -webkit-sticky) or (position: sticky)){
 
 	a,
-	img {
-			-ms-flex: 1;
-			    flex: 1;
-			height: 100%;
-			-o-object-fit: cover;
-			   object-fit: cover
+	img{
+			-ms-flex:1;
+			    flex:1;
+			height:100%;
+			-o-object-fit:cover;
+			   object-fit:cover
 	}
 		}
 }
 
-/* // Fallback to 2 columns. */
-
-.blocks-gallery-item {
-	width: calc( 100% / 2 - 16px );
+.blocks-gallery-item{
+	width:calc( 100% / 2 - 16px );
 }
 
-/* // 1 column. */
-
-.columns-1 .blocks-gallery-item {
-	width: calc( 100% / 1 - 16px );
+.columns-1 .blocks-gallery-item{
+	width:calc( 100% / 1 - 16px );
 }
 
-/* // 3-8 columns on larger screens. */
+.wp-block-image{
+	width:-webkit-fit-content;
+	width:-moz-fit-content;
+	width:fit-content;
+	max-width:100%;
 
-/* @media ( min-width: break( small ) ) {
-
-	@for $i from 3 through 8 {
-
-		.columns-#{ $i }
-
-		.blocks-gallery-item {
-			width: calc( 100% / #{ $i } - 16px );
-		}
-	}
-} */
-
-/* ////
-/// Image block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-image {
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	max-width: 100%;
-
-	img {
-		max-width: 100%;
+	img{
+		max-width:100%;
 	}
 }
 
-.wp-block-image.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
+.wp-block-image.aligncenter{
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
 	}
 
-.wp-block-image.is-resized {
-		width: -webkit-min-content;
-		width: -moz-min-content;
-		width: min-content;
+.wp-block-image.is-resized{
+		width:-webkit-min-content;
+		width:-moz-min-content;
+		width:min-content;
+		display:-ms-inline-grid;
+		-ms-grid-columns:min-content;
 
-		/* // Emulate min-content for Edge and IE11 */
-		display: -ms-inline-grid;
-		-ms-grid-columns: min-content;
-
-		figcaption {
-			-ms-grid-row: 2;
+		figcaption{
+			-ms-grid-row:2;
 		}
 
-		img {
-			max-width: none;
+		img{
+			max-width:none;
 		}
 	}
 
-.wp-block-image {
-
-	figcaption {
-	}
+img.emoji{
+	max-width:1.25rem;
 }
 
-img.emoji {
-	max-width: 1.25rem;
-}
+.wp-block-latest-posts.is-grid{
+		display:-ms-flexbox;
+		display:flex;
+		-ms-flex-wrap:wrap;
+		    flex-wrap:wrap;
+		padding:0;
+		list-style:none;
 
-/* ////
-/// Latest posts block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-latest-posts.is-grid {
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
-		padding: 0;
-		list-style: none;
-
-		li {
-			margin: 0 16px 16px 0;
-			width: 100%;
+		li{
+			margin:0 16px 16px 0;
+			width:100%;
 		}
 	}
 
-.wp-block-latest-posts {
+.wp-block-latest-posts{
 
-	/* @media ( min-width: break( small ) ) {
-
-		@for $i from 2 through 6 {
-
-			&.columns-#{ $i }
-
-			li {
-				width: calc( ( 100% / #{ $i } ) - 16px );
-			}
-		}
-	} */
-
-	&__post-date {
-		display: block;
+	&__post-date{
+		display:block;
 	}
 }
 
-/* ////
-/// Preformatted block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-preformatted {
-
-}
-
-/* ////
-/// Pullquote block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-pullquote {
-	padding: 3em 0;
-	text-align: center;
+.wp-block-pullquote{
+	padding:3em 0;
+	text-align:center;
 
 	cite,
-	footer {
-		position: relative;
+	footer{
+		position:relative;
 	}
 }
 
-/* ////
-/// Quote block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-quote {
-
-	p {}
-
-	cite {}
+.wp-block-subhead{
+	font-size:1.125em;
+	font-style:italic;
+	opacity:0.75;
 }
 
-/* ////
-/// Separator block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-separator {
-
-}
-
-/* ////
-/// Subhead block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-subhead {
-	font-size: 1.125em;
-	font-style: italic;
-	opacity: 0.75;
-}
-
-/* ////
-/// Table block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-table.has-fixed-layout {}
-
-/* ////
-/// Verse block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-.wp-block-verse {
-
-}
-
-/* ////
-/// Utility imports.
-///
-/// Utilities are helper classes and overrides. This gets loaded last. If
-/// necessary, this is the only place where `!important` rules should go, but
-/// only if necessary.
-///
-/// @group  Utilities
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-/* ////
-/// Accessibility styles.
-///
-/// @group  Utilities
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-/* // Text only shown to screen readers. */
-
-.screen-reader-text {
-	clip: rect( 1px, 1px, 1px, 1px );
-	-webkit-clip-path: inset( 50% );
-	        clip-path: inset( 50% );
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	word-wrap: normal;
-	border: none
+.screen-reader-text{
+	clip:rect( 1px, 1px, 1px, 1px );
+	-webkit-clip-path:inset( 50% );
+	        clip-path:inset( 50% );
+	position:absolute;
+	width:1px;
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	word-wrap:normal;
+	border:none
 }
 
 .screen-reader-text:active,
-	.screen-reader-text:focus {
-		clip: auto;
-		-webkit-clip-path: none;
-		        clip-path: none;
-		display: block;
-		height: auto;
-		width: auto;
-		z-index: 100000;
-		text-decoration: none;
+	.screen-reader-text:focus{
+		clip:auto;
+		-webkit-clip-path:none;
+		        clip-path:none;
+		display:block;
+		height:auto;
+		width:auto;
+		z-index:100000;
+		text-decoration:none;
 	}
 
-/* // Targets the "skip to content" link at the top of the page if it needs extra
-// style rules beyond the screen reader text rules. */
-
-.skip-link {}
-
-/* ////
-/// Alignment classes.
-///
-/// Primarily, we use this to build out style rules for the core WordPress
-/// `.align*` classes.
-///
-/// @group  Utilities
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-@media (min-width: 21rem) {
-	.alignleft {
-		float: left;
-		margin: 0 0 1.5rem 1.5rem;
-		max-width: 50%;
+@media (min-width: 21rem){
+	.alignleft{
+		float:left;
+		margin:0 0 1.5rem 1.5rem;
+		max-width:50%;
 	}
 
-	.alignright {
-		float: left;
-		margin: 0 1.5rem 1.5rem 0;
-		max-width: 50%;
+	.alignright{
+		float:left;
+		margin:0 1.5rem 1.5rem 0;
+		max-width:50%;
 	}
 }
 
-.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	clear: both;
+.aligncenter{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
 }
 
 .alignfull,
-.alignwide {
-	margin-left: calc(-100vw / 2 + 100% / 2);
-	margin-right: calc(-100vw / 2 + 100% / 2);
-	width: auto;
-	max-width: 100vw;
+.alignwide{
+	margin-left:calc(-100vw / 2 + 100% / 2);
+	margin-right:calc(-100vw / 2 + 100% / 2);
+	width:auto;
+	max-width:100vw;
 }
 
-/* ////
-/// Helper classes.
-///
-/// @group  Utilities
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
-
-/* /// Loops through the theme colors and adds utility classes for them. Primarily,
-/// these are the `.has-{$color}-color` and `.has-{$color}-background-color`
-/// classes added via Gutenberg. However, they are useful elsewhere. */
-
-/* @each $color-name, $color-value in block-colors() {
-
-	.has-#{ $color-name }
-
-	-color {
-
-		color : #{ $color-value };
-	}
-
-	.has-#{ $color-name }
-
-	-background-color {
-
-		background-color: #{ $color-value };
-	}
-} */
-
-/* /// Loops through the editor font sizes and adds utility classes for them. This
-/// handles the `.has-{$size}-font-size` classes added via Gutenberg, which may
-/// be useful elsewhere. */
-
-/* @each $font-size-name, $font-size-value in editor-font-sizes() {
-
-	.has-#{ $font-size-name }
-
-	-font-size {
-
-		font-size: #{ $font-size-value };
-	}
-} */
-
-.has-parallax {
-	background-attachment: fixed;
+.has-parallax{
+	background-attachment:fixed;
 }
 
 /*# sourceMappingURL=editor.css.map */

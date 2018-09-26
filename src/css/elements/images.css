@@ -17,6 +17,11 @@ img {
 	border-style: none;
 }
 
+a > img {
+	transition: inherit;
+	backface-visibility: hidden;
+}
+
 svg {
 	overflow: hidden;
 	max-height: 100%;

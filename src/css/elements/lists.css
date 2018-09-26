@@ -15,10 +15,19 @@ article dl {
 	list-style: initial;
 }
 
+section ol,
+section ul,
+nav ol,
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+
 ol ol,
 ul ul,
 ol ul,
-ul ol {
+ul ol,
+ul:last-child, {
 	margin-bottom: 0;
 }
 
@@ -33,14 +42,6 @@ dd {
 
 dfn {
 	font-style: italic;
-}
-
-section ol,
-section ul,
-nav ol,
-nav ul {
-	padding: 0;
-	margin: 0;
 }
 
 /*
