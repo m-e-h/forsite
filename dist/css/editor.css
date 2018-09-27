@@ -746,10 +746,6 @@ div.wp-block-code [aria-label="Code"]{
 		}
 	}
 
-img.emoji{
-	max-width:1.25rem;
-}
-
 .wp-block-latest-posts.is-grid{
 		display:-ms-flexbox;
 		display:flex;

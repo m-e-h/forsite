@@ -1,10 +1,11 @@
-<?php
+<?php Hybrid\View\display( 'header' ); ?>
 
-// Load header/* template.
-Hybrid\View\display( 'header', Hybrid\Template\hierarchy() );
+	<main id="main" class="app-main">
 
-// Load content/* template.
-Hybrid\View\display( 'content', Hybrid\Template\hierarchy() );
+		<?php Hybrid\View\display( 'layouts', Hybrid\Template\hierarchy() ); ?>
 
-// Load footer/* template.
-Hybrid\View\display( 'footer', Hybrid\Template\hierarchy() );
+	</main>
+
+	<?php Hybrid\View\display( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
+
+<?php Hybrid\View\display( 'footer' ); ?>

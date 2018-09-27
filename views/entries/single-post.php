@@ -12,7 +12,7 @@
 
 	<div class="entry__content">
 		<?php the_content() ?>
-		<?php Hybrid\View\display( 'nav/pagination', 'post' ) ?>
+		<?php Hybrid\View\display( 'components', 'pagination-post' ); ?>
 	</div>
 
 	<footer class="entry__footer">
@@ -21,3 +21,5 @@
 	</footer>
 
 </article>
+
+<?php comments_template() ?>
