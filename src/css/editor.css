@@ -1,5 +1,2 @@
-@import "settings";
-@import "elements/editor.css";
-@import "components";
+@import "vowelcss";
 @import "blocks";
-@import "utilities";
