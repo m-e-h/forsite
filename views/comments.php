@@ -1,4 +1,4 @@
-<?php if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! pings_open() ) ) {
+<?php if ( post_password_required() || ( ! have_comments() && ! comments_open() ) ) {
 	return;
 } ?>
 
@@ -8,7 +8,7 @@
 
 		<h2 class="comments__title"><?php comments_number() ?></h2>
 
-		<?php Hybrid\View\display( 'components', 'pagination-comments' ) ?>
+		<?= Hybrid\View\render( 'components', 'pagination-comments' ) ?>
 
 		<ol class="comments__list">
 

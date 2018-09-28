@@ -1,24 +1,24 @@
 <!doctype html>
-<html <?php Hybrid\Attr\display( 'html' ); ?>>
+<html <?= Hybrid\Attr\render( 'html' ); ?>>
 
 <head>
 <?php wp_head(); ?>
 </head>
 
-<body <?php Hybrid\Attr\display( 'body' ); ?>>
+<body <?= Hybrid\Attr\render( 'body' ); ?>>
 
 	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'forsite' ); ?></a>
 
 	<header class="app-header">
 
 		<div class="app-header__branding">
-			<?php the_custom_logo(); ?>
-			<?php Hybrid\Site\display_title( [ 'class' => 'u-h4' ] ); ?>
-			<?php Hybrid\Site\display_description(); ?>
+			<?= get_custom_logo(); ?>
+			<?= Hybrid\Site\render_title( [ 'class' => 'u-h4 u-m0' ] ); ?>
+			<?= Hybrid\Site\render_description(); ?>
 		</div>
 
-		<?php the_custom_header_markup(); ?>
+		<?= get_custom_header_markup(); ?>
 
-		<?php Hybrid\View\display( 'components', 'menu', [ 'location' => 'primary' ] ); ?>
+		<?= Hybrid\View\render( 'components', 'menu', [ 'location' => 'primary' ] ); ?>
 
 	</header>

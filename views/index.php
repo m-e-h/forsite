@@ -1,11 +1,11 @@
-<?php Hybrid\View\display( 'header' ); ?>
+<?= Hybrid\View\render( 'header' ); ?>
 
 	<main id="main" class="app-main">
 
-		<?php Hybrid\View\display( 'layouts', Hybrid\Template\hierarchy() ); ?>
+		<?= Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
 
 	</main>
 
-	<?php Hybrid\View\display( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
+	<?= Hybrid\View\render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
 
-<?php Hybrid\View\display( 'footer' ); ?>
+<?= Hybrid\View\render( 'footer' ); ?>
