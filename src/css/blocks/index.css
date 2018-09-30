@@ -29,3 +29,124 @@
 @import "subhead";
 @import "table";
 @import "verse";
+
+.entry__content > * {
+	margin: $h2 auto;
+	max-width: $paragraph-width;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.wp-block-video video {
+	max-width: $paragraph-width;
+}
+
+.wp-block-image img {
+	display: block;
+}
+
+.wp-block-image.alignleft,
+.wp-block-image.alignright {
+	width: 100%;
+}
+
+.wp-block-image.alignfull img {
+	width: 100vw;
+}
+
+.wp-block-cover-text p {
+	padding: $base-space 1rem;
+}
+
+ul.wp-block-latest-posts.alignwide,
+ul.wp-block-latest-posts.alignfull,
+ul.wp-block-latest-posts.is-grid.alignwide,
+ul.wp-block-latest-posts.is-grid.alignwide {
+	padding: 0 1rem;
+}
+
+.wp-block-table {
+	display: block;
+	overflow-x: auto;
+}
+
+.wp-block-table table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.wp-block-embed.type-video > .wp-block-embed__wrapper {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%;
+}
+
+.wp-block-embed.type-video > .wp-block-embed__wrapper > iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.wp-block-quote.is-large {
+	margin: 0 auto $h5;
+}
+
+.wp-block-pullquote > p:first-child {
+	margin-top: 0;
+}
+
+.wp-block-separator {
+	margin: $h1 auto;
+	padding: 0;
+}
+
+@media (--md) {
+	.wp-block-cover-text p {
+		padding: $base-space 0;
+	}
+
+	.entry__content > * {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+# Block Color Palette Colors
+--------------------------------------------------------------*/
+.has-strong-blue-color {
+	color: $blue6;
+}
+
+.has-strong-blue-background-color {
+	background-color: $blue6;
+}
+
+.has-lighter-blue-color {
+	color: $blue4;
+}
+
+.has-lighter-blue-background-color {
+	background-color: $blue4;
+}
+
+.has-very-light-gray-color {
+	color: $color-grey-bg;
+}
+
+.has-very-light-gray-background-color {
+	background-color: $color-grey-bg;
+}
+
+.has-very-dark-gray-color {
+	color: $color-grey-char;
+}
+
+.has-very-dark-gray-background-color {
+	background-color: $color-grey-char;
+}

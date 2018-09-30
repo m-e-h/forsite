@@ -14,8 +14,8 @@
 		padding: 0;
 		list-style: none;
 
-		li {
-			margin: 0 16px 16px 0;
+		& li {
+			margin: 0 1rem 1rem 0;
 			width: 100%;
 		}
 	}
@@ -27,7 +27,7 @@
 			&.columns-#{ $i }
 
 			li {
-				width: calc( ( 100% / #{ $i } ) - 16px );
+				width: calc( ( 100% / #{ $i } ) - 1rem );
 			}
 		}
 	} */

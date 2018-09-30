@@ -10,9 +10,9 @@
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
-	min-height: 430px;
+	min-height: 25rem;
 	width: 100%;
-	margin: 0 0 1.5em;
+	margin: 0 0 $base-space;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -51,18 +51,18 @@
 /* // Paragraph of text shown within the cover image element. */
 .wp-block-cover-image-text {
 	color: color-mod( white );
-	font-size: 2em;
+	font-size: $h2;
 	line-height: 1.25;
 	z-index: 1;
 	margin-bottom: 0;
 	max-width: $container;
-	padding: 14px;
+	padding: 1rem;
 	text-align: center;
 
-	a,
-	a:hover,
-	a:focus,
-	a:active {
+	& a,
+	& a:hover,
+	& a:focus,
+	& a:active {
 		color: color-mod( white );
 	}
 }

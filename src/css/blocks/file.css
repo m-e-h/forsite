@@ -7,7 +7,7 @@
 //// */
 
 .wp-block-file {
-	margin-bottom: 1.5em;
+	margin-bottom: $base-space;
 
 	&.aligncenter {
 		text-align: center;
@@ -18,23 +18,11 @@
 	}
 
 	&__button {
-		background: color-mod( black );
-		color: color-mod( white );
-		padding: 0.5em 1em;
-		text-decoration: none;
-
-		&:hover,
-		&:visited,
-		&:focus,
-		&:active {
-			color: color-mod( white );
-			opacity: 0.85;
-			text-decoration: none;
-		}
+		@extend button;
 	}
 }
 
 /* // Give the file block button some spacing to the left if there's another element preceding it. */
 * + .wp-block-file__button {
-	margin-left: 0.75em;
+	margin-left: 1rem;
 }

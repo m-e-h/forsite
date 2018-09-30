@@ -7,7 +7,7 @@
 //// */
 
 .wp-block-subhead {
-	font-size: 1.125em;
+	font-size: $h5;
 	font-style: italic;
 	opacity: 0.75;
 }

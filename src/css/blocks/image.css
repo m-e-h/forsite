@@ -10,7 +10,7 @@
 	width: fit-content;
 	max-width: 100%;
 
-	img {
+	& img {
 		max-width: 100%;
 	}
 
@@ -28,15 +28,12 @@
 		display: -ms-inline-grid;
 		-ms-grid-columns: min-content;
 
-		figcaption {
+		& figcaption {
 			-ms-grid-row: 2;
 		}
 
-		img {
+		& img {
 			max-width: none;
 		}
-	}
-
-	figcaption {
 	}
 }

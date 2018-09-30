@@ -5,7 +5,10 @@ module.exports = ctx => ({
 		"postcss-simple-vars": {},
 		"postcss-preset-env": {
 			stage: 0,
-			features: { "color-mod-function": true }
+			features: {
+				"color-mod-function": true,
+				"all-property": false
+			}
 		},
 		"postcss-extend-rule": {},
 		"postcss-discard-comments": {},

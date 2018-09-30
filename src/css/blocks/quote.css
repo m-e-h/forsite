@@ -7,8 +7,7 @@
 //// */
 
 .wp-block-quote {
+	padding-left: 1em;
 
-	p {}
-
-	cite {}
+	& cite {}
 }

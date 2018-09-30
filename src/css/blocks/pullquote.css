@@ -7,11 +7,14 @@
 //// */
 
 .wp-block-pullquote {
-	padding: 3em 0;
+	padding: $h1 0;
 	text-align: center;
+	border-top: 4px solid #555d66;
+	border-bottom: 4px solid #555d66;
 
-	cite,
-	footer {
-		position: relative;
+	& blockquote {
+		text-align: center;
+		margin: 0 $base-space;
+		border-left: none;
 	}
 }
