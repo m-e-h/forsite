@@ -12,4 +12,4 @@
  * @link      https://github.com/m-e-h/forsite
  */
 
-import { customHeader } from './customize-preview/custom-header';
+import { customHeader } from "./customize-preview/custom-header";

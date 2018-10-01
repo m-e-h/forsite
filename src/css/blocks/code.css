@@ -7,9 +7,11 @@
 //// */
 
 div.wp-block-code {
+
 	@extend pre;
 }
 
 [aria-label="Code"] {
+
 	@extend code;
 }

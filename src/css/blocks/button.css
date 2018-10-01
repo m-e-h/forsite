@@ -10,5 +10,6 @@
 }
 
 .wp-block-button__link {
+
 	@extend button;
 }

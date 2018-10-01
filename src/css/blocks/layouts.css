@@ -1,0 +1,15 @@
+article > div > * {
+	margin: $h2 auto;
+	max-width: var(--content-width);
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* .wp-block-video video {
+  max-width: var(--content-width);
+}
+
+.wp-block-image img {
+  display: block;
+} */
+

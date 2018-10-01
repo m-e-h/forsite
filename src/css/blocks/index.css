@@ -11,6 +11,7 @@
 */
 
 /* Import core blocks. */
+@import "layouts";
 @import "audio";
 @import "button";
 @import "code";
@@ -30,12 +31,7 @@
 @import "table";
 @import "verse";
 
-.entry__content > * {
-	margin: $h2 auto;
-	max-width: $paragraph-width;
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
+/*
 
 .wp-block-video video {
 	max-width: $paragraph-width;
@@ -106,6 +102,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media (--md) {
+
 	.wp-block-cover-text p {
 		padding: $base-space 0;
 	}
@@ -116,9 +113,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 }
 
-/*--------------------------------------------------------------
-# Block Color Palette Colors
---------------------------------------------------------------*/
+
 .has-strong-blue-color {
 	color: $blue6;
 }
@@ -149,4 +144,4 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .has-very-dark-gray-background-color {
 	background-color: $color-grey-char;
-}
+} */

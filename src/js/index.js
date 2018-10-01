@@ -20,6 +20,4 @@
  * @access public
  * @return void
  */
-(function() {
-
-})();
+(function() {})();

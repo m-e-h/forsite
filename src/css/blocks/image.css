@@ -7,26 +7,13 @@
 //// */
 
 .wp-block-image {
-	width: fit-content;
-	max-width: 100%;
 
-	& img {
-		max-width: 100%;
+	&.alignfull img {
+		width: 100vw;
 	}
 
-	&.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-	}
-
-	&.is-resized {
+	/* &.is-resized {
 		width: min-content;
-
-		/* // Emulate min-content for Edge and IE11 */
-		display: -ms-inline-grid;
-		-ms-grid-columns: min-content;
 
 		& figcaption {
 			-ms-grid-row: 2;
@@ -35,5 +22,5 @@
 		& img {
 			max-width: none;
 		}
-	}
+	} */
 }
