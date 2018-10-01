@@ -13,6 +13,7 @@ module.exports = ctx => ({
 		"postcss-extend-rule": {},
 		"postcss-discard-comments": {},
 		"postcss-discard-empty": {},
+		"postcss-increase-specificity": ctx.env === "editor" ? {stackableRoot: '[data-block]',repeat: 2} : false,
 		cssnano: ctx.env === "production" ? { preset: "default" } : false
 	}
 });
