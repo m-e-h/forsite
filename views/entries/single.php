@@ -1,6 +1,6 @@
 <article <?php Hybrid\Attr\display( 'entry' ); ?>>
 
-	<header class="entry__header">
+	<header class="entry__header u-text-center">
 		<?php Hybrid\Post\display_title(); ?>
 	</header>
 

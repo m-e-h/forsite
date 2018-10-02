@@ -1,6 +1,6 @@
 <article <?php Hybrid\Attr\display( 'entry' ) ?>>
 
-	<header class="entry__header">
+	<header class="entry__header u-text-center">
 		<?php Hybrid\Post\display_title() ?>
 
 		<div class="entry__byline">
@@ -15,7 +15,7 @@
 		<?php Hybrid\View\display( 'components', 'pagination-post' ); ?>
 	</div>
 
-	<footer class="entry__footer">
+	<footer class="entry__footer u-container">
 		<?php Hybrid\Post\display_terms( [ 'taxonomy' => 'category' ] ) ?>
 		<?php Hybrid\Post\display_terms( [ 'taxonomy' => 'post_tag', 'before' => Forsite\sep() ] ) ?>
 	</footer>

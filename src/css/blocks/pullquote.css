@@ -7,14 +7,15 @@
 //// */
 
 .wp-block-pullquote {
-	padding: $h1 0;
+	color: var(--color-2-dark);
+	padding: var(--base-space) 0;
 	text-align: center;
-	border-top: 4px solid #555d66;
-	border-bottom: 4px solid #555d66;
+	border-top: 0.25rem solid var(--color-2);
+	border-bottom: 0.25rem solid var(--color-2);
 
 	& blockquote {
 		text-align: center;
-		margin: 0 $base-space;
-		border-left: none;
+		margin: 0 var(--base-space);
+		border: none;
 	}
 }

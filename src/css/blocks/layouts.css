@@ -1,8 +1,18 @@
 article > div > * {
-	margin: $h2 auto;
+	margin: var(--base-space) auto;
 	max-width: var(--content-width);
 	padding-left: 1rem;
 	padding-right: 1rem;
+}
+
+.entry__content h1,
+.entry__content h2,
+.entry__content h3,
+.entry__content h4,
+.entry__content h5,
+.entry__content h6 {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
 
 /* .wp-block-video video {
@@ -12,4 +22,3 @@ article > div > * {
 .wp-block-image img {
   display: block;
 } */
-
