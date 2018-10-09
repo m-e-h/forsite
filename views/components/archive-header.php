@@ -1,6 +1,6 @@
 <?php if ( ! is_front_page() ) : ?>
 
-	<div class="archive-header">
+	<div class="archive-header u-1of1 u-p">
 
 		<h1 class="archive-header__title"><?php the_archive_title() ?></h1>
 

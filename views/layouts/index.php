@@ -1,3 +1,5 @@
+<main id="main" class="app-main o-grid u-content-width">
+
 <?php Hybrid\View\display( 'components', 'archive-header' ); ?>
 
 <?php if ( have_posts() ) : ?>
@@ -15,3 +17,6 @@
 
 	<?php
 endif;
+?>
+
+</main>
