@@ -16,11 +16,10 @@
 	&.alignright {
 		text-align: right;
 	}
+}
 
-	&__button {
-
-		@extend button;
-	}
+.wp-block-file__button {
+	@extend button;
 }
 
 /* // Give the file block button some spacing to the left if there's another element preceding it. */
