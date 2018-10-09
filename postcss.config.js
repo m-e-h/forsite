@@ -13,7 +13,7 @@ module.exports = ctx => ({
 		"postcss-extend-rule": {},
 		"postcss-discard-comments": {},
 		"postcss-discard-empty": {},
-		"postcss-scope-to": ctx.env === "editor" ? {scopeTo: ".editor-block-list__block-edit"} : false,
+		"postcss-scope-to": ctx.env === "editor" ? {scopeTo: "[data-block]"} : false,
 		cssnano: ctx.env === "production" ? { preset: "default" } : false
 	}
 });

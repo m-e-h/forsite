@@ -270,7 +270,7 @@ h6 {
 	font-weight: inherit;
 	line-height: 1.2;
 	line-height: var(--heading-line-height);
-	margin: 0 0 1rem;
+	margin: 0 0 1em;
 }
 
 h1 > a,
@@ -290,7 +290,6 @@ article h4,
 article h5,
 article h6 {
 	margin-top: 1.5em;
-	margin-bottom: 1em;
 }
 
 abbr[title],
