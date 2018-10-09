@@ -7,7 +7,6 @@
 	</header>
 
 	<div class="entry__content">
-	<h1>Archive</h1>
 		<?php
 		if ( has_excerpt() && ! is_singular() ) {
 			the_excerpt();
