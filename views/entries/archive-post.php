@@ -12,8 +12,15 @@
 		</div>
 	</header>
 
-	<div class="entry__summary">
-		<?php the_excerpt(); ?>
+	<div class="entry__content">
+	<h1>Archive Post</h1>
+		<?php
+		if ( has_excerpt() ) {
+			the_excerpt();
+		} else {
+			the_content();
+		}
+		?>
 	</div>
 
 </article>

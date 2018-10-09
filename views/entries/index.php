@@ -6,8 +6,8 @@
 		<?php Hybrid\Post\display_title() ?>
 	</header>
 
-	<div class="entry__summary">
-		<?php the_excerpt() ?>
+	<div class="entry__content">
+		<?php the_content(); ?>
 	</div>
 
 </article>

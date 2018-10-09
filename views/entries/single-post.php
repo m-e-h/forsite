@@ -12,7 +12,7 @@
 
 	<div class="entry__content">
 		<?php the_content() ?>
-		<?php Hybrid\View\display( 'components', 'pagination-post' ); ?>
+		<?= Hybrid\View\render( 'components', 'pagination-post' ); ?>
 	</div>
 
 	<footer class="entry__footer u-container">
