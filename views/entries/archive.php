@@ -1,4 +1,4 @@
-<article <?php Hybrid\Attr\display( 'entry' ); ?>>
+<article <?php Hybrid\Attr\display( 'entry', '', [ 'class' => 'o-cell' ] ); ?>>
 
 	<?php the_post_thumbnail( 'medium', [ 'class' => 'entry__image' ] ); ?>
 
