@@ -4,7 +4,7 @@
 		<?php Hybrid\Post\display_title(); ?>
 	</header>
 
-	<div class="entry__content">
+	<div class="entry__content u-content-wrap">
 		<?php the_content(); ?>
 		<?= Hybrid\View\render( 'components', 'pagination-post' ); ?>
 	</div>

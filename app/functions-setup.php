@@ -34,7 +34,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Sets the theme content width. This variable is also set in the
 	// `src/scss/settings/_dimensions.scss` file.
-	$GLOBALS['content_width'] = 750;
+	$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 999 );
 
 	// Load theme translations.
 	load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'src/lang' ) );

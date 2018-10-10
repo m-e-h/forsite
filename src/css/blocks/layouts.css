@@ -1,8 +1,6 @@
 article > div > * {
-	margin: var(--base-space) auto;
-	max-width: var(--content-width);
-	padding-left: 1rem;
-	padding-right: 1rem;
+	margin-top: var(--base-space);
+	margin-bottom: var(--base-space);
 }
 
 .entry__content h1,

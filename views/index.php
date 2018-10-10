@@ -1,7 +1,20 @@
-<?= Hybrid\View\render( 'header' ); ?>
+<!doctype html>
+<html <?= Hybrid\Attr\render( 'html' ); ?>>
 
-<?= Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
+	<head>
+		<?php wp_head(); ?>
+	</head>
 
-<?= Hybrid\View\render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
+	<body <?= Hybrid\Attr\render( 'body' ); ?>>
 
-<?= Hybrid\View\render( 'footer' ); ?>
+		<?= Hybrid\View\render( 'header' ); ?>
+
+		<?= Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
+
+		<?= Hybrid\View\render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
+
+		<?= Hybrid\View\render( 'footer' ); ?>
+
+	</body>
+
+</html>

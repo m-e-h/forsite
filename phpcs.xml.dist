@@ -35,11 +35,13 @@
 	<!-- Include the WordPress ruleset, with exclusions. WordPress-Extra Includes WordPress-Core. -->
 	<!-- See: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
 	<rule ref="WordPress-Extra">
-		<!-- Allow short open tags. -->
-		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
-
 		<!-- We have cache busting via dist/mix-manifest.json file. -->
 		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion"/>
+	</rule>
+
+	<rule ref="WordPress-Core">
+		<!-- Allow short open tags. -->
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
 	</rule>
 
 	<!-- Include the WordPress Docs ruleset. -->

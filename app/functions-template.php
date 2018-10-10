@@ -15,6 +15,23 @@
 namespace Forsite;
 
 /**
+ * Set the content-width as a CSS custom property.
+ *
+ * @access public
+ * @return void
+ */
+add_action( 'wp_head', function() {
+
+	$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : false;
+
+	if ( $content_width ) { ?>
+		<style>:root{--content-width:<?= "{$content_width}px" ?>};</style>
+	<?php
+	}
+
+});
+
+/**
  * Returns the metadata separator.
  *
  * @since  1.0.0
