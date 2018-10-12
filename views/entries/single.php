@@ -1,12 +1,14 @@
-<article <?php Hybrid\Attr\display( 'entry' ); ?>>
+<article <?= Hybrid\Attr\render( 'entry' ); ?>>
 
-	<header class="entry__header u-text-center">
-		<?php Hybrid\Post\display_title(); ?>
-	</header>
+	<?= Hybrid\View\render( 'components', 'post-header' ); ?>
 
 	<div class="entry__content u-content-wrap">
-		<?php the_content(); ?>
-		<?= Hybrid\View\render( 'components', 'pagination-post' ); ?>
+		<?php the_content() ?>
+		<?= Hybrid\View\render( 'components', 'post-pagination' ); ?>
 	</div>
 
+	<?= Hybrid\View\render( 'components', 'post-footer' ); ?>
+
 </article>
+
+<?php comments_template() ?>

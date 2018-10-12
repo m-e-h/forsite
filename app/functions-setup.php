@@ -69,11 +69,11 @@ add_action( 'after_setup_theme', function() {
 
 	// Add custom logo support.
 	add_theme_support( 'custom-logo', [
-		'width'       => null,
-		'height'      => null,
-		'flex-width'  => null,
-		'flex-height' => false,
-		'header-text' => ''
+		'height'      => 100,
+		'width'       => 100,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
 	] );
 
 	// Editor color palette. These colors are also defined in the
@@ -148,47 +148,15 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'custom-background', [
 		'default-image'          => '',
 		'default-preset'         => 'default',
-		'default-position-x'     => 'left',
-		'default-position-y'     => 'top',
-		'default-size'           => 'auto',
-		'default-repeat'         => 'repeat',
-		'default-attachment'     => 'scroll',
+		'default-position-x'     => 'center',
+		'default-position-y'     => 'center',
+		'default-size'           => 'cover',
+		'default-repeat'         => 'no-repeat',
+		'default-attachment'     => 'fixed',
 		'default-color'          => '',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
-	] );
-
-}, 15 );
-
-/**
- * Adds support for the custom header feature. This is in its own function
- * hooked to `after_setup_theme` so that we can give it a later priority.  This
- * is so that child themes can more easily overwrite this feature.  Note that
- * overwriting the header should be done *before* rather than after.
- *
- * @link   https://developer.wordpress.org/reference/functions/add_theme_support/#custom-header
- * @since  1.0.0
- * @access public
- * @return void
- */
-add_action( 'after_setup_theme', function() {
-
-	add_theme_support( 'custom-header', [
-		'default-image'          => '',
-		'random-default'         => false,
-		'width'                  => 750,
-		'height'                 => 422,
-		'flex-height'            => false,
-		'flex-width'             => false,
-		'default-text-color'     => '',
-		'header-text'            => true,
-		'uploads'                => true,
-		'wp-head-callback'       => '',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => '',
-		'video'                  => false,
-		'video-active-callback'  => 'is_front_page'
 	] );
 
 }, 15 );
@@ -252,6 +220,11 @@ add_action( 'widgets_init', function() {
 	register_sidebar( [
 		'id'   => 'primary',
 		'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' )
+	] + $args );
+
+	register_sidebar( [
+		'id'   => 'footer',
+		'name' => esc_html_x( 'Footer', 'sidebar', 'forsite' )
 	] + $args );
 
 }, 5 );

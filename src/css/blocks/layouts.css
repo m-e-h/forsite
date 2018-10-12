@@ -1,6 +1,12 @@
 article > div > * {
-	margin-top: var(--base-space);
-	margin-bottom: var(--base-space);
+	margin-top: var(--gutter);
+	margin-bottom: var(--gutter);
+}
+
+article > div > p {
+	/* margin-top: calc(var(--gutter) * -0.5); */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .entry__content h1,
@@ -11,6 +17,14 @@ article > div > * {
 .entry__content h6 {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+}
+
+.alignfull {
+	margin: 0;
+}
+
+.alignfull + * {
+	margin-top: var(--gutter);
 }
 
 /* .wp-block-video video {

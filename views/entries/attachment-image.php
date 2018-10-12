@@ -19,7 +19,7 @@
 
 	<div class="entry__content">
 		<?php the_content(); ?>
-		<?php Hybrid\View\display( 'components', 'pagination-post' ); ?>
+		<?php Hybrid\View\display( 'components', 'post-pagination' ); ?>
 	</div>
 
 	<?php

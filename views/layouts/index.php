@@ -13,7 +13,7 @@
 
 	<?php endwhile ?>
 
-	<?= Hybrid\View\render( 'components', 'pagination-posts' ); ?>
+	<?= Hybrid\View\render( 'components', 'posts-pagination' ); ?>
 
 	<?php
 endif;

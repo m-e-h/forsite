@@ -1,5 +1,6 @@
 :root {
 	--base-space: 1.5rem;
+	--gutter: calc(var(--base-space) * 1.5);
 
 	--line-height: 1.5;
 	--heading-line-height: 1.2;
@@ -11,7 +12,7 @@
 		Courier, monospace;
 
 	--color-text: #24292e;
-	--color-text-light: #fff;
+	--color-text-light: #90a4ae;
 	--color-1: #2982b9;
 	--color-1-light: #8cbcd9;
 	--color-1-dark: #206691;
@@ -20,9 +21,8 @@
 	--color-2-dark: #20924c;
 
 	--opacity: 0.7;
-	--paragraph-width: 64rem;
-	--content-width: 70rem;
-	--content-wide: calc(var(--content-width) + 15vw);
+	--content-width: 50rem;
+	--content-wide: calc(var(--content-width) + 30rem);
 	--fluid-font: calc(
 		var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21em) / (90 - 21))
 	);
@@ -45,8 +45,7 @@
 	--space-3: 3rem;
 	--space-4: 4rem;
 	--space-5: 5rem;
-	--gutter: var(--base-space);
-	--gutter-half: 0.75rem;
+	--gutter-half: calc(var(--base-space) * 0.5);
 	--gutter-mobile: var(--space-1);
 
 	--color-frost-1: rgba(248, 249, 249, 0.15);
@@ -138,6 +137,8 @@ main {
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	padding-bottom: 1.5rem;
+	padding-bottom: var(--base-space);
 }
 
 article {
@@ -148,29 +149,30 @@ article {
 body > header {
 	background-color: #fff;
 	display: flex;
-	justify-content: space-around;
+	font-size: 0.9rem;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	padding: 0.5rem;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 body > footer {
-	padding-left: 10%;
-	padding-right: 10%;
+	margin-top: auto;
 }
 
-body > aside {
+body > footer > aside {
+	max-width: calc(50rem + 30rem);
+	max-width: var(--content-wide);
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin-top: auto;
-}
-
-body > aside:last-of-type {
-	flex-direction: row;
-	margin-top: auto;
+	padding-top: 1.5rem;
+	padding-top: var(--base-space);
+	padding-bottom: 1.5rem;
+	padding-bottom: var(--base-space);
 }
 
 a {
@@ -644,7 +646,7 @@ blockquote cite {
 
 form {
 	margin-bottom: 1.5rem;
-	max-width: 70rem;
+	max-width: 50rem;
 	max-width: var(--content-width);
 }
 
@@ -689,7 +691,7 @@ textarea {
 	font-size: 1rem;
 	line-height: 1.5;
 	background-color: rgba(248, 249, 249, 0.9);
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 	vertical-align: baseline;
 	font-weight: inherit;
@@ -878,7 +880,7 @@ figcaption {
 	margin-top: 0.5rem;
 	display: block;
 	font-size: 0.9rem;
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 }
 
@@ -893,13 +895,13 @@ figcaption {
 .o-cell {
 	min-width: 300px;
 	max-width: calc(33.33333% - 1.5rem);
-	max-width: calc(33.33333% - var(--gutter));
-	margin-left: calc(1.5rem / 2);
-	margin-left: calc(var(--gutter) / 2);
-	margin-right: calc(1.5rem / 2);
-	margin-right: calc(var(--gutter) / 2);
+	max-width: calc(33.33333% - var(--base-space));
+	margin-left: calc(1.5rem * 0.5);
+	margin-left: calc(var(--base-space) * 0.5);
+	margin-right: calc(1.5rem * 0.5);
+	margin-right: calc(var(--base-space) * 0.5);
 	margin-bottom: 1.5rem;
-	margin-bottom: var(--gutter);
+	margin-bottom: var(--base-space);
 }
 
 .u-list-naked,
@@ -1175,12 +1177,11 @@ body:not(.search) .trail-end > span,
 }
 
 .u-max-width {
-	max-width: calc(70rem + 15vw);
+	max-width: calc(50rem + 30rem);
 	max-width: var(--content-wide);
 }
 
 .u-text-wrap {
-	max-width: calc(64rem + 1.5rem);
 	max-width: calc(var(--paragraph-width) + 1.5rem);
 	margin-left: auto;
 	margin-right: auto;
@@ -1188,7 +1189,7 @@ body:not(.search) .trail-end > span,
 
 .u-content-width {
 	width: 100%;
-	max-width: 70rem;
+	max-width: 50rem;
 	max-width: var(--content-width);
 	margin-left: auto;
 	margin-right: auto;
@@ -1196,14 +1197,14 @@ body:not(.search) .trail-end > span,
 
 .u-content-wide {
 	width: 100%;
-	max-width: calc(70rem + 15vw);
+	max-width: calc(50rem + 30rem);
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-max-center {
-	max-width: calc(70rem + 15vw);
+	max-width: calc(50rem + 30rem);
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
@@ -1226,65 +1227,65 @@ body:not(.search) .trail-end > span,
 }
 
 .u-1of2 {
-	flex: 0 0 calc(50% - 1.5rem);
+	flex: 0 0 calc(50% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(50% - var(--gutter));
-	max-width: calc(50% - 1.5rem);
+	max-width: calc(50% - calc(1.5rem * 1.5));
 	max-width: calc(50% - var(--gutter));
 }
 
 .u-1of3 {
-	flex: 0 0 calc(33.33% - 1.5rem);
+	flex: 0 0 calc(33.33% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(33.33% - var(--gutter));
-	max-width: calc(33.33% - 1.5rem);
+	max-width: calc(33.33% - calc(1.5rem * 1.5));
 	max-width: calc(33.33% - var(--gutter));
 }
 
 .u-2of3 {
-	flex: 0 0 calc(66.66% - 1.5rem);
+	flex: 0 0 calc(66.66% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(66.66% - var(--gutter));
-	max-width: calc(66.66% - 1.5rem);
+	max-width: calc(66.66% - calc(1.5rem * 1.5));
 	max-width: calc(66.66% - var(--gutter));
 }
 
 .u-1of4 {
-	flex: 0 0 calc(25% - 1.5rem);
+	flex: 0 0 calc(25% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(25% - var(--gutter));
-	max-width: calc(25% - 1.5rem);
+	max-width: calc(25% - calc(1.5rem * 1.5));
 	max-width: calc(25% - var(--gutter));
 }
 
 .u-3of4 {
-	flex: 0 0 calc(75% - 1.5rem);
+	flex: 0 0 calc(75% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(75% - var(--gutter));
-	max-width: calc(75% - 1.5rem);
+	max-width: calc(75% - calc(1.5rem * 1.5));
 	max-width: calc(75% - var(--gutter));
 }
 
 .u-1of5 {
-	flex: 0 0 calc(20% - 1.5rem);
+	flex: 0 0 calc(20% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(20% - var(--gutter));
-	max-width: calc(20% - 1.5rem);
+	max-width: calc(20% - calc(1.5rem * 1.5));
 	max-width: calc(20% - var(--gutter));
 }
 
 .u-2of5 {
-	flex: 0 0 calc(40% - 1.5rem);
+	flex: 0 0 calc(40% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(40% - var(--gutter));
-	max-width: calc(40% - 1.5rem);
+	max-width: calc(40% - calc(1.5rem * 1.5));
 	max-width: calc(40% - var(--gutter));
 }
 
 .u-3of5 {
-	flex: 0 0 calc(60% - 1.5rem);
+	flex: 0 0 calc(60% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(60% - var(--gutter));
-	max-width: calc(60% - 1.5rem);
+	max-width: calc(60% - calc(1.5rem * 1.5));
 	max-width: calc(60% - var(--gutter));
 }
 
 .u-4of5 {
-	flex: 0 0 calc(80% - 1.5rem);
+	flex: 0 0 calc(80% - calc(1.5rem * 1.5));
 	flex: 0 0 calc(80% - var(--gutter));
-	max-width: calc(80% - 1.5rem);
+	max-width: calc(80% - calc(1.5rem * 1.5));
 	max-width: calc(80% - var(--gutter));
 }
 
@@ -1295,65 +1296,65 @@ body:not(.search) .trail-end > span,
 	}
 
 	.u-1of2-md {
-		flex: 0 0 calc(50% - 1.5rem);
+		flex: 0 0 calc(50% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(50% - var(--gutter));
-		max-width: calc(50% - 1.5rem);
+		max-width: calc(50% - calc(1.5rem * 1.5));
 		max-width: calc(50% - var(--gutter));
 	}
 
 	.u-1of3-md {
-		flex: 0 0 calc(33.33% - 1.5rem);
+		flex: 0 0 calc(33.33% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(33.33% - var(--gutter));
-		max-width: calc(33.33% - 1.5rem);
+		max-width: calc(33.33% - calc(1.5rem * 1.5));
 		max-width: calc(33.33% - var(--gutter));
 	}
 
 	.u-2of3-md {
-		flex: 0 0 calc(66.66% - 1.5rem);
+		flex: 0 0 calc(66.66% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(66.66% - var(--gutter));
-		max-width: calc(66.66% - 1.5rem);
+		max-width: calc(66.66% - calc(1.5rem * 1.5));
 		max-width: calc(66.66% - var(--gutter));
 	}
 
 	.u-1of4-md {
-		flex: 0 0 calc(25% - 1.5rem);
+		flex: 0 0 calc(25% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(25% - var(--gutter));
-		max-width: calc(25% - 1.5rem);
+		max-width: calc(25% - calc(1.5rem * 1.5));
 		max-width: calc(25% - var(--gutter));
 	}
 
 	.u-3of4-md {
-		flex: 0 0 calc(75% - 1.5rem);
+		flex: 0 0 calc(75% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(75% - var(--gutter));
-		max-width: calc(75% - 1.5rem);
+		max-width: calc(75% - calc(1.5rem * 1.5));
 		max-width: calc(75% - var(--gutter));
 	}
 
 	.u-1of5-md {
-		flex: 0 0 calc(20% - 1.5rem);
+		flex: 0 0 calc(20% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(20% - var(--gutter));
-		max-width: calc(20% - 1.5rem);
+		max-width: calc(20% - calc(1.5rem * 1.5));
 		max-width: calc(20% - var(--gutter));
 	}
 
 	.u-2of5-md {
-		flex: 0 0 calc(40% - 1.5rem);
+		flex: 0 0 calc(40% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(40% - var(--gutter));
-		max-width: calc(40% - 1.5rem);
+		max-width: calc(40% - calc(1.5rem * 1.5));
 		max-width: calc(40% - var(--gutter));
 	}
 
 	.u-3of5-md {
-		flex: 0 0 calc(60% - 1.5rem);
+		flex: 0 0 calc(60% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(60% - var(--gutter));
-		max-width: calc(60% - 1.5rem);
+		max-width: calc(60% - calc(1.5rem * 1.5));
 		max-width: calc(60% - var(--gutter));
 	}
 
 	.u-4of5-md {
-		flex: 0 0 calc(80% - 1.5rem);
+		flex: 0 0 calc(80% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(80% - var(--gutter));
-		max-width: calc(80% - 1.5rem);
+		max-width: calc(80% - calc(1.5rem * 1.5));
 		max-width: calc(80% - var(--gutter));
 	}
 
@@ -1369,65 +1370,65 @@ body:not(.search) .trail-end > span,
 	}
 
 	.u-1of2-lg {
-		flex: 0 0 calc(50% - 1.5rem);
+		flex: 0 0 calc(50% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(50% - var(--gutter));
-		max-width: calc(50% - 1.5rem);
+		max-width: calc(50% - calc(1.5rem * 1.5));
 		max-width: calc(50% - var(--gutter));
 	}
 
 	.u-1of3-lg {
-		flex: 0 0 calc(33.33% - 1.5rem);
+		flex: 0 0 calc(33.33% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(33.33% - var(--gutter));
-		max-width: calc(33.33% - 1.5rem);
+		max-width: calc(33.33% - calc(1.5rem * 1.5));
 		max-width: calc(33.33% - var(--gutter));
 	}
 
 	.u-2of3-lg {
-		flex: 0 0 calc(66.66% - 1.5rem);
+		flex: 0 0 calc(66.66% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(66.66% - var(--gutter));
-		max-width: calc(66.66% - 1.5rem);
+		max-width: calc(66.66% - calc(1.5rem * 1.5));
 		max-width: calc(66.66% - var(--gutter));
 	}
 
 	.u-1of4-lg {
-		flex: 0 0 calc(25% - 1.5rem);
+		flex: 0 0 calc(25% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(25% - var(--gutter));
-		max-width: calc(25% - 1.5rem);
+		max-width: calc(25% - calc(1.5rem * 1.5));
 		max-width: calc(25% - var(--gutter));
 	}
 
 	.u-3of4-lg {
-		flex: 0 0 calc(75% - 1.5rem);
+		flex: 0 0 calc(75% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(75% - var(--gutter));
-		max-width: calc(75% - 1.5rem);
+		max-width: calc(75% - calc(1.5rem * 1.5));
 		max-width: calc(75% - var(--gutter));
 	}
 
 	.u-1of5-lg {
-		flex: 0 0 calc(20% - 1.5rem);
+		flex: 0 0 calc(20% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(20% - var(--gutter));
-		max-width: calc(20% - 1.5rem);
+		max-width: calc(20% - calc(1.5rem * 1.5));
 		max-width: calc(20% - var(--gutter));
 	}
 
 	.u-2of5-lg {
-		flex: 0 0 calc(40% - 1.5rem);
+		flex: 0 0 calc(40% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(40% - var(--gutter));
-		max-width: calc(40% - 1.5rem);
+		max-width: calc(40% - calc(1.5rem * 1.5));
 		max-width: calc(40% - var(--gutter));
 	}
 
 	.u-3of5-lg {
-		flex: 0 0 calc(60% - 1.5rem);
+		flex: 0 0 calc(60% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(60% - var(--gutter));
-		max-width: calc(60% - 1.5rem);
+		max-width: calc(60% - calc(1.5rem * 1.5));
 		max-width: calc(60% - var(--gutter));
 	}
 
 	.u-4of5-lg {
-		flex: 0 0 calc(80% - 1.5rem);
+		flex: 0 0 calc(80% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(80% - var(--gutter));
-		max-width: calc(80% - 1.5rem);
+		max-width: calc(80% - calc(1.5rem * 1.5));
 		max-width: calc(80% - var(--gutter));
 	}
 
@@ -1443,9 +1444,9 @@ body:not(.search) .trail-end > span,
 	}
 
 	.u-1of2-sm {
-		flex: 0 0 calc(50% - 1.5rem);
+		flex: 0 0 calc(50% - calc(1.5rem * 1.5));
 		flex: 0 0 calc(50% - var(--gutter));
-		max-width: calc(50% - 1.5rem);
+		max-width: calc(50% - calc(1.5rem * 1.5));
 		max-width: calc(50% - var(--gutter));
 	}
 }
@@ -2265,7 +2266,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-grad-overlay {
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 }
 
@@ -2493,8 +2494,15 @@ body.admin-bar {
 }
 
 .u-content-wrap > * {
-	max-width: 70rem;
+	max-width: 50rem;
 	max-width: var(--content-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.u-content-wrap--wide > * {
+	max-width: calc(50rem + 30rem);
+	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -2789,7 +2797,7 @@ body.admin-bar {
 }
 
 .u-text-grey-sub {
-	color: #fff;
+	color: #90a4ae;
 }
 
 .u-text-silver {
@@ -3073,7 +3081,7 @@ body.admin-bar {
 }
 
 .alignwide {
-	max-width: calc(70rem + 15vw);
+	max-width: calc(50rem + 30rem);
 	max-width: var(--content-wide);
 }
 
@@ -3255,7 +3263,7 @@ nav .u-link[class]:focus {
 .wp-block-cover-image-text .u-link[class]:hover,
 .wp-block-cover-image-text .u-link[class]:focus,
 .wp-block-cover-image-text .u-link[class]:active {
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 }
 
@@ -3365,10 +3373,15 @@ img.emoji {
 }
 
 article > div > * {
-	margin-top: 1.5rem;
-	margin-top: var(--base-space);
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-top: calc(1.5rem * 1.5);
+	margin-top: var(--gutter);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
+}
+
+article > div > p {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .entry__content h1,
@@ -3379,6 +3392,15 @@ article > div > * {
 .entry__content h6 {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+}
+
+.alignfull {
+	margin: 0;
+}
+
+.alignfull + * {
+	margin-top: calc(1.5rem * 1.5);
+	margin-top: var(--gutter);
 }
 
 .wp-block-audio {
@@ -3619,13 +3641,12 @@ div.wp-block-code [aria-label="Code"] {
 }
 
 .wp-block-cover-image-text {
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 	font-size: 2rem;
 	line-height: 1.25;
 	z-index: 1;
 	margin-bottom: 0;
-	max-width: 64rem;
 	max-width: var(--paragraph-width);
 	padding: 1rem;
 	text-align: center;
@@ -3635,7 +3656,7 @@ div.wp-block-code [aria-label="Code"] {
 .wp-block-cover-image-text a:hover,
 .wp-block-cover-image-text a:focus,
 .wp-block-cover-image-text a:active {
-	color: #fff;
+	color: #90a4ae;
 	color: var(--color-text-light);
 }
 

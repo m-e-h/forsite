@@ -1,17 +1,15 @@
-<?php if ( ! is_front_page() ) : ?>
+<?php if ( is_front_page() ) { return; } ?>
 
-	<div class="archive-header u-1of1 u-p">
+<header class="archive-header u-text-center u-1of1 u-p u-mt u-mb">
 
-		<h1 class="archive-header__title"><?php the_archive_title() ?></h1>
+	<h1 class="archive-header__title u-h1"><?php the_archive_title() ?></h1>
 
-		<?php if ( ! is_paged() && get_the_archive_description() ) : ?>
+	<?php if ( ! is_paged() && get_the_archive_description() ) : ?>
 
-			<div class="archive-header__description">
-				<?php the_archive_description() ?>
-			</div>
+		<div class="archive-header__description">
+			<?php the_archive_description() ?>
+		</div>
 
-		<?php endif ?>
+	<?php endif ?>
 
-	</div>
-
-<?php endif ?>
+</header>

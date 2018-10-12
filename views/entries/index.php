@@ -1,13 +1,11 @@
-<article <?php Hybrid\Attr\display( 'entry' ) ?>>
+<article <?= Hybrid\Attr\render( 'entry' ) ?>>
 
-	<?php the_post_thumbnail( 'forsite-medium', [ 'class' => 'entry__image' ] ) ?>
+	<?php the_post_thumbnail( 'medium', [ 'class' => 'entry__image' ] ); ?>
 
 	<header class="entry__header">
-		<?php Hybrid\Post\display_title() ?>
+		<?= Hybrid\Post\render_title( [ 'class' => 'u-h4' ] ); ?>
 	</header>
 
-	<div class="entry__content">
-		<?php the_content(); ?>
-	</div>
+	<?php the_excerpt() ?>
 
 </article>

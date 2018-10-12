@@ -26,18 +26,6 @@
 		right: 0;
 	}
 
-	/* // The background dim can be any number from 10-100. We're just running
-	// a simple loop to add a black background color over the element. */
-
-	/* @for $dim from 1 through 10 {
-
-		&.has-background-dim-#{ $dim * 10 }
-
-		::before {
-			background-color: rgba( color-mod( black ), $dim * 0.1 );
-		}
-	} */
-
 	&.has-background-dim-10::before,
 	&.has-background-dim-20::before {
 		background-color: color-mod($color-grey-char-dark a(0.15));
