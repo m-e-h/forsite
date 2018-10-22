@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------
+# Buttons
+-------------------------------------------------------------- */
+
+a.btn,
+a.button {
+	opacity: 1;
+	text-decoration: none;
+}
+
+input[type="submit"] {
+	background-color: var(--color-1);
+	color: #fff;
+}
+
+a.btn-hollow,
+.btn-hollow,
+input[type="reset"],
+input[type="button"] {
+	color: var(--color-1-dark);
+	background-color: var(--color-frost-4);
+	box-shadow: inset 0 0 0 0.125rem var(--color-1-dark);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+		background-color: var(--color-1-dark);
+		box-shadow: none;
+	}
+}
+
+.btn-round {
+	border-radius: 50%;
+	overflow: hidden;
+	height: $form-element-min-height;
+	width: $form-element-min-height;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	text-align: center;
+	box-shadow: $shadow-1;
+
+	&:hover {
+		opacity: 0.9;
+		box-shadow: $shadow-2;
+	}
+
+	& a {
+		color: inherit;
+		width: $form-element-min-height;
+		height: $form-element-min-height;
+		display: inline-block;
+		text-align: center;
+		border-radius: 50%;
+		padding: 0.5rem 0;
+		background-image: none;
+	}
+}
+
+.btn-round > svg {
+	height: $form-element-min-height;
+	vertical-align: baseline;
+}
+
+.btn-sm {
+	font-size: 0.9rem;
+}
+
+.btn-lg {
+	font-size: 1.1rem;
+}

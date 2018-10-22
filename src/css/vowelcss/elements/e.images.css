@@ -1,0 +1,40 @@
+/* #IMAGES
+\*------------------------------------ */
+
+/* specify the alignment of media elements */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	border-style: none;
+}
+
+a > img {
+	transition: inherit;
+	backface-visibility: hidden;
+}
+
+svg {
+	overflow: hidden;
+	max-height: 100%;
+	fill: currentColor;
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	margin-top: 0.5rem;
+	display: block;
+	font-size: $h6;
+	color: var(--color-text-light);
+}

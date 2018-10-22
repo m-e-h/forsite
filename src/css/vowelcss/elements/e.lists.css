@@ -1,0 +1,53 @@
+/* #LISTS
+\*------------------------------------ */
+
+ul,
+ol,
+dl {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	padding: 0;
+}
+
+article ul,
+article ol,
+article dl {
+	list-style: initial;
+	padding-left: 2.5rem;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-bottom: 0.5rem;
+	margin-left: 0;
+}
+
+dfn {
+	font-style: italic;
+}
+
+/*
+ * Add the correct display in Edge and IE.
+ */
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+	font-weight: bolder;
+}
+
+details[open] summary {
+	margin-bottom: 0.5em;
+}

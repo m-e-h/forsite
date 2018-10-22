@@ -1,0 +1,28 @@
+@media (--md) {
+	.alignleft {
+		float: left;
+		margin-right: 1.5rem;
+	}
+
+	.alignright {
+		float: right;
+		margin-left: 1.5rem;
+	}
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.alignwide {
+	max-width: var(--content-wide);
+}
+
+.alignfull {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100%;
+}

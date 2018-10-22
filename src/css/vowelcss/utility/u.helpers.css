@@ -1,0 +1,110 @@
+/* #HELPERS
+\*------------------------------------ */
+
+.u-color-inherit,
+.u-color-inherit * {
+	color: inherit;
+}
+
+.u-currentcolor_a a {
+	color: currentColor;
+}
+
+.u-currentcolor {
+	color: currentColor;
+}
+
+.u-no-link {
+	box-shadow: none;
+}
+
+.u-link[class] {
+	@extend a;
+	color: $color-links;
+}
+
+.u-strip-space {
+	margin: 0;
+	padding: 0;
+
+	& > * {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.u-spacer1 {
+	min-height: 1rem;
+}
+
+.u-spacer16 {
+	min-height: 1.6rem;
+}
+
+.u-spacer20 {
+	min-height: 2rem;
+}
+
+.u-spacer3 {
+	min-height: 3rem;
+}
+
+/* Opacity */
+.u-opacity {
+	opacity: var(--opacity);
+}
+
+.u-opacity1 {
+	opacity: 1;
+}
+
+.hidden {
+	display: none;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	width: auto;
+	white-space: inherit;
+	z-index: 9999;
+}
+
+.clear::before,
+.clear::after {
+	content: "";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	max-width: 1.1em;
+	margin: 0 0.07em;
+	vertical-align: -0.1em;
+}

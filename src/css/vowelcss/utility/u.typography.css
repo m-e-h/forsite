@@ -1,0 +1,135 @@
+/* #TYPOGRAPHY UTILITY
+\*------------------------------------ */
+
+.u-f1 {
+	font-size: 1rem;
+}
+
+.u-h0 {
+	font-size: var(--h0);
+	line-height: var(--heading-line-height);
+}
+
+.u-h1 {
+	font-size: var(--h1);
+	line-height: var(--heading-line-height);
+}
+
+.u-h2 {
+	font-size: var(--h2);
+	line-height: var(--heading-line-height);
+}
+
+.u-h3 {
+	font-size: var(--h3);
+	line-height: var(--heading-line-height);
+}
+
+.u-h4 {
+	font-size: var(--h4);
+	line-height: var(--heading-line-height);
+}
+
+.u-f-plus,
+.u-h5 {
+	font-size: var(--h5);
+}
+
+.u-f-minus,
+.u-h6 {
+	font-size: var(--h6);
+}
+
+.u-lh-1 {
+	line-height: 1;
+}
+
+.u-lh-2 {
+	line-height: 2;
+}
+
+.u-light {
+	font-weight: $font-light;
+}
+
+.u-bold {
+	font-weight: $font-bold;
+}
+
+.u-text-read {
+	font-family: var(--font-family);
+}
+
+.u-regular,
+.u-normal {
+	font-weight: $font-normal;
+}
+
+.u-italic {
+	font-style: italic;
+}
+
+.u-caps {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.u-text-shadow {
+	text-shadow: 0.063rem 0.063rem 0.313rem var(--color-tint-3);
+}
+
+.u-text-left {
+	text-align: left;
+}
+
+.u-text-center {
+	text-align: center;
+}
+
+.u-text-right {
+	text-align: right;
+}
+
+.u-text-justify {
+	text-align: justify;
+}
+
+.u-nowrap {
+	white-space: nowrap;
+}
+
+.u-break-word {
+	word-wrap: break-word;
+}
+
+.u-truncate {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.u-lead,
+.intro-paragraph {
+	font-weight: 300;
+	font-size: var(--h5);
+}
+
+.u-dropcap::first-letter {
+	font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif;
+	float: left;
+	margin-right: 0.15em;
+	background: transparent;
+	color: inherit;
+	font-size: 3.5rem;
+	line-height: 0.9;
+
+	@media (--md) {
+		font-size: var(--h0);
+	}
+}
+
+.u-text-display,
+.u-dropcap::first-letter {
+	font-family: var(--display-font-family);
+}

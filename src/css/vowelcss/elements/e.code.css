@@ -1,0 +1,44 @@
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--monospace-font-family);
+	color: #586e75;
+}
+
+code {
+	padding: 0.2em 0.3em;
+	margin: 0;
+	font-size: $h6;
+	background-color: var(--color-frost-3);
+	border-radius: $border-radius;
+	word-break: break-word;
+}
+
+pre {
+	margin-top: 0;
+	margin-bottom: var(--base-space);
+	padding: $space-1;
+	overflow: auto;
+	background-color: #fdf6e3;
+	border-radius: $border-radius;
+	word-wrap: normal;
+	max-height: 80vh;
+}
+
+pre code {
+	display: inline;
+	max-width: auto;
+	padding: 0;
+	margin: 0;
+	overflow: visible;
+	line-height: inherit;
+	word-wrap: normal;
+	border: 0;
+	font-size: inherit;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
