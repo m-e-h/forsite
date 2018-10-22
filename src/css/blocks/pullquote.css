@@ -8,14 +8,13 @@
 
 .wp-block-pullquote {
 	color: var(--color-2-dark);
-	padding: var(--base-space) 0;
-	text-align: center;
-	border-top: 0.25rem solid var(--color-2);
-	border-bottom: 0.25rem solid var(--color-2);
 
 	& blockquote {
 		text-align: center;
-		margin: 0 var(--base-space);
 		border: none;
+		padding-top: var(--base-space);
+		padding-bottom: var(--base-space);
+		border-top: 0.25rem solid var(--color-2);
+		border-bottom: 0.25rem solid var(--color-2);
 	}
 }

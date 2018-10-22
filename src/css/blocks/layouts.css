@@ -1,12 +1,6 @@
-article > div > * {
+.entry__content > div {
 	margin-top: var(--gutter);
 	margin-bottom: var(--gutter);
-}
-
-article > div > p {
-	/* margin-top: calc(var(--gutter) * -0.5); */
-	margin-top: 1rem;
-	margin-bottom: 1rem;
 }
 
 .entry__content h1,
