@@ -1,4 +1,4 @@
-<footer class="app-footer u-pt">
+<footer class="app-footer">
 
 	<?= Hybrid\View\render( 'sidebar', 'footer', [ 'sidebar' => 'footer' ] ); ?>
 

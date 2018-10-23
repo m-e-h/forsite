@@ -19,6 +19,7 @@ main {
 }
 
 article {
+	width: 100%;
 	margin-bottom: var(--base-space);
 }
 
@@ -37,13 +38,18 @@ body > footer {
 	margin-top: auto;
 }
 
-body > footer > aside {
-	max-width: var(--content-wide);
-	margin-left: auto;
-	margin-right: auto;
+aside {
+	/* max-width: var(--content-wide); */
+	padding-left: calc((100vw - var(--content-wide)) * 0.5);
+	padding-right: calc((100vw - var(--content-wide)) * 0.5);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding-top: var(--base-space);
 	padding-bottom: var(--base-space);
+}
+
+aside > section {
+	margin: calc(var(--base-space) * 0.5);
+	min-width: calc(25% - var(--base-space));
 }

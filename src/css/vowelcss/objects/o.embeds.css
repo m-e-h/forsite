@@ -8,58 +8,51 @@
 * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
 */
 
-.flex-embed {
-	display: block;
-	overflow: hidden;
+.wp-block-embed__wrapper {
 	position: relative;
 }
 
 /**
-* The aspect-ratio hack is applied to an empty element because it allows
-* the component to respect `max-height`. Default aspect ratio is 1:1.
+* Modifier: 1:1 aspect ratio
 */
-.flex-embed__ratio {
-	display: block;
+.wp-embed-aspect-1-1 > .wp-block-embed__wrapper {
 	padding-bottom: 100%;
-	width: 100%;
 }
 
-/**
-* Modifier: 3:1 aspect ratio
-*/
-.flex-embed__ratio--3by1 {
-	padding-bottom: calc(100% / 3);
+.wp-embed-aspect-1-2 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (2 / 1));
 }
 
-/**
-* Modifier: 2:1 aspect ratio
-*/
-.flex-embed__ratio--2by1 {
-	padding-bottom: 50%;
+.wp-embed-aspect-2-1 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (1 / 2));
+}
+
+.wp-embed-aspect-4-3 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (3 / 4));
+}
+
+.wp-embed-aspect-18-9 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (9 / 18));
+}
+
+.wp-embed-aspect-21-9 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (9 / 21));
 }
 
 /**
 * Modifier: 16:9 aspect ratio
 */
-.flex-embed__ratio--16by9 {
-	padding-bottom: 56.25%;
-}
-
-/**
-* Modifier: 4:3 aspect ratio
-*/
-.flex-embed__ratio--4by3 {
-	padding-bottom: 75%;
+.wp-embed-aspect-16-9 > .wp-block-embed__wrapper {
+	padding-bottom: calc(100% * (9 / 16));
 }
 
 /**
 * Fit the content to the aspect ratio
 */
-.flex-embed-content > iframe {
-	bottom: 0;
-	height: 100%;
-	left: 0;
+.wp-block-embed__wrapper > iframe {
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
 }
