@@ -22,6 +22,11 @@ p {
 	margin-bottom: 1rem;
 }
 
+:not(p) + p,
+p + :not(p) {
+	margin-top: var(--gutter);
+}
+
 h1 {
 	font-size: var(--h2);
 }
@@ -123,7 +128,7 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
-	margin: 1rem 0;
+	margin: var(--gutter) 0;
 	border: 0;
 	border-top: 1px solid currentColor;
 	opacity: 0.4;

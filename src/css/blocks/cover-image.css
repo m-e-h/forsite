@@ -24,6 +24,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
+		background-color: color-mod($color-grey-char-dark a(0.55));
 	}
 
 	&.has-background-dim-10::before,

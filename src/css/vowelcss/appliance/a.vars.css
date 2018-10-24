@@ -69,6 +69,8 @@
 	--color-tint-3: $color-tint-3;
 	--color-tint-4: $color-tint-4;
 
+	--shadow: $shadow;
+
 	--timing: $base-timing;
 	--timing-open: $timing-open;
 	--timing-close: $timing-close;

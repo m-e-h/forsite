@@ -1,0 +1,4 @@
+article .gform_wrapper {
+	max-width: var(--content-width);
+	margin: 0 auto;
+}

@@ -1,0 +1,46 @@
+.wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+
+	/* // Add styles based on the number of columns. Supports 2-6 columns. */
+	&.has-2-columns {
+	}
+}
+
+/* // Individual columns. */
+.wp-block-column {
+	flex: 1;
+}
+
+.entry__content > * {
+	max-width: var(--content-width);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.entry__content > div {
+	margin-top: var(--gutter);
+	margin-bottom: var(--gutter);
+}
+
+.entry__content > *:first-of-type {
+	margin-top: 0;
+}
+
+.entry__content > *:last-of-type {
+	margin-bottom: 0;
+}
+
+.entry__content h1,
+.entry__content h2,
+.entry__content h3,
+.entry__content h4,
+.entry__content h5,
+.entry__content h6 {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+/* .alignfull + * {
+	margin-top: var(--gutter);
+} */

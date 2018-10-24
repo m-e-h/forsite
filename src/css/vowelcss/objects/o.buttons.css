@@ -2,6 +2,15 @@
 # Buttons
 -------------------------------------------------------------- */
 
+.wp-block-button {
+	margin-bottom: 1.5em;
+}
+
+.wp-block-button__link {
+
+	@extend button;
+}
+
 a.btn,
 a.button {
 	opacity: 1;

@@ -31,7 +31,7 @@ body > header {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 0.5rem;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--shadow);
 }
 
 body > footer {
@@ -51,5 +51,6 @@ aside {
 
 aside > section {
 	margin: calc(var(--base-space) * 0.5);
-	min-width: calc(25% - var(--base-space));
+	min-width: calc(200px - var(--base-space));
+	flex: 1;
 }

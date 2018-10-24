@@ -14,13 +14,13 @@ a {
 
 	&:hover,
 	&:focus {
-		box-shadow: inset 0 -0.1875rem 0 var(--color-shade-4);
+		box-shadow: inset 0 0 0 20rem var(--color-shade-1);
 	}
 }
 
 p > a,
 article a {
-	box-shadow: inset 0 -0.125rem 0 var(--color-shade-3);
+	box-shadow: inset 0 -0.125rem 0 var(--color-shade-2);
 	overflow-wrap: break-word;
 }
 
