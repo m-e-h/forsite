@@ -122,6 +122,50 @@
         ]
     },
     {
+        "name": "justintadlock/hybrid-breadcrumbs",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/justintadlock/hybrid-breadcrumbs.git",
+            "reference": "9e06be3b12ac3855b58f4c97f352c7916dd6f91b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/justintadlock/hybrid-breadcrumbs/zipball/9e06be3b12ac3855b58f4c97f352c7916dd6f91b",
+            "reference": "9e06be3b12ac3855b58f4c97f352c7916dd6f91b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "time": "2018-10-23T19:57:54+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hybrid\\Breadcrumbs\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Justin Tadlock",
+                "email": "justintadlock@gmail.com",
+                "homepage": "https://themehybrid.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A powerful breadcrumb script for inclusion with WordPress themes.",
+        "homepage": "https://github.com/justintadlock/hybrid-breadcrumbs",
+        "keywords": [
+            "wordpress"
+        ]
+    },
+    {
         "name": "justintadlock/hybrid-core",
         "version": "5.0.0",
         "version_normalized": "5.0.0.0",

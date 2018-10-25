@@ -77,15 +77,6 @@ article h6 {
 	margin-bottom: 1.5em;
 }
 
-/* h1[class],
-h2[class],
-h3[class],
-h4[class],
-h5[class],
-h6[class] {
-	margin: 0;
-} */
-
 abbr[title],
 abbr[data-original-title] {
 	text-decoration: underline dotted;

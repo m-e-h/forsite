@@ -59,7 +59,7 @@ textarea {
 	font-size: 1rem;
 	line-height: 1.5;
 	background-color: $form-element-background-color;
-	color: var(--color-text-light);
+	color: inherit;
 	vertical-align: baseline;
 	font-weight: inherit;
 

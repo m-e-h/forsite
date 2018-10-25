@@ -1,6 +1,6 @@
 <main id="main" class="app-main o-grid u-content-width">
 
-<?= Hybrid\View\render( 'components', 'archive-header' ); ?>
+<?= Hybrid\View\render( 'components', 'posts-header' ); ?>
 
 <?php if ( have_posts() ) : ?>
 

@@ -2,20 +2,20 @@
 \*------------------------------------ */
 
 .breadcrumbs {
-	margin-bottom: $space-1;
 
-	& ul {
+	& ol {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		font-size: $h5;
+		font-size: $h6;
 	}
 
 	& li {
 		display: inline-flex;
 		align-items: center;
 		font-style: italic;
+		flex: 0 1 auto;
 
 		&:not(:last-of-type)::after {
 			margin: 0 0.3em -0.05em;

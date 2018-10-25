@@ -63,7 +63,7 @@
 
 /* // Paragraph of text shown within the cover image element. */
 .wp-block-cover-image-text {
-	color: var(--color-text-light);
+	color: #fff;
 	font-size: $h2;
 	line-height: 1.25;
 	z-index: 1;
@@ -72,11 +72,8 @@
 	padding: 1rem;
 	text-align: center;
 
-	& a,
-	& a:hover,
-	& a:focus,
-	& a:active {
-		color: var(--color-text-light);
+	& a {
+		opacity: inherit;
 	}
 }
 

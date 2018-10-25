@@ -13,6 +13,7 @@ class ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb
     public static $prefixLengthsPsr4 = array (
         'H' => 
         array (
+            'Hybrid\\Breadcrumbs\\' => 19,
             'Hybrid\\' => 7,
         ),
         'F' => 
@@ -26,6 +27,10 @@ class ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb
     );
 
     public static $prefixDirsPsr4 = array (
+        'Hybrid\\Breadcrumbs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/justintadlock/hybrid-breadcrumbs/src',
+        ),
         'Hybrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/justintadlock/hybrid-core/src',

@@ -19,7 +19,7 @@ article ul,
 article ol,
 article dl {
 	list-style: initial;
-	padding-left: 2.5rem;
+	padding-left: 1rem;
 }
 
 dt {

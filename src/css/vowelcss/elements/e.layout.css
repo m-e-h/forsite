@@ -13,9 +13,6 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-bottom: var(--base-space);
 }
 
 article {

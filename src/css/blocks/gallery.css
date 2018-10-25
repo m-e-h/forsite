@@ -18,7 +18,7 @@
 
 /* // The wrapper for individual gallery images/figures. */
 .blocks-gallery-item {
-	margin: 0 0.5rem 0.5rem 0;
+	margin: 0.5rem;
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;

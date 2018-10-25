@@ -22,7 +22,7 @@
 
 	--opacity: 0.7;
 	--content-width: 50rem;
-	--content-wide: calc(var(--content-width) + 30rem);
+	--content-wide: calc(var(--content-width) + 16vw);
 	--fluid-font: calc(
 		var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21em) / (90 - 21))
 	);
@@ -137,10 +137,6 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-bottom: 1.5rem;
-	padding-bottom: var(--base-space);
 }
 
 article {
@@ -166,9 +162,9 @@ body > footer {
 }
 
 aside {
-	padding-left: calc((100vw - calc(50rem + 30rem)) * 0.5);
+	padding-left: calc((100vw - calc(50rem + 16vw)) * 0.5);
 	padding-left: calc((100vw - var(--content-wide)) * 0.5);
-	padding-right: calc((100vw - calc(50rem + 30rem)) * 0.5);
+	padding-right: calc((100vw - calc(50rem + 16vw)) * 0.5);
 	padding-right: calc((100vw - var(--content-wide)) * 0.5);
 	display: flex;
 	flex-wrap: wrap;
@@ -493,7 +489,7 @@ article ul,
 article ol,
 article dl {
 	list-style: initial;
-	padding-left: 2.5rem;
+	padding-left: 1rem;
 }
 
 dt {
@@ -712,8 +708,7 @@ textarea {
 	font-size: 1rem;
 	line-height: 1.5;
 	background-color: rgba(248, 249, 249, 0.9);
-	color: #90a4ae;
-	color: var(--color-text-light);
+	color: inherit;
 	vertical-align: baseline;
 	font-weight: inherit;
 }
@@ -898,11 +893,10 @@ figure {
 }
 
 figcaption {
-	margin-top: 0.5rem;
-	display: block;
 	font-size: 0.9rem;
-	color: #90a4ae;
-	color: var(--color-text-light);
+	padding: 0.5rem;
+	opacity: 0.7;
+	opacity: var(--opacity);
 }
 
 .o-grid {
@@ -925,15 +919,6 @@ figcaption {
 	margin-bottom: var(--base-space);
 }
 
-.wp-block-columns {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.wp-block-column {
-	flex: 1;
-}
-
 .entry__content > * {
 	max-width: 50rem;
 	max-width: var(--content-width);
@@ -948,11 +933,11 @@ figcaption {
 	margin-bottom: var(--gutter);
 }
 
-.entry__content > *:first-of-type {
+.entry__content > *:first-child {
 	margin-top: 0;
 }
 
-.entry__content > *:last-of-type {
+.entry__content > *:last-child {
 	margin-bottom: 0;
 }
 
@@ -964,6 +949,15 @@ figcaption {
 .entry__content h6 {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+}
+
+.wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wp-block-column {
+	flex: 1;
 }
 
 .u-list-naked,
@@ -1272,22 +1266,19 @@ input[type="button"]:active {
 	display: none;
 }
 
-.breadcrumbs {
-	margin-bottom: 1rem;
-}
-
-.breadcrumbs ul {
+.breadcrumbs ol {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.25rem;
+	font-size: 0.9rem;
 }
 
 .breadcrumbs li {
 	display: inline-flex;
 	align-items: center;
 	font-style: italic;
+	flex: 0 1 auto;
 }
 
 .breadcrumbs li:not(:last-of-type)::after {
@@ -1324,7 +1315,7 @@ body:not(.search) .trail-end > span,
 }
 
 .u-max-width {
-	max-width: calc(50rem + 30rem);
+	max-width: calc(50rem + 16vw);
 	max-width: var(--content-wide);
 }
 
@@ -1344,14 +1335,14 @@ body:not(.search) .trail-end > span,
 
 .u-content-wide {
 	width: 100%;
-	max-width: calc(50rem + 30rem);
+	max-width: calc(50rem + 16vw);
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-max-center {
-	max-width: calc(50rem + 30rem);
+	max-width: calc(50rem + 16vw);
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
@@ -2648,7 +2639,7 @@ body.admin-bar {
 }
 
 .u-content-wrap--wide > * {
-	max-width: calc(50rem + 30rem);
+	max-width: calc(50rem + 16vw);
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;
@@ -3228,7 +3219,7 @@ body.admin-bar {
 }
 
 .alignwide {
-	max-width: calc(50rem + 30rem);
+	max-width: calc(50rem + 16vw);
 	max-width: var(--content-wide);
 }
 
@@ -3411,12 +3402,8 @@ nav .u-link:focus {
 	color: currentColor;
 }
 
-.wp-block-cover-image-text .u-link,
-.wp-block-cover-image-text .u-link:hover,
-.wp-block-cover-image-text .u-link:focus,
-.wp-block-cover-image-text .u-link:active {
-	color: #90a4ae;
-	color: var(--color-text-light);
+.wp-block-cover-image-text .u-link {
+	opacity: inherit;
 }
 
 .is-cropped .blocks-gallery-item .u-link {
@@ -3578,8 +3565,7 @@ img.emoji {
 }
 
 .wp-block-cover-image-text {
-	color: #90a4ae;
-	color: var(--color-text-light);
+	color: #fff;
 	font-size: 2rem;
 	line-height: 1.25;
 	z-index: 1;
@@ -3589,12 +3575,8 @@ img.emoji {
 	text-align: center;
 }
 
-.wp-block-cover-image-text a,
-.wp-block-cover-image-text a:hover,
-.wp-block-cover-image-text a:focus,
-.wp-block-cover-image-text a:active {
-	color: #90a4ae;
-	color: var(--color-text-light);
+.wp-block-cover-image-text a {
+	opacity: inherit;
 }
 
 .has-left-content .wp-block-cover-image-text {
@@ -3710,7 +3692,7 @@ input[type=".wp-block-file__button"]:active {
 }
 
 .blocks-gallery-item {
-	margin: 0 0.5rem 0.5rem 0;
+	margin: 0.5rem;
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;

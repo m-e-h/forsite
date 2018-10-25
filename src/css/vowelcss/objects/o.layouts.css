@@ -1,16 +1,3 @@
-.wp-block-columns {
-	display: flex;
-	flex-wrap: wrap;
-
-	/* // Add styles based on the number of columns. Supports 2-6 columns. */
-	&.has-2-columns {
-	}
-}
-
-/* // Individual columns. */
-.wp-block-column {
-	flex: 1;
-}
 
 .entry__content > * {
 	max-width: var(--content-width);
@@ -23,11 +10,11 @@
 	margin-bottom: var(--gutter);
 }
 
-.entry__content > *:first-of-type {
+.entry__content > *:first-child {
 	margin-top: 0;
 }
 
-.entry__content > *:last-of-type {
+.entry__content > *:last-child {
 	margin-bottom: 0;
 }
 
@@ -44,3 +31,17 @@
 /* .alignfull + * {
 	margin-top: var(--gutter);
 } */
+
+.wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+
+	/* // Add styles based on the number of columns. Supports 2-6 columns. */
+	&.has-2-columns {
+	}
+}
+
+/* // Individual columns. */
+.wp-block-column {
+	flex: 1;
+}

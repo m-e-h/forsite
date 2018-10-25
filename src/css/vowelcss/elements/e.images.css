@@ -33,8 +33,7 @@ figure {
 }
 
 figcaption {
-	margin-top: 0.5rem;
-	display: block;
 	font-size: $h6;
-	color: var(--color-text-light);
+	padding: 0.5rem;
+	opacity: var(--opacity);
 }
