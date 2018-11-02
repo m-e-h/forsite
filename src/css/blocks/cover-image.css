@@ -6,7 +6,7 @@
 /// @link   https://github.com/m-e-h/forsite
 //// */
 
-.wp-block-cover-image {
+.wp-block-cover {
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
@@ -62,7 +62,7 @@
 }
 
 /* // Paragraph of text shown within the cover image element. */
-.wp-block-cover-image-text {
+.wp-block-cover-text {
 	color: #fff;
 	font-size: $h2;
 	line-height: 1.25;
@@ -78,13 +78,13 @@
 }
 
 /* // Left-aligned text. */
-.has-left-content .wp-block-cover-image-text {
+.has-left-content .wp-block-cover-text {
 	margin-left: 0;
 	text-align: left;
 }
 
 /* // Right-aligned text. */
-.has-right-content .wp-block-cover-image-text {
+.has-right-content .wp-block-cover-text {
 	margin-right: 0;
 	text-align: right;
 }
