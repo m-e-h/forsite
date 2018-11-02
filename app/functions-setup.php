@@ -34,7 +34,7 @@ add_action( 'after_setup_theme', function() {
 
 	// Sets the theme content width. This variable is also set in the
 	// `src/scss/settings/_dimensions.scss` file.
-	$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 999 );
+	$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 900 );
 
 	// Load theme translations.
 	load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'src/lang' ) );
@@ -56,6 +56,7 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'align-wide' );
 
 	add_theme_support( 'editor-styles' );
+
 	add_editor_style( 'dist/css/editor.css' );
 
 	// Outputs HTML5 markup for core features.
@@ -71,33 +72,63 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'custom-logo', [
 		'height'      => 100,
 		'width'       => 100,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-description' ),
+		'flex-width'  => false,
+		'flex-height' => false,
+		'header-text' => '',
 	] );
 
 	// Editor color palette. These colors are also defined in the
 	// `src/scss/settings/_colors.scss` file.
 	add_theme_support( 'editor-color-palette', [
 		[
-			'name'  => __( 'Charcoal', 'forsite' ),
-			'slug'  => 'charcoal',
-			'color' => '#282c34'
+			'name'  => __( 'strawberry', 'forsite' ),
+			'slug'  => 'strawberry',
+			'color' => '#c6262e'
 		],
 		[
-			'name'  => __( 'Regent', 'forsite' ),
-			'slug'  => 'regent',
-			'color' => '#8c97a7',
+			'name'  => __( 'orange', 'forsite' ),
+			'slug'  => 'orange',
+			'color' => '#f37329',
 		],
 		[
-			'name'  => __( 'Husk', 'forsite' ),
-			'slug'  => 'husk',
-			'color' => '#B9A364',
+			'name'  => __( 'banana', 'forsite' ),
+			'slug'  => 'banana',
+			'color' => '#f9c440',
 		],
 		[
-			'name'  => __( 'Red Stage', 'forsite' ),
-			'slug'  => 'red-stage',
-			'color' => '#b15330',
+			'name'  => __( 'lime', 'forsite' ),
+			'slug'  => 'lime',
+			'color' => '#68b723',
+		],
+		[
+			'name'  => __( 'blueberry', 'forsite' ),
+			'slug'  => 'blueberry',
+			'color' => '#3689e6'
+		],
+		[
+			'name'  => __( 'grape', 'forsite' ),
+			'slug'  => 'grape',
+			'color' => '#a56de2',
+		],
+		[
+			'name'  => __( 'cocoa', 'forsite' ),
+			'slug'  => 'cocoa',
+			'color' => '#715344',
+		],
+		[
+			'name'  => __( 'silver', 'forsite' ),
+			'slug'  => 'silver',
+			'color' => '#abacae',
+		],
+		[
+			'name'  => __( 'slate', 'forsite' ),
+			'slug'  => 'slate',
+			'color' => '#485a6c',
+		],
+		[
+			'name'  => __( 'black', 'forsite' ),
+			'slug'  => 'black',
+			'color' => '#1a1a1a',
 		]
 	] );
 
@@ -107,7 +138,7 @@ add_action( 'after_setup_theme', function() {
 		[
 			'name'      => __( 'Small', 'forsite' ),
 			'shortName' => __( 'S', 'forsite' ),
-			'size'      => 12,
+			'size'      => 14,
 			'slug'      => 'small'
 		],
 		[
@@ -119,13 +150,13 @@ add_action( 'after_setup_theme', function() {
 		[
 			'name'      => __( 'Large', 'forsite' ),
 			'shortName' => __( 'L', 'forsite' ),
-			'size'      => 36,
+			'size'      => 32,
 			'slug'      => 'large'
 		],
 		[
 			'name'      => __( 'Larger', 'forsite' ),
 			'shortName' => __( 'XL', 'forsite' ),
-			'size'      => 48,
+			'size'      => 40,
 			'slug'      => 'larger'
 		]
 	] );
@@ -147,16 +178,13 @@ add_action( 'after_setup_theme', function() {
 
 	add_theme_support( 'custom-background', [
 		'default-image'          => '',
-		'default-preset'         => 'default',
 		'default-position-x'     => 'center',
 		'default-position-y'     => 'center',
 		'default-size'           => 'cover',
 		'default-repeat'         => 'no-repeat',
 		'default-attachment'     => 'fixed',
-		'default-color'          => '',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
+		'default-color'          => 'ffffff',
+		'wp-head-callback'       => '_custom_background_cb'
 	] );
 
 }, 15 );
