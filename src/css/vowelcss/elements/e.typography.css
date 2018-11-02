@@ -6,12 +6,14 @@ html {
 }
 
 @media (--sm) {
+
 	html {
 		font-size: var(--fluid-font);
 	}
 }
 
 @media (--xl) {
+
 	html {
 		font-size: var(--max-font-size);
 	}
@@ -111,13 +113,13 @@ sup {
 }
 
 hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-	margin: var(--gutter) 0;
 	border: 0;
-	border-top: 1px solid currentColor;
-	opacity: 0.4;
+	height: 1px;
+	margin: var(--gutter) 0;
+	line-height: 1;
+	color: inherit;
+	background: currentColor;
+	background-image: linear-gradient(to right, #d4d4d4, currentColor, #d4d4d4);
 }
 
 template {
