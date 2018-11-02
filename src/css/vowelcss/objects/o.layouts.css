@@ -10,6 +10,11 @@
 	margin-bottom: var(--gutter);
 }
 
+.entry__content > :not(p) + p,
+.entry__content > p + :not(p) {
+	margin-top: var(--gutter);
+}
+
 .entry__content > *:first-child {
 	margin-top: 0;
 }
@@ -45,3 +50,39 @@
 .wp-block-column {
 	flex: 1;
 }
+
+hr:not(.is-style-wide) {
+	max-width: 200px;
+}
+
+hr.is-style-dots {
+	background: none;
+	border: none;
+	height: auto;
+	text-align: center;
+
+	&::before {
+		content: "\00b7 \00b7 \00b7";
+		font-family: serif;
+		font-size: $h2;
+		letter-spacing: $h2;
+		padding-left: $h2;
+	}
+}
+
+/*input,*/
+/*select,*/
+/*textarea,*/
+/*button {*/
+/*	box-shadow: 10px 5px 5px red;*/
+/*	min-height: 4.5rem;*/
+/*	background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");*/
+/*    background-position: 40% 80%;*/
+/*    background-size: 100vw 40vw;*/
+/*    background-repeat: repeat;*/
+/*    background-origin: padding-box;*/
+/*    background-clip: border-box;*/
+/*    background-attachment: fixed;*/
+/*    background-color: red;*/
+/*}*/
+
