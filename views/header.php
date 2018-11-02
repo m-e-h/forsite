@@ -4,7 +4,7 @@
 
 	<div class="app-header__branding u-text-center">
 		<?= get_custom_logo(); ?>
-		<?= Hybrid\Site\render_title( [ 'class' => 'u-h4 u-m0' ] ); ?>
+		<?= Hybrid\Site\render_title( [ 'class' => 'app-header__title u-h4 u-m0' ] ); ?>
 		<?= Hybrid\Site\render_description(); ?>
 	</div>
 
