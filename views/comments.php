@@ -8,7 +8,7 @@
 
 		<h2 class="comments__title"><?php comments_number() ?></h2>
 
-		<?= Hybrid\View\render( 'components', 'pagination-comments' ) ?>
+		<?= Hybrid\View\render( 'components', 'comments-pagination' ) ?>
 
 		<ol class="comments__list">
 
