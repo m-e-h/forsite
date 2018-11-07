@@ -1,4 +1,5 @@
-@import "vowelcss/appliance";
-@import "vowelcss/objects";
-@import "blocks";
-@import "vowelcss/utility";
+@import "appliance";
+@import "elements";
+@import "objects";
+@import "utility";
+@import "vendors";
