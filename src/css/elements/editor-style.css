@@ -1,0 +1,24 @@
+@import "e.layout";
+@import "e.links";
+@import "e.typography";
+@import "e.code";
+@import "e.buttons";
+@import "e.lists";
+@import "e.nav";
+@import "e.tables";
+@import "e.quotes";
+@import "e.forms";
+@import "e.images";
+
+html {
+	font-family: var(--font-family); /* 2 */
+	line-height: var(--line-height); /* 3 */
+}
+
+body {
+	font-size: 1rem;
+	font-family: var(--font-family); /* 2 */
+	line-height: var(--line-height); /* 3 */
+	color: var(--color-text);
+	background-color: #fff;
+}

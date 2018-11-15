@@ -1,12 +1,16 @@
-body {
-	min-height: 100vh;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
-
 header {
 	width: 100%;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+	text-align: initial;
+	display: block;
 }
 
 main {

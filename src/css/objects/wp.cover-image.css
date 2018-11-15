@@ -10,6 +10,7 @@
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
+	background-color: $color-grey-char-dark;
 	min-height: 25rem;
 	width: 100%;
 	display: flex;
@@ -24,31 +25,48 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		background-color: color-mod($color-grey-char-dark a(0.55));
+		background-color: inherit;
+		opacity: 0.5;
 	}
 
-	&.has-background-dim-10::before,
+	&.has-background-dim-10::before {
+		opacity: 0.1;
+	}
+
 	&.has-background-dim-20::before {
-		background-color: color-mod($color-grey-char-dark a(0.15));
+		opacity: 0.2;
 	}
 
-	&.has-background-dim-30::before,
+	&.has-background-dim-30::before {
+		opacity: 0.3;
+	}
+
 	&.has-background-dim-40::before {
-		background-color: color-mod($color-grey-char-dark a(0.35));
+		opacity: 0.4;
 	}
 
-	&.has-background-dim-50::before,
+	&.has-background-dim-50::before {
+		opacity: 0.5;
+	}
+
 	&.has-background-dim-60::before {
-		background-color: color-mod($color-grey-char-dark a(0.55));
+		opacity: 0.6;
 	}
 
-	&.has-background-dim-70::before,
+	&.has-background-dim-70::before {
+		opacity: 0.7;
+	}
+
 	&.has-background-dim-80::before {
-		background-color: color-mod($color-grey-char-dark a(0.75));
+		opacity: 0.8;
 	}
 
 	&.has-background-dim-90::before {
-		background-color: color-mod($color-grey-char-dark a(0.9));
+		opacity: 0.9;
+	}
+
+	&.has-background-dim-100::before {
+		opacity: 1;
 	}
 
 	/* // Left/Right text content. */
@@ -74,6 +92,7 @@
 
 	& a {
 		opacity: inherit;
+		color: inherit;
 	}
 }
 

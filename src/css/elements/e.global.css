@@ -43,6 +43,10 @@ html {
 }
 
 body {
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 	margin: 0;
 	overflow-x: hidden;
 	font-family: inherit;
@@ -51,15 +55,4 @@ body {
 	line-height: inherit;
 	color: var(--color-text);
 	background-color: #fff;
-}
-
-article,
-aside,
-footer,
-header,
-main,
-nav,
-section {
-	text-align: initial;
-	display: block;
 }
