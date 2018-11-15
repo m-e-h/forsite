@@ -28,7 +28,7 @@ use Hybrid\App;
 add_action( 'wp_enqueue_scripts', function() {
 
 	// Disable core block styles.
-	wp_dequeue_style( 'wp-block-library' );
+	// wp_dequeue_style( 'wp-block-library' );
 
 	// Load WordPress' comment-reply script where appropriate.
 	if ( is_singular() && get_option( 'thread_comments' ) && comments_open() ) {
@@ -50,21 +50,18 @@ add_action( 'wp_enqueue_scripts', function() {
  * @access public
  * @return void
  */
-add_action( 'enqueue_block_editor_assets', function() {
+// add_action( 'enqueue_block_editor_assets', function() {
 
 	// Enqueue theme editor styles.
-	wp_enqueue_style( 'forsite-editor', asset( 'css/editor.css' ), null, null );
+	// wp_enqueue_style( 'forsite-editor', asset( 'css/editor.css' ), null, null );
 
-	// Unregister core block and theme styles.
-	wp_deregister_style( 'wp-block-library' );
-	wp_deregister_style( 'wp-block-library-theme' );
+	// Unregister then Re-register core block and theme styles.
+	// wp_deregister_style( 'wp-block-library' );
+	// wp_deregister_style( 'wp-block-library-theme' );
+	// wp_register_style( 'wp-block-library', '' );
+	// wp_register_style( 'wp-block-library-theme', '' );
 
-	// Re-register core block and theme styles with an empty string. This is
-	// necessary to get styles set up correctly.
-	wp_register_style( 'wp-block-library', '' );
-	wp_register_style( 'wp-block-library-theme', '' );
-
-} );
+// } );
 
 /**
  * Helper function for outputting an asset URL in the theme. This integrates

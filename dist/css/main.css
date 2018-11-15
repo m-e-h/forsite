@@ -5,11 +5,11 @@
 	--line-height: 1.6;
 	--heading-line-height: 1.2;
 
-	--font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	--font-family: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
+		noto sans, sans-serif;
 	--display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
-	--monospace-font-family: "SFMono-Regular", "Roboto Mono", Consolas, Menlo,
-		Courier, monospace;
+	--monospace-font-family: "SFMono-Regular", "Roboto Mono", consolas, menlo,
+		courier, monospace;
 
 	--color-text: #24292e;
 	--color-text-light: #90a4ae;
@@ -173,6 +173,7 @@ aside {
 	padding-top: var(--base-space);
 	padding-bottom: 1.5rem;
 	padding-bottom: var(--base-space);
+	align-items: flex-start;
 }
 
 aside > section {
@@ -354,11 +355,6 @@ hr {
 
 template {
 	display: none;
-}
-
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
 }
 
 ::selection {
@@ -884,6 +880,7 @@ svg {
 
 figure {
 	margin: 0;
+	padding: 0;
 }
 
 figcaption {
@@ -1241,6 +1238,10 @@ input[type="button"]:active {
 
 .wp-block-embed__wrapper {
 	position: relative;
+}
+
+.wp-block-embed__wrapper::before {
+	content: none;
 }
 
 .is-type-video.wp-embed-aspect-1-1 .wp-block-embed__wrapper {

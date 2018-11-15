@@ -44,6 +44,7 @@ aside {
 	justify-content: space-around;
 	padding-top: var(--base-space);
 	padding-bottom: var(--base-space);
+	align-items: flex-start;
 }
 
 aside > section {
