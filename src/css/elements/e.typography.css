@@ -19,6 +19,14 @@ html {
 	}
 }
 
+body {
+	font-family: var(--font-family);
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: var(--line-height);
+	color: var(--color-text);
+}
+
 p {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -115,23 +123,11 @@ sup {
 hr {
 	border: 0;
 	height: 1px;
-	margin: var(--gutter) 0;
+	margin-top: var(--gutter);
+	margin-bottom: var(--gutter);
 	line-height: 1;
 	color: inherit;
 	background: currentColor;
 	background-image: linear-gradient(to right, #d4d4d4, currentColor, #d4d4d4);
 }
 
-template {
-	display: none;
-}
-
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}

@@ -1,7 +1,3 @@
-header {
-	width: 100%;
-}
-
 article,
 aside,
 footer,
@@ -13,15 +9,8 @@ section {
 	display: block;
 }
 
-main {
-	text-align: center;
-	display: block;
+header {
 	width: 100%;
-}
-
-article {
-	width: 100%;
-	margin-bottom: var(--base-space);
 }
 
 body > header {
@@ -39,15 +28,25 @@ body > footer {
 	margin-top: auto;
 }
 
+main {
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+article {
+	width: 100%;
+	margin-bottom: var(--base-space);
+}
+
 aside {
-	/* max-width: var(--content-wide); */
+	padding-top: var(--base-space);
+	padding-bottom: var(--base-space);
 	padding-left: calc((100vw - var(--content-wide)) * 0.5);
 	padding-right: calc((100vw - var(--content-wide)) * 0.5);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding-top: var(--base-space);
-	padding-bottom: var(--base-space);
 	align-items: flex-start;
 }
 

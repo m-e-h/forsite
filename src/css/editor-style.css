@@ -1,0 +1,17 @@
+@import "appliance";
+@import "elements/editor-style.css";
+@import "objects";
+@import "utility";
+@import "vendors";
+
+.editor-block-list__layout {
+	font-family: var(--font-family);
+	font-size: 1rem;
+	line-height: var(--line-height);
+	color: var(--color-text);
+}
+
+.editor-block-list__layout p {
+	font-size: inherit;
+	line-height: inherit;
+}

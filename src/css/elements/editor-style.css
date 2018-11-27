@@ -9,16 +9,3 @@
 @import "e.quotes";
 @import "e.forms";
 @import "e.images";
-
-html {
-	font-family: var(--font-family); /* 2 */
-	line-height: var(--line-height); /* 3 */
-}
-
-body {
-	font-size: 1rem;
-	font-family: var(--font-family); /* 2 */
-	line-height: var(--line-height); /* 3 */
-	color: var(--color-text);
-	background-color: #fff;
-}
