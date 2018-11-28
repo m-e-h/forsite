@@ -1540,6 +1540,8 @@
 .editor-styles-wrapper .wp-block-pullquote {
 	color: #20924c;
 	color: var(--color-2-dark);
+	padding: 0;
+	border: 0;
 }
 
 .editor-styles-wrapper .wp-block-pullquote blockquote {
@@ -1553,6 +1555,19 @@
 	border-top: 0.25rem solid var(--color-2);
 	border-bottom: 0.25rem solid #29b960;
 	border-bottom: 0.25rem solid var(--color-2);
+	margin: 0;
+}
+
+.editor-styles-wrapper blockquote.has-text-color {
+	border-color: currentColor;
+}
+
+.editor-styles-wrapper .wp-block-embed__wrapper {
+	position: relative;
+}
+
+.editor-styles-wrapper .wp-block-embed__wrapper::before {
+	content: none !important;
 }
 
 .editor-styles-wrapper .wp-block-audio {

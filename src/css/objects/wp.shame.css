@@ -1,0 +1,7 @@
+.wp-block-embed__wrapper {
+	position: relative;
+
+	&::before {
+		content: none!important;
+	}
+}

@@ -8,12 +8,12 @@
 @import "o.breadcrumbs";
 
 /* WP core blocks. */
-@import "wp.cover-image";
+@import "wp.cover";
 @import "wp.file";
 @import "wp.gallery";
 @import "wp.latest-posts";
 @import "wp.pullquote";
-
+@import "wp.shame";
 
 /* input,
 select,

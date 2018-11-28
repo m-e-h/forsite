@@ -1574,6 +1574,8 @@ input[type=".wp-block-file__button"]:active {
 .wp-block-pullquote {
 	color: #20924c;
 	color: var(--color-2-dark);
+	padding: 0;
+	border: 0;
 }
 
 .wp-block-pullquote blockquote {
@@ -1587,6 +1589,19 @@ input[type=".wp-block-file__button"]:active {
 	border-top: 0.25rem solid var(--color-2);
 	border-bottom: 0.25rem solid #29b960;
 	border-bottom: 0.25rem solid var(--color-2);
+	margin: 0;
+}
+
+blockquote.has-text-color {
+	border-color: currentColor;
+}
+
+.wp-block-embed__wrapper {
+	position: relative;
+}
+
+.wp-block-embed__wrapper::before {
+	content: none !important;
 }
 
 .wp-block-audio {
