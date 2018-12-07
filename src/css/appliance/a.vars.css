@@ -18,6 +18,7 @@
 	--monospace-font-family: $monospace-font-family;
 
 	--color-text: $color-text;
+	--header-text-color: inherit;
 	--color-text-light: $color-text-light;
 	--color-1: $color-1;
 	--color-1-light: $color-1-light;

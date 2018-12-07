@@ -75,7 +75,13 @@ add_action(
 			]
 		);
 
-		add_theme_support( 'custom-header' );
+		add_theme_support(
+			'custom-header',
+			[
+				'default-text-color' => '24292e',
+			]
+		);
+
 		add_theme_support(
 			'custom-background',
 			[

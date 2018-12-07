@@ -30,9 +30,10 @@ add_action(
 		$accent_color = get_theme_mod( 'accent_color', default_accent_color() );
 		$header_text_color = get_theme_mod( 'header_textcolor' );
 
-		$style = "--color-1:{$primary_color};";
-		$style .= "--color-2:{$accent_color};";
+		$style = "--color-1:#{$primary_color};";
+		$style .= "--color-2:#{$accent_color};";
 		$style .= "--header-text-color:#{$header_text_color};";
+		$style .= "--header-bg-color:#{$header_bg_color};";
 		$style .= "--content-width:{$content_width}px;";
 
 		/* Put the final style output together. */

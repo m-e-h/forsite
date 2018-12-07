@@ -12,6 +12,7 @@
 		courier, monospace;
 
 	--color-text: #24292e;
+	--header-text-color: inherit;
 	--color-text-light: #90a4ae;
 	--color-1: #2982b9;
 	--color-1-light: #8cbcd9;
@@ -276,10 +277,9 @@ header {
 }
 
 body > header {
-	color: #24292e;
-	color: var(--header-text-color, #24292e);
-	background-color: #2982b9;
-	background-color: var(--color-1);
+	color: inherit;
+	color: var(--header-text-color);
+	background-color: var(--header-bg-color);
 	display: flex;
 	font-size: 0.9rem;
 	justify-content: space-between;

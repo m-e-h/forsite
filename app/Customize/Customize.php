@@ -63,7 +63,7 @@ class Customize implements Bootable {
 			[
 				'default'           => default_primary_color(),
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color',
+				'sanitize_callback' => 'sanitize_hex_color_no_hash',
 			]
 		);
 
@@ -73,11 +73,21 @@ class Customize implements Bootable {
 			[
 				'default'           => default_accent_color(),
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color',
+				'sanitize_callback' => 'sanitize_hex_color_no_hash',
 			]
 		);
 
 				// Accent color.
+		$wp_customize->add_setting(
+			'header_bg_color',
+			[
+				'default'           => '#ffffff',
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color_no_hash',
+			]
+		);
+
+				// Breadcrumbs.
 		$wp_customize->add_setting(
 			'forsite_breadcrumbs',
 			[
@@ -118,6 +128,18 @@ class Customize implements Bootable {
 					'label'    => __( 'Accent Color' ),
 					'section'  => 'colors',
 					'settings' => 'accent_color',
+				]
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'header_bg_color',
+				[
+					'label'    => __( 'Header Background Color' ),
+					'section'  => 'colors',
+					'settings' => 'header_bg_color',
 				]
 			)
 		);
