@@ -7,6 +7,7 @@
 //// */
 
 .wp-block-cover {
+	color: #fff;
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
@@ -81,7 +82,7 @@
 
 /* // Paragraph of text shown within the cover image element. */
 .wp-block-cover-text {
-	color: #fff;
+	color: inherit;
 	font-size: $h2;
 	line-height: 1.25;
 	z-index: 1;
@@ -89,6 +90,7 @@
 	max-width: var(--paragraph-width);
 	padding: 1rem;
 	text-align: center;
+	text-shadow: .063rem .063rem .313rem rgb(55, 64, 70);
 
 	& a {
 		opacity: inherit;

@@ -10,3 +10,8 @@
 	max-height: 90vh;
 	overflow-y: hidden;
 }
+
+.wp-block-cover-text p {
+	color: inherit;
+	font-size: $h2;
+}

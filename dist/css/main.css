@@ -187,6 +187,7 @@ h6 {
 	line-height: 1.2;
 	line-height: var(--heading-line-height);
 	margin: 0.5em 0;
+	clear: both;
 }
 
 h1 > a,
@@ -1273,6 +1274,7 @@ body:not(.search) .trail-end > span,
 }
 
 .wp-block-cover {
+	color: #fff;
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
@@ -1344,7 +1346,7 @@ body:not(.search) .trail-end > span,
 }
 
 .wp-block-cover-text {
-	color: #fff;
+	color: inherit;
 	font-size: 2rem;
 	line-height: 1.25;
 	z-index: 1;
@@ -1352,6 +1354,7 @@ body:not(.search) .trail-end > span,
 	max-width: var(--paragraph-width);
 	padding: 1rem;
 	text-align: center;
+	text-shadow: 0.063rem 0.063rem 0.313rem rgb(55, 64, 70);
 }
 
 .wp-block-cover-text a {
@@ -1540,6 +1543,11 @@ blockquote.has-text-color {
 .wp-block-media-text__media {
 	max-height: 90vh;
 	overflow-y: hidden;
+}
+
+.wp-block-cover-text p {
+	color: inherit;
+	font-size: 2rem;
 }
 
 .wp-block-audio {
