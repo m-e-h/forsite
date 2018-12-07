@@ -16,13 +16,13 @@ module.exports = ctx => ({
 		'postcss-editor-styles':
 			'editor' === ctx.env ?
 				{
-					remove: [
-						'html',
-						':disabled',
-						'[readonly]',
-						'[disabled]'
-					]
-				} :
+						remove: [
+							'html',
+							':disabled',
+							'[readonly]',
+							'[disabled]'
+						]
+				  } :
 				false,
 		cssnano: 'production' === ctx.env ? { preset: 'default' } : false
 	}

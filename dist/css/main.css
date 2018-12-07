@@ -276,7 +276,10 @@ header {
 }
 
 body > header {
-	background-color: #fff;
+	color: #24292e;
+	color: var(--header-text-color, #24292e);
+	background-color: #2982b9;
+	background-color: var(--color-1);
 	display: flex;
 	font-size: 0.9rem;
 	justify-content: space-between;
@@ -408,7 +411,7 @@ input[type="submit"] {
 	background: none;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.5em 0.75em;
+	padding: 0.9em 2rem;
 	border-width: 0;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -496,19 +499,7 @@ nav li {
 
 nav a {
 	display: block;
-	padding: 0.5rem 1rem;
-}
-
-nav a:hover,
-nav a:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
-}
-
-.nav a:hover,
-.nav a:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
+	padding: 0.5em 1rem;
 }
 
 header nav > ul {
@@ -680,6 +671,7 @@ textarea {
 	border-radius: 0.1rem;
 	border-width: 1px;
 	border-color: #ced3d7;
+	border-style: solid;
 	padding: 0.5em 0.625em;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -1068,7 +1060,7 @@ hr.is-style-dots::before {
 	background: none;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.5em 0.75em;
+	padding: 0.9em 2rem;
 	border-width: 0;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -1389,13 +1381,12 @@ body:not(.search) .trail-end > span,
 	text-align: right;
 }
 
-.wp-block-file__button,
-input[type=".wp-block-file__button"] {
+.wp-block-file__button {
 	color: inherit;
 	background: none;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.5em 0.75em;
+	padding: 0.9em 2rem;
 	border-width: 0;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -1412,69 +1403,9 @@ input[type=".wp-block-file__button"] {
 }
 
 .wp-block-file__button:hover,
-.wp-block-file__button:focus,
-input[type=".wp-block-file__button"]:hover,
-input[type=".wp-block-file__button"]:focus {
+.wp-block-file__button:focus {
 	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
 	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
-}
-
-.wp-block-file__button {
-	overflow: visible;
-	transition-duration: 0.16s;
-	transition-duration: var(--timing);
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-timing-function: var(--ease);
-	margin: 0;
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-	text-transform: none;
-}
-
-..wp-block-file__button {
-	color: inherit;
-	background: none;
-	background-color: rgba(248, 249, 249, 0.6);
-	background-color: var(--color-frost-3);
-	padding: 0.5em 0.75em;
-	border-width: 0;
-	border-radius: 0.25rem;
-	display: inline-block;
-	word-break: normal;
-	vertical-align: middle;
-	cursor: pointer;
-	box-shadow: none;
-	min-height: 2.5rem;
-	transition-duration: 0.16s;
-	transition-duration: var(--timing);
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-timing-function: var(--ease);
-	transition-property: color, box-shadow, background-color;
-}
-
-..wp-block-file__button:hover,
-..wp-block-file__button:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
-}
-
-input[type=".wp-block-file__button"] {
-	color: #206691;
-	color: var(--color-1-dark);
-	background-color: rgba(248, 249, 249, 0.9);
-	background-color: var(--color-frost-4);
-	box-shadow: inset 0 0 0 0.125rem #206691;
-	box-shadow: inset 0 0 0 0.125rem var(--color-1-dark);
-}
-
-input[type=".wp-block-file__button"]:hover,
-input[type=".wp-block-file__button"]:focus,
-input[type=".wp-block-file__button"]:active {
-	color: #fff;
-	background-color: #206691;
-	background-color: var(--color-1-dark);
-	box-shadow: none;
 }
 
 * + .wp-block-file__button {
@@ -1604,6 +1535,11 @@ blockquote.has-text-color {
 
 .wp-block-embed__wrapper::before {
 	content: none !important;
+}
+
+.wp-block-media-text__media {
+	max-height: 90vh;
+	overflow-y: hidden;
 }
 
 .wp-block-audio {
@@ -3753,170 +3689,6 @@ body.admin-bar {
 
 .u-currentcolor {
 	color: currentColor;
-}
-
-.u-no-link {
-	box-shadow: none;
-}
-
-h1 > .u-link,
-h2 > .u-link,
-h3 > .u-link,
-h4 > .u-link,
-h5 > .u-link,
-h6 > .u-link {
-	color: inherit;
-	font-weight: inherit;
-}
-
-.u-link {
-	color: inherit;
-	text-decoration: none;
-	background-color: transparent;
-	transition-duration: 0.16s;
-	transition-duration: var(--timing);
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-timing-function: var(--ease);
-	transition-property: color, box-shadow, opacity;
-}
-
-.u-link:hover,
-.u-link:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.15);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-1);
-}
-
-p > .u-link,
-article .u-link {
-	box-shadow: inset 0 -0.125rem 0 rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 -0.125rem 0 var(--color-shade-2);
-	word-wrap: break-word;
-}
-
-nav .u-link {
-	display: block;
-	padding: 0.5rem 1rem;
-}
-
-nav .u-link:hover,
-nav .u-link:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
-}
-
-.nav .u-link:hover,
-.nav .u-link:focus {
-	box-shadow: inset 0 0 0 20rem rgba(189, 196, 201, 0.3);
-	box-shadow: inset 0 0 0 20rem var(--color-shade-2);
-}
-
-:root .u-link[href="#main"] {
-	border: 0;
-	background-color: rgba(248, 249, 249, 0.9);
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}
-
-:root .u-link[href="#main"]:active,
-:root .u-link[href="#main"]:focus {
-	top: 0.5rem;
-	left: 0.5rem;
-	clip: auto;
-	height: auto;
-	margin: 0;
-	padding: 0.5rem;
-	box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-		0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-	overflow: visible;
-	width: auto;
-	white-space: inherit;
-	z-index: 100000;
-}
-
-.u-link > img {
-	transition: inherit;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.o-list-group-links > li .u-link {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.5rem 0.75rem;
-	max-width: 100%;
-	width: 100%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	color: inherit;
-	font-weight: inherit;
-}
-
-.u-link.btn-hollow {
-	color: #206691;
-	color: var(--color-1-dark);
-	background-color: rgba(248, 249, 249, 0.9);
-	background-color: var(--color-frost-4);
-	box-shadow: inset 0 0 0 0.125rem #206691;
-	box-shadow: inset 0 0 0 0.125rem var(--color-1-dark);
-}
-
-.u-link.btn-hollow:hover,
-.u-link.btn-hollow:focus,
-.u-link.btn-hollow:active {
-	color: #fff;
-	background-color: #206691;
-	background-color: var(--color-1-dark);
-	box-shadow: none;
-}
-
-.btn-round .u-link {
-	color: inherit;
-	width: 2.5rem;
-	height: 2.5rem;
-	display: inline-block;
-	text-align: center;
-	border-radius: 50%;
-	padding: 0.5rem 0;
-	background-image: none;
-}
-
-.breadcrumbs .u-link {
-	color: inherit;
-	font-weight: normal;
-	opacity: 0.9;
-}
-
-.breadcrumbs .u-link:hover {
-	opacity: 1;
-}
-
-.wp-block-cover-text .u-link {
-	opacity: inherit;
-	color: inherit;
-}
-
-.is-cropped .blocks-gallery-item .u-link {
-	flex: 1;
-	width: 100%;
-	flex: 1;
-	height: 100%;
-	-o-object-fit: cover;
-	object-fit: cover;
-}
-
-.u-currentcolor_a .u-link {
-	color: currentColor;
-}
-
-.u-link {
-	color: #1f2d8f;
 }
 
 .u-strip-space {

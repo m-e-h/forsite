@@ -9,12 +9,7 @@ nav li {
 
 nav a {
 	display: block;
-	padding: 0.5rem 1rem;
-
-	&:hover,
-	&:focus {
-		@extend button:hover;
-	}
+	padding: 0.5em 1rem;
 }
 
 header nav > ul {

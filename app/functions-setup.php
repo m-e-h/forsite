@@ -28,54 +28,86 @@ namespace Forsite;
  * @access public
  * @return void
  */
-add_action( 'after_setup_theme', function() {
+add_action(
+	'after_setup_theme',
+	function() {
 
-	// Sets the theme content width.
-	$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 900 );
+		// Sets the theme content width.
+		$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 900 );
 
-	// Load theme translations.
-	load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'dist/lang' ) );
+		// Load theme translations.
+		load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'dist/lang' ) );
 
-	// Automatically add the `<title>` tag.
-	add_theme_support( 'title-tag' );
+		// Automatically add the `<title>` tag.
+		add_theme_support( 'title-tag' );
 
-	// Automatically add feed links to `<head>`.
-	add_theme_support( 'automatic-feed-links' );
+		// Automatically add feed links to `<head>`.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Adds featured image support.
-	add_theme_support( 'post-thumbnails' );
+		// Adds featured image support.
+		add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one locations.
-	register_nav_menus( [
-		'primary' => esc_html_x( 'Primary', 'nav menu location', 'forsite' )
-	] );
+		// This theme uses wp_nav_menu() in one locations.
+		register_nav_menus(
+			[
+				'primary' => esc_html_x( 'Primary', 'nav menu location', 'forsite' ),
+			]
+		);
 
-	add_theme_support( 'html5', [
-		'caption',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'search-form'
-	] );
+		add_theme_support(
+			'html5',
+			[
+				'caption',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'search-form',
+			]
+		);
 
-	add_theme_support( 'custom-logo', [
-		'height'      => 180,
-		'width'       => 180,
-		'flex-width'  => false,
-		'flex-height' => false,
-	] );
+		add_theme_support(
+			'custom-logo',
+			[
+				'height'      => 180,
+				'width'       => 180,
+				'flex-width'  => false,
+				'flex-height' => false,
+			]
+		);
 
-	add_theme_support( 'custom-background', [
-		'default-image'          => '',
-		'default-position-x'     => 'center',
-		'default-position-y'     => 'center',
-		'default-size'           => 'cover',
-		'default-repeat'         => 'no-repeat',
-		'default-attachment'     => 'fixed',
-		'default-color'          => 'ffffff'
-	] );
+		add_theme_support( 'custom-header' );
+		add_theme_support(
+			'custom-background',
+			[
+				'default-image'      => '',
+				'default-position-x' => 'center',
+				'default-position-y' => 'center',
+				'default-size'       => 'cover',
+				'default-repeat'     => 'no-repeat',
+				'default-attachment' => 'fixed',
+				'default-color'      => 'ffffff',
+			]
+		);
 
-} );
+		add_theme_support(
+			'jetpack-content-options',
+			[
+				'post-details'    => array(
+					'stylesheet' => 'forsite-mainCSS',
+					'date'       => '.entry__published',
+					'categories' => '.entry__terms--category',
+					'tags'       => '.entry__terms--post_tag',
+					'author'     => '.entry__author',
+					'comment'    => '.entry__comments',
+				),
+				'featured-images' => array(
+					'archive' => true,
+				),
+			]
+		);
+
+	}
+);
 
 /**
  * Register image sizes.
@@ -86,15 +118,19 @@ add_action( 'after_setup_theme', function() {
  * @access public
  * @return void
  */
-add_action( 'init', function() {
+add_action(
+	'init',
+	function() {
 
-	// Set the `post-thumbnail` size.
-	set_post_thumbnail_size( 178, 100, true );
+		// Set the `post-thumbnail` size.
+		set_post_thumbnail_size( 178, 100, true );
 
-	// Register custom image sizes.
-	add_image_size( 'forsite-medium', 750, 422, true );
+		// Register custom image sizes.
+		add_image_size( 'forsite-medium', 750, 422, true );
 
-}, 5 );
+	},
+	5
+);
 
 /**
  * Register sidebars.
@@ -105,23 +141,31 @@ add_action( 'init', function() {
  * @access public
  * @return void
  */
-add_action( 'widgets_init', function() {
+add_action(
+	'widgets_init',
+	function() {
 
-	$args = [
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget__title">',
-		'after_title'   => '</h3>'
-	];
+		$args = [
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget__title">',
+			'after_title'   => '</h3>',
+		];
 
-	register_sidebar( [
-		'id'   => 'primary',
-		'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' )
-	] + $args );
+		register_sidebar(
+			[
+				'id'   => 'primary',
+				'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' ),
+			] + $args
+		);
 
-	register_sidebar( [
-		'id'   => 'footer',
-		'name' => esc_html_x( 'Footer', 'sidebar', 'forsite' )
-	] + $args );
+		register_sidebar(
+			[
+				'id'   => 'footer',
+				'name' => esc_html_x( 'Footer', 'sidebar', 'forsite' ),
+			] + $args
+		);
 
-}, 5 );
+	},
+	5
+);

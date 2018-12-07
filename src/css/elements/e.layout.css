@@ -14,7 +14,8 @@ header {
 }
 
 body > header {
-	background-color: #fff;
+	color: var(--header-text-color, $color-text);
+	background-color: var(--color-1);
 	display: flex;
 	font-size: $h6;
 	justify-content: space-between;

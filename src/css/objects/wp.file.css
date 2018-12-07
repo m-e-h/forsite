@@ -19,7 +19,7 @@
 }
 
 .wp-block-file__button {
-	@extend button;
+	@extend %e_button;
 }
 
 /* // Give the file block button some spacing to the left if there's another element preceding it. */

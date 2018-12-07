@@ -20,32 +20,61 @@ namespace Forsite;
  * @access public
  * @return void
  */
-add_action( 'wp_head', function() {
+add_action(
+	'wp_head',
+	function() {
 
-	$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : false;
+		$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : '900px';
 
-	if ( $content_width ) { ?>
-		<style>:root{--content-width:<?= "{$content_width}px" ?>};</style>
-	<?php
+		$primary_color = get_theme_mod( 'primary_color', default_primary_color() );
+		$accent_color = get_theme_mod( 'accent_color', default_accent_color() );
+		$header_text_color = get_theme_mod( 'header_textcolor' );
+
+		$style = "--color-1:{$primary_color};";
+		$style .= "--color-2:{$accent_color};";
+		$style .= "--header-text-color:#{$header_text_color};";
+		$style .= "--content-width:{$content_width}px;";
+
+		/* Put the final style output together. */
+		$style = "\n" . '<style data-style="custom-properties">:root{' . trim( $style ) . '}</style>' . "\n";
+
+		/* Output the custom style. */
+		echo $style;
 	}
-
-});
+);
 
 /**
- * Returns the metadata separator.
+ * Returns the primary color.
  *
  * @since  1.0.0
  * @access public
- * @param  string  $sep  String to separate metadata.
+ * @param  string  $hex.
  * @return string
  */
-function sep( $sep = '' ) {
+function default_primary_color() {
 
 	return apply_filters(
-		'forsite/sep',
-		sprintf(
-			' <span class="sep">%s</span> ',
-			$sep ?: esc_html_x( '&middot;', 'meta separator', 'forsite' )
-		)
+		'forsite/primary_color',
+		'#2980b9'
 	);
+}
+
+/**
+ * Returns the accent color.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $hex.
+ * @return string
+ */
+function default_accent_color() {
+
+	return apply_filters(
+		'forsite/accent_color',
+		'#16a085'
+	);
+}
+
+function forsite_sanitize_checkbox( $input ) {
+	return ( 1 == $input ) ? 1 : '';
 }

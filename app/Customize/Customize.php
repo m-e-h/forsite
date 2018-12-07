@@ -2,22 +2,17 @@
 /**
  * Customize class.
  *
- * This file shows some basics on how to set up and work with the WordPress
- * Customization API. This is the place to set up all of your theme options for
- * the customizer.
- *
  * @package   Forsite
- * @author    Marty Helmick <info@martyhelmick.com>
- * @copyright 2018 Marty Helmick
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://github.com/m-e-h/forsite
  */
 
 namespace Forsite\Customize;
 
 use WP_Customize_Manager;
+use WP_Customize_Color_Control;
 use Hybrid\Contracts\Bootable;
 use function Forsite\asset;
+use function Forsite\default_primary_color;
+use function Forsite\default_accent_color;
 
 /**
  * Handles setting up everything we need for the customizer.
@@ -36,40 +31,20 @@ class Customize implements Bootable {
 	 * @return void
 	 */
 	public function boot() {
-
-		// Register panels, sections, settings, controls, and partials.
-		add_action( 'customize_register', [ $this, 'registerPanels'   ] );
+		add_action( 'customize_register', [ $this, 'registerPanels' ] );
 		add_action( 'customize_register', [ $this, 'registerSections' ] );
 		add_action( 'customize_register', [ $this, 'registerSettings' ] );
 		add_action( 'customize_register', [ $this, 'registerControls' ] );
 		add_action( 'customize_register', [ $this, 'registerPartials' ] );
 
 		// Enqueue scripts and styles.
-		add_action( 'customize_controls_enqueue_scripts', [ $this, 'controlsEnqueue'] );
+		// add_action( 'customize_controls_enqueue_scripts', [ $this, 'controlsEnqueue' ] );
 		add_action( 'customize_preview_init', [ $this, 'previewEnqueue' ] );
 	}
 
-	/**
-	 * Callback for registering panels.
-	 *
-	 * @link   https://developer.wordpress.org/themes/customize-api/customizer-objects/#panels
-	 * @since  1.0.0
-	 * @access public
-	 * @param  WP_Customize_Manager  $manager  Instance of the customize manager.
-	 * @return void
-	 */
-	public function registerPanels( WP_Customize_Manager $manager ) {}
 
-	/**
-	 * Callback for registering sections.
-	 *
-	 * @link   https://developer.wordpress.org/themes/customize-api/customizer-objects/#sections
-	 * @since  1.0.0
-	 * @access public
-	 * @param  WP_Customize_Manager  $manager  Instance of the customize manager.
-	 * @return void
-	 */
-	public function registerSections( WP_Customize_Manager $manager ) {}
+	public function registerPanels( WP_Customize_Manager $wp_customize ) {}
+	public function registerSections( WP_Customize_Manager $wp_customize ) {}
 
 	/**
 	 * Callback for registering settings.
@@ -77,89 +52,131 @@ class Customize implements Bootable {
 	 * @link   https://developer.wordpress.org/themes/customize-api/customizer-objects/#settings
 	 * @since  1.0.0
 	 * @access public
-	 * @param  WP_Customize_Manager  $manager  Instance of the customize manager.
+	 * @param  WP_Customize_Manager  $wp_customize  Instance of the customize manager.
 	 * @return void
 	 */
-	public function registerSettings( WP_Customize_Manager $manager ) {
+	public function registerSettings( WP_Customize_Manager $wp_customize ) {
 
-		// Update the `transform` property of core WP settings.
-		$settings = [
-			$manager->get_setting( 'blogname' ),
-			$manager->get_setting( 'blogdescription' ),
-			$manager->get_setting( 'header_textcolor' ),
-			$manager->get_setting( 'header_image' ),
-			$manager->get_setting( 'header_image_data' )
-		];
+		//Primary color.
+		$wp_customize->add_setting(
+			'primary_color',
+			[
+				'default'           => default_primary_color(),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
+		);
 
-		array_walk( $settings, function( &$setting ) {
-			$setting->transport = 'postMessage';
-		} );
+		// Accent color.
+		$wp_customize->add_setting(
+			'accent_color',
+			[
+				'default'           => default_accent_color(),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
+		);
+
+				// Accent color.
+		$wp_customize->add_setting(
+			'forsite_breadcrumbs',
+			[
+				'default'           => 0,
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'forsite_sanitize_checkbox',
+			]
+		);
+
 	}
 
 	/**
 	 * Callback for registering controls.
 	 *
-	 * @link   https://developer.wordpress.org/themes/customize-api/customizer-objects/#controls
 	 * @since  1.0.0
-	 * @access public
-	 * @param  WP_Customize_Manager  $manager  Instance of the customize manager.
+	 * @param  WP_Customize_Manager  $wp_customize
 	 * @return void
 	 */
-	public function registerControls( WP_Customize_Manager $manager ) {}
+	public function registerControls( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'primary_color',
+				[
+					'label'    => __( 'Primary Theme Color' ),
+					'section'  => 'colors',
+					'settings' => 'primary_color',
+				]
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'accent_color',
+				[
+					'label'    => __( 'Accent Color' ),
+					'section'  => 'colors',
+					'settings' => 'accent_color',
+				]
+			)
+		);
+
+		$wp_customize->add_control(
+			'breadcrumbs_show',
+			[
+				'label'    => __( 'Display Breadcrumbs' ),
+				'type'     => 'checkbox',
+				'section'  => 'jetpack_content_options',
+				'settings' => 'forsite_breadcrumbs',
+			]
+		);
+
+	}
 
 	/**
 	 * Callback for registering partials.
 	 *
-	 * @link   https://developer.wordpress.org/themes/customize-api/tools-for-improved-user-experience/#selective-refresh-fast-accurate-updates
 	 * @since  1.0.0
-	 * @access public
-	 * @param  WP_Customize_Manager  $manager  Instance of the customize manager.
+	 * @param  WP_Customize_Manager  $wp_customize
 	 * @return void
 	 */
-	public function registerPartials( WP_Customize_Manager $manager ) {
+	public function registerPartials( WP_Customize_Manager $wp_customize ) {
 
-		// If the selective refresh component is not available, bail.
-		if ( ! isset( $manager->selective_refresh ) ) {
+		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+		if ( ! isset( $wp_customize->selective_refresh ) ) {
 			return;
 		}
 
-		// Selectively refreshes the title in the header when the core
-		// WP `blogname` setting changes.
-		$manager->selective_refresh->add_partial( 'blogname', [
-			'selector'        => '.app-header__title-link',
-			'render_callback' => function() {
-				return get_bloginfo( 'name', 'display' );
-			}
-		] );
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			[
+				'selector'        => '.app-header__title-link',
+				'render_callback' => function() {
+					return get_bloginfo( 'name', 'display' );
+				},
+			]
+		);
 
-		// Selectively refreshes the description in the header when the
-		// core WP `blogdescription` setting changes.
-		$manager->selective_refresh->add_partial( 'blogdescription', [
-			'selector'        => '.app-header__description',
-			'render_callback' => function() {
-				return get_bloginfo( 'description', 'display' );
-			}
-		] );
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			[
+				'selector'        => '.app-header__description',
+				'render_callback' => function() {
+					return get_bloginfo( 'description', 'display' );
+				},
+			]
+		);
 
-		// Selectively refreshes the custom header if it doesn't support
-		// videos. Core WP won't properly refresh output from its own
-		// `the_custom_header_markup()` function unless video is supported.
-		if ( ! current_theme_supports( 'custom-header', 'video' ) ) {
-
-			$manager->selective_refresh->add_partial( 'header_image', [
-				'selector'            => '#wp-custom-header',
-				'render_callback'     => 'the_custom_header_markup',
-				'container_inclusive' => true,
-			] );
-		}
 	}
 
 	/**
-	 * Register or enqueue scripts/styles for the controls that are output
-	 * in the controls frame.
+	 * scripts/styles for the the controls frame.
 	 *
 	 * @since  1.0.0
-	 * @access public
 	 * @return void
 	 */
 	public function controlsEnqueue() {
@@ -181,17 +198,16 @@ class Customize implements Bootable {
 	}
 
 	/**
-	 * Register or enqueue scripts/styles for the live preview frame.
+	 * scripts/styles for the live preview frame.
 	 *
 	 * @since  1.0.0
-	 * @access public
 	 * @return void
 	 */
 	public function previewEnqueue() {
 
 		wp_enqueue_script(
 			'forsite-customize-preview',
-			asset( 'js/customize-preview.js' ),
+			asset( 'js/customize-view.js' ),
 			[ 'customize-preview' ],
 			null,
 			true

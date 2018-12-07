@@ -5,3 +5,4 @@
 *.map
 *.lock
 package-lock.json
+/.cache*

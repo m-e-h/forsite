@@ -14,15 +14,6 @@
 	color: currentColor;
 }
 
-.u-no-link {
-	box-shadow: none;
-}
-
-.u-link {
-	@extend a;
-	color: $color-links;
-}
-
 .u-strip-space {
 	margin: 0;
 	padding: 0;

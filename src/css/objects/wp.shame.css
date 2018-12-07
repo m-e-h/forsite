@@ -2,6 +2,11 @@
 	position: relative;
 
 	&::before {
-		content: none!important;
+		content: none !important;
 	}
+}
+
+.wp-block-media-text__media {
+	max-height: 90vh;
+	overflow-y: hidden;
 }

@@ -12,8 +12,8 @@
 				Hybrid\Comment\render_time()
 			)
 		] ) ?>
-		<?php Hybrid\Comment\display_edit_link( [ 'before' => Forsite\sep() ] ) ?>
-		<?php Hybrid\Comment\display_reply_link( [ 'before' => Forsite\sep() ] ) ?>
+		<?php Hybrid\Comment\display_edit_link() ?>
+		<?php Hybrid\Comment\display_reply_link() ?>
 	</header>
 
 	<div class="comment__content">

@@ -1,5 +1,5 @@
-<div class="entry__byline">
+<div class="entry__info">
 	<?php Hybrid\Post\display_author() ?>
-	<?php Hybrid\Post\display_date( [ 'before' => Forsite\sep() ] ) ?>
-	<?php Hybrid\Post\display_comments_link( [ 'before' => Forsite\sep() ] ) ?>
+	<?php Hybrid\Post\display_date() ?>
+	<?php Hybrid\Post\display_comments_link() ?>
 </div>
