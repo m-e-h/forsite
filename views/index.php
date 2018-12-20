@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?= Hybrid\Attr\render( 'html' ); ?>>
+<html <?= Hybrid\Attr\render( 'html' ); ?> class="no-js">
 
 	<head>
 		<?php wp_head(); ?>

@@ -1,6 +1,7 @@
 /* Custom media queries */
 @custom-media --xs (width <= 20em);
 @custom-media --sm (width >= 21em);
+@custom-media --md_down (width <= 40em);
 @custom-media --md (width >= 40em);
 @custom-media --lg (width >= 64em);
 @custom-media --xl (width >= 90em);

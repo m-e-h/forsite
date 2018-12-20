@@ -286,9 +286,6 @@ body > header {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	padding: 0.5rem;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-	box-shadow: var(--shadow);
 }
 
 body > footer {
@@ -1226,8 +1223,86 @@ input[type="button"]:active {
 	height: 100%;
 }
 
-.menu-toggle {
+.menu--primary {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+
+.menu--primary ul {
 	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.menu--primary ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.menu--primary ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.menu--primary ul ul li:hover > ul,
+.menu--primary ul ul li.focus > ul {
+	left: 100%;
+}
+
+.menu--primary ul ul a {
+	width: 200px;
+}
+
+.menu--primary ul li:hover > ul,
+.menu--primary ul li.focus > ul {
+	left: auto;
+}
+
+.menu--primary li {
+	position: relative;
+}
+
+.menu__item {
+	width: 100%;
+}
+
+.menu__link {
+	font-size: 0.875rem;
+	display: block;
+	text-decoration: none;
+	width: 100%;
+}
+
+.menu--primary.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+	display: inline-block;
+	font-size: 1.5rem;
+	padding: 0.25rem 0.5em;
+}
+
+@media (min-width: 40em) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.menu__item {
+		width: auto;
+	}
+
+	.menu--primary ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 .breadcrumbs ol {
@@ -1548,6 +1623,25 @@ blockquote.has-text-color {
 .wp-block-cover-text p {
 	color: inherit;
 	font-size: 2rem;
+}
+
+.entry__content h4:first-child {
+	margin-top: 0;
+}
+
+@media (max-width: 40em) {
+	.wp-block-media-text {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.icon {
+	height: 1em;
+}
+
+.wp-block-cover {
+	background-position-x: 0;
 }
 
 .wp-block-audio {

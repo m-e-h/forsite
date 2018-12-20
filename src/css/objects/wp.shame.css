@@ -15,3 +15,23 @@
 	color: inherit;
 	font-size: $h2;
 }
+
+.entry__content h4:first-child {
+	margin-top: 0;
+}
+
+@media (--md_down) {
+
+	.wp-block-media-text {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.icon {
+	height: 1em;
+}
+
+.wp-block-cover {
+	background-position-x: 0;
+}
