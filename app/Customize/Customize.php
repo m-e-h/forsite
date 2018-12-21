@@ -13,6 +13,8 @@ use Hybrid\Contracts\Bootable;
 use function Forsite\asset;
 use function Forsite\default_primary_color;
 use function Forsite\default_accent_color;
+use function Forsite\default_header_bg_color;
+use function Forsite\forsite_sanitize_checkbox;
 
 /**
  * Handles setting up everything we need for the customizer.
@@ -63,7 +65,7 @@ class Customize implements Bootable {
 			[
 				'default'           => default_primary_color(),
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color_no_hash',
+				'sanitize_callback' => 'sanitize_hex_color',
 			]
 		);
 
@@ -73,7 +75,7 @@ class Customize implements Bootable {
 			[
 				'default'           => default_accent_color(),
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color_no_hash',
+				'sanitize_callback' => 'sanitize_hex_color',
 			]
 		);
 
@@ -81,9 +83,9 @@ class Customize implements Bootable {
 		$wp_customize->add_setting(
 			'header_bg_color',
 			[
-				'default'           => '#ffffff',
+				'default'           => default_header_bg_color(),
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color_no_hash',
+				'sanitize_callback' => 'sanitize_hex_color',
 			]
 		);
 
@@ -91,7 +93,7 @@ class Customize implements Bootable {
 		$wp_customize->add_setting(
 			'forsite_breadcrumbs',
 			[
-				'default'           => 0,
+				'default'           => '',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'forsite_sanitize_checkbox',
 			]
@@ -176,7 +178,7 @@ class Customize implements Bootable {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
 			[
-				'selector'        => '.app-header__title-link',
+				'selector'        => '.app-header__title',
 				'render_callback' => function() {
 					return get_bloginfo( 'name', 'display' );
 				},
