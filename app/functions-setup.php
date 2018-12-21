@@ -115,6 +115,7 @@ add_action(
 	}
 );
 
+
 /**
  * Register image sizes.
  *

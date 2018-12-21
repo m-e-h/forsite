@@ -26,19 +26,21 @@ add_action(
 
 		$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : '900px';
 
-		$primary_color = get_theme_mod( 'primary_color', default_primary_color() );
-		$accent_color = get_theme_mod( 'accent_color', default_accent_color() );
+		$primary_color     = get_theme_mod( 'primary_color', default_primary_color() );
+		$accent_color      = get_theme_mod( 'accent_color', default_accent_color() );
 		$header_text_color = get_theme_mod( 'header_textcolor' );
-		$header_bg_color = get_theme_mod( 'header_bg_color' );
+		$header_bg_color   = get_theme_mod( 'header_bg_color' );
 
-		$style = "--color-1:#{$primary_color};";
+		$style  = "--color-1:#{$primary_color};";
 		$style .= "--color-2:#{$accent_color};";
-		$style .= "--header-text-color:#{$header_text_color};";
+		$style .= display_header_text() ? "--header-text-color:#{$header_text_color};" : '';
 		$style .= "--header-bg-color:#{$header_bg_color};";
 		$style .= "--content-width:{$content_width}px;";
 
+		$display_style = display_header_text() ? '' : '.app-header__title,.app-header__description{clip: rect(0, 0, 0, 0);position: absolute;}';
+
 		/* Put the final style output together. */
-		$style = "\n" . '<style data-style="custom-properties">:root{' . trim( $style ) . '}</style>' . "\n";
+		$style = "\n" . '<style data-style="custom-properties">:root{' . trim( $style ) . '}' . $display_style . '</style>' . "\n";
 
 		/* Output the custom style. */
 		echo $style;
@@ -57,7 +59,7 @@ function default_primary_color() {
 
 	return apply_filters(
 		'forsite/primary_color',
-		'#2980b9'
+		'2980b9'
 	);
 }
 
@@ -73,7 +75,7 @@ function default_accent_color() {
 
 	return apply_filters(
 		'forsite/accent_color',
-		'#16a085'
+		'16a085'
 	);
 }
 

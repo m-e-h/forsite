@@ -16,7 +16,7 @@
 		"editor:css": "postcss src/css/editor-style.css -d dist/css --env editor development",
 		"main:css": "postcss src/css/main.css -d dist/css --env development",
 		"compile:js": "webpack --module-bind js=babel-loader src/js/main.js -o dist/js/[name].js --mode development",
-		"customizerjs": "parcel build src/js/customize-view.js -d dist/js",
+		"customizerjs": "parcel build src/js/customize-view.js -d dist/js --no-source-maps",
 		"lint": "run-s lint:*",
 		"lint:css": "stylelint './src/css/**/*.css' --fix",
 		"lint:js": "eslint './src/js/**/*.js'",
