@@ -3,7 +3,7 @@
 	--gutter: calc(var(--base-space) * 1.5);
 
 	--line-height: 1.6;
-	--heading-line-height: 1.2;
+	--heading-line-height: 1.4;
 
 	--font-family: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
 		noto sans, sans-serif;
@@ -184,7 +184,7 @@ h4,
 h5,
 h6 {
 	font-weight: inherit;
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 	margin: 0.5em 0;
 	clear: both;
@@ -2896,7 +2896,7 @@ div.wp-block-code [aria-label="Code"] {
 .u-h0 {
 	font-size: 3.5rem;
 	font-size: var(--h0);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
@@ -2905,7 +2905,7 @@ div.wp-block-code [aria-label="Code"] {
 .has-huge-font-size {
 	font-size: 2.5rem;
 	font-size: var(--h1);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
@@ -2913,21 +2913,21 @@ div.wp-block-code [aria-label="Code"] {
 .has-large-font-size {
 	font-size: 2rem;
 	font-size: var(--h2);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
 .u-h3 {
 	font-size: 1.75rem;
 	font-size: var(--h3);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
 .u-h4 {
 	font-size: 1.5rem;
 	font-size: var(--h4);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 

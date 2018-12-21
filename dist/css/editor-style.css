@@ -3,7 +3,7 @@
 	--gutter: calc(var(--base-space) * 1.5);
 
 	--line-height: 1.6;
-	--heading-line-height: 1.2;
+	--heading-line-height: 1.4;
 
 	--font-family: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
 		noto sans, sans-serif;
@@ -222,7 +222,7 @@
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
 	font-weight: inherit;
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 	margin: 0.5em 0;
 	clear: both;
@@ -2860,7 +2860,7 @@
 .editor-styles-wrapper .u-h0 {
 	font-size: 3.5rem;
 	font-size: var(--h0);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
@@ -2869,7 +2869,7 @@
 .editor-styles-wrapper .has-huge-font-size {
 	font-size: 2.5rem;
 	font-size: var(--h1);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
@@ -2877,21 +2877,21 @@
 .editor-styles-wrapper .has-large-font-size {
 	font-size: 2rem;
 	font-size: var(--h2);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
 .editor-styles-wrapper .u-h3 {
 	font-size: 1.75rem;
 	font-size: var(--h3);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
 .editor-styles-wrapper .u-h4 {
 	font-size: 1.5rem;
 	font-size: var(--h4);
-	line-height: 1.2;
+	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
 
