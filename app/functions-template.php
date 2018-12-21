@@ -29,6 +29,7 @@ add_action(
 		$primary_color     = get_theme_mod( 'primary_color', default_primary_color() );
 		$accent_color      = get_theme_mod( 'accent_color', default_accent_color() );
 		$header_text_color = get_theme_mod( 'header_textcolor' );
+		$header_text_color = sanitize_hex_color_add_hash( $header_text_color );
 		$header_bg_color   = get_theme_mod( 'header_bg_color', default_header_bg_color() );
 
 		$style_var  = '';
