@@ -505,7 +505,12 @@
 	border-top: 1px solid var(--color-shade-2);
 }
 
-.editor-styles-wrapper tr:nth-child(2n) {
+.editor-styles-wrapper tr:last-child {
+	border-bottom: 1px solid rgba(189, 196, 201, 0.3);
+	border-bottom: 1px solid var(--color-shade-2);
+}
+
+.editor-styles-wrapper .is-style-stripes tr:nth-child(2n + 1) {
 	background-color: rgba(189, 196, 201, 0.3);
 	background-color: var(--color-shade-2);
 }
