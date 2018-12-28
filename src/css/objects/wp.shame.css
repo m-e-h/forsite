@@ -1,3 +1,7 @@
+.wp-block {
+	max-width: var(--content-width);
+}
+
 .wp-block-embed__wrapper {
 	position: relative;
 

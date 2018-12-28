@@ -1,19 +1,18 @@
 %e_button {
 	color: inherit;
-	background: none;
+	background: transparent;
 	background-color: var(--color-frost-3);
 	padding: 0.9em 2rem;
-	border-width: 0;
+	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
-	word-break: normal;
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
 	min-height: $form-element-min-height;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
-	transition-property: color, box-shadow, background-color;
+	transition-property: all;
 
 	&:hover,
 	&:focus {

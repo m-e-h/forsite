@@ -41,10 +41,7 @@ select,
 optgroup,
 textarea {
 	margin: 0; /* 1 */
-	font-family: inherit;
 	font-size: inherit;
-	line-height: inherit;
-	text-transform: none; /* 2 */
 }
 
 input,
@@ -57,12 +54,10 @@ textarea {
 	border-color: $gray3;
 	border-style: solid;
 	padding: 0.5em 0.625em;
-	font-size: 1rem;
 	line-height: 1.5;
 	background-color: $form-element-background-color;
 	color: inherit;
 	vertical-align: baseline;
-	font-weight: inherit;
 
 	&:focus {
 		background-color: #fff;
@@ -96,7 +91,6 @@ legend {
 	max-width: 100%;
 	padding: 0;
 	margin-bottom: 0.5rem;
-	line-height: inherit;
 	color: inherit;
 	white-space: normal;
 }

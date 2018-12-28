@@ -22,14 +22,14 @@ html {
 body {
 	font-family: var(--font-family);
 	font-size: 1rem;
-	font-weight: 400;
 	line-height: var(--line-height);
 	color: var(--color-text);
+	overflow-wrap: break-word;
 }
 
 p {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 0;
+	margin-bottom: var(--base-space);
 }
 
 h1 {
@@ -62,26 +62,24 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: inherit;
 	line-height: var(--heading-line-height);
-	margin: 0.5em 0;
+	margin-top: 0.5em;
+	margin-bottom: var(--base-space);
 	clear: both;
 
 	& > a {
 		color: inherit;
-		font-weight: inherit;
 	}
 }
 
-article * + h1,
+/* article * + h1,
 article * + h2,
 article h3,
 article h4,
 article h5,
 article h6 {
 	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-}
+} */
 
 abbr[title],
 abbr[data-original-title] {
@@ -93,7 +91,6 @@ abbr[data-original-title] {
 address {
 	margin-bottom: 1rem;
 	font-style: normal;
-	line-height: inherit;
 }
 
 b,

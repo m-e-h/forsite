@@ -18,6 +18,7 @@
 	--display-font-family: $display-font-family;
 	--monospace-font-family: $monospace-font-family;
 
+	--site-bg: #fff;
 	--color-text: $color-text;
 	--header-text-color: inherit;
 	--color-text-light: $color-text-light;

@@ -5,8 +5,13 @@ ul,
 ol,
 dl {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 var(--base-space);
 	padding: 0;
+}
+
+ul ul,
+ol ol {
+	margin-bottom: 0;
 }
 
 li {

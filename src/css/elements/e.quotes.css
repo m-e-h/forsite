@@ -15,7 +15,6 @@ blockquote {
 cite {
 	width: 100%;
 	display: inline-block;
-	font-family: var(--font-family);
 }
 
 blockquote cite {

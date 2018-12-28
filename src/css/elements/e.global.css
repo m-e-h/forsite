@@ -1,52 +1,39 @@
 /* #Global
 \*------------------------------------ */
 
-/**
- * 1. Remove repeating backgrounds in all browsers (opinionated).
- * 2. Add border box sizing in all browsers (opinionated).
- */
+* {
+	text-transform: none;
+	font-weight: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+
 *,
 ::before,
 ::after {
-	background-repeat: no-repeat; /* 1 */
-	box-sizing: border-box; /* 2 */
+	background-repeat: no-repeat;
+	box-sizing: border-box;
 }
 
 /**
-  * 1. Add text decoration inheritance in all browsers (opinionated).
-  * 2. Add vertical alignment inheritance in all browsers (opinionated).
-  */
-::before,
-::after {
-	text-decoration: inherit; /* 1 */
-	vertical-align: inherit; /* 2 */
-}
-
-/**
-  * 1. Use the default cursor in all browsers (opinionated).
-  * 2. Use sans-serif font (opinionated).
-  * 3. Correct the line height in all browsers.
-  * 4. Prevent adjustments of font size after orientation changes in
-  *    IE on Windows Phone and in iOS.
-  * 5. Breaks words to prevent overflow in all browsers (opinionated).
+  * 4. Prevent adjustments of font size after orientation changes in mobile.
   */
 
 html {
-	cursor: default; /* 1 */
-	font-family: sans-serif; /* 2 */
-	line-height: 1.15; /* 3 */
-	-webkit-text-size-adjust: 100%; /* 4 */
-	overflow-wrap: break-word; /* 5 */
+	cursor: default;
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: var(--line-height);
+	-webkit-text-size-adjust: 100%; /* 1 */
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
 	margin: 0;
 	overflow-x: hidden;
-	background-color: #fff;
+	background-color: var(--site-bg);
 	min-height: 100vh;
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
 }
 

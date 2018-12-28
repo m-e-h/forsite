@@ -29,7 +29,7 @@ svg {
 }
 
 figure {
-	margin: 0;
+	margin: 0 0 var(--base-space);
 	padding: 0;
 }
 
