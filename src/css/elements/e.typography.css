@@ -129,3 +129,6 @@ hr {
 	background-image: linear-gradient(to right, #d4d4d4, currentColor, #d4d4d4);
 }
 
+br + br {
+	display: none;
+}

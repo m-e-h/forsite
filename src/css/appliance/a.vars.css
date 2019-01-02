@@ -9,6 +9,7 @@
 /* global vars */
 :root {
 	--base-space: $base-space;
+	--double-space: calc(var(--base-space) * 2);
 	--gutter: calc(var(--base-space) * 1.5);
 
 	--line-height: $line-height;
@@ -31,7 +32,7 @@
 
 	--opacity: $opacity;
 	--content-width: $content-width;
-	--content-wide: calc(var(--content-width) + 16vw);
+	--content-wide: calc(var(--content-width) - var(--double-space) + 20vw);
 
 	/* Fluid font = calc(minPX + (max - min) * ((100vw - sm-mqPX) / (xlMQ - sm-mq))) */
 	--fluid-font: calc(

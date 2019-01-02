@@ -2,10 +2,11 @@
 \*------------------------------------ */
 
 * {
-	text-transform: none;
+	font-size: inherit;
 	font-weight: inherit;
 	font-family: inherit;
 	line-height: inherit;
+	text-transform: none;
 }
 
 *,
@@ -21,6 +22,7 @@
 
 html {
 	cursor: default;
+	font-size: 100%;
 	font-family: sans-serif;
 	font-weight: 400;
 	line-height: var(--line-height);
@@ -46,4 +48,3 @@ body {
 	background: #b3d4fc;
 	text-shadow: none;
 }
-

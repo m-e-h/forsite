@@ -8,15 +8,19 @@ table {
 	text-align: left;
 }
 
+th {
+	font-weight: bold;
+}
+
 td,
 th {
 	vertical-align: middle;
-	padding: 0.5rem;
+	padding: 0.25rem;
 	border-top: 1px solid var(--color-shade-2);
 }
 
 tr:last-child {
-    border-bottom: 1px solid var(--color-shade-2);
+	border-bottom: 1px solid var(--color-shade-2);
 }
 
 .is-style-stripes tr:nth-child(2n + 1) {

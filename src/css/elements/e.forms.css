@@ -33,7 +33,6 @@ button {
 
 /**
  * 1. Remove the margin in Safari.
- * 2. Remove the inheritance of text transform in Firefox.
  */
 input,
 button,
@@ -41,7 +40,6 @@ select,
 optgroup,
 textarea {
 	margin: 0; /* 1 */
-	font-size: inherit;
 }
 
 input,

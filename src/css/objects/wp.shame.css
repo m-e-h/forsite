@@ -2,6 +2,14 @@
 	max-width: var(--content-width);
 }
 
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: var(--content-wide);
+}
+
 .wp-block-embed__wrapper {
 	position: relative;
 
@@ -38,4 +46,8 @@
 
 .wp-block-cover {
 	background-position-x: 0;
+}
+
+.wp-block-column :last-child {
+	margin-bottom: 0;
 }
