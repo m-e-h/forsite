@@ -10,7 +10,6 @@ body > header {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	/* box-shadow: var(--shadow); */
 }
 
 body > footer {
