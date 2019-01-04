@@ -25,3 +25,18 @@
 blockquote.has-text-color {
 	border-color: currentColor;
 }
+
+.wp-block-quote.is-style-large {
+	font-size: var(--h4);
+}
+
+.wp-block-quote.wp-block-quote p {
+	font-style: italic;
+	line-height: inherit;
+	font-size: inherit;
+}
+
+.wp-block-quote.wp-block-quote cite {
+	font-size: 0.75em;
+	text-align: right;
+}

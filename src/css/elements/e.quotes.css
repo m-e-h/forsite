@@ -2,7 +2,7 @@
 \*------------------------------------ */
 
 blockquote {
-	padding: 0.5rem;
+	padding: 0 1em;
 	font-size: var(--h5);
 	border-left: 0.25rem solid var(--color-2);
 	margin: var(--gutter) auto;
