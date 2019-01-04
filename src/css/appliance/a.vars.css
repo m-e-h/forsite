@@ -9,6 +9,7 @@
 /* global vars */
 :root {
 	--base-space: $base-space;
+	--half-space: calc(var(--base-space) / 2);
 	--double-space: calc(var(--base-space) * 2);
 	--gutter: calc(var(--base-space) * 1.5);
 

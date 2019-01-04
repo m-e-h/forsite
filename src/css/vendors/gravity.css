@@ -2,3 +2,53 @@ article .gform_wrapper {
 	max-width: var(--content-width);
 	margin: 0 auto;
 }
+
+.ui-datepicker.ui-datepicker {
+
+	font-family: inherit;
+	font-size: 0.7rem;
+
+	& tbody tr td {
+		border-color: $gray4;
+	}
+
+	& .ui-datepicker-unselectable.ui-state-disabled {
+		background-color: $gray4;
+	}
+
+	& .ui-datepicker-header {
+		background-color: var(--color-1);
+		color: inherit;
+		border-width: 0;
+		box-shadow: none;
+		text-shadow: none;
+	}
+
+	& .ui-datepicker-title select {
+		margin: 2px 1px;
+		background-color: var(--color-frost-3);
+		font-size: 0.8rem;
+		min-height: 1rem;
+		padding: 1px;
+		border-color: var(--color-frost-3);
+	}
+
+	& .ui-datepicker-calendar .ui-state-default {
+		box-shadow: none;
+		text-shadow: none;
+		background: $gray0;
+		color: $gray8;
+	}
+
+	& .ui-datepicker-calendar .ui-state-hover {
+		background: #fff;
+	}
+
+	& .ui-datepicker-calendar .ui-state-active {
+		background: #fff;
+		color: $black;
+		margin: 0;
+		border-color: var(--color-1);
+		font-size: 0.9rem;
+	}
+}

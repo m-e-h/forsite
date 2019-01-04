@@ -63,6 +63,23 @@ textarea {
 	}
 }
 
+select {
+	appearance: none;
+	line-height: 2 !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235e6e78' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 7.5l9 9 9-9z'/%3E%3C/svg%3E");
+	background-origin: content-box;
+	background-position: right -1.1rem center;
+	background-repeat: no-repeat;
+	background-size: 0.9rem;
+	padding-right: 1.5rem !important;
+}
+
+input[type="file"] {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
 input[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
@@ -101,13 +118,11 @@ label {
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box;
 	padding: 0;
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 $space-1 0 0;
-	width: 1rem;
-	height: 1rem;
+	margin: 0 0.5em 0 0;
+	min-height: unset;
 }
 
 input[type="number"] {
