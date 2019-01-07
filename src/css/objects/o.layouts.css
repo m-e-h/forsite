@@ -71,7 +71,7 @@ hr:not(.is-style-wide) {
 	max-width: 200px;
 }
 
-hr.is-style-dots {
+hr.is-style-dots.is-style-dots {
 	background: none;
 	border: none;
 	height: auto;

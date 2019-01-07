@@ -32,9 +32,3 @@ figure {
 	margin: 0 0 var(--base-space);
 	padding: 0;
 }
-
-figcaption {
-	font-size: $h6;
-	padding: 0.5rem;
-	opacity: var(--opacity);
-}

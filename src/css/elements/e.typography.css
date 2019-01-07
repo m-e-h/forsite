@@ -1,19 +1,24 @@
 /* #TYPOGRAPHY
 \*------------------------------------ */
 
+%e_figcaption {
+	color: var(--color-text-muted);
+	font-size: var(--h6);
+	line-height: 1.25;
+	margin-top: 0.5rem;
+}
+
 html {
 	font-size: var(--min-font-size);
 }
 
 @media (--sm) {
-
 	html {
 		font-size: var(--fluid-font);
 	}
 }
 
 @media (--xl) {
-
 	html {
 		font-size: var(--max-font-size);
 	}
@@ -131,4 +136,20 @@ hr {
 
 br + br {
 	display: none;
+}
+
+figcaption {
+	@extend %e_figcaption;
+}
+
+time {
+	color: var(--color-text-muted);
+	display: block;
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+p > time {
+	display: inline;
+	font-size: 0.9em;
 }

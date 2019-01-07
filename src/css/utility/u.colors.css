@@ -14,10 +14,6 @@
 	color: $color-grey-ui;
 }
 
-.u-text-grey-sub {
-	color: $color-text-light;
-}
-
 .u-text-silver {
 	color: $silver;
 }
@@ -27,7 +23,7 @@
 }
 
 .u-text-muted {
-	color: $color-tint-3;
+	color: $color-text-muted;
 }
 
 .u-text-1 {

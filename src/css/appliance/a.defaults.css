@@ -39,8 +39,6 @@ $color-warning-light: $red1;
 $color-warning-dark: $red9;
 $color-links: $indigo7;
 $color-links-hover: $indigo5;
-$color-text-light: $grey-nuetral;
-$color-text-dark: #121516;
 $color-grey-bg: $gray1;
 $color-grey-bg-light: $gray0;
 $color-grey-bg-dark: $gray2;
@@ -78,6 +76,8 @@ $shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 
 /* global vars */
 $color-text: #24292e;
+$color-text-muted: $grey-nuetral;
+$color-text-dark: #121516;
 $font-family: system-ui;
 $display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 $form-element-background-color: $color-frost-4;

@@ -23,7 +23,7 @@
 	--site-bg: #fff;
 	--color-text: $color-text;
 	--header-text-color: inherit;
-	--color-text-light: $color-text-light;
+	--color-text-muted: $color-grey-char;
 	--color-1: $color-1;
 	--color-1-light: $color-1-light;
 	--color-1-dark: $color-1-dark;
