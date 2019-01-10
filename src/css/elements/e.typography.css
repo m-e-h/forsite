@@ -153,3 +153,11 @@ p > time {
 	display: inline;
 	font-size: 0.9em;
 }
+
+caption {
+	padding-top: var(--half-space);
+	padding-bottom: var(--half-space);
+	color: #6c757d;
+	text-align: left;
+	caption-side: bottom;
+}

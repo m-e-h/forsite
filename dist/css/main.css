@@ -285,6 +285,16 @@ p > time {
 	font-size: 0.9em;
 }
 
+caption {
+	padding-top: calc(1.5rem / 2);
+	padding-top: var(--half-space);
+	padding-bottom: calc(1.5rem / 2);
+	padding-bottom: var(--half-space);
+	color: #6c757d;
+	text-align: left;
+	caption-side: bottom;
+}
+
 header {
 	width: 100%;
 }
@@ -562,67 +572,41 @@ nav li:not(:hover) > ul {
 }
 
 table {
-	max-width: 100%;
 	width: 100%;
+	border-spacing: 0;
 	border-collapse: collapse;
 	margin-bottom: 1.5rem;
-	text-align: left;
-}
-
-th {
-	font-weight: bold;
 }
 
 td,
 th {
-	vertical-align: middle;
-	padding: 0.25rem;
-	border-top: 1px solid rgba(189, 196, 201, 0.3);
-	border-top: 1px solid var(--color-shade-2);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(189, 196, 201, 0.5);
+	border-color: var(--color-shade-3);
+	padding: 0.5rem 0.75rem;
 }
 
-tr:last-child {
-	border-bottom: 1px solid rgba(189, 196, 201, 0.3);
-	border-bottom: 1px solid var(--color-shade-2);
-}
-
-.is-style-stripes tr:nth-child(2n + 1) {
-	background-color: rgba(189, 196, 201, 0.3);
-	background-color: var(--color-shade-2);
-}
-
-thead th {
-	text-align: left;
-	border-top: none;
-}
-
-thead {
+th {
 	font-weight: 600;
 	vertical-align: bottom;
-	border-bottom: 2px solid rgba(189, 196, 201, 0.3);
-	border-bottom: 2px solid var(--color-shade-2);
+	border-bottom-width: 2px;
+	text-align: inherit;
 }
 
 tfoot {
 	font-weight: 600;
-	border-top: 2px solid rgba(189, 196, 201, 0.3);
-	border-top: 2px solid var(--color-shade-2);
-}
-
-caption {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	color: #6c757d;
-	text-align: left;
-	caption-side: bottom;
+	border-top-width: 2px solid rgba(189, 196, 201, 0.5);
+	border-top-width: 2px solid var(--color-shade-3);
 }
 
 blockquote {
 	padding: 0 1em;
 	font-size: 1.25rem;
 	font-size: var(--h5);
-	border-left: 0.25rem solid #29b960;
-	border-left: 0.25rem solid var(--color-2);
+	line-height: 1.4;
+	line-height: var(--heading-line-height);
+	border-left: 0.2rem solid currentColor;
 	margin: calc(1.5rem * 1.5) auto;
 	margin: var(--gutter) auto;
 }
@@ -1087,7 +1071,7 @@ hr.is-style-dots.is-style-dots::before {
 	color: inherit;
 }
 
-.has-background {
+.has-background:not(.has-text-color) {
 	color: #fff;
 }
 
@@ -1174,6 +1158,20 @@ input[type="button"]:active {
 
 .btn-lg {
 	font-size: 1.1rem;
+}
+
+table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1) {
+	background-color: rgba(189, 196, 201, 0.15);
+	background-color: var(--color-shade-1);
+}
+
+table.is-style-stripes.is-style-stripes {
+	border-bottom: 1px solid rgba(189, 196, 201, 0.3);
+	border-bottom: 1px solid var(--color-shade-2);
+}
+
+table.has-fixed-layout {
+	table-layout: fixed;
 }
 
 .wp-block-embed__wrapper {
@@ -1588,28 +1586,22 @@ body:not(.search) .trail-end > span,
 }
 
 .wp-block-pullquote {
-	color: #20924c;
-	color: var(--color-2-dark);
+	color: #206691;
+	color: var(--color-1-dark);
+	text-align: center;
 	padding: 0;
-	border: 0;
+	border-width: 0.2rem 0;
+	border-style: solid;
+	border-color: currentColor;
 }
 
 .wp-block-pullquote blockquote {
-	text-align: center;
-	border: none;
+	border-width: 0;
 	padding-top: 1.5rem;
 	padding-top: var(--base-space);
 	padding-bottom: 1.5rem;
 	padding-bottom: var(--base-space);
-	border-top: 0.25rem solid #29b960;
-	border-top: 0.25rem solid var(--color-2);
-	border-bottom: 0.25rem solid #29b960;
-	border-bottom: 0.25rem solid var(--color-2);
 	margin: 0;
-}
-
-blockquote.has-text-color {
-	border-color: currentColor;
 }
 
 .wp-block-quote.is-style-large {
@@ -1626,6 +1618,26 @@ blockquote.has-text-color {
 .wp-block-quote.wp-block-quote cite {
 	font-size: 0.75em;
 	text-align: right;
+}
+
+.is-style-solid-color {
+	background-color: #206691;
+	background-color: var(--color-1-dark);
+	border-radius: 0.1rem;
+}
+
+.is-style-solid-color blockquote {
+	color: #fff;
+}
+
+.is-style-solid-color.is-style-solid-color {
+	border-width: 0;
+}
+
+.is-style-solid-color.is-style-solid-color blockquote {
+	max-width: 100%;
+	text-align: inherit;
+	margin: 0;
 }
 
 .wp-block {

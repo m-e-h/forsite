@@ -7,24 +7,24 @@
 //// */
 
 .wp-block-pullquote {
-	color: var(--color-2-dark);
+	color: var(--color-1-dark);
+	text-align: center;
 	padding: 0;
-	border: 0;
+	border-width: 0.2rem 0;
+	border-style: solid;
+	border-color: currentColor;
 
 	& blockquote {
-		text-align: center;
-		border: none;
+		border-width: 0;
 		padding-top: var(--base-space);
 		padding-bottom: var(--base-space);
-		border-top: 0.25rem solid var(--color-2);
-		border-bottom: 0.25rem solid var(--color-2);
 		margin: 0;
 	}
 }
 
-blockquote.has-text-color {
+/* blockquote.has-text-color {
 	border-color: currentColor;
-}
+} */
 
 .wp-block-quote.is-style-large {
 	font-size: var(--h4);
@@ -39,4 +39,23 @@ blockquote.has-text-color {
 .wp-block-quote.wp-block-quote cite {
 	font-size: 0.75em;
 	text-align: right;
+}
+
+.is-style-solid-color {
+	background-color: var(--color-1-dark);
+	border-radius: $border-radius;
+}
+
+.is-style-solid-color blockquote {
+	color: #fff;
+}
+
+.is-style-solid-color.is-style-solid-color {
+	border-width: 0;
+}
+
+.is-style-solid-color.is-style-solid-color blockquote {
+	max-width: 100%;
+	text-align: inherit;
+	margin: 0;
 }

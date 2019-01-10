@@ -5,6 +5,7 @@
 .btn,
 .button,
 .wp-block-button__link {
+
 	@extend %e_button;
 }
 
@@ -12,7 +13,7 @@
 	color: inherit;
 }
 
-.has-background {
+.has-background:not(.has-text-color) {
 	color: #fff;
 }
 

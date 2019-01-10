@@ -3,6 +3,7 @@
 @import "o.lists";
 @import "o.image";
 @import "o.buttons";
+@import "o.tables";
 @import "o.embeds";
 @import "o.nav";
 @import "o.breadcrumbs";
@@ -12,7 +13,7 @@
 @import "wp.file";
 @import "wp.gallery";
 @import "wp.latest-posts";
-@import "wp.pullquote";
+@import "wp.quotes";
 @import "wp.shame";
 
 /* input,
