@@ -11,5 +11,3 @@
 	<?= Hybrid\View\render( 'components', 'menu', [ 'location' => 'primary' ] ); ?>
 
 </header>
-
-<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>

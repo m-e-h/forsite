@@ -318,6 +318,8 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
+	padding-top: 2.5rem;
+	padding-top: var(--h1);
 }
 
 main > * {
@@ -1327,10 +1329,16 @@ table.has-fixed-layout {
 	color: inherit;
 	font-weight: normal;
 	opacity: 0.9;
+	padding: 0.25rem 0.5rem;
 }
 
 .breadcrumbs a:hover {
 	opacity: 1;
+}
+
+.breadcrumbs li:last-of-type {
+	padding-left: 0.5rem;
+	opacity: 0.5;
 }
 
 body:not(.search) .trail-end > span,
