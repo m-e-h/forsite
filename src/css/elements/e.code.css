@@ -26,5 +26,6 @@ pre code {
 	font-size: inherit;
 	line-height: 1.75;
 	padding: 0;
+	background-color: transparent;
 	overflow-wrap: normal;
 }

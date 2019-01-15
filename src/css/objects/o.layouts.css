@@ -1,5 +1,3 @@
-
-
 .entry__content {
 	width: 100%;
 	margin-left: auto;
@@ -7,64 +5,6 @@
 	padding-left: var(--base-space);
 	padding-right: var(--base-space);
 	max-width: var(--content-width);
-
-	/* @media (--md) {
-		max-width: 80vw;
-	}
-
-	@media (--lg) {
-		max-width: 60vw;
-	}
-
-	@media (--xl) {
-		max-width: 40vw;
-	} */
-}
-
-/* .entry__content > * {
-	margin-top: var(--gutter);
-	margin-bottom: var(--gutter);
-} */
-
-/* .entry__content > :not(p) + p,
-.entry__content > p + :not(p) {
-	margin-top: var(--gutter);
-}
-
-.entry__content > *:first-child {
-	margin-top: 0;
-}
-
-.entry__content > *:last-child {
-	margin-bottom: 0;
-} */
-
-/* .entry__content h1,
-.entry__content h2,
-.entry__content h3,
-.entry__content h4,
-.entry__content h5,
-.entry__content h6 {
-	margin-top: 1.5em;
-	margin-bottom: 1em;
-} */
-
-/* .alignfull + * {
-	margin-top: var(--gutter);
-} */
-
-.wp-block-columns {
-	display: flex;
-	flex-wrap: wrap;
-
-	/* // Add styles based on the number of columns. Supports 2-6 columns. */
-	&.has-2-columns {
-	}
-}
-
-/* // Individual columns. */
-.wp-block-column {
-	flex: 1;
 }
 
 hr:not(.is-style-wide) {
@@ -72,6 +12,7 @@ hr:not(.is-style-wide) {
 }
 
 hr.is-style-dots.is-style-dots {
+	color: inherit;
 	background: none;
 	border: none;
 	height: auto;

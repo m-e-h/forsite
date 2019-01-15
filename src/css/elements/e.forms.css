@@ -110,12 +110,6 @@ legend {
 	white-space: normal;
 }
 
-label {
-	font-size: 0.875rem;
-	display: block;
-	margin: 0.15rem;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0;
@@ -123,6 +117,11 @@ input[type="radio"] {
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
 	min-height: unset;
+
+	& + label {
+		display: inline-block;
+		margin: 0;
+	}
 }
 
 input[type="number"] {
@@ -232,4 +231,24 @@ dialog:not([open]) {
 	border-color: transparent !important;
 	background-color: $form-element-background-color !important;
 	opacity: 0.5;
+}
+
+label {
+	font-size: 0.875rem;
+	line-height: 1;
+	display: block;
+	margin: 0.25rem 0 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+
+	& + label {
+		margin-bottom: 1rem !important;
+	}
+}
+
+label + input,
+label + select {
+	margin-bottom: 1rem !important;
 }

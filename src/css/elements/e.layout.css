@@ -1,3 +1,11 @@
+header,
+footer,
+main,
+aside,
+section {
+	position: relative;
+}
+
 header {
 	width: 100%;
 }

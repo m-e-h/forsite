@@ -23,8 +23,12 @@ li {
 article ul,
 article ol,
 article dl {
-	list-style: initial;
+	list-style-type: initial;
 	padding-left: 1rem;
+}
+
+article ul ul {
+	list-style-type: circle;
 }
 
 dt {

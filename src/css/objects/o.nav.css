@@ -32,7 +32,7 @@
 }
 
 .menu--primary ul ul a {
-	width: 200px;
+	width: 100%;
 }
 
 .menu--primary ul li:hover > ul,

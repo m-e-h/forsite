@@ -295,6 +295,14 @@ caption {
 	caption-side: bottom;
 }
 
+header,
+footer,
+main,
+aside,
+section {
+	position: relative;
+}
+
 header {
 	width: 100%;
 }
@@ -385,7 +393,7 @@ pre,
 samp {
 	background-color: rgba(248, 249, 249, 0.9);
 	background-color: var(--color-frost-4);
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -415,6 +423,7 @@ pre code {
 	font-size: inherit;
 	line-height: 1.75;
 	padding: 0;
+	background-color: transparent;
 	word-wrap: normal;
 }
 
@@ -481,8 +490,12 @@ li {
 article ul,
 article ol,
 article dl {
-	list-style: initial;
+	list-style-type: initial;
 	padding-left: 1rem;
+}
+
+article ul ul {
+	list-style-type: circle;
 }
 
 dt {
@@ -664,7 +677,7 @@ select,
 textarea {
 	max-width: 100%;
 	min-height: 2.5rem;
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 	border-width: 1px;
 	border-color: #ced3d7;
 	border-style: solid;
@@ -732,12 +745,6 @@ legend {
 	white-space: normal;
 }
 
-label {
-	font-size: 0.875rem;
-	display: block;
-	margin: 0.15rem;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0;
@@ -745,6 +752,12 @@ input[type="radio"] {
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
 	min-height: unset;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	margin: 0;
 }
 
 input[type="number"] {
@@ -839,6 +852,23 @@ dialog:not([open]) {
 	opacity: 0.5;
 }
 
+label {
+	font-size: 0.875rem;
+	line-height: 1;
+	display: block;
+	margin: 0.25rem 0 !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) + label,
+select + label {
+	margin-bottom: 1rem !important;
+}
+
+label + input,
+label + select {
+	margin-bottom: 1rem !important;
+}
+
 audio,
 canvas,
 iframe,
@@ -904,20 +934,12 @@ figure {
 	max-width: var(--content-width);
 }
 
-.wp-block-columns {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.wp-block-column {
-	flex: 1;
-}
-
 hr:not(.is-style-wide) {
 	max-width: 200px;
 }
 
 hr.is-style-dots.is-style-dots {
+	color: inherit;
 	background: none;
 	border: none;
 	height: auto;
@@ -984,7 +1006,7 @@ hr.is-style-dots.is-style-dots::before {
 	background-color: #fff;
 	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
 		0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 }
 
 .u-list-group > li,
@@ -1256,7 +1278,7 @@ table.has-fixed-layout {
 }
 
 .menu--primary ul ul a {
-	width: 200px;
+	width: 100%;
 }
 
 .menu--primary ul li:hover > ul,
@@ -1631,7 +1653,7 @@ body:not(.search) .trail-end > span,
 .is-style-solid-color {
 	background-color: #206691;
 	background-color: var(--color-1-dark);
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 }
 
 .is-style-solid-color blockquote {
@@ -1646,6 +1668,35 @@ body:not(.search) .trail-end > span,
 	max-width: 100%;
 	text-align: inherit;
 	margin: 0;
+}
+
+.wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wp-block-column.wp-block-column {
+	margin: 0 calc(1.5rem / 2) 1.5rem;
+	margin: 0 var(--half-space) var(--base-space);
+	word-wrap: break-word;
+	flex: auto;
+	width: calc(16% - 1.5rem);
+	width: calc(16% - var(--base-space));
+	min-width: 180px;
+}
+
+@media (min-width: 40em) {
+	.wp-block-column.wp-block-column {
+		min-width: 90px;
+	}
+
+	.wp-block-column.wp-block-column:first-child {
+		margin-left: 0;
+	}
+
+	.wp-block-column.wp-block-column:last-child {
+		margin-right: 0;
+	}
 }
 
 .wp-block {
@@ -1699,10 +1750,6 @@ body:not(.search) .trail-end > span,
 	background-position-x: 0;
 }
 
-.wp-block-column :last-child {
-	margin-bottom: 0;
-}
-
 .entry__content figcaption {
 	color: #5e6e78;
 	color: var(--color-text-muted);
@@ -1723,6 +1770,14 @@ body:not(.search) .trail-end > span,
 	font-style: italic;
 	background-color: transparent;
 	padding: 0;
+}
+
+.wp-block-column :last-child {
+	margin-bottom: 0;
+}
+
+p.has-background {
+	padding: 0.75rem 1rem;
 }
 
 .u-fit {
@@ -3248,7 +3303,7 @@ body.admin-bar {
 
 .shadow-hover::after {
 	content: "";
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -3309,7 +3364,7 @@ body.admin-bar {
 }
 
 .u-br {
-	border-radius: 0.1rem;
+	border-radius: 0.2rem;
 }
 
 .u-br0 {
@@ -3321,19 +3376,19 @@ body.admin-bar {
 }
 
 .u-br-t {
-	border-radius: 0.1rem 0.1rem 0 0;
+	border-radius: 0.2rem 0.2rem 0 0;
 }
 
 .u-br-r {
-	border-radius: 0 0.1rem 0.1rem 0;
+	border-radius: 0 0.2rem 0.2rem 0;
 }
 
 .u-br-b {
-	border-radius: 0 0 0.1rem 0.1rem;
+	border-radius: 0 0 0.2rem 0.2rem;
 }
 
 .u-br-l {
-	border-radius: 0.1rem 0 0 0.1rem;
+	border-radius: 0.2rem 0 0 0.2rem;
 }
 
 .u-text-color.u-text-color {
