@@ -7,8 +7,8 @@
 	--line-height: 1.6;
 	--heading-line-height: 1.4;
 
-	--font-family: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
-		noto sans, sans-serif;
+	--font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto,
+		liberation sans, helvetica neue, sans-serif;
 	--display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 	--monospace-font-family: "SFMono-Regular", "Roboto Mono", consolas, menlo,
 		courier, monospace;
@@ -138,8 +138,8 @@ html {
 }
 
 body {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Liberation Sans, Helvetica Neue, sans-serif;
 	font-family: var(--font-family);
 	font-size: 1rem;
 	line-height: 1.6;
@@ -280,6 +280,7 @@ time {
 	font-style: italic;
 }
 
+a + time,
 p > time {
 	display: inline;
 	font-size: 0.9em;
@@ -298,6 +299,7 @@ caption {
 header,
 footer,
 main,
+article,
 aside,
 section {
 	position: relative;
@@ -924,6 +926,7 @@ figure {
 
 .entry__content {
 	width: 100%;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
@@ -1053,6 +1056,14 @@ hr.is-style-dots.is-style-dots::before {
 	background-size: contain;
 	margin-right: 0.5em;
 	margin-left: -1.5em;
+}
+
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	width: 1em;
+	margin: 0 0.1em;
+	vertical-align: -0.1em;
 }
 
 .alignfull img {
@@ -2990,8 +3001,8 @@ p.has-background {
 }
 
 .u-text-read {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Liberation Sans, Helvetica Neue, sans-serif;
 	font-family: var(--font-family);
 }
 
@@ -3905,14 +3916,6 @@ body.admin-bar {
 	pointer-events: none;
 	cursor: default;
 	opacity: 0.5;
-}
-
-img.wp-smiley,
-img.emoji {
-	display: inline;
-	max-width: 1.1em;
-	margin: 0 0.07em;
-	vertical-align: -0.1em;
 }
 
 @media print {

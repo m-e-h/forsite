@@ -7,8 +7,8 @@
 	--line-height: 1.6;
 	--heading-line-height: 1.4;
 
-	--font-family: system-ui, -apple-system, segoe ui, roboto, ubuntu, cantarell,
-		noto sans, sans-serif;
+	--font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto,
+		liberation sans, helvetica neue, sans-serif;
 	--display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 	--monospace-font-family: "SFMono-Regular", "Roboto Mono", consolas, menlo,
 		courier, monospace;
@@ -78,6 +78,7 @@
 .editor-styles-wrapper header,
 .editor-styles-wrapper footer,
 .editor-styles-wrapper main,
+.editor-styles-wrapper article,
 .editor-styles-wrapper aside,
 .editor-styles-wrapper section {
 	position: relative;
@@ -175,8 +176,8 @@
 }
 
 .editor-styles-wrapper {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Liberation Sans, Helvetica Neue, sans-serif;
 	font-family: var(--font-family);
 	font-size: 1rem;
 	line-height: 1.6;
@@ -317,6 +318,7 @@
 	font-style: italic;
 }
 
+.editor-styles-wrapper a + time,
 .editor-styles-wrapper p > time {
 	display: inline;
 	font-size: 0.9em;
@@ -871,6 +873,7 @@
 
 .editor-styles-wrapper .entry__content {
 	width: 100%;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
@@ -1000,6 +1003,14 @@
 	background-size: contain;
 	margin-right: 0.5em;
 	margin-left: -1.5em;
+}
+
+.editor-styles-wrapper img.wp-smiley,
+.editor-styles-wrapper img.emoji {
+	display: inline;
+	width: 1em;
+	margin: 0 0.1em;
+	vertical-align: -0.1em;
 }
 
 .editor-styles-wrapper .alignfull img {
@@ -2953,8 +2964,8 @@
 }
 
 .editor-styles-wrapper .u-text-read {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Liberation Sans, Helvetica Neue, sans-serif;
 	font-family: var(--font-family);
 }
 
@@ -3870,14 +3881,6 @@
 	opacity: 0.5;
 }
 
-.editor-styles-wrapper img.wp-smiley,
-.editor-styles-wrapper img.emoji {
-	display: inline;
-	max-width: 1.1em;
-	margin: 0 0.07em;
-	vertical-align: -0.1em;
-}
-
 @media print {
 	.editor-styles-wrapper body > *:not(main) {
 		display: none;
@@ -3958,8 +3961,8 @@
 }
 
 .editor-styles-wrapper .editor-block-list__layout {
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-		Noto Sans, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Liberation Sans, Helvetica Neue, sans-serif;
 	font-family: var(--font-family);
 	font-size: 1rem;
 	line-height: 1.6;

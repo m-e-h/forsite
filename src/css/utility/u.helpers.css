@@ -91,11 +91,3 @@
 	cursor: default;
 	opacity: 0.5;
 }
-
-img.wp-smiley,
-img.emoji {
-	display: inline;
-	max-width: 1.1em;
-	margin: 0 0.07em;
-	vertical-align: -0.1em;
-}

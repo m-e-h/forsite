@@ -78,7 +78,7 @@ $shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 $color-text: #24292e;
 $color-text-muted: $grey-nuetral;
 $color-text-dark: #121516;
-$font-family: system-ui;
+$font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Liberation Sans,Helvetica Neue,sans-serif;
 $display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
 $form-element-background-color: $color-frost-4;
 $form-element-min-height: 2.5rem;

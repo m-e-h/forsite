@@ -1,5 +1,6 @@
 .entry__content {
 	width: 100%;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: var(--base-space);

@@ -1,3 +1,11 @@
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	width: 1em;
+	margin: 0 0.1em;
+	vertical-align: -0.1em;
+}
+
 .alignfull img {
 	width: 100vw;
 }
