@@ -434,7 +434,7 @@ input[type="submit"] {
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -687,7 +687,7 @@ textarea {
 	line-height: 1.5;
 	background-color: rgba(248, 249, 249, 0.9);
 	color: inherit;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 
 input:focus,
@@ -1077,7 +1077,7 @@ img.emoji {
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -1513,7 +1513,7 @@ body:not(.search) .trail-end > span,
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;

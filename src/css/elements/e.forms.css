@@ -55,7 +55,7 @@ textarea {
 	line-height: 1.5;
 	background-color: $form-element-background-color;
 	color: inherit;
-	vertical-align: baseline;
+	vertical-align: middle;
 
 	&:focus {
 		background-color: #fff;

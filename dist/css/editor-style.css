@@ -380,7 +380,7 @@
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -644,7 +644,7 @@
 	line-height: 1.5;
 	background-color: rgba(248, 249, 249, 0.9);
 	color: inherit;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 
 .editor-styles-wrapper input:focus,
@@ -1024,7 +1024,7 @@
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
@@ -1476,7 +1476,7 @@
 	background: transparent;
 	background-color: rgba(248, 249, 249, 0.6);
 	background-color: var(--color-frost-3);
-	padding: 0.9em 2rem;
+	padding: 0.8rem 2em;
 	border: 1px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
