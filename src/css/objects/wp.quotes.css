@@ -30,8 +30,9 @@
 	font-size: var(--h4);
 }
 
+.wp-block-pullquote.wp-block-pullquote p
 .wp-block-quote.wp-block-quote p {
-	font-style: italic;
+	font-style: inherit;
 	line-height: inherit;
 	font-size: inherit;
 }

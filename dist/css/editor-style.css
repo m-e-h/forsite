@@ -107,8 +107,6 @@
 	text-align: center;
 	display: block;
 	width: 100%;
-	padding-top: 2.5rem;
-	padding-top: var(--h1);
 }
 
 .editor-styles-wrapper main > * {
@@ -318,7 +316,6 @@
 	font-style: italic;
 }
 
-.editor-styles-wrapper a + time,
 .editor-styles-wrapper p > time {
 	display: inline;
 	font-size: 0.9em;
@@ -584,9 +581,12 @@
 }
 
 .editor-styles-wrapper blockquote cite {
-	font-size: 0.9rem;
-	font-size: var(--h6);
+	font-size: 0.75em;
 	font-style: italic;
+}
+
+.editor-styles-wrapper blockquote :last-child {
+	margin-bottom: 0;
 }
 
 .editor-styles-wrapper
@@ -1300,12 +1300,21 @@
 	}
 }
 
+.editor-styles-wrapper .breadcrumbs {
+	margin-top: calc(1.5rem * 1.5);
+
+	margin-top: var(--gutter);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
+}
+
 .editor-styles-wrapper .breadcrumbs ol {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	font-size: 0.9rem;
+	margin: 0;
 }
 
 .editor-styles-wrapper .breadcrumbs li {
@@ -1613,8 +1622,12 @@
 	font-size: var(--h4);
 }
 
-.editor-styles-wrapper .wp-block-quote.wp-block-quote p {
-	font-style: italic;
+.editor-styles-wrapper
+	.wp-block-pullquote.wp-block-pullquote
+	p
+	.wp-block-quote.wp-block-quote
+	p {
+	font-style: inherit;
 	line-height: inherit;
 	font-size: inherit;
 }

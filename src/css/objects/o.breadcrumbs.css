@@ -3,12 +3,16 @@
 
 .breadcrumbs {
 
+	margin-top: var(--gutter);
+	margin-bottom: var(--gutter);
+
 	& ol {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		font-size: $h6;
+		margin: 0;
 	}
 
 	& li {

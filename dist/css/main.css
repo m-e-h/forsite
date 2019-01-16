@@ -280,7 +280,6 @@ time {
 	font-style: italic;
 }
 
-a + time,
 p > time {
 	display: inline;
 	font-size: 0.9em;
@@ -328,8 +327,6 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
-	padding-top: 2.5rem;
-	padding-top: var(--h1);
 }
 
 main > * {
@@ -638,9 +635,12 @@ cite {
 }
 
 blockquote cite {
-	font-size: 0.9rem;
-	font-size: var(--h6);
+	font-size: 0.75em;
 	font-style: italic;
+}
+
+blockquote :last-child {
+	margin-bottom: 0;
 }
 
 form {
@@ -1337,12 +1337,21 @@ table.has-fixed-layout {
 	}
 }
 
+.breadcrumbs {
+	margin-top: calc(1.5rem * 1.5);
+
+	margin-top: var(--gutter);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
+}
+
 .breadcrumbs ol {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	font-size: 0.9rem;
+	margin: 0;
 }
 
 .breadcrumbs li {
@@ -1650,8 +1659,8 @@ body:not(.search) .trail-end > span,
 	font-size: var(--h4);
 }
 
-.wp-block-quote.wp-block-quote p {
-	font-style: italic;
+.wp-block-pullquote.wp-block-pullquote p .wp-block-quote.wp-block-quote p {
+	font-style: inherit;
 	line-height: inherit;
 	font-size: inherit;
 }

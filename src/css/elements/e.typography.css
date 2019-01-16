@@ -149,7 +149,6 @@ time {
 	font-style: italic;
 }
 
-a + time,
 p > time {
 	display: inline;
 	font-size: 0.9em;

@@ -19,6 +19,10 @@ cite {
 }
 
 blockquote cite {
-	font-size: var(--h6);
+	font-size: 0.75em;
 	font-style: italic;
+}
+
+blockquote :last-child {
+	margin-bottom: 0;
 }
