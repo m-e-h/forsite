@@ -1,15 +1,11 @@
-<main id="main" class="app-main o-grid u-content-width">
+<article <?= Hybrid\Attr\render( 'entry' ) ?>>
 
-	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+	<?= Hybrid\View\render( 'components', 'featured-image' ); ?>
 
-	<?= Hybrid\View\render( 'components', 'posts-header' ); ?>
+	<header class="entry__header">
+		<?= Hybrid\Post\render_title( [ 'class' => 'u-h4' ] ); ?>
+	</header>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php the_excerpt() ?>
 
-		<?= Hybrid\View\render( 'entries', Hybrid\Template\hierarchy() ); ?>
-
-	<?php endwhile ?>
-
-	<?= Hybrid\View\render( 'components', 'posts-pagination' ); ?>
-
-</main>
+</article>

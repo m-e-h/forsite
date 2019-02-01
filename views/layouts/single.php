@@ -1,11 +1,21 @@
-<main id="main" class="app-main">
+<article <?= Hybrid\Attr\render( 'entry' ); ?>>
 
-	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+	<?= Hybrid\View\render( 'components', 'post-header' ); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?= Hybrid\View\render( 'components', 'featured-image' ); ?>
 
-		<?= Hybrid\View\render( 'entries', Hybrid\Template\hierarchy() ); ?>
+	<div class="entry__content">
 
-	<?php endwhile ?>
+		<?php the_content() ?>
 
-</main>
+		<?= Hybrid\View\render( 'components', 'post-pagination' ); ?>
+
+	</div>
+
+	<?php edit_post_link( __( 'Edit &#x270F;', 'textdomain' ), '<div class="edit-link-container u-bold u-opacity u-content-width u-px1 u-text-right">', '</div>' ); ?>
+
+	<?= Hybrid\View\render( 'components', 'post-footer' ); ?>
+
+</article>
+
+<?php comments_template() ?>

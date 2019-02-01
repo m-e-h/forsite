@@ -13,15 +13,7 @@
 
 			<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
 
-			<?= Hybrid\View\render( 'components', 'posts-header' ); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?= Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
-
-			<?php endwhile ?>
-
-			<?= Hybrid\View\render( 'components', 'posts-pagination' ); ?>
+			<?= Hybrid\View\render( 'layouts', '404' ); ?>
 
 		</main>
 
