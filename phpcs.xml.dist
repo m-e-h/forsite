@@ -11,8 +11,8 @@
 
 	<!-- Exclude folders. -->
 	<!-- See: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#ignoring-files-and-folders -->
-	<exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>./node_modules/</exclude-pattern>
+	<exclude-pattern>./vendor/</exclude-pattern>
 
 	<!-- Pass some flags to PHPCS:
 			p flag: Show progress of the run.
