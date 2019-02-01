@@ -49,11 +49,11 @@ textarea {
 	min-height: $form-element-min-height;
 	border-radius: $border-radius;
 	border-width: 1px;
-	border-color: $gray3;
+	border-color: var(--color-shade-2);
 	border-style: solid;
 	padding: 0.5em 0.625em;
 	line-height: 1.5;
-	background-color: $form-element-background-color;
+	background-color: var(--color-shade-2);
 	color: inherit;
 	vertical-align: middle;
 

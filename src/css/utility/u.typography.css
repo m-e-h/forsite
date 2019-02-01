@@ -78,7 +78,7 @@
 
 .u-caps {
 	text-transform: uppercase;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.08em;
 }
 
 .u-text-shadow {
@@ -122,8 +122,8 @@
 	font-size: var(--h5);
 }
 
-.has-drop-cap::first-letter {
-	font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif;
+.has-drop-cap.has-drop-cap::first-letter {
+	font-family: Baskerville, Palatino, "Palatino Linotype", serif;
 	float: left;
 	font-size: 8.4em;
 	line-height: 0.68;

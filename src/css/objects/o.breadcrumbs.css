@@ -3,6 +3,8 @@
 
 .breadcrumbs {
 
+	font-size: $h6;
+	font-style: italic;
 	margin-top: var(--gutter);
 	margin-bottom: var(--gutter);
 
@@ -11,14 +13,12 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		font-size: $h6;
 		margin: 0;
 	}
 
 	& li {
 		display: inline-flex;
 		align-items: center;
-		font-style: italic;
 		flex: 0 1 auto;
 
 		&:not(:last-of-type)::after {
@@ -31,7 +31,6 @@
 
 .breadcrumbs a {
 	color: inherit;
-	font-weight: normal;
 	opacity: 0.9;
 	padding: 0.25rem 0.5rem;
 
@@ -45,7 +44,7 @@
 	opacity: 0.5;
 }
 
-body:not(.search) .trail-end > span,
+/* body:not(.search) .trail-end > span,
 .search .archive-title {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -55,4 +54,4 @@ body:not(.search) .trail-end > span,
 	padding: 0;
 	position: absolute;
 	width: 1px;
-}
+} */

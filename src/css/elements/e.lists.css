@@ -44,17 +44,22 @@ dfn {
 	font-style: italic;
 }
 
-/*
- * Add the correct display in Edge and IE.
- */
-
 details {
 	display: block;
+	border: 2px solid var(--color-frost-4);
+	padding-left: 1em;
+}
+
+details[open] {
+	padding-bottom: 0.5em;
 }
 
 summary {
 	display: list-item;
+	background-color: var(--color-frost-3);
 	font-weight: bolder;
+	padding: 0.5em 1em;
+	margin-left: -1em;
 }
 
 details[open] summary {

@@ -23,7 +23,7 @@
 }
 
 .u-text-muted {
-	color: $color-text-muted;
+	color: var(--color-text-muted);
 }
 
 .u-text-1 {
@@ -119,7 +119,7 @@
 }
 
 .u-b-silver {
-	border-color: $color-grey-ui-light;
+	border-color: $silver;
 }
 
 /* Alerts */

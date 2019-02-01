@@ -7,7 +7,7 @@
 //// */
 
 /* // The wrapper element for the entire gallery. */
-.wp-block-gallery {
+.wp-block-gallery.wp-block-gallery.wp-block-gallery {
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
@@ -15,15 +15,12 @@
 }
 
 /* // The wrapper for individual gallery images/figures. */
-.blocks-gallery-item {
-	margin: 0.5rem;
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
+.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item {
+	flex: auto;
+	width: calc(100% / 2 - 1vw);
+	margin: 0.5vw;
 
-	/* // Image figure. */
+	/* Image figure. */
 	& figure {
 		margin: 0;
 		height: 100%;
@@ -60,31 +57,25 @@
 	}
 }
 
-/* // Fallback to 2 columns. */
-.blocks-gallery-item {
-	width: calc(100% / 2 - 1rem);
-}
-
 /* // 1 column. */
-.columns-1 .blocks-gallery-item {
-	width: calc(100% / 1 - 1rem);
+.columns-1 .blocks-gallery-item.blocks-gallery-item {
+	width: calc(100% / 1 - 1vw);
 }
 
 @media (--md) {
-
-	.columns-3 .blocks-gallery-item {
-		width: calc(100% / 3 - 1rem);
+	.columns-3 .blocks-gallery-item.blocks-gallery-item {
+		width: calc(100% / 3 - 1vw);
 	}
 
-	.columns-4 .blocks-gallery-item {
-		width: calc(100% / 4 - 1rem);
+	.columns-4 .blocks-gallery-item.blocks-gallery-item {
+		width: calc(100% / 4 - 1vw);
 	}
 
-	.columns-5 .blocks-gallery-item {
-		width: calc(100% / 5 - 1rem);
+	.columns-5 .blocks-gallery-item.blocks-gallery-item {
+		width: calc(100% / 5 - 1vw);
 	}
 
-	.columns-6 .blocks-gallery-item {
-		width: calc(100% / 6 - 1rem);
+	.columns-6 .blocks-gallery-item.blocks-gallery-item {
+		width: calc(100% / 6 - 1vw);
 	}
 }

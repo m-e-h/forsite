@@ -29,6 +29,8 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
+	padding-left: var(--base-space);
+	padding-right: var(--base-space);
 }
 
 main > * {
@@ -37,6 +39,10 @@ main > * {
 
 article {
 	width: 100%;
+	max-width: var(--content-width);
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: var(--base-space);
 }
 

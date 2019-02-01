@@ -1,9 +1,9 @@
 %e_button {
 	color: inherit;
 	background: transparent;
-	background-color: var(--color-frost-3);
+	background-color: var(--color-gray);
 	padding: 0.8rem 2em;
-	border: 1px solid transparent;
+	border: 0.125rem solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
 	vertical-align: middle;
@@ -16,7 +16,7 @@
 
 	&:hover,
 	&:focus {
-		box-shadow: inset 0 0 0 20rem var(--color-shade-2);
+		box-shadow: inset 0 0 0 20rem var(--color-tint-1);
 	}
 }
 

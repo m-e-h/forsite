@@ -13,12 +13,14 @@ html {
 }
 
 @media (--sm) {
+
 	html {
 		font-size: var(--fluid-font);
 	}
 }
 
 @media (--xl) {
+
 	html {
 		font-size: var(--max-font-size);
 	}
@@ -124,14 +126,15 @@ sup {
 }
 
 hr {
-	border: 0;
-	height: 1px;
-	margin-top: var(--gutter);
-	margin-bottom: var(--gutter);
-	line-height: 1;
 	color: inherit;
-	background: currentColor;
-	background-image: linear-gradient(to right, #d4d4d4, currentColor, #d4d4d4);
+	margin-top: var(--base-space);
+	margin-bottom: var(--base-space);
+	border-width: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: currentColor;
+	opacity: 0.5;
+	box-sizing: content-box;
 }
 
 br + br {
@@ -139,19 +142,13 @@ br + br {
 }
 
 figcaption {
+
 	@extend %e_figcaption;
 }
 
 time {
 	color: var(--color-text-muted);
-	display: block;
-	font-size: 0.9em;
 	font-style: italic;
-}
-
-p > time {
-	display: inline;
-	font-size: 0.9em;
 }
 
 caption {

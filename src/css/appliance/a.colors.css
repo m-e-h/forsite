@@ -1,9 +1,20 @@
 /* https://palx.jxnblk.com/2980b9
 *  ─────────────────────────────────── */
 
+$gray0: #f8f9fa;
+$gray1: #f1f3f5;
+$gray2: #e9ecef;
+$gray3: #dee2e6;
+$gray4: #ced4da;
+$gray5: #adb5bd;
+$gray6: #868e96;
+$gray7: #495057;
+$gray8: #343a40;
+$gray9: #212529;
+
 $base: #2980b9;
 $black: #212629;
-$gray0: #f8f9f9;
+/* $gray0: #f8f9f9;
 $gray1: #ebedef;
 $gray2: #dde1e3;
 $gray3: #ced3d7;
@@ -12,7 +23,7 @@ $gray5: #abb4ba;
 $gray6: #96a1a8;
 $gray7: #7c8b94;
 $gray8: #5e6e78;
-$gray9: #374046;
+$gray9: #374046; */
 $blue0: #e7f1f7;
 $blue1: #cce1ee;
 $blue2: #aed0e4;

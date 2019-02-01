@@ -20,10 +20,18 @@
 	--display-font-family: $display-font-family;
 	--monospace-font-family: $monospace-font-family;
 
+	--primary: hsla(var(--primary-hue), var(--primary-saturation), var(--primary-lightness), var(--primary-alpha));
+	--primary-hue: 195;
+	--primary-saturation: 100%;
+	--primary-lightness: 50%;
+	--primary-alpha: 1;
+
+	--border-radius: $border-radius;
 	--site-bg: #fff;
 	--color-text: $color-text;
 	--header-text-color: inherit;
-	--color-text-muted: $color-grey-char;
+	--color-text-muted: $grey-nuetral;
+	--color-gray: $gray3;
 	--color-1: $color-1;
 	--color-1-light: $color-1-light;
 	--color-1-dark: $color-1-dark;
