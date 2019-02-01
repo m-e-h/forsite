@@ -98,17 +98,19 @@ add_action(
 		add_theme_support(
 			'jetpack-content-options',
 			[
-				'post-details'    => array(
+				'post-details'    => [
 					'stylesheet' => 'forsite-mainCSS',
-					'date'       => '.entry__published',
+					'date'       => '.entry__posted-on',
 					'categories' => '.entry__terms--category',
 					'tags'       => '.entry__terms--post_tag',
-					'author'     => '.entry__author',
-					'comment'    => '.entry__comments',
-				),
-				'featured-images' => array(
-					'archive' => true,
-				),
+					'author'     => '.entry__byline',
+					'comment'    => '.entry__comments-count',
+				],
+				'featured-images' => [
+					'archive'    => true,
+					'post'       => true,
+					'page'       => true,
+				],
 			]
 		);
 

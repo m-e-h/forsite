@@ -48,6 +48,7 @@ wp.customize( 'header_textcolor', value => {
 				text.style.clip = 'rect(0 0 0 0)';
 				text.style.position = 'absolute';
 			} else {
+				text.style.color = to;
 				text.style.clip = 'auto';
 				text.style.position = 'relative';
 			}

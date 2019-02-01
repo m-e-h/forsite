@@ -14,7 +14,6 @@ use function Forsite\asset;
 use function Forsite\default_primary_color;
 use function Forsite\default_accent_color;
 use function Forsite\default_header_bg_color;
-use function Forsite\forsite_sanitize_checkbox;
 
 /**
  * Handles setting up everything we need for the customizer.
@@ -33,9 +32,6 @@ class Customize implements Bootable {
 	 * @return void
 	 */
 	public function boot() {
-		add_action( 'customize_register', [ $this, 'registerPanels' ] );
-		add_action( 'customize_register', [ $this, 'registerSections' ] );
-		add_action( 'customize_register', [ $this, 'registerSettings' ] );
 		add_action( 'customize_register', [ $this, 'registerControls' ] );
 		add_action( 'customize_register', [ $this, 'registerPartials' ] );
 
@@ -44,20 +40,14 @@ class Customize implements Bootable {
 		add_action( 'customize_preview_init', [ $this, 'previewEnqueue' ] );
 	}
 
-
-	public function registerPanels( WP_Customize_Manager $wp_customize ) {}
-	public function registerSections( WP_Customize_Manager $wp_customize ) {}
-
 	/**
-	 * Callback for registering settings.
+	 * Callback for registering settings & controls.
 	 *
-	 * @link   https://developer.wordpress.org/themes/customize-api/customizer-objects/#settings
 	 * @since  1.0.0
-	 * @access public
-	 * @param  WP_Customize_Manager  $wp_customize  Instance of the customize manager.
+	 * @param  WP_Customize_Manager  $wp_customize
 	 * @return void
 	 */
-	public function registerSettings( WP_Customize_Manager $wp_customize ) {
+	public function registerControls( WP_Customize_Manager $wp_customize ) {
 
 		//Primary color.
 		$wp_customize->add_setting(
@@ -69,47 +59,6 @@ class Customize implements Bootable {
 			]
 		);
 
-		// Accent color.
-		$wp_customize->add_setting(
-			'accent_color',
-			[
-				'default'           => default_accent_color(),
-				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color',
-			]
-		);
-
-				// Accent color.
-		$wp_customize->add_setting(
-			'header_bg_color',
-			[
-				'default'           => default_header_bg_color(),
-				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_hex_color',
-			]
-		);
-
-				// Breadcrumbs.
-		$wp_customize->add_setting(
-			'forsite_breadcrumbs',
-			[
-				'default'           => '',
-				'transport'         => 'postMessage',
-				'sanitize_callback' => 'forsite_sanitize_checkbox',
-			]
-		);
-
-	}
-
-	/**
-	 * Callback for registering controls.
-	 *
-	 * @since  1.0.0
-	 * @param  WP_Customize_Manager  $wp_customize
-	 * @return void
-	 */
-	public function registerControls( WP_Customize_Manager $wp_customize ) {
-
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -120,6 +69,16 @@ class Customize implements Bootable {
 					'settings' => 'primary_color',
 				]
 			)
+		);
+
+		// Accent color.
+		$wp_customize->add_setting(
+			'accent_color',
+			[
+				'default'           => default_accent_color(),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
 		);
 
 		$wp_customize->add_control(
@@ -134,6 +93,16 @@ class Customize implements Bootable {
 			)
 		);
 
+		// Header background color.
+		$wp_customize->add_setting(
+			'header_bg_color',
+			[
+				'default'           => default_header_bg_color(),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
+		);
+
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
@@ -146,13 +115,21 @@ class Customize implements Bootable {
 			)
 		);
 
+		// Breadcrumbs.
+		$wp_customize->add_setting(
+			'forsite_breadcrumbs',
+			[
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
+			]
+		);
+
 		$wp_customize->add_control(
-			'breadcrumbs_show',
+			'forsite_breadcrumbs',
 			[
 				'label'    => __( 'Display Breadcrumbs' ),
 				'type'     => 'checkbox',
 				'section'  => 'jetpack_content_options',
-				'settings' => 'forsite_breadcrumbs',
 			]
 		);
 

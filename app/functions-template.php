@@ -14,6 +14,7 @@
 
 namespace Forsite;
 
+use function Forsite\sanitize_hex_color_add_hash;
 /**
  * Set the content-width as a CSS custom property.
  *
@@ -107,16 +108,4 @@ function default_header_bg_color( $color = 0 ) {
 		'forsite/header_bg_color',
 		sanitize_hex_color_add_hash( $color )
 	);
-}
-
-function forsite_sanitize_checkbox( $input ) {
-	return ( 1 == $input ) ? 1 : '';
-}
-
-function sanitize_hex_color_add_hash( $color ) {
-	if ( $unhashed = sanitize_hex_color_no_hash( $color ) ) {
-		return '#' . $unhashed;
-	}
-
-	return sanitize_hex_color( $color );
 }
