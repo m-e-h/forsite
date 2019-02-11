@@ -115,6 +115,16 @@ class Customize implements Bootable {
 			)
 		);
 
+		if ( ! $wp_customize->get_section( 'jetpack_content_options' ) ) {
+			$wp_customize->add_section(
+				'jetpack_content_options',
+				array(
+					'title'    => esc_html__( 'Content Options' ),
+					'priority' => 90,
+				)
+			);
+		}
+
 		// Breadcrumbs.
 		$wp_customize->add_setting(
 			'forsite_breadcrumbs',
