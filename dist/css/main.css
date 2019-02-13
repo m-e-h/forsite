@@ -2950,16 +2950,28 @@ p.has-background {
 	width: 100%;
 }
 
+.u-h6,
+.has-small-font-size {
+	font-size: 0.8125rem;
+	font-size: var(--h6);
+}
+
 .u-f1,
 .has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
+.has-normal-font-size {
 	font-size: 1rem;
 }
 
-.u-h0 {
-	font-size: 3.5rem;
-	font-size: var(--h0);
+.u-h5,
+.has-medium-font-size {
+	font-size: 1.25rem;
+	font-size: var(--h5);
+}
+
+.u-h2,
+.has-large-font-size {
+	font-size: 2rem;
+	font-size: var(--h2);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
@@ -2973,10 +2985,9 @@ p.has-background {
 	line-height: var(--heading-line-height);
 }
 
-.u-h2,
-.has-large-font-size {
-	font-size: 2rem;
-	font-size: var(--h2);
+.u-h0 {
+	font-size: 3.5rem;
+	font-size: var(--h0);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
@@ -2993,19 +3004,6 @@ p.has-background {
 	font-size: var(--h4);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
-}
-
-.u-f-plus,
-.u-h5 {
-	font-size: 1.25rem;
-	font-size: var(--h5);
-}
-
-.u-f-minus,
-.u-h6,
-.has-small-font-size {
-	font-size: 0.8125rem;
-	font-size: var(--h6);
 }
 
 .u-lh-1 {
@@ -3787,28 +3785,6 @@ body.admin-bar {
 
 .has-very-dark-gray-color {
 	color: #313131;
-}
-
-.has-small-font-size {
-	font-size: 0.85rem;
-}
-
-.has-normal-font-size,
-.has-regular-font-size {
-	font-size: 1rem;
-}
-
-.has-medium-font-size {
-	font-size: 1.5rem;
-}
-
-.has-large-font-size {
-	font-size: 2rem;
-}
-
-.has-huge-font-size,
-.has-larger-font-size {
-	font-size: 3rem;
 }
 
 @media (min-width: 40em) {

@@ -1,15 +1,25 @@
 /* #TYPOGRAPHY UTILITY
 \*------------------------------------ */
 
+.u-h6,
+.has-small-font-size {
+	font-size: var(--h6);
+}
+
 .u-f1,
 .has-regular-font-size,
-.has-normal-font-size,
-.has-medium-font-size {
+.has-normal-font-size {
 	font-size: 1rem;
 }
 
-.u-h0 {
-	font-size: var(--h0);
+.u-h5,
+.has-medium-font-size {
+	font-size: var(--h5);
+}
+
+.u-h2,
+.has-large-font-size {
+	font-size: var(--h2);
 	line-height: var(--heading-line-height);
 }
 
@@ -20,9 +30,8 @@
 	line-height: var(--heading-line-height);
 }
 
-.u-h2,
-.has-large-font-size {
-	font-size: var(--h2);
+.u-h0 {
+	font-size: var(--h0);
 	line-height: var(--heading-line-height);
 }
 
@@ -34,17 +43,6 @@
 .u-h4 {
 	font-size: var(--h4);
 	line-height: var(--heading-line-height);
-}
-
-.u-f-plus,
-.u-h5 {
-	font-size: var(--h5);
-}
-
-.u-f-minus,
-.u-h6,
-.has-small-font-size {
-	font-size: var(--h6);
 }
 
 .u-lh-1 {

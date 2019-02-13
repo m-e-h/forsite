@@ -26,87 +26,94 @@ add_action( 'after_setup_theme', function() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// add_theme_support( 'wp-block-styles' );
-
-	// add_theme_support( 'responsive-embeds' );
-
 	add_theme_support( 'align-wide' );
-
-	// add_theme_support( 'editor-styles' );
-	// add_editor_style( 'dist/css/editor-style.css' );
 
 	// Editor block font sizes.
 	add_theme_support( 'editor-font-sizes', [
 		[
-			'name'      => __( 'Small', 'forsite' ),
-			'shortName' => __( 'S', 'forsite' ),
+			'name'      => __( 'Small' ),
+			'shortName' => __( 'S' ),
 			'size'      => 14,
 			'slug'      => 'small'
 		],
 		[
-			'name'      => __( 'Regular', 'forsite' ),
-			'shortName' => __( 'M', 'forsite' ),
+			'name'      => __( 'Normal' ),
+			'shortName' => __( 'N' ),
 			'size'      => 16,
-			'slug'      => 'regular'
+			'slug'      => 'normal'
 		],
 		[
-			'name'      => __( 'Large', 'forsite' ),
-			'shortName' => __( 'L', 'forsite' ),
+			'name'      => __( 'Medium' ),
+			'shortName' => __( 'M' ),
+			'size'      => 20,
+			'slug'      => 'medium'
+		],
+		[
+			'name'      => __( 'Large' ),
+			'shortName' => __( 'L' ),
 			'size'      => 32,
 			'slug'      => 'large'
 		],
 		[
-			'name'      => __( 'Larger', 'forsite' ),
-			'shortName' => __( 'XL', 'forsite' ),
+			'name'      => __( 'Huge' ),
+			'shortName' => __( 'XL' ),
 			'size'      => 40,
-			'slug'      => 'larger'
+			'slug'      => 'huge'
 		]
 	] );
+
+	// add_theme_support( 'wp-block-styles' );
+
+	// add_theme_support( 'responsive-embeds' );
+
+	// add_theme_support( 'editor-styles' );
+
+	// add_editor_style( 'dist/css/editor-style.css' );
 
 	// Editor color palette.
 	// add_theme_support( 'editor-color-palette', [
 	// 	[
-	// 		'name'  => __( 'strawberry', 'forsite' ),
+	// 		'name'  => __( 'strawberry' ),
 	// 		'slug'  => 'strawberry',
 	// 		'color' => '#c6262e'
 	// 	],
 	// 	[
-	// 		'name'  => __( 'orange', 'forsite' ),
+	// 		'name'  => __( 'orange' ),
 	// 		'slug'  => 'orange',
 	// 		'color' => '#f37329',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'banana', 'forsite' ),
+	// 		'name'  => __( 'banana' ),
 	// 		'slug'  => 'banana',
 	// 		'color' => '#f9c440',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'lime', 'forsite' ),
+	// 		'name'  => __( 'lime' ),
 	// 		'slug'  => 'lime',
 	// 		'color' => '#68b723',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'blueberry', 'forsite' ),
+	// 		'name'  => __( 'blueberry' ),
 	// 		'slug'  => 'blueberry',
 	// 		'color' => '#3689e6'
 	// 	],
 	// 	[
-	// 		'name'  => __( 'grape', 'forsite' ),
+	// 		'name'  => __( 'grape' ),
 	// 		'slug'  => 'grape',
 	// 		'color' => '#a56de2',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'cocoa', 'forsite' ),
+	// 		'name'  => __( 'cocoa' ),
 	// 		'slug'  => 'cocoa',
 	// 		'color' => '#715344',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'silver', 'forsite' ),
+	// 		'name'  => __( 'silver' ),
 	// 		'slug'  => 'silver',
 	// 		'color' => '#abacae',
 	// 	],
 	// 	[
-	// 		'name'  => __( 'black', 'forsite' ),
+	// 		'name'  => __( 'black' ),
 	// 		'slug'  => 'black',
 	// 		'color' => '#1a1a1a',
 	// 	]

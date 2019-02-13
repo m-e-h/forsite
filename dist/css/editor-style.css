@@ -2925,16 +2925,28 @@
 	width: 100%;
 }
 
+.editor-styles-wrapper .u-h6,
+.editor-styles-wrapper .has-small-font-size {
+	font-size: 0.8125rem;
+	font-size: var(--h6);
+}
+
 .editor-styles-wrapper .u-f1,
 .editor-styles-wrapper .has-regular-font-size,
-.editor-styles-wrapper .has-normal-font-size,
-.editor-styles-wrapper .has-medium-font-size {
+.editor-styles-wrapper .has-normal-font-size {
 	font-size: 1rem;
 }
 
-.editor-styles-wrapper .u-h0 {
-	font-size: 3.5rem;
-	font-size: var(--h0);
+.editor-styles-wrapper .u-h5,
+.editor-styles-wrapper .has-medium-font-size {
+	font-size: 1.25rem;
+	font-size: var(--h5);
+}
+
+.editor-styles-wrapper .u-h2,
+.editor-styles-wrapper .has-large-font-size {
+	font-size: 2rem;
+	font-size: var(--h2);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
@@ -2948,10 +2960,9 @@
 	line-height: var(--heading-line-height);
 }
 
-.editor-styles-wrapper .u-h2,
-.editor-styles-wrapper .has-large-font-size {
-	font-size: 2rem;
-	font-size: var(--h2);
+.editor-styles-wrapper .u-h0 {
+	font-size: 3.5rem;
+	font-size: var(--h0);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
 }
@@ -2968,19 +2979,6 @@
 	font-size: var(--h4);
 	line-height: 1.4;
 	line-height: var(--heading-line-height);
-}
-
-.editor-styles-wrapper .u-f-plus,
-.editor-styles-wrapper .u-h5 {
-	font-size: 1.25rem;
-	font-size: var(--h5);
-}
-
-.editor-styles-wrapper .u-f-minus,
-.editor-styles-wrapper .u-h6,
-.editor-styles-wrapper .has-small-font-size {
-	font-size: 0.8125rem;
-	font-size: var(--h6);
 }
 
 .editor-styles-wrapper .u-lh-1 {
@@ -3762,28 +3760,6 @@
 
 .editor-styles-wrapper .has-very-dark-gray-color {
 	color: #313131;
-}
-
-.editor-styles-wrapper .has-small-font-size {
-	font-size: 0.85rem;
-}
-
-.editor-styles-wrapper .has-normal-font-size,
-.editor-styles-wrapper .has-regular-font-size {
-	font-size: 1rem;
-}
-
-.editor-styles-wrapper .has-medium-font-size {
-	font-size: 1.5rem;
-}
-
-.editor-styles-wrapper .has-large-font-size {
-	font-size: 2rem;
-}
-
-.editor-styles-wrapper .has-huge-font-size,
-.editor-styles-wrapper .has-larger-font-size {
-	font-size: 3rem;
 }
 
 @media (min-width: 40em) {
