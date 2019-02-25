@@ -137,10 +137,6 @@ hr {
 	box-sizing: content-box;
 }
 
-br + br {
-	display: none;
-}
-
 figcaption {
 
 	@extend %e_figcaption;

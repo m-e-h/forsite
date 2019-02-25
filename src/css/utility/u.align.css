@@ -43,4 +43,6 @@
 	margin-left: calc(-50vw + 50%);
 	width: 100vw;
 	max-width: none;
+	margin-top: 0;
+	margin-bottom: 0;
 }

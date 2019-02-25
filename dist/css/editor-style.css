@@ -318,10 +318,6 @@
 	box-sizing: content-box;
 }
 
-.editor-styles-wrapper br + br {
-	display: none;
-}
-
 .editor-styles-wrapper figcaption {
 	color: #868e96;
 	color: var(--color-text-muted);
@@ -1326,6 +1322,7 @@
 	margin-top: var(--gutter);
 	margin-bottom: calc(1.5rem * 1.5);
 	margin-bottom: var(--gutter);
+	width: 100%;
 }
 
 .editor-styles-wrapper .breadcrumbs ol {
@@ -1608,18 +1605,17 @@
 	color: var(--color-1-dark);
 	text-align: center;
 	padding: 0;
-	border-width: 0.2rem 0;
-	border-style: solid;
-	border-color: currentColor;
 }
 
 .editor-styles-wrapper .wp-block-pullquote blockquote {
-	border-width: 0;
 	padding-top: 1.5rem;
 	padding-top: var(--base-space);
 	padding-bottom: 1.5rem;
 	padding-bottom: var(--base-space);
 	margin: 0;
+	border-width: 0.2rem 0;
+	border-style: solid;
+	border-color: currentColor;
 }
 
 .editor-styles-wrapper .wp-block-quote.is-style-large {
@@ -3801,6 +3797,8 @@
 	margin-left: calc(-50vw + 50%);
 	width: 100vw;
 	max-width: none;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .editor-styles-wrapper .u-color-inherit,
