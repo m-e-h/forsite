@@ -1,83 +1,13 @@
-.menu--primary {
-	clear: both;
-	display: block;
-	width: 100%;
-	text-align: right;
-}
-
-.menu--primary ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.menu--primary ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.menu--primary ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.menu--primary ul ul li:hover > ul,
-.menu--primary ul ul li.focus > ul {
-	left: 100%;
-}
-
-.menu--primary ul ul a {
-	width: 100%;
-}
-
-.menu--primary ul li:hover > ul,
-.menu--primary ul li.focus > ul {
-	left: auto;
-}
-
-.menu--primary li {
-	position: relative;
-}
-
-.menu__item {
-	width: 100%;
-}
-
-.menu__link {
-	font-size: 0.875rem;
-	display: block;
-	text-decoration: none;
-	width: 100%;
-}
-
-/* Small menu. */
-.menu--primary.toggled ul {
-	display: block;
-}
-
 .menu-toggle {
 	display: inline-block;
 	font-size: 1.5rem;
-	padding: 0.25rem 0.5em;
-}
+	padding: 0;
+	margin: 1rem 1rem 1rem auto;
+	height: var(--h1);
+	width: var(--h1);
+	line-height: 1;
 
-@media (--md) {
-
-	.menu-toggle {
+	@media (--md) {
 		display: none;
-	}
-
-	.menu__item {
-		width: auto;
-	}
-
-	.menu--primary ul {
-		display: flex;
-		flex-wrap: wrap;
 	}
 }

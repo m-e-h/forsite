@@ -1,7 +1,15 @@
 /* #NAV
 \*------------------------------------ */
 
+nav ol,
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 nav li {
+	display: inline-block;
 	flex: 1 auto;
 	position: relative;
 	margin: 0;
@@ -9,29 +17,81 @@ nav li {
 
 nav a {
 	display: block;
-	padding: 0.5em 1rem;
+	text-decoration: none;
+	padding: 1em 1rem;
 }
 
 header nav > ul {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	text-align: center;
+	flex-direction: column;
+
+	@media (--md) {
+		flex-direction: row;
+		text-align: center;
+		justify-content: space-around;
+	}
 }
 
-nav li > ul {
+[aria-expanded="false"] + nav {
+	display: none;
+
+	@media (--md) {
+		display: block;
+	}
+}
+
+[aria-expanded="true"] + nav {
+	display: block;
+	width: 100%;
+	padding-top: 1rem;
+	box-shadow: var(--shadow);
+}
+
+/* [aria-expanded="true"] + nav ul {
+	display: flex;
+	right: 0;
+	background-color: #fff;
+	width: 100%;
+	z-index: 999;
+	text-align: left;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+} */
+
+@media (--md) {
+	header > nav {
+		width: auto;
+		flex: 1;
+		margin: 0;
+		box-shadow: none;
+	}
+}
+
+
+
+header nav li > ul {
+	display: flex;
+	flex-direction: column;
 	background-color: #fff;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	position: absolute;
 	z-index: 99999;
 	width: 100%;
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity 0.16s cubic-bezier(0, 0, 0.2, 1);
+
+	@media (--md) {
+		position: absolute;
+	}
 }
 
-nav li:not(:hover) > ul {
-	top: 100%;
-	left: -999em;
-	max-height: 0;
+header nav li:not(:hover):not(:focus) > ul {
 	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0.32s, opacity 0.16s cubic-bezier(0.4, 0, 1, 1);
 }
 
 :root a[href="#main"] {

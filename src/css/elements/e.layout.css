@@ -18,7 +18,11 @@ body > header {
 	font-size: $h6;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	align-items: center;
+	min-height: 5rem;
+
+	@media (--md) {
+		align-items: center;
+	}
 }
 
 body > footer {

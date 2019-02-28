@@ -1,4 +1,7 @@
-/* .entry__content, */
+.app-header__branding {
+	padding: 1rem;
+	text-align: center;
+}
 
 hr:not(.is-style-wide):not(.is-style-dots) {
 	width: 25%;

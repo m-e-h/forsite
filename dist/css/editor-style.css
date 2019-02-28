@@ -109,7 +109,13 @@
 	font-size: 0.8125rem;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	align-items: center;
+	min-height: 5rem;
+}
+
+@media (min-width: 40em) {
+	.editor-styles-wrapper body > header {
+		align-items: center;
+	}
 }
 
 .editor-styles-wrapper body > footer {
@@ -493,7 +499,15 @@
 	margin-bottom: 0.5em;
 }
 
+.editor-styles-wrapper nav ol,
+.editor-styles-wrapper nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .editor-styles-wrapper nav li {
+	display: inline-block;
 	flex: 1 auto;
 	position: relative;
 	margin: 0;
@@ -501,29 +515,75 @@
 
 .editor-styles-wrapper nav a {
 	display: block;
-	padding: 0.5em 1rem;
+	text-decoration: none;
+	padding: 1em 1rem;
 }
 
 .editor-styles-wrapper header nav > ul {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	text-align: center;
+	flex-direction: column;
 }
 
-.editor-styles-wrapper nav li > ul {
+@media (min-width: 40em) {
+	.editor-styles-wrapper header nav > ul {
+		flex-direction: row;
+		text-align: center;
+		justify-content: space-around;
+	}
+}
+
+.editor-styles-wrapper [aria-expanded="false"] + nav {
+	display: none;
+}
+
+@media (min-width: 40em) {
+	.editor-styles-wrapper [aria-expanded="false"] + nav {
+		display: block;
+	}
+}
+
+.editor-styles-wrapper [aria-expanded="true"] + nav {
+	display: block;
+	width: 100%;
+	padding-top: 1rem;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--shadow);
+}
+
+@media (min-width: 40em) {
+	.editor-styles-wrapper header > nav {
+		width: auto;
+		flex: 1;
+		margin: 0;
+		box-shadow: none;
+	}
+}
+
+.editor-styles-wrapper header nav li > ul {
+	display: flex;
+	flex-direction: column;
 	background-color: #fff;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	position: absolute;
 	z-index: 99999;
 	width: 100%;
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity 0.16s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.editor-styles-wrapper nav li:not(:hover) > ul {
-	top: 100%;
-	left: -999em;
-	max-height: 0;
+@media (min-width: 40em) {
+	.editor-styles-wrapper header nav li > ul {
+		position: absolute;
+	}
+}
+
+.editor-styles-wrapper header nav li:not(:hover):not(:focus) > ul {
 	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0.32s, opacity 0.16s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .editor-styles-wrapper :root a[href="#main"] {
@@ -897,6 +957,11 @@
 	margin-bottom: var(--base-space);
 }
 
+.editor-styles-wrapper .app-header__branding {
+	padding: 1rem;
+	text-align: center;
+}
+
 .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots) {
 	width: 25%;
 	min-width: 150px;
@@ -1233,85 +1298,21 @@
 	height: 100%;
 }
 
-.editor-styles-wrapper .menu--primary {
-	clear: both;
-	display: block;
-	width: 100%;
-	text-align: right;
-}
-
-.editor-styles-wrapper .menu--primary ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.editor-styles-wrapper .menu--primary ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.editor-styles-wrapper .menu--primary ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.editor-styles-wrapper .menu--primary ul ul li:hover > ul,
-.editor-styles-wrapper .menu--primary ul ul li.focus > ul {
-	left: 100%;
-}
-
-.editor-styles-wrapper .menu--primary ul ul a {
-	width: 100%;
-}
-
-.editor-styles-wrapper .menu--primary ul li:hover > ul,
-.editor-styles-wrapper .menu--primary ul li.focus > ul {
-	left: auto;
-}
-
-.editor-styles-wrapper .menu--primary li {
-	position: relative;
-}
-
-.editor-styles-wrapper .menu__item {
-	width: 100%;
-}
-
-.editor-styles-wrapper .menu__link {
-	font-size: 0.875rem;
-	display: block;
-	text-decoration: none;
-	width: 100%;
-}
-
-.editor-styles-wrapper .menu--primary.toggled ul {
-	display: block;
-}
-
 .editor-styles-wrapper .menu-toggle {
 	display: inline-block;
 	font-size: 1.5rem;
-	padding: 0.25rem 0.5em;
+	padding: 0;
+	margin: 1rem 1rem 1rem auto;
+	height: 2.5rem;
+	height: var(--h1);
+	width: 2.5rem;
+	width: var(--h1);
+	line-height: 1;
 }
 
 @media (min-width: 40em) {
 	.editor-styles-wrapper .menu-toggle {
 		display: none;
-	}
-
-	.editor-styles-wrapper .menu__item {
-		width: auto;
-	}
-
-	.editor-styles-wrapper .menu--primary ul {
-		display: flex;
-		flex-wrap: wrap;
 	}
 }
 

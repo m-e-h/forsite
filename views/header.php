@@ -2,7 +2,7 @@
 
 <header class="app-header">
 
-	<div class="app-header__branding u-text-center">
+	<div class="app-header__branding">
 		<?= get_custom_logo(); ?>
 		<?= Hybrid\Site\render_title( [ 'class' => 'app-header__title u-h4 u-m0' ] ); ?>
 		<?= Hybrid\Site\render_description(); ?>
