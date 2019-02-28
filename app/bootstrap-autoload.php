@@ -41,5 +41,6 @@ array_map( function( $file ) {
 	'functions-setup',
 	'functions-color',
 	'functions-editor',
-	'functions-template'
+	'functions-template',
+	'functions-login-logo'
 ] );
