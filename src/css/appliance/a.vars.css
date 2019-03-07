@@ -41,12 +41,10 @@
 
 	--opacity: $opacity;
 	--content-width: $content-width;
-	--content-wide: calc(var(--content-width) - var(--double-space) + 20vw);
+	--content-wide: calc(var(--content-width) + 20vw);
 
 	/* Fluid font = calc(minPX + (max - min) * ((100vw - sm-mqPX) / (xlMQ - sm-mq))) */
-	--fluid-font: calc(
-		var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21em) / (90 - 21))
-	);
+	--fluid-font: calc(var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21em) / (90 - 21)));
 	--min-font-size: 0.95rem;
 	--max-font-size: 1.125rem;
 

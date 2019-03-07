@@ -259,6 +259,7 @@
 }
 
 @media (--md) {
+
 	.u-m2-md {
 		margin: $space-2;
 	}
@@ -341,6 +342,7 @@
 }
 
 @media (--lg) {
+
 	.u-mx4-lg {
 		margin-right: $space-4;
 		margin-left: $space-4;

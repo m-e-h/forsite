@@ -1,6 +1,6 @@
 @import "u.widths";
-@import 'u.margin';
-@import 'u.padding';
+@import "u.margin";
+@import "u.padding";
 @import "u.tables";
 @import "u.flex";
 @import "u.images";

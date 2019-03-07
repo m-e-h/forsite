@@ -36,7 +36,6 @@ class Customize implements Bootable {
 		add_action( 'customize_register', [ $this, 'registerPartials' ] );
 
 		// Enqueue scripts and styles.
-		// add_action( 'customize_controls_enqueue_scripts', [ $this, 'controlsEnqueue' ] );
 		add_action( 'customize_preview_init', [ $this, 'previewEnqueue' ] );
 	}
 
@@ -185,30 +184,6 @@ class Customize implements Bootable {
 	}
 
 	/**
-	 * scripts/styles for the the controls frame.
-	 *
-	 * @since  1.0.0
-	 * @return void
-	 */
-	public function controlsEnqueue() {
-
-		wp_enqueue_script(
-			'forsite-customize-controls',
-			asset( 'js/customize-controls.js' ),
-			[ 'customize-controls' ],
-			null,
-			true
-		);
-
-		wp_enqueue_style(
-			'forsite-customize-controls',
-			asset( 'css/customize-controls.css' ),
-			[],
-			null
-		);
-	}
-
-	/**
 	 * scripts/styles for the live preview frame.
 	 *
 	 * @since  1.0.0
@@ -218,7 +193,7 @@ class Customize implements Bootable {
 
 		wp_enqueue_script(
 			'forsite-customize-preview',
-			asset( 'js/customize-view.js' ),
+			asset( 'customize-view.js' ),
 			[ 'customize-preview' ],
 			null,
 			true

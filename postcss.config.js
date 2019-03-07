@@ -11,18 +11,18 @@ module.exports = ctx => ({
 			}
 		},
 		'postcss-extend-rule': {},
-		'postcss-discard-comments': {},
+		'postcss-discard-comments': 'production' === ctx.env ? { removeAll: true } : { removeAll: false },
 		'postcss-discard-empty': {},
 		'postcss-editor-styles':
 			'editor' === ctx.env ?
 				{
-						remove: [
-							'html',
-							':disabled',
-							'[readonly]',
-							'[disabled]'
-						]
-				  } :
+					remove: [
+						'html',
+						':disabled',
+						'[readonly]',
+						'[disabled]'
+					]
+				} :
 				false,
 		cssnano: 'production' === ctx.env ? { preset: 'default' } : false
 	}

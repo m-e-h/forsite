@@ -19,6 +19,7 @@
 }
 
 .wp-block-file__button {
+
 	@extend %e_button;
 }
 

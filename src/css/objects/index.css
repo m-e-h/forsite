@@ -15,20 +15,5 @@
 @import "wp.latest-posts";
 @import "wp.quotes";
 @import "wp.columns";
+@import "wp.media-text";
 @import "wp.shame";
-
-/* input,
-select,
-textarea,
-button {
-	box-shadow: 10px 5px 5px red;
-	min-height: 4.5rem;
-	background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
-    background-position: 40% 80%;
-    background-size: 100vw 40vw;
-    background-repeat: repeat;
-    background-origin: padding-box;
-    background-clip: border-box;
-    background-attachment: fixed;
-    background-color: red;
-} */

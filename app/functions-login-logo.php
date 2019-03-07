@@ -35,9 +35,9 @@ add_action(
 		$logo_image = '';
 
 		if ( has_custom_logo() ) {
-			$logo_image = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), ['100','100'] );
+			$logo_image = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), [ '100', '100' ] );
 		} elseif ( has_site_icon() ) {
-			$logo_image = get_site_icon_url( '100', home_url() . '/wp-admin/images/wordpress-logo.svg');
+			$logo_image = get_site_icon_url( '100', home_url() . '/wp-admin/images/wordpress-logo.svg' );
 		}
 
 		$logo_image = $logo_image ? "background-image: url({$logo_image})" : '';
@@ -58,7 +58,7 @@ add_action(
 				position: absolute;
 				top: 0;
 				left: 0;
-				opacity: .9;
+				opacity: 0.8;
 				z-index: -1;
 			}
 			#login h1 a {

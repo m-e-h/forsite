@@ -2,9 +2,6 @@
 /**
  * Asset-related functions and filters.
  *
- * This file holds some setup actions for scripts and styles as well as a helper
- * functions for work with assets.
- *
  * @package   Forsite
  * @author    Marty Helmick <info@martyhelmick.com>
  * @copyright 2018 Marty Helmick
@@ -25,23 +22,23 @@ use Hybrid\App;
  * @access public
  * @return void
  */
-add_action( 'wp_enqueue_scripts', function() {
+add_action(
+	'wp_enqueue_scripts',
+	function() {
 
-	// Disable core block styles.
-	// wp_dequeue_style( 'wp-block-library' );
+		// Enqueue theme scripts.
+		wp_enqueue_script( 'forsite-mainJS', asset( 'main.js' ), null, null, true );
 
-	// Load WordPress' comment-reply script where appropriate.
-	if ( is_singular() && get_option( 'thread_comments' ) && comments_open() ) {
-		wp_enqueue_script( 'comment-reply' );
+		// Enqueue theme styles.
+		wp_enqueue_style( 'forsite-mainCSS', asset( 'main.css' ), null, null );
+
+		// Load WordPress' comment-reply script where appropriate.
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+
 	}
-
-	// Enqueue theme scripts.
-	wp_enqueue_script( 'forsite-mainJS', asset( 'js/main.js' ), null, null, true );
-
-	// Enqueue theme styles.
-	wp_enqueue_style( 'forsite-mainCSS', asset( 'css/main.css' ), null, null );
-
-} );
+);
 
 /**
  * Enqueue scripts/styles for the editor.
@@ -50,23 +47,19 @@ add_action( 'wp_enqueue_scripts', function() {
  * @access public
  * @return void
  */
-add_action( 'enqueue_block_editor_assets', function() {
+add_action(
+	'enqueue_block_editor_assets',
+	function() {
 
-	// Enqueue theme editor styles.
-	wp_enqueue_style( 'forsite-editor', asset( 'css/editor-style.css' ), null, null );
+		// Enqueue theme editor styles.
+		wp_enqueue_style( 'forsite-editorCSS', asset( 'editor-style.css' ), null, null );
 
-	// Unregister then Re-register core block and theme styles.
-	// wp_deregister_style( 'wp-block-library' );
-	// wp_deregister_style( 'wp-block-library-theme' );
-	// wp_register_style( 'wp-block-library', '' );
-	// wp_register_style( 'wp-block-library-theme', '' );
-
-} );
+	}
+);
 
 /**
- * Helper function for outputting an asset URL in the theme. This integrates
- * with Laravel Mix for handling cache busting. If used when you enqueue a script
- * or style, it'll append an ID to the filename.
+ * Helper function for outputting an asset URL in the theme. If used when
+ * you enqueue a script or style, it'll append an ID to the filename.
  *
  * @link   https://laravel.com/docs/5.6/mix#versioning-and-cache-busting
  * @since  1.0.0

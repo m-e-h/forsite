@@ -40,14 +40,10 @@ add_action(
 		$style_var .= "--header-bg-color:{$header_bg_color};";
 		$style_var .= "--content-width:{$content_width}px;";
 
-		$style_rule  = '';
-		$style_rule .= display_header_text() ? '' : '.app-header__title, .app-header__description{ clip: rect(0, 0, 0, 0);position: absolute; }';
-
 		/* Put the final style output together. */
 		$style = "
 		<style data-style='theme-customized'>
 			:root{ {$style_var} }
-			$style_rule
 		</style>
 		";
 
@@ -55,6 +51,28 @@ add_action(
 		echo $style;
 	}
 );
+
+function render_if( $condition = false, $is = true, $class = false ) {
+	if ( $condition == $is ) {
+		return $class;
+	}
+	return;
+}
+
+function get_text_display() {
+	if ( ! display_header_text() ) {
+		return ' screen-reader-text';
+	}
+	return;
+}
+
+function get_branding_display() {
+	if ( ! display_header_text() && ! has_custom_logo() ) {
+		return ' screen-reader-text';
+	}
+	return;
+}
+
 
 /**
  * Returns the primary color.

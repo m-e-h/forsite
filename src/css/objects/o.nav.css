@@ -1,8 +1,10 @@
 .menu-toggle {
 	display: inline-block;
+	background-color: transparent;
 	font-size: 1.5rem;
 	padding: 0;
-	margin: 1rem 1rem 1rem auto;
+	margin: 0.25rem;
+	margin-left: auto;
 	height: var(--h1);
 	width: var(--h1);
 	line-height: 1;

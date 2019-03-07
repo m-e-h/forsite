@@ -1,6 +1,10 @@
 .app-header__branding {
-	padding: 1rem;
+	padding: 0 0.5rem;
 	text-align: center;
+}
+
+.app-header__logo {
+	padding-top: 0.5rem;
 }
 
 hr:not(.is-style-wide):not(.is-style-dots) {

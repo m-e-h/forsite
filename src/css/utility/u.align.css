@@ -27,16 +27,6 @@
 		margin-left: -10vw;
 		width: var(--content-wide);
 	}
-
-	/* @media (--lg) {
-		margin-left: calc(-10vw - 1rem);
-		max-width: 80vw;
-	}
-
-	@media (--xl) {
-		margin-left: calc(-10vw - 1rem);
-		max-width: 60vw;
-	} */
 }
 
 .alignfull {

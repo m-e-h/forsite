@@ -60,6 +60,7 @@ header nav > ul {
 } */
 
 @media (--md) {
+
 	header > nav {
 		width: auto;
 		flex: 1;

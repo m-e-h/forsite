@@ -1,12 +1,9 @@
-const siteHeader = document.querySelector( '.app-header' );
+const siteBranding = document.querySelector( '.app-header__branding' );
+const titleText = document.querySelector( '.app-header__text' );
 const siteTitle = document.querySelector( '.app-header__title' );
 const siteDesc = document.querySelector( '.app-header__description' );
 
-// https://googlechrome.github.io/samples/css-custom-properties/
-// Auxiliary method. Sets the value of a custom property at the document level.
-const setVariable = function( propertyName, value ) {
-	document.documentElement.style.setProperty( propertyName, value );
-};
+let root = document.documentElement;
 
 // Site title.
 wp.customize( 'blogname', value => {
@@ -22,43 +19,46 @@ wp.customize( 'blogdescription', value => {
 	});
 });
 
-// Header text color.
-wp.customize( 'header_textcolor', value => {
-	value.bind( to => {
-		setVariable( '--header-text-color', to );
-
-		let headerText = [ siteTitle, siteDesc ];
-
-		headerText.forEach( text => {
-			if ( 'blank' === to ) {
-				text.style.clip = 'rect(0 0 0 0)';
-				text.style.position = 'absolute';
-			} else {
-				text.style.color = to;
-				text.style.clip = 'auto';
-				text.style.position = 'relative';
-			}
-		});
-	});
-});
-
 // Primary color.
 wp.customize( 'header_bg_color', value => {
 	value.bind( to => {
-		setVariable( '--header-bg-color', to );
+		root.style.setProperty( '--header-bg-color', to );
 	});
 });
 
 // Primary color.
 wp.customize( 'primary_color', value => {
 	value.bind( to => {
-		setVariable( '--color-1', to );
+		root.style.setProperty( '--color-1', to );
 	});
 });
 
 // Secondary color.
 wp.customize( 'accent_color', value => {
 	value.bind( to => {
-		setVariable( '--color-2', to );
+		root.style.setProperty( '--color-2', to );
+	});
+});
+
+// Header text.
+wp.customize( 'header_textcolor', value => {
+	value.bind( to => {
+
+		root.style.setProperty( '--header-text-color', to );
+
+		const hasLogo = document.querySelector( '.custom-logo-link' ).style.display;
+
+		if ( 'blank' === to ) {
+			if ( 'none' === hasLogo ) {
+				siteBranding.classList.add( 'screen-reader-text' );
+			} else {
+				siteBranding.classList.remove( 'screen-reader-text' );
+				titleText.classList.add( 'screen-reader-text' );
+			}
+		} else {
+			siteBranding.classList.remove( 'screen-reader-text' );
+			titleText.classList.remove( 'screen-reader-text' );
+		}
+
 	});
 });

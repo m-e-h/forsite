@@ -95,6 +95,7 @@
 }
 
 @media (--md) {
+
 	.u-1of1-md {
 		width: 100%;
 		max-width: 100%;
@@ -151,6 +152,7 @@
 }
 
 @media (--lg) {
+
 	.u-1of1-lg {
 		width: 100%;
 		max-width: 100%;
@@ -207,6 +209,7 @@
 }
 
 @media (--xs) {
+
 	.u-1of1-sm {
 		width: 100%;
 		max-width: 100%;

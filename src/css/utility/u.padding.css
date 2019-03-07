@@ -153,6 +153,7 @@
 }
 
 @media (--md) {
+
 	.u-px1-md {
 		padding-right: $space-1;
 		padding-left: $space-1;

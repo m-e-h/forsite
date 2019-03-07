@@ -34,12 +34,7 @@
 		padding: $h1 $h6 0.5rem;
 		text-align: center;
 		color: white;
-		background: linear-gradient(
-			0deg,
-			rgba(0, 0, 0, 0.7) 0,
-			rgba(0, 0, 0, 0.3) 60%,
-			transparent
-		);
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.3) 60%, transparent);
 
 		& img {
 			display: inline;
@@ -48,6 +43,7 @@
 }
 
 .is-cropped .blocks-gallery-item {
+
 	& a,
 	& img {
 		flex: 1;
@@ -63,6 +59,7 @@
 }
 
 @media (--md) {
+
 	.columns-3 .blocks-gallery-item.blocks-gallery-item {
 		width: calc(100% / 3 - 1vw);
 	}

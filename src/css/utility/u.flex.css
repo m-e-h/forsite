@@ -123,6 +123,7 @@
 
 /* small */
 @media (--xs) {
+
 	.u-flex-sm {
 		display: flex;
 	}
@@ -134,6 +135,7 @@
 
 /* medium */
 @media (--md) {
+
 	.u-flex-md {
 		display: flex;
 	}
@@ -145,6 +147,7 @@
 
 /* large */
 @media (--lg) {
+
 	.u-flex-lg {
 		display: flex;
 	}
