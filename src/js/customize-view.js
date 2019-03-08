@@ -2,6 +2,7 @@ const siteBranding = document.querySelector( '.app-header__branding' );
 const titleText = document.querySelector( '.app-header__text' );
 const siteTitle = document.querySelector( '.app-header__title' );
 const siteDesc = document.querySelector( '.app-header__description' );
+const docBody = document.querySelector( 'body' );
 
 let root = document.documentElement;
 
@@ -40,25 +41,32 @@ wp.customize( 'accent_color', value => {
 	});
 });
 
+// // Header Branding.
+wp.customize( 'custom_logo', value => {
+	value.bind( to => {
+		if ( '' === to && titleText.classList.contains( 'screen-reader-text' ) ) {
+			siteBranding.classList.add( 'screen-reader-text' );
+		} else {
+			siteBranding.classList.remove( 'screen-reader-text' );
+		}
+	});
+});
+
 // Header text.
 wp.customize( 'header_textcolor', value => {
 	value.bind( to => {
-
-		root.style.setProperty( '--header-text-color', to );
-
-		const hasLogo = document.querySelector( '.custom-logo-link' ).style.display;
-
 		if ( 'blank' === to ) {
-			if ( 'none' === hasLogo ) {
-				siteBranding.classList.add( 'screen-reader-text' );
-			} else {
+			titleText.classList.add( 'screen-reader-text' );
+
+			if ( docBody.classList.contains( 'wp-custom-logo' ) ) {
 				siteBranding.classList.remove( 'screen-reader-text' );
-				titleText.classList.add( 'screen-reader-text' );
+			} else {
+				siteBranding.classList.add( 'screen-reader-text' );
 			}
 		} else {
 			siteBranding.classList.remove( 'screen-reader-text' );
 			titleText.classList.remove( 'screen-reader-text' );
+			root.style.setProperty( '--header-text-color', to );
 		}
-
 	});
 });
