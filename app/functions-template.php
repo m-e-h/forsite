@@ -59,20 +59,6 @@ function render_if( $condition = false, $is = true, $class = false ) {
 	return;
 }
 
-function get_text_display() {
-	if ( ! display_header_text() ) {
-		return ' screen-reader-text';
-	}
-	return;
-}
-
-function get_branding_display() {
-	if ( ! display_header_text() && ! has_custom_logo() ) {
-		return ' screen-reader-text';
-	}
-	return;
-}
-
 
 /**
  * Returns the primary color.
