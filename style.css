@@ -352,8 +352,8 @@ main {
 	display: block;
 	width: 100%;
 	padding-left: 1.5rem;
-	padding-left: var(--base-space);
 	padding-right: 1.5rem;
+	padding-left: var(--base-space);
 	padding-right: var(--base-space);
 }
 
@@ -378,8 +378,8 @@ aside {
 	padding-bottom: 1.5rem;
 	padding-bottom: var(--base-space);
 	padding-left: calc((100vw - calc(900px + 20vw)) * 0.5);
-	padding-left: calc((100vw - var(--content-wide)) * 0.5);
 	padding-right: calc((100vw - calc(900px + 20vw)) * 0.5);
+	padding-left: calc((100vw - var(--content-wide)) * 0.5);
 	padding-right: calc((100vw - var(--content-wide)) * 0.5);
 	display: flex;
 	flex-wrap: wrap;
@@ -1026,7 +1026,8 @@ figure {
 }
 
 .app-header__branding {
-	padding: 0 0.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 	text-align: center;
 }
 
@@ -1159,7 +1160,7 @@ hr.is-style-dots.is-style-dots::before {
 
 img.wp-smiley,
 img.emoji {
-	display: inline;
+	display: inline-block;
 	width: 1em;
 	margin: 0 0.1em;
 	vertical-align: -0.1em;
@@ -2538,8 +2539,8 @@ p.has-background {
 }
 
 .u-px1 {
-	padding-right: 1rem;
 	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .u-pt1 {
@@ -2556,8 +2557,8 @@ p.has-background {
 }
 
 .u-px2 {
-	padding-right: 2rem;
 	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 .u-pt2 {
@@ -2578,8 +2579,8 @@ p.has-background {
 }
 
 .u-px3 {
-	padding-right: 3rem;
 	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 .u-pt3 {
@@ -2600,8 +2601,8 @@ p.has-background {
 }
 
 .u-px4 {
-	padding-right: 4rem;
 	padding-left: 4rem;
+	padding-right: 4rem;
 }
 
 .u-pt4 {
@@ -2618,8 +2619,8 @@ p.has-background {
 }
 
 .u-px0 {
-	padding-right: 0;
 	padding-left: 0;
+	padding-right: 0;
 }
 
 .u-pt0 {
@@ -2628,8 +2629,8 @@ p.has-background {
 
 @media (min-width: 40em) {
 	.u-px1-md {
-		padding-right: 1rem;
 		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	.u-p2-md {
@@ -2642,8 +2643,8 @@ p.has-background {
 	}
 
 	.u-px2-md {
-		padding-right: 2rem;
 		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.u-p3-md {
@@ -2656,8 +2657,8 @@ p.has-background {
 	}
 
 	.u-px3-md {
-		padding-right: 3rem;
 		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
 	.u-pt3-md {
@@ -2678,8 +2679,8 @@ p.has-background {
 	}
 
 	.u-px4-md {
-		padding-right: 4rem;
 		padding-left: 4rem;
+		padding-right: 4rem;
 	}
 
 	.u-pt4-md {

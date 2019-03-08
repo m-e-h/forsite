@@ -32,8 +32,7 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
-	padding-left: var(--base-space);
-	padding-right: var(--base-space);
+	padding-inline: var(--base-space);
 }
 
 main > * {
@@ -52,8 +51,7 @@ article {
 aside {
 	padding-top: var(--base-space);
 	padding-bottom: var(--base-space);
-	padding-left: calc((100vw - var(--content-wide)) * 0.5);
-	padding-right: calc((100vw - var(--content-wide)) * 0.5);
+	padding-inline: calc((100vw - var(--content-wide)) * 0.5);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;

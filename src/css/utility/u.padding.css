@@ -64,8 +64,7 @@
 }
 
 .u-px1 {
-	padding-right: $space-1;
-	padding-left: $space-1;
+	padding-inline: $space-1;
 }
 
 .u-pt1 {
@@ -82,8 +81,7 @@
 }
 
 .u-px2 {
-	padding-right: $space-2;
-	padding-left: $space-2;
+	padding-inline: $space-2;
 }
 
 .u-pt2 {
@@ -104,8 +102,7 @@
 }
 
 .u-px3 {
-	padding-right: $space-3;
-	padding-left: $space-3;
+	padding-inline: $space-3;
 }
 
 .u-pt3 {
@@ -126,8 +123,7 @@
 }
 
 .u-px4 {
-	padding-right: $space-4;
-	padding-left: $space-4;
+	padding-inline: $space-4;
 }
 
 .u-pt4 {
@@ -144,8 +140,7 @@
 }
 
 .u-px0 {
-	padding-right: 0;
-	padding-left: 0;
+	padding-inline: 0;
 }
 
 .u-pt0 {
@@ -155,8 +150,7 @@
 @media (--md) {
 
 	.u-px1-md {
-		padding-right: $space-1;
-		padding-left: $space-1;
+		padding-inline: $space-1;
 	}
 
 	.u-p2-md {
@@ -169,8 +163,7 @@
 	}
 
 	.u-px2-md {
-		padding-right: $space-2;
-		padding-left: $space-2;
+		padding-inline: $space-2;
 	}
 
 	.u-p3-md {
@@ -183,8 +176,7 @@
 	}
 
 	.u-px3-md {
-		padding-right: $space-3;
-		padding-left: $space-3;
+		padding-inline: $space-3;
 	}
 
 	.u-pt3-md {
@@ -205,8 +197,7 @@
 	}
 
 	.u-px4-md {
-		padding-right: $space-4;
-		padding-left: $space-4;
+		padding-inline: $space-4;
 	}
 
 	.u-pt4-md {

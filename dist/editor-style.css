@@ -119,8 +119,8 @@
 	display:block;
 	width:100%;
 	padding-left:1.5rem;
-	padding-left:var(--base-space);
 	padding-right:1.5rem;
+	padding-left:var(--base-space);
 	padding-right:var(--base-space);
 }
 
@@ -145,8 +145,8 @@
 	padding-bottom:1.5rem;
 	padding-bottom:var(--base-space);
 	padding-left:calc((100vw - calc(900px + 20vw)) * 0.5);
-	padding-left:calc((100vw - var(--content-wide)) * 0.5);
 	padding-right:calc((100vw - calc(900px + 20vw)) * 0.5);
+	padding-left:calc((100vw - var(--content-wide)) * 0.5);
 	padding-right:calc((100vw - var(--content-wide)) * 0.5);
 	display:flex;
 	flex-wrap:wrap;
@@ -919,7 +919,8 @@
 }
 
 .editor-styles-wrapper .app-header__branding{
-	padding:0 0.5rem;
+	padding-left:0.5rem;
+	padding-right:0.5rem;
 	text-align:center;
 }
 
@@ -1048,7 +1049,7 @@
 
 .editor-styles-wrapper img.wp-smiley,
 .editor-styles-wrapper img.emoji{
-	display:inline;
+	display:inline-block;
 	width:1em;
 	margin:0 0.1em;
 	vertical-align:-0.1em;
@@ -2426,8 +2427,8 @@
 }
 
 .editor-styles-wrapper .u-px1{
-	padding-right:1rem;
 	padding-left:1rem;
+	padding-right:1rem;
 }
 
 .editor-styles-wrapper .u-pt1{
@@ -2444,8 +2445,8 @@
 }
 
 .editor-styles-wrapper .u-px2{
-	padding-right:2rem;
 	padding-left:2rem;
+	padding-right:2rem;
 }
 
 .editor-styles-wrapper .u-pt2{
@@ -2466,8 +2467,8 @@
 }
 
 .editor-styles-wrapper .u-px3{
-	padding-right:3rem;
 	padding-left:3rem;
+	padding-right:3rem;
 }
 
 .editor-styles-wrapper .u-pt3{
@@ -2488,8 +2489,8 @@
 }
 
 .editor-styles-wrapper .u-px4{
-	padding-right:4rem;
 	padding-left:4rem;
+	padding-right:4rem;
 }
 
 .editor-styles-wrapper .u-pt4{
@@ -2506,8 +2507,8 @@
 }
 
 .editor-styles-wrapper .u-px0{
-	padding-right:0;
 	padding-left:0;
+	padding-right:0;
 }
 
 .editor-styles-wrapper .u-pt0{
@@ -2517,8 +2518,8 @@
 @media (min-width: 40em){
 
 	.editor-styles-wrapper .u-px1-md{
-		padding-right:1rem;
 		padding-left:1rem;
+		padding-right:1rem;
 	}
 
 	.editor-styles-wrapper .u-p2-md{
@@ -2531,8 +2532,8 @@
 	}
 
 	.editor-styles-wrapper .u-px2-md{
-		padding-right:2rem;
 		padding-left:2rem;
+		padding-right:2rem;
 	}
 
 	.editor-styles-wrapper .u-p3-md{
@@ -2545,8 +2546,8 @@
 	}
 
 	.editor-styles-wrapper .u-px3-md{
-		padding-right:3rem;
 		padding-left:3rem;
+		padding-right:3rem;
 	}
 
 	.editor-styles-wrapper .u-pt3-md{
@@ -2567,8 +2568,8 @@
 	}
 
 	.editor-styles-wrapper .u-px4-md{
-		padding-right:4rem;
 		padding-left:4rem;
+		padding-right:4rem;
 	}
 
 	.editor-styles-wrapper .u-pt4-md{
