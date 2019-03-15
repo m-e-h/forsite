@@ -25,7 +25,7 @@ add_action(
 	'wp_head',
 	function() {
 
-		$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : '900px';
+		$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : '900';
 
 		$primary_color     = get_theme_mod( 'primary_color', default_primary_color() );
 		$accent_color      = get_theme_mod( 'accent_color', default_accent_color() );

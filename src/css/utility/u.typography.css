@@ -114,21 +114,24 @@
 	white-space: nowrap;
 }
 
-.u-lead,
-.intro-paragraph {
-	font-weight: 300;
-	font-size: var(--h5);
+.has-drop-cap:not(:focus)::first-letter {
+	float: left;
+	font-family: Baskerville, Palatino, "Palatino Linotype", serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 4.4em;
+	line-height: 0.84;
+	margin: 0;
+	padding-right: 0.125em;
+	padding-top: 0.1em;
+	text-transform: uppercase;
 }
 
-.has-drop-cap.has-drop-cap::first-letter {
-	font-family: Baskerville, Palatino, "Palatino Linotype", serif;
-	float: left;
-	font-size: 8.4em;
-	line-height: 0.68;
-	font-weight: 100;
-	margin: 0.05em 0.1em 0 0;
-	text-transform: uppercase;
-	font-style: normal;
+.has-drop-cap:not(:focus)::after {
+	display: block;
+	clear: both;
+	content: "";
+	padding: 0;
 }
 
 .u-text-display {

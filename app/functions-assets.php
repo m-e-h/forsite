@@ -30,7 +30,11 @@ add_action(
 		wp_enqueue_script( 'forsite-mainJS', asset( 'main.js' ), null, null, true );
 
 		// Enqueue theme styles.
-		wp_enqueue_style( 'forsite-mainCSS', asset( 'main.css' ), null, null );
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+			wp_enqueue_style( 'forsite-mainCSS', get_stylesheet_uri() );
+		} else {
+			wp_enqueue_style( 'forsite-mainCSS', asset( 'main.css' ), null, null );
+		}
 
 		// Load WordPress' comment-reply script where appropriate.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

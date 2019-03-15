@@ -17,6 +17,7 @@
 	&:hover,
 	&:focus {
 		box-shadow: inset 0 0 0 20rem var(--color-tint-1);
+		border-color: var(--color-tint-1);
 	}
 }
 
