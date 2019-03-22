@@ -10,7 +10,6 @@ namespace Forsite\Customize;
 use WP_Customize_Manager;
 use WP_Customize_Color_Control;
 use Hybrid\Contracts\Bootable;
-use function Forsite\asset;
 use function Forsite\default_primary_color;
 use function Forsite\default_accent_color;
 use function Forsite\default_header_bg_color;
@@ -128,7 +127,8 @@ class Customize implements Bootable {
 		$wp_customize->add_setting(
 			'forsite_breadcrumbs',
 			[
-				'default'           => 1,
+				'default'           => true,
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'absint',
 			]
 		);
@@ -193,7 +193,7 @@ class Customize implements Bootable {
 
 		wp_enqueue_script(
 			'forsite-customize-preview',
-			asset( 'customize-view.js' ),
+			get_theme_file_uri( 'dist/customize-view.js' ),
 			[ 'customize-preview' ],
 			null,
 			true

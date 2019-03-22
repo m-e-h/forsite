@@ -1,13 +1,9 @@
-<div class="app-header__branding<?= has_custom_logo() || display_header_text() ? null : ' screen-reader-text' ?>">
+<div class="app-header__branding">
 
-	<?php echo get_custom_logo(); ?>
+	<?= get_custom_logo(); ?>
 
-	<div class="app-header__text<?= display_header_text() ? null : ' screen-reader-text' ?>">
+	<?= Hybrid\Site\render_title( [ 'class' => display_header_text() ? 'app-header__title' : 'app-header__title screen-reader-text' ] ); ?>
 
-		<?php echo Hybrid\Site\render_title( [ 'class' => 'app-header__title u-h4 u-m0' ] ); ?>
-
-		<?php echo Hybrid\Site\render_description(); ?>
-
-	</div>
+	<?= Hybrid\Site\render_description( [ 'class' => display_header_text() ? 'app-header__description' : 'app-header__description screen-reader-text' ] ); ?>
 
 </div>

@@ -27,13 +27,17 @@ add_action(
 	function() {
 
 		// Enqueue theme scripts.
-		wp_enqueue_script( 'forsite-mainJS', asset( 'main.js' ), null, null, true );
+		wp_enqueue_script( 'theme-script', get_theme_file_uri( 'dist/main.js' ), false, false, true );
 
 		// Enqueue theme styles.
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_style( 'forsite-mainCSS', get_stylesheet_uri() );
+			wp_enqueue_style( 'theme-style', get_parent_theme_file_uri( 'style.css' ), false );
 		} else {
-			wp_enqueue_style( 'forsite-mainCSS', asset( 'main.css' ), null, null );
+			wp_enqueue_style( 'theme-style', get_parent_theme_file_uri( 'dist/main.css' ), false );
+		}
+
+		if ( is_child_theme() ) {
+			wp_enqueue_style( 'child-style', get_theme_file_uri( 'style.css' ), [ 'theme-style' ] );
 		}
 
 		// Load WordPress' comment-reply script where appropriate.
@@ -56,32 +60,7 @@ add_action(
 	function() {
 
 		// Enqueue theme editor styles.
-		wp_enqueue_style( 'forsite-editorCSS', asset( 'editor-style.css' ), null, null );
+		wp_enqueue_style( 'theme-editor-style', get_parent_theme_file_uri( 'dist/editor-style.css' ), false );
 
 	}
 );
-
-/**
- * Helper function for outputting an asset URL in the theme. If used when
- * you enqueue a script or style, it'll append an ID to the filename.
- *
- * @link   https://laravel.com/docs/5.6/mix#versioning-and-cache-busting
- * @since  1.0.0
- * @access public
- * @param  string  $path  A relative path/file to append to the `dist` folder.
- * @return string
- */
-function asset( $path ) {
-
-	// Get the Laravel Mix manifest.
-	$manifest = App::resolve( 'forsite/mix' );
-
-	// Make sure to trim any slashes from the front of the path.
-	$path = '/' . ltrim( $path, '/' );
-
-	if ( $manifest && isset( $manifest[ $path ] ) ) {
-		$path = $manifest[ $path ];
-	}
-
-	return get_theme_file_uri( 'dist' . $path );
-}
