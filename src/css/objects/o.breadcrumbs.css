@@ -5,7 +5,6 @@
 
 	font-size: $h6;
 	font-style: italic;
-	margin-top: var(--gutter);
 	margin-bottom: var(--gutter);
 	width: 100%;
 
