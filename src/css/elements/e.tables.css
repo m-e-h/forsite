@@ -1,8 +1,8 @@
 /* #TABLES
 \*------------------------------------ */
 table {
-	width: 100%;
 	border-spacing: 0;
+	table-layout: auto;
 	border-collapse: collapse;
 	margin-bottom: $gutter;
 }
@@ -10,8 +10,8 @@ table {
 td,
 th {
 	border-width: 1px;
+	border-color: var(--color-shade-4);
 	border-style: solid;
-	border-color: var(--color-shade-3);
 	padding: 0.5rem 0.75rem;
 }
 

@@ -13,7 +13,9 @@
 	color: inherit;
 }
 
-.has-background:not(.has-text-color) {
+.has-background[contenteditable],
+button.has-background,
+a.has-background {
 	color: #fff;
 }
 

@@ -53,7 +53,7 @@
 	display: none;
 }
 
-.screen-reader-text {
+.screen-reader-text.screen-reader-text {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -63,6 +63,7 @@
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+	flex: none;
 }
 
 .screen-reader-text:active,
@@ -73,7 +74,7 @@
 	overflow: visible;
 	width: auto;
 	white-space: inherit;
-	z-index: 9999;
+	z-index: 100000;
 }
 
 .clear::before,

@@ -53,6 +53,10 @@
 	padding: 0;
 }
 
+.u-px05 {
+	padding-inline: $space-05;
+}
+
 .u-py05 {
 	padding-top: $space-05;
 	padding-bottom: $space-05;
@@ -145,66 +149,4 @@
 
 .u-pt0 {
 	padding-top: 0;
-}
-
-@media (--md) {
-
-	.u-px1-md {
-		padding-inline: $space-1;
-	}
-
-	.u-p2-md {
-		padding: $space-2;
-	}
-
-	.u-py2-md {
-		padding-top: $space-2;
-		padding-bottom: $space-2;
-	}
-
-	.u-px2-md {
-		padding-inline: $space-2;
-	}
-
-	.u-p3-md {
-		padding: $space-3;
-	}
-
-	.u-py3-md {
-		padding-top: $space-3;
-		padding-bottom: $space-3;
-	}
-
-	.u-px3-md {
-		padding-inline: $space-3;
-	}
-
-	.u-pt3-md {
-		padding-top: $space-3;
-	}
-
-	.u-pb3-md {
-		padding-bottom: $space-3;
-	}
-
-	.u-p4-md {
-		padding: $space-4;
-	}
-
-	.u-py4-md {
-		padding-top: $space-4;
-		padding-bottom: $space-4;
-	}
-
-	.u-px4-md {
-		padding-inline: $space-4;
-	}
-
-	.u-pt4-md {
-		padding-top: $space-4;
-	}
-
-	.u-pb4-md {
-		padding-bottom: $space-4;
-	}
 }
