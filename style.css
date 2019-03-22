@@ -21,7 +21,7 @@
 	--gutter: calc(var(--base-space) * 1.5);
 
 	--line-height: 1.6;
-	--heading-line-height: 1.4;
+	--heading-line-height: 1.2;
 
 	--font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto,
 		liberation sans, helvetica neue, sans-serif;
@@ -220,11 +220,10 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
-	margin-top: 0.5em;
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-top: 0;
+	margin-bottom: 1rem;
 	clear: both;
 }
 
@@ -351,10 +350,8 @@ main {
 	text-align: center;
 	display: block;
 	width: 100%;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-	padding-left: var(--base-space);
-	padding-right: var(--base-space);
+	padding-top: calc(1.5rem * 1.5);
+	padding-top: var(--gutter);
 }
 
 main > * {
@@ -363,13 +360,27 @@ main > * {
 
 article {
 	width: 100%;
-	max-width: 900px;
-	max-width: var(--content-width);
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: 1.5rem;
 	margin-bottom: var(--base-space);
+}
+
+article > * {
+	width: 900px;
+	width: var(--content-width);
+	max-width: calc(100% - calc(1.5rem * 2));
+	max-width: calc(100% - var(--double-space));
+}
+
+article > div {
+	margin-bottom: 1.5rem;
+	margin-bottom: var(--base-space);
+}
+
+article > *:last-child {
+	margin-bottom: 0;
 }
 
 aside {
@@ -687,8 +698,8 @@ header nav li:not(:hover):not(:focus) > ul {
 }
 
 table {
-	width: 100%;
 	border-spacing: 0;
+	table-layout: auto;
 	border-collapse: collapse;
 	margin-bottom: 1.5rem;
 }
@@ -696,9 +707,9 @@ table {
 td,
 th {
 	border-width: 1px;
+	border-color: rgba(222, 226, 230, 0.9);
+	border-color: var(--color-shade-4);
 	border-style: solid;
-	border-color: rgba(222, 226, 230, 0.5);
-	border-color: var(--color-shade-3);
 	padding: 0.5rem 0.75rem;
 }
 
@@ -719,7 +730,7 @@ blockquote {
 	padding: 0 1em;
 	font-size: 1.25rem;
 	font-size: var(--h5);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 	border-left: 0.2rem solid currentColor;
 	margin: calc(1.5rem * 1.5) auto;
@@ -1028,22 +1039,28 @@ figure {
 }
 
 .app-header__branding {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
 	text-align: center;
+}
+
+.app-header__title {
+	font-size: 1.5rem;
+	font-size: var(--h4);
+}
+
+.app-header__title,
+.app-header__description {
+	line-height: inherit;
+	font-weight: inherit;
+	margin: 0 0.5rem;
 }
 
 .app-header__logo {
 	padding-top: 0.5rem;
 }
 
-.wp-block-separator {
-	max-width: none;
-}
-
 hr.is-style-wide {
-	margin-left: calc(-50vw + 50%);
 	width: 100vw;
+	max-width: none;
 }
 
 hr.is-style-dots.is-style-dots {
@@ -1214,7 +1231,9 @@ img.emoji {
 	color: inherit;
 }
 
-.has-background:not(.has-text-color) {
+.has-background[contenteditable],
+button.has-background,
+a.has-background {
 	color: #fff;
 }
 
@@ -1304,13 +1323,14 @@ input[type="button"]:active {
 }
 
 table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1) {
-	background-color: rgba(222, 226, 230, 0.15);
-	background-color: var(--color-shade-1);
+	background-color: rgba(222, 226, 230, 0.3);
+	background-color: var(--color-shade-2);
 }
 
 table.is-style-stripes.is-style-stripes {
-	border-bottom: 1px solid rgba(222, 226, 230, 0.3);
-	border-bottom: 1px solid var(--color-shade-2);
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(222, 226, 230, 0.5);
+	border-bottom-color: var(--color-shade-3);
 }
 
 table.has-fixed-layout {
@@ -1386,8 +1406,6 @@ table.has-fixed-layout {
 .breadcrumbs {
 	font-size: 0.8125rem;
 	font-style: italic;
-	margin-top: calc(1.5rem * 1.5);
-	margin-top: var(--gutter);
 	margin-bottom: calc(1.5rem * 1.5);
 	margin-bottom: var(--gutter);
 	width: 100%;
@@ -1667,6 +1685,7 @@ table.has-fixed-layout {
 	color: var(--color-1-dark);
 	text-align: center;
 	padding: 0;
+	border-width: 0;
 }
 
 .wp-block-pullquote blockquote {
@@ -1696,14 +1715,11 @@ table.has-fixed-layout {
 	text-align: right;
 }
 
-.is-style-solid-color {
+.is-style-solid-color blockquote {
+	color: #fff;
 	background-color: #206691;
 	background-color: var(--color-1-dark);
 	border-radius: 0.2rem;
-}
-
-.is-style-solid-color blockquote {
-	color: #fff;
 }
 
 .is-style-solid-color.is-style-solid-color {
@@ -1714,6 +1730,23 @@ table.has-fixed-layout {
 	max-width: 100%;
 	text-align: inherit;
 	margin: 0;
+}
+
+.wp-block-pullquote.alignleft,
+.wp-block-pullquote.alignright {
+	max-width: none;
+}
+
+.alignleft blockquote,
+.alignright blockquote,
+.aligncenter blockquote {
+	width: 50%;
+	min-width: 300px;
+}
+
+.is-style-solid-color[class*="-background-color"] blockquote {
+	background-color: transparent;
+	border-width: 0;
 }
 
 .wp-block-columns {
@@ -2538,6 +2571,11 @@ p.has-background {
 	padding: 0;
 }
 
+.u-px05 {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
 .u-py05 {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -2635,71 +2673,6 @@ p.has-background {
 
 .u-pt0 {
 	padding-top: 0;
-}
-
-@media (min-width: 40em) {
-	.u-px1-md {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	.u-p2-md {
-		padding: 2rem;
-	}
-
-	.u-py2-md {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-
-	.u-px2-md {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-
-	.u-p3-md {
-		padding: 3rem;
-	}
-
-	.u-py3-md {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-	}
-
-	.u-px3-md {
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
-
-	.u-pt3-md {
-		padding-top: 3rem;
-	}
-
-	.u-pb3-md {
-		padding-bottom: 3rem;
-	}
-
-	.u-p4-md {
-		padding: 4rem;
-	}
-
-	.u-py4-md {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-
-	.u-px4-md {
-		padding-left: 4rem;
-		padding-right: 4rem;
-	}
-
-	.u-pt4-md {
-		padding-top: 4rem;
-	}
-
-	.u-pb4-md {
-		padding-bottom: 4rem;
-	}
 }
 
 .u-table-light th,
@@ -3004,7 +2977,7 @@ p.has-background {
 .has-large-font-size {
 	font-size: 2rem;
 	font-size: var(--h2);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 }
 
@@ -3013,28 +2986,28 @@ p.has-background {
 .has-huge-font-size {
 	font-size: 2.5rem;
 	font-size: var(--h1);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 }
 
 .u-h0 {
 	font-size: 3.5rem;
 	font-size: var(--h0);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 }
 
 .u-h3 {
 	font-size: 1.75rem;
 	font-size: var(--h3);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 }
 
 .u-h4 {
 	font-size: 1.5rem;
 	font-size: var(--h4);
-	line-height: 1.4;
+	line-height: 1.2;
 	line-height: var(--heading-line-height);
 }
 
@@ -3821,47 +3794,41 @@ body.admin-bar {
 	color: #313131;
 }
 
-@media (min-width: 40em) {
-	.alignleft {
-		float: left;
-		margin-right: 1.5rem;
-	}
+.alignleft {
+	float: left;
+	margin-right: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-start;
+}
 
-	.alignright {
-		float: right;
-		margin-left: 1.5rem;
-	}
+.alignright {
+	float: right;
+	margin-left: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-end;
 }
 
 .aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
 }
 
 .alignwide {
-	margin-left: calc(1.5rem / -2);
-	margin-left: calc(var(--base-space) / -2);
-	width: calc(100% + 1.5rem);
-	width: calc(100% + var(--base-space));
-	max-width: 100vw;
-}
-
-@media (min-width: 64em) {
-	.alignwide {
-		margin-left: -10vw;
-		width: calc(900px + 20vw);
-		width: var(--content-wide);
-	}
+	width: calc(900px + 20vw);
+	width: var(--content-wide);
+	max-width: calc(100% - 1.5rem);
+	max-width: calc(100% - var(--base-space));
 }
 
 .alignfull {
-	margin-left: calc(-50vw + 50%);
-	width: 100vw;
+	width: 100%;
 	max-width: none;
-	margin-top: 0;
-	margin-bottom: 0;
 }
 
 .u-color-inherit,
@@ -3916,7 +3883,7 @@ body.admin-bar {
 	display: none;
 }
 
-.screen-reader-text {
+.screen-reader-text.screen-reader-text {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
@@ -3926,6 +3893,7 @@ body.admin-bar {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+	flex: none;
 }
 
 .screen-reader-text:active,
@@ -3936,7 +3904,7 @@ body.admin-bar {
 	overflow: visible;
 	width: auto;
 	white-space: inherit;
-	z-index: 9999;
+	z-index: 100000;
 }
 
 .clear::before,
