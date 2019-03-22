@@ -167,23 +167,23 @@
     },
     {
         "name": "justintadlock/hybrid-core",
-        "version": "5.0.0",
-        "version_normalized": "5.0.0.0",
+        "version": "5.0.1",
+        "version_normalized": "5.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/justintadlock/hybrid-core.git",
-            "reference": "e3cbd33fec8bd2b23799410bf22a2522fbe0d80c"
+            "reference": "051ff5109c45dda640f28b343a2bf179a5bbfd10"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/e3cbd33fec8bd2b23799410bf22a2522fbe0d80c",
-            "reference": "e3cbd33fec8bd2b23799410bf22a2522fbe0d80c",
+            "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/051ff5109c45dda640f28b343a2bf179a5bbfd10",
+            "reference": "051ff5109c45dda640f28b343a2bf179a5bbfd10",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6"
         },
-        "time": "2018-09-13T21:11:17+00:00",
+        "time": "2018-12-11T16:06:07+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
