@@ -15,16 +15,6 @@ $gray9: #212529;
 $base: #2980b9;
 $black: #212629;
 
-/* $gray0: #f8f9f9;
-$gray1: #ebedef;
-$gray2: #dde1e3;
-$gray3: #ced3d7;
-$gray4: #bdc4c9;
-$gray5: #abb4ba;
-$gray6: #96a1a8;
-$gray7: #7c8b94;
-$gray8: #5e6e78;
-$gray9: #374046; */
 $blue0: #e7f1f7;
 $blue1: #cce1ee;
 $blue2: #aed0e4;
@@ -35,6 +25,7 @@ $blue6: #2475a6;
 $blue7: #206691;
 $blue8: #1a5478;
 $blue9: #123b54;
+
 $indigo0: #eaecf8;
 $indigo1: #d3d7f0;
 $indigo2: #b9bfe8;
@@ -45,6 +36,7 @@ $indigo6: #2434a5;
 $indigo7: #1f2d8f;
 $indigo8: #192474;
 $indigo9: #11194f;
+
 $violet0: #efeaf8;
 $violet1: #dfd4f0;
 $violet2: #cbbae8;
@@ -55,6 +47,7 @@ $violet6: #5624a6;
 $violet7: #4a1f90;
 $violet8: #3c1a75;
 $violet9: #291150;
+
 $fuschia0: #f6eaf8;
 $fuschia1: #edd3f0;
 $fuschia2: #e2b8e8;
@@ -65,6 +58,7 @@ $fuschia6: #9724a6;
 $fuschia7: #842091;
 $fuschia8: #6c1a77;
 $fuschia9: #4c1254;
+
 $pink0: #f8eaf3;
 $pink1: #f0d3e5;
 $pink2: #e8b9d6;
@@ -75,6 +69,7 @@ $pink6: #a62475;
 $pink7: #912066;
 $pink8: #781a54;
 $pink9: #54123b;
+
 $red0: #f8eaec;
 $red1: #f0d4d7;
 $red2: #e8b9bf;
@@ -85,6 +80,7 @@ $red6: #a62434;
 $red7: #91202d;
 $red8: #771a25;
 $red9: #54121a;
+
 $orange0: #f7ede7;
 $orange1: #eedacd;
 $orange2: #e5c4af;
@@ -95,6 +91,7 @@ $orange6: #a65624;
 $orange7: #914b20;
 $orange8: #773e1a;
 $orange9: #542b12;
+
 $yellow0: #f5f3e3;
 $yellow1: #ece7c5;
 $yellow2: #e1daa5;
@@ -105,6 +102,7 @@ $yellow6: #a79725;
 $yellow7: #928520;
 $yellow8: #796e1a;
 $yellow9: #574f13;
+
 $lime0: #eff6e3;
 $lime1: #ddecc6;
 $lime2: #cbe1a6;
@@ -115,6 +113,7 @@ $lime6: #75a725;
 $lime7: #679220;
 $lime8: #55791a;
 $lime9: #3d5713;
+
 $green0: #e8f6e6;
 $green1: #ceedca;
 $green2: #b2e3ab;
@@ -125,6 +124,7 @@ $green6: #34a725;
 $green7: #2d9220;
 $green8: #26791a;
 $green9: #1b5713;
+
 $teal0: #e6f6ec;
 $teal1: #caedd8;
 $teal2: #abe3c1;
@@ -135,6 +135,7 @@ $teal6: #25a756;
 $teal7: #20924c;
 $teal8: #1a793f;
 $teal9: #13572d;
+
 $cyan0: #e5f6f4;
 $cyan1: #c9ede9;
 $cyan2: #aae3dc;

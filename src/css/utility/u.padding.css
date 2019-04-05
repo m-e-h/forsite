@@ -22,31 +22,27 @@
 }
 
 .u-p05 {
-	padding: $space-05;
-}
-
-.u-p15 {
-	padding: $space-15;
+	padding: 0.5rem;
 }
 
 .u-p25 {
-	padding: $space-25;
+	padding: 2.5rem;
 }
 
 .u-p1 {
-	padding: $space-1;
+	padding: 1rem;
 }
 
 .u-p2 {
-	padding: $space-2;
+	padding: 2rem;
 }
 
 .u-p3 {
-	padding: $space-3;
+	padding: 3rem;
 }
 
 .u-p4 {
-	padding: $space-4;
+	padding: 4rem;
 }
 
 .u-p0 {
@@ -54,88 +50,88 @@
 }
 
 .u-px05 {
-	padding-inline: $space-05;
+	padding-inline: 0.5rem;
 }
 
 .u-py05 {
-	padding-top: $space-05;
-	padding-bottom: $space-05;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .u-py1 {
-	padding-top: $space-1;
-	padding-bottom: $space-1;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .u-px1 {
-	padding-inline: $space-1;
+	padding-inline: 1rem;
 }
 
 .u-pt1 {
-	padding-top: $space-1;
+	padding-top: 1rem;
 }
 
 .u-pb1 {
-	padding-bottom: $space-1;
+	padding-bottom: 1rem;
 }
 
 .u-py2 {
-	padding-top: $space-2;
-	padding-bottom: $space-2;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .u-px2 {
-	padding-inline: $space-2;
+	padding-inline: 2rem;
 }
 
 .u-pt2 {
-	padding-top: $space-2;
+	padding-top: 2rem;
 }
 
 .u-pb2 {
-	padding-bottom: $space-2;
+	padding-bottom: 2rem;
 }
 
 .u-pl3 {
-	padding-left: $space-3;
+	padding-left: 3rem;
 }
 
 .u-py3 {
-	padding-top: $space-3;
-	padding-bottom: $space-3;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .u-px3 {
-	padding-inline: $space-3;
+	padding-inline: 3rem;
 }
 
 .u-pt3 {
-	padding-top: $space-3;
+	padding-top: 3rem;
 }
 
 .u-pb3 {
-	padding-bottom: $space-3;
+	padding-bottom: 3rem;
 }
 
 .u-pl4 {
-	padding-left: $space-4;
+	padding-left: 4rem;
 }
 
 .u-py4 {
-	padding-top: $space-4;
-	padding-bottom: $space-4;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 
 .u-px4 {
-	padding-inline: $space-4;
+	padding-inline: 4rem;
 }
 
 .u-pt4 {
-	padding-top: $space-4;
+	padding-top: 4rem;
 }
 
 .u-pb4 {
-	padding-bottom: $space-4;
+	padding-bottom: 4rem;
 }
 
 .u-py0 {

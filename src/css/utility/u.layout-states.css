@@ -171,40 +171,13 @@ body.admin-bar {
 	visibility: visible;
 }
 
-@media (--md) {
-
-	.u-relative-md {
-		position: relative;
-	}
-
-	.u-absolute-md {
-		position: absolute;
-	}
-
-	.u-fixed-md {
-		position: fixed;
-	}
-
-	.u-static-md {
-		position: static;
-	}
-
-	.u-left-md {
-		float: left;
-	}
-
-	.u-right-md {
-		float: right;
-	}
-}
-
 .shadow-hover {
 	overflow: visible;
 }
 
 .shadow-hover::after {
 	content: "";
-	border-radius: $border-radius;
+	border-radius: var(--border-radius);
 	position: absolute;
 	top: 0;
 	left: 0;

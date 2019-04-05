@@ -10,17 +10,9 @@
 	max-width: var(--content-wide);
 }
 
-.wp-block-embed__wrapper {
-	position: relative;
-
-	&::before {
-		content: none !important;
-	}
-}
-
 .wp-block-cover-text p {
 	color: inherit;
-	font-size: $h2;
+	font-size: var(--h2);
 }
 
 .entry__content h4:first-child {

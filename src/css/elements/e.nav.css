@@ -97,7 +97,7 @@ header nav li:not(:hover):not(:focus) > ul {
 
 :root a[href="#main"] {
 	border: 0;
-	background-color: $color-frost-4;
+	background-color: var(--color-frost-4);
 	clip: rect(0 0 0 0);
 	height: 1px;
 	margin: -1px;
@@ -115,7 +115,7 @@ header nav li:not(:hover):not(:focus) > ul {
 		height: auto;
 		margin: 0;
 		padding: 0.5rem;
-		box-shadow: $shadow-3;
+		box-shadow: var(--shadow-3);
 		overflow: visible;
 		width: auto;
 		white-space: inherit;

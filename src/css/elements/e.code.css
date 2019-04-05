@@ -3,7 +3,7 @@ kbd,
 pre,
 samp {
 	background-color: var(--color-tint-1);
-	border-radius: $border-radius;
+	border-radius: var(--border-radius);
 	tab-size: 4;
 }
 
@@ -15,10 +15,11 @@ code {
 }
 
 pre {
+	margin-top: 0;
 	margin-bottom: var(--base-space);
-	padding: $space-1;
+	padding: 1rem;
 	overflow: auto;
-	max-height: 65vh;
+	max-height: 80vh;
 	scrollbar-width: thin;
 	white-space: pre;
 	hyphens: none;

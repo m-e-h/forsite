@@ -2,25 +2,25 @@
 \*------------------------------------ */
 
 .u-border {
-	border-width: 0.063rem;
+	border-width: 1px;
 	border-style: solid;
 	border-color: currentColor;
 }
 
 .u-border-t {
-	border-top-width: 0.063rem;
+	border-top-width: 1px;
 }
 
 .u-border-r {
-	border-right-width: 0.063rem;
+	border-right-width: 1px;
 }
 
 .u-border-b {
-	border-bottom-width: 0.063rem;
+	border-bottom-width: 1px;
 }
 
 .u-border-l {
-	border-left-width: 0.063rem;
+	border-left-width: 1px;
 }
 
 .u-border0 {
@@ -28,7 +28,7 @@
 }
 
 .u-br {
-	border-radius: $border-radius;
+	border-radius: var(--border-radius);
 }
 
 .u-br0 {
@@ -37,20 +37,4 @@
 
 .u-round {
 	border-radius: 50%;
-}
-
-.u-br-t {
-	border-radius: $border-radius $border-radius 0 0;
-}
-
-.u-br-r {
-	border-radius: 0 $border-radius $border-radius 0;
-}
-
-.u-br-b {
-	border-radius: 0 0 $border-radius $border-radius;
-}
-
-.u-br-l {
-	border-radius: $border-radius 0 0 $border-radius;
 }

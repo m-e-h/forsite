@@ -74,9 +74,13 @@ h6 {
 	margin-bottom: 1rem;
 	clear: both;
 
-	& > a {
+	> a {
 		color: inherit;
 	}
+}
+
+article :matches(h1, h2, h3) {
+	margin-bottom: 0.6em;
 }
 
 abbr[title],

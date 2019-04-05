@@ -33,9 +33,9 @@ hr.is-style-dots.is-style-dots {
 		content: "\00b7 \00b7 \00b7";
 		color: inherit;
 		font-family: serif;
-		font-size: $h2;
-		letter-spacing: $h2;
-		padding-left: $h2;
+		font-size: var(--h2);
+		letter-spacing: var(--h2);
+		padding-left: var(--h2);
 	}
 }
 

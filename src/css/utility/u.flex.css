@@ -9,10 +9,6 @@
 	display: inline-flex;
 }
 
-.u-flex-rev {
-	flex-direction: row-reverse;
-}
-
 .u-flex-row-rev {
 	flex-direction: row-reverse;
 }
@@ -124,10 +120,6 @@
 /* small */
 @media (--xs) {
 
-	.u-flex-sm {
-		display: flex;
-	}
-
 	.u-flex-col-sm {
 		flex-direction: column;
 	}
@@ -136,10 +128,6 @@
 /* medium */
 @media (--md) {
 
-	.u-flex-md {
-		display: flex;
-	}
-
 	.u-flex-row-md {
 		flex-direction: row;
 	}
@@ -147,10 +135,6 @@
 
 /* large */
 @media (--lg) {
-
-	.u-flex-lg {
-		display: flex;
-	}
 
 	.u-flex-row-lg {
 		flex-direction: row;

@@ -7,29 +7,12 @@
 *
 * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
 */
-.wp-block-embed {
-
-	/* // Image embeds. */
-	&.is-type-image {}
-
-	/* // Audio embeds. */
-	&.is-type-audio {}
-
-	/* // Rich text embeds (text, Twitter, etc.) */
-	&.is-type-rich {}
-
-	/* // Video embeds. */
-	&.is-type-video {}
-
-	/* // Directly target iframes. */
-	& iframe {}
-}
 
 .wp-block-embed__wrapper {
 	position: relative;
 
 	&::before {
-		content: none;
+		content: none !important;
 	}
 }
 

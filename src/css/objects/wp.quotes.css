@@ -12,7 +12,7 @@
 	padding: 0;
 	border-width: 0;
 
-	& blockquote {
+	blockquote {
 		padding-top: var(--base-space);
 		padding-bottom: var(--base-space);
 		margin: 0;
@@ -41,7 +41,7 @@
 .is-style-solid-color blockquote {
 	color: #fff;
 	background-color: var(--color-1-dark);
-	border-radius: $border-radius;
+	border-radius: var(--border-radius);
 }
 
 .is-style-solid-color.is-style-solid-color {

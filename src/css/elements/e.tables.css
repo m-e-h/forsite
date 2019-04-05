@@ -4,7 +4,7 @@ table {
 	border-spacing: 0;
 	table-layout: auto;
 	border-collapse: collapse;
-	margin-bottom: $gutter;
+	margin-bottom: var(--gutter);
 }
 
 td,
@@ -16,13 +16,13 @@ th {
 }
 
 th {
-	font-weight: $font-bold;
+	font-weight: 600;
 	vertical-align: bottom;
 	border-bottom-width: 2px;
 	text-align: inherit;
 }
 
 tfoot {
-	font-weight: $font-bold;
+	font-weight: 600;
 	border-top-width: 2px solid var(--color-shade-3);
 }

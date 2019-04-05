@@ -48,7 +48,7 @@
 .u-frosted-image,
 .u-tinted-image {
 
-	& > * {
+	> * {
 		position: relative;
 	}
 }

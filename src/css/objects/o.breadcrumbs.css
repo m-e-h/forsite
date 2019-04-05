@@ -3,12 +3,12 @@
 
 .breadcrumbs {
 
-	font-size: $h6;
+	font-size: var(--h6);
 	font-style: italic;
 	margin-bottom: var(--gutter);
 	width: 100%;
 
-	& ol {
+	ol {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -16,7 +16,7 @@
 		margin: 0;
 	}
 
-	& li {
+	li {
 		display: inline-flex;
 		align-items: center;
 		flex: 0 1 auto;

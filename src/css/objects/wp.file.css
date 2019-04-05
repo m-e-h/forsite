@@ -7,7 +7,7 @@
 //// */
 
 .wp-block-file {
-	margin-bottom: $base-space;
+	margin-bottom: var(--base-space);
 
 	&.aligncenter {
 		text-align: center;

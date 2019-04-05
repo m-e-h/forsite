@@ -3,8 +3,8 @@
 
 .u-table-light th,
 .u-table-light td {
-	border-bottom-width: 0.063rem;
-	border-bottom-color: $color-grey-ui;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--color-gray);
 }
 
 .u-table-light tr:last-child td {

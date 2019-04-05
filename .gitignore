@@ -1,5 +1,6 @@
 /node_modules
-# /vendor/bin
+/vendor/bin
+/vendor/composer/installers
 /phpcs.xml
 /.phpcs.xml
 *.map

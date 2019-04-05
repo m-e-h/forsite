@@ -2,7 +2,6 @@ const siteBranding = document.querySelector( '.app-header__branding' );
 const siteTitle = document.querySelector( '.app-header__title' );
 const siteDesc = document.querySelector( '.app-header__description' );
 const siteCrumbs = document.querySelector( '.breadcrumbs' );
-const docBody = document.querySelector( 'body' );
 
 let root = document.documentElement;
 

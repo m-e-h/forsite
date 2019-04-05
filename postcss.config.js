@@ -3,6 +3,7 @@ module.exports = ctx => ({
 	plugins: {
 		'postcss-import': {},
 		'postcss-simple-vars': {},
+		'postcss-nested': {},
 		'postcss-preset-env': {
 			stage: 0,
 			features: {

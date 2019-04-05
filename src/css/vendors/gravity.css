@@ -8,15 +8,15 @@ article .gform_wrapper {
 	font-family: inherit;
 	font-size: 0.7rem;
 
-	& tbody tr td {
-		border-color: $gray4;
+	tbody tr td {
+		border-color: var(--color-gray);
 	}
 
-	& .ui-datepicker-unselectable.ui-state-disabled {
-		background-color: $gray4;
+	.ui-datepicker-unselectable.ui-state-disabled {
+		background-color: var(--color-gray);
 	}
 
-	& .ui-datepicker-header {
+	.ui-datepicker-header {
 		background-color: var(--color-1);
 		color: inherit;
 		border-width: 0;
@@ -24,7 +24,7 @@ article .gform_wrapper {
 		text-shadow: none;
 	}
 
-	& .ui-datepicker-title select {
+	.ui-datepicker-title select {
 		margin: 2px 1px;
 		background-color: var(--color-frost-3);
 		font-size: 0.8rem;
@@ -33,22 +33,22 @@ article .gform_wrapper {
 		border-color: var(--color-frost-3);
 	}
 
-	& .ui-datepicker-calendar .ui-state-default {
+	.ui-datepicker-calendar .ui-state-default {
 		box-shadow: none;
 		text-shadow: none;
-		background: $gray0;
-		color: $gray8;
+		background: var(--silver);
+		color: #343a40;
 	}
 
-	& .ui-datepicker-calendar .ui-state-hover {
+	.ui-datepicker-calendar .ui-state-hover {
 		background: #fff;
 	}
 
-	& .ui-datepicker-calendar .ui-state-active {
+	.ui-datepicker-calendar .ui-state-active {
 		background: #fff;
-		color: $black;
+		color: #000;
 		margin: 0;
 		border-color: var(--color-1);
-		font-size: 0.9rem;
+		font-size: var(--h6);
 	}
 }

@@ -13,7 +13,7 @@
 	list-style: none;
 	justify-content: space-around;
 
-	& li {
+	li {
 		margin: 0.5rem;
 		width: auto;
 	}

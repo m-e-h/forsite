@@ -12,7 +12,7 @@
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
-	background-color: $color-grey-char-dark;
+	background-color: var(--color-tint-4);
 	min-height: 25rem;
 	width: 100%;
 	display: flex;
@@ -83,8 +83,6 @@
 
 /* // Paragraph of text shown within the cover image element. */
 .wp-block-cover-text.wp-block-cover-text {
-
-
 	color: inherit;
 	font-size: inherit;
 	line-height: 1.25;
@@ -95,7 +93,7 @@
 	z-index: 1;
 	text-shadow: 0.063rem 0.063rem 0.313rem rgb(55, 64, 70);
 
-	& a {
+	a {
 		opacity: inherit;
 		color: inherit;
 	}

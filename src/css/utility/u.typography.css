@@ -54,11 +54,11 @@
 }
 
 .u-light {
-	font-weight: $font-light;
+	font-weight: var(--font-light);
 }
 
 .u-bold {
-	font-weight: $font-bold;
+	font-weight: var(--font-bold);
 }
 
 .u-text-read {
@@ -67,7 +67,7 @@
 
 .u-regular,
 .u-normal {
-	font-weight: $font-normal;
+	font-weight: var(--font-normal);
 }
 
 .u-italic {

@@ -1,25 +1,29 @@
 /* #LINKS
 \*------------------------------------ */
 
-/**
- * 1. Remove the gray background on active links in IE 10.
- */
 a {
-	color: inherit;
+	color: color-mod(var(--color-text) blend(blue 10%));
 	text-decoration: none;
-	background-color: transparent; /* 1 */
+	background-color: transparent;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
 	transition-property: color, box-shadow, opacity;
-
-	&:hover,
-	&:focus {
-		box-shadow: inset 0 0 0 20rem var(--color-shade-1);
-	}
 }
 
-p > a,
-article a {
-	box-shadow: inset 0 -0.125rem 0 var(--color-shade-2);
+:matches(article p, article li) > a {
+	box-shadow: inset 0 -1px 0 var(--color-shade-4);
+	font-weight: bolder;
+	opacity: 0.8;
 	overflow-wrap: break-word;
+}
+
+a:matches(:hover, :focus) {
+	box-shadow: inset 0 0 0 2em var(--color-shade-2);
+	opacity: 1;
+	color: inherit;
+}
+
+:matches(header, nav) a {
+	opacity: 1;
+	color: inherit;
 }

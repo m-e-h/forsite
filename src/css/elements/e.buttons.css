@@ -3,20 +3,20 @@
 	background: transparent;
 	background-color: var(--color-gray);
 	padding: 0.8rem 2em;
-	border: 0.125rem solid transparent;
+	border: 2px solid transparent;
 	border-radius: 0.25rem;
 	display: inline-block;
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
-	min-height: $form-element-min-height;
+	min-height: var(--h1);
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
 	transition-property: all;
 
 	&:hover,
 	&:focus {
-		box-shadow: inset 0 0 0 20rem var(--color-tint-1);
+		box-shadow: inset 0 0 0 2em var(--color-tint-1);
 		border-color: var(--color-tint-1);
 	}
 }
