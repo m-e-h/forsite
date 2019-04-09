@@ -2,7 +2,7 @@
  * Theme Name:   Forsite
  * Theme URI:    https://github.com/m-e-h/forsite
  * Description:  A started starter theme for WordPress
- * Version:      0.7.0
+ * Version:      0.7.1
  * Author:       Marty Helmick
  * Author URI:   https://github.com/m-e-h
  * GitHub Theme URI: m-e-h/forsite
@@ -151,7 +151,6 @@
 
 html {
 	cursor: default;
-	font-size: 100%;
 	font-family: sans-serif;
 	font-weight: 400;
 	line-height: 1.6;
@@ -331,8 +330,10 @@ figcaption {
 	color: var(--color-text-muted);
 	font-size: 0.8125rem;
 	font-size: var(--h6);
-	line-height: 1.25;
-	margin: 0.5em;
+	margin: 0;
+	padding: 0.25rem;
+	line-height: 1.36;
+	line-height: var(--heading-line-height);
 }
 
 time {
@@ -446,8 +447,8 @@ aside > section {
 }
 
 a {
-	color: rgb(32, 37, 67);
-	color: rgb(32, 37, 67);
+	color: rgb(39, 86, 116);
+	color: rgb(39, 86, 116);
 	text-decoration: none;
 	background-color: transparent;
 	transition-duration: 0.16s;
@@ -496,9 +497,9 @@ code {
 	font-family: sfmono-regular, "Roboto Mono", menlo, monaco, consolas,
 		"Liberation Mono", "Courier New", monospace;
 	font-family: var(--monospace-font-family);
-	padding: 0.125em 0.375em;
-	margin: 0 0.125em;
-	font-size: 0.9rem;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	font-size: 87.5%;
 }
 
 pre {
@@ -507,7 +508,6 @@ pre {
 	margin-bottom: var(--base-space);
 	padding: 1rem;
 	overflow: auto;
-	max-height: 80vh;
 	scrollbar-width: thin;
 	white-space: pre;
 	-webkit-hyphens: none;
@@ -1134,7 +1134,7 @@ figure {
 }
 
 hr.is-style-wide {
-	width: 100vw;
+	width: 100%;
 	max-width: none;
 }
 
@@ -1508,36 +1508,28 @@ table.has-fixed-layout {
 	padding: 0;
 }
 
-.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item {
-	flex: auto;
-	width: calc(100% / 2 - 1vw);
-	margin: 0.5vw;
-}
-
-.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item figure {
+.blocks-gallery-item figure {
 	margin: 0;
 	height: 100%;
 }
 
-.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item figcaption {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	max-height: 100%;
-	padding: 2.5rem 1rem 0.5rem;
-	padding: var(--h1) 1rem 0.5rem;
-	text-align: center;
-	color: #fff;
-	background-image: linear-gradient(
+.blocks-gallery-item figcaption:not(.block-editor-rich-text__editable) {
+	background: linear-gradient(
 		0deg,
-		rgba(0, 0, 0, 0.7) 0,
-		rgba(0, 0, 0, 0.3) 60%,
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.3) 70%,
 		transparent
 	);
-}
-
-.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item figcaption img {
-	display: inline;
+	bottom: 0;
+	color: #fff;
+	font-size: 0.8125rem;
+	font-size: var(--h6);
+	max-height: 100%;
+	overflow: auto;
+	padding: 2.5rem 0.5rem 0.5rem;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
 
 .is-cropped .blocks-gallery-item a,
@@ -1546,6 +1538,16 @@ table.has-fixed-layout {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item {
+	flex: auto;
+	margin: 0.5vw;
+	min-width: 120px;
+}
+
+.blocks-gallery-item.blocks-gallery-item {
+	width: calc(100% / 2 - 1vw);
 }
 
 .columns-1 .blocks-gallery-item.blocks-gallery-item {
@@ -1755,15 +1757,6 @@ table.has-fixed-layout {
 
 .wp-block-cover {
 	background-position-x: 0;
-}
-
-.entry__content figcaption {
-	color: #868e96;
-	color: var(--color-text-muted);
-	font-size: 0.8125rem;
-	font-size: var(--h6);
-	line-height: 1.25;
-	margin: 0.5em;
 }
 
 .wp-block-preformatted {
