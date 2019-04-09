@@ -9,6 +9,7 @@
 
 /* WP core blocks. */
 @import "wp.cover";
+@import "wp.code";
 @import "wp.file";
 @import "wp.gallery";
 @import "wp.latest-posts";

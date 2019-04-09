@@ -38,6 +38,13 @@
 	text-align: right;
 }
 
+.alignleft blockquote,
+.alignright blockquote,
+.aligncenter blockquote {
+	width: 50%;
+	min-width: 300px;
+}
+
 .is-style-solid-color blockquote {
 	color: #fff;
 	background-color: var(--color-1-dark);
@@ -57,13 +64,6 @@
 .wp-block-pullquote.alignleft,
 .wp-block-pullquote.alignright {
 	max-width: none;
-}
-
-.alignleft blockquote,
-.alignright blockquote,
-.aligncenter blockquote {
-	width: 50%;
-	min-width: 300px;
 }
 
 /* Hack */

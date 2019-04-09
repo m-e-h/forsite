@@ -458,6 +458,12 @@ a {
 	transition-property: color, box-shadow, opacity;
 }
 
+header a,
+nav a {
+	opacity: 1;
+	color: inherit;
+}
+
 article p > a,
 article li > a {
 	box-shadow: inset 0 -1px 0 rgba(222, 226, 230, 0.9);
@@ -471,12 +477,6 @@ a:hover,
 a:focus {
 	box-shadow: inset 0 0 0 2em rgba(222, 226, 230, 0.3);
 	box-shadow: inset 0 0 0 2em var(--color-shade-2);
-	opacity: 1;
-	color: inherit;
-}
-
-header a,
-nav a {
 	opacity: 1;
 	color: inherit;
 }
@@ -503,6 +503,8 @@ code {
 }
 
 pre {
+	font-size: 0.9rem;
+	line-height: 1.5;
 	margin-top: 0;
 	margin-bottom: 1.5rem;
 	margin-bottom: var(--base-space);
@@ -878,14 +880,6 @@ textarea {
 	vertical-align: middle;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-	background-color: #fff;
-	border-color: #2982b9;
-	border-color: var(--color-1);
-}
-
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -897,6 +891,14 @@ select {
 	background-repeat: no-repeat;
 	background-size: 0.9rem;
 	padding-right: 1.5rem !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	background-color: #fff;
+	border-color: #2982b9;
+	border-color: var(--color-1);
 }
 
 input[type="file"] {
@@ -942,12 +944,6 @@ input[type="radio"] {
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
 	min-height: unset;
-}
-
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-	display: inline-block;
-	margin: 0;
 }
 
 input[type="number"] {
@@ -997,9 +993,10 @@ output {
 }
 
 dialog {
-	background-color: white;
+	background-color: #fff;
 	border: solid;
-	color: black;
+	color: #24292e;
+	color: var(--color-text);
 	display: block;
 	height: -moz-fit-content;
 	height: -webkit-fit-content;
@@ -1050,13 +1047,16 @@ label {
 	margin: 0.25rem 0 !important;
 }
 
-input:not([type="checkbox"]):not([type="radio"]) + label,
-select + label {
-	margin-bottom: 1rem !important;
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	display: inline-block;
+	margin: 0;
 }
 
 label + input,
-label + select {
+label + select,
+input:not([type="checkbox"]):not([type="radio"]) + label,
+select + label {
 	margin-bottom: 1rem !important;
 }
 
@@ -1455,6 +1455,13 @@ table.has-fixed-layout {
 	text-align: right;
 }
 
+.wp-block-code {
+	color: #f8f9fa;
+	color: var(--color-silver);
+	background-color: rgba(33, 37, 41, 0.9);
+	background-color: var(--color-tint-4);
+}
+
 .wp-block-file {
 	margin-bottom: 1.5rem;
 	margin-bottom: var(--base-space);
@@ -1628,6 +1635,13 @@ table.has-fixed-layout {
 	text-align: right;
 }
 
+.alignleft blockquote,
+.alignright blockquote,
+.aligncenter blockquote {
+	width: 50%;
+	min-width: 300px;
+}
+
 .is-style-solid-color blockquote {
 	color: #fff;
 	background-color: #206691;
@@ -1649,13 +1663,6 @@ table.has-fixed-layout {
 .wp-block-pullquote.alignleft,
 .wp-block-pullquote.alignright {
 	max-width: none;
-}
-
-.alignleft blockquote,
-.alignright blockquote,
-.aligncenter blockquote {
-	width: 50%;
-	min-width: 300px;
 }
 
 .is-style-solid-color[class*="-background-color"] blockquote {
@@ -2693,7 +2700,7 @@ p.has-background {
 }
 
 .u-tinted-image {
-	color: white;
+	color: #fff;
 }
 
 .u-tinted-image::before {
@@ -2706,7 +2713,10 @@ p.has-background {
 }
 
 .u-grad-overlay::after {
-	background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.1) 40%,
+		rgba(0, 0, 0, 0.6)
+	);
 	content: "";
 	height: 100%;
 	position: absolute;

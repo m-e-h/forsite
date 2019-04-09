@@ -218,6 +218,11 @@
 	transition-property:color, box-shadow, opacity;
 }
 
+.editor-styles-wrapper header a, .editor-styles-wrapper nav a{
+	opacity:1;
+	color:inherit;
+}
+
 .editor-styles-wrapper article p > a, .editor-styles-wrapper article li > a{
 	box-shadow:inset 0 -1px 0 rgba(222, 226, 230, 0.9);
 	box-shadow:inset 0 -1px 0 var(--color-shade-4);
@@ -229,11 +234,6 @@
 .editor-styles-wrapper a:hover, .editor-styles-wrapper a:focus{
 	box-shadow:inset 0 0 0 2em rgba(222, 226, 230, 0.3);
 	box-shadow:inset 0 0 0 2em var(--color-shade-2);
-	opacity:1;
-	color:inherit;
-}
-
-.editor-styles-wrapper header a, .editor-styles-wrapper nav a{
 	opacity:1;
 	color:inherit;
 }
@@ -412,6 +412,8 @@
 }
 
 .editor-styles-wrapper pre{
+	font-size:0.9rem;
+	line-height:1.5;
 	margin-top:0;
 	margin-bottom:1.5rem;
 	margin-bottom:var(--base-space);
@@ -773,12 +775,6 @@
 	vertical-align:middle;
 }
 
-.editor-styles-wrapper input:focus, .editor-styles-wrapper select:focus, .editor-styles-wrapper textarea:focus{
-		background-color:#fff;
-		border-color:#2982b9;
-		border-color:var(--color-1);
-	}
-
 .editor-styles-wrapper select:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]){
 	-webkit-appearance:none;
 	   -moz-appearance:none;
@@ -790,6 +786,12 @@
 	background-repeat:no-repeat;
 	background-size:0.9rem;
 	padding-right:1.5rem !important;
+}
+
+.editor-styles-wrapper input:focus, .editor-styles-wrapper select:focus, .editor-styles-wrapper textarea:focus{
+	background-color:#fff;
+	border-color:#2982b9;
+	border-color:var(--color-1);
 }
 
 .editor-styles-wrapper input[type="file"]{
@@ -836,11 +838,6 @@
 	margin:0 0.5em 0 0;
 	min-height:unset;
 }
-
-.editor-styles-wrapper input[type="checkbox"] + label, .editor-styles-wrapper input[type="radio"] + label{
-		display:inline-block;
-		margin:0;
-	}
 
 .editor-styles-wrapper input[type="number"]{
 	width:auto;
@@ -889,9 +886,10 @@
 }
 
 .editor-styles-wrapper dialog{
-	background-color:white;
+	background-color:#fff;
 	border:solid;
-	color:black;
+	color:#24292e;
+	color:var(--color-text);
 	display:block;
 	height:-moz-fit-content;
 	height:-webkit-fit-content;
@@ -929,12 +927,12 @@
 	margin:0.25rem 0 !important;
 }
 
-.editor-styles-wrapper input:not([type="checkbox"]):not([type="radio"]) + label, .editor-styles-wrapper select + label{
-	margin-bottom:1rem !important;
+.editor-styles-wrapper input[type="checkbox"] + label, .editor-styles-wrapper input[type="radio"] + label{
+	display:inline-block;
+	margin:0;
 }
 
-.editor-styles-wrapper label + input,
-.editor-styles-wrapper label + select{
+.editor-styles-wrapper label + input, .editor-styles-wrapper label + select, .editor-styles-wrapper input:not([type="checkbox"]):not([type="radio"]) + label, .editor-styles-wrapper select + label{
 	margin-bottom:1rem !important;
 }
 
@@ -1328,6 +1326,13 @@
 	text-align:right;
 }
 
+.editor-styles-wrapper .wp-block-code{
+	color:#f8f9fa;
+	color:var(--color-silver);
+	background-color:rgba(33, 37, 41, 0.9);
+	background-color:var(--color-tint-4);
+}
+
 .editor-styles-wrapper .wp-block-file{
 	margin-bottom:1.5rem;
 	margin-bottom:var(--base-space);
@@ -1497,6 +1502,13 @@
 	text-align:right;
 }
 
+.editor-styles-wrapper .alignleft blockquote,
+.editor-styles-wrapper .alignright blockquote,
+.editor-styles-wrapper .aligncenter blockquote{
+	width:50%;
+	min-width:300px;
+}
+
 .editor-styles-wrapper .is-style-solid-color blockquote{
 	color:#fff;
 	background-color:#206691;
@@ -1518,13 +1530,6 @@
 .editor-styles-wrapper .wp-block-pullquote.alignleft,
 .editor-styles-wrapper .wp-block-pullquote.alignright{
 	max-width:none;
-}
-
-.editor-styles-wrapper .alignleft blockquote,
-.editor-styles-wrapper .alignright blockquote,
-.editor-styles-wrapper .aligncenter blockquote{
-	width:50%;
-	min-width:300px;
 }
 
 .editor-styles-wrapper .is-style-solid-color[class*="-background-color"] blockquote{
@@ -2569,8 +2574,7 @@
 	}
 
 .editor-styles-wrapper .u-tinted-image{
-
-	color:white;
+	color:#fff;
 }
 
 .editor-styles-wrapper .u-tinted-image::before{
@@ -2583,7 +2587,7 @@
 }
 
 .editor-styles-wrapper .u-grad-overlay::after{
-		background:linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
+		background-image:linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6));
 		content:"";
 		height:100%;
 		position:absolute;

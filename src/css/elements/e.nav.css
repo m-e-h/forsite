@@ -69,8 +69,6 @@ header nav > ul {
 	}
 }
 
-
-
 header nav li > ul {
 	display: flex;
 	flex-direction: column;

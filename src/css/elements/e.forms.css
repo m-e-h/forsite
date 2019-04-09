@@ -56,11 +56,6 @@ textarea {
 	background-color: var(--color-shade-2);
 	color: inherit;
 	vertical-align: middle;
-
-	&:focus {
-		background-color: #fff;
-		border-color: var(--color-1);
-	}
 }
 
 select {
@@ -72,6 +67,11 @@ select {
 	background-repeat: no-repeat;
 	background-size: 0.9rem;
 	padding-right: 1.5rem !important;
+}
+
+:matches(input, select, textarea):focus {
+	background-color: #fff;
+	border-color: var(--color-1);
 }
 
 input[type="file"] {
@@ -117,11 +117,6 @@ input[type="radio"] {
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
 	min-height: unset;
-
-	+ label {
-		display: inline-block;
-		margin: 0;
-	}
 }
 
 input[type="number"] {
@@ -175,9 +170,9 @@ output {
   */
 
 dialog {
-	background-color: white;
+	background-color: #fff;
 	border: solid;
-	color: black;
+	color: var(--color-text);
 	display: block;
 	height: -moz-fit-content;
 	height: -webkit-fit-content;
@@ -240,11 +235,13 @@ label {
 	margin: 0.25rem 0 !important;
 }
 
-:matches(input:not([type="checkbox"]):not([type="radio"]), select) + label {
-	margin-bottom: 1rem !important;
+:matches(input[type="checkbox"], input[type="radio"]) + label {
+	display: inline-block;
+	margin: 0;
 }
 
 label + input,
-label + select {
+label + select,
+:matches(input:not([type="checkbox"]):not([type="radio"]), select) + label {
 	margin-bottom: 1rem !important;
 }
