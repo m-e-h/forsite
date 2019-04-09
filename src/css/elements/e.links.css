@@ -2,7 +2,7 @@
 \*------------------------------------ */
 
 a {
-	color: color-mod(var(--color-text) blend(blue 10%));
+	color: color-mod(var(--color-text) blend(var(--color-1) 50%));
 	text-decoration: none;
 	background-color: transparent;
 	transition-duration: var(--timing);

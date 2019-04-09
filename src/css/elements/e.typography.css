@@ -4,8 +4,9 @@
 %e_figcaption {
 	color: var(--color-text-muted);
 	font-size: var(--h6);
-	line-height: 1.25;
-	margin: 0.5em;
+	margin: 0;
+	padding: 0.25rem;
+	line-height: var(--heading-line-height);
 }
 
 html {

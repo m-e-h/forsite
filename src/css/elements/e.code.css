@@ -9,9 +9,9 @@ samp {
 
 code {
 	font-family: var(--monospace-font-family);
-	padding: 0.125em 0.375em;
-	margin: 0 0.125em;
-	font-size: 0.9rem;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	font-size: 87.5%;
 }
 
 pre {
@@ -19,7 +19,6 @@ pre {
 	margin-bottom: var(--base-space);
 	padding: 1rem;
 	overflow: auto;
-	max-height: 80vh;
 	scrollbar-width: thin;
 	white-space: pre;
 	hyphens: none;

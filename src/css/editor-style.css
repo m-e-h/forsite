@@ -10,8 +10,3 @@
 	line-height: var(--line-height);
 	color: var(--color-text);
 }
-
-.editor-block-list__layout p {
-	font-size: inherit;
-	line-height: inherit;
-}

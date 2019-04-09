@@ -35,11 +35,6 @@
 	background-position-x: 0;
 }
 
-.entry__content figcaption {
-
-	@extend %e_figcaption;
-}
-
 .wp-block-preformatted {
 	background-color: transparent;
 	padding: 0;

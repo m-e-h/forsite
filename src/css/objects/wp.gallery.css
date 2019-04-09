@@ -14,32 +14,24 @@
 	padding: 0;
 }
 
-/* // The wrapper for individual gallery images/figures. */
-.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item {
-	flex: auto;
-	width: calc(100% / 2 - 1vw);
-	margin: 0.5vw;
 
-	/* Image figure. */
-	figure {
-		margin: 0;
-		height: 100%;
-	}
+/* Image figure. */
+.blocks-gallery-item figure {
+	margin: 0;
+	height: 100%;
+}
 
-	figcaption {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		max-height: 100%;
-		padding: var(--h1) 1rem 0.5rem;
-		text-align: center;
-		color: #fff;
-		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.3) 60%, transparent);
-
-		img {
-			display: inline;
-		}
-	}
+.blocks-gallery-item figcaption:not(.block-editor-rich-text__editable) {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3) 70%, transparent);
+	bottom: 0;
+	color: #fff;
+	font-size: var(--h6);
+	max-height: 100%;
+	overflow: auto;
+	padding: 2.5rem 0.5rem 0.5rem;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
 
 .is-cropped .blocks-gallery-item {
@@ -51,6 +43,17 @@
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+/* Needs extra specificity to override WP styles. */
+.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item.blocks-gallery-item {
+	flex: auto;
+	margin: 0.5vw;
+	min-width: 120px;
+}
+
+.blocks-gallery-item.blocks-gallery-item {
+	width: calc(100% / 2 - 1vw);
 }
 
 /* // 1 column. */
