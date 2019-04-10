@@ -48,8 +48,8 @@ article {
 }
 
 article > * {
-	width: var(--content-width);
-	max-width: calc(100% - var(--double-space));
+	width: calc(100% - var(--double-space));
+	max-width: var(--content-width);
 }
 
 article > div {

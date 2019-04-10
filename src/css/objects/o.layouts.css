@@ -8,8 +8,6 @@
 
 .app-header__title,
 .app-header__description {
-	line-height: inherit;
-	font-weight: inherit;
 	margin: 0 0.5rem;
 }
 
@@ -17,25 +15,37 @@
 	padding-top: 0.5rem;
 }
 
-hr.is-style-wide {
+hr.is-style-wide.is-style-wide {
 	width: 100%;
-	max-width: none;
+	max-width: 100%;
+	border-bottom-width: 2px;
 }
 
 hr.is-style-dots.is-style-dots {
 	background: none;
 	border-width: 0;
-	height: auto;
+	height: 1rem;
+	line-height: inherit;
+	text-align: center;
+	width: 9rem;
+	background-image: radial-gradient(currentColor 10%, transparent 10%);
+	background-position: 0;
+	background-size: 3rem 3rem;
+
+	/* height: auto;
 	line-height: 1;
 	text-align: center;
+	width: 100%; */
 
 	&::before {
-		content: "\00b7 \00b7 \00b7";
+		content: none;
+
+		/* content: "\00b7 \00b7 \00b7";
 		color: inherit;
 		font-family: serif;
 		font-size: var(--h2);
 		letter-spacing: var(--h2);
-		padding-left: var(--h2);
+		padding-left: var(--h2); */
 	}
 }
 

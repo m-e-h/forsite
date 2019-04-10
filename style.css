@@ -258,15 +258,6 @@ h6 {
 	clear: both;
 }
 
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
-	color: inherit;
-}
-
 article h1,
 article h2,
 article h3 {
@@ -313,15 +304,14 @@ sup {
 
 hr {
 	color: inherit;
-	margin-top: 1.5rem;
-	margin-top: var(--base-space);
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-top: 1rem;
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
 	border-width: 0;
-	border-bottom-width: 1px;
+	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: currentColor;
-	opacity: 0.5;
+	opacity: 0.3;
 	box-sizing: content-box;
 }
 
@@ -408,10 +398,10 @@ article {
 }
 
 article > * {
-	width: 900px;
-	width: var(--content-width);
-	max-width: calc(100% - calc(1.5rem * 2));
-	max-width: calc(100% - var(--double-space));
+	width: calc(100% - calc(1.5rem * 2));
+	width: calc(100% - var(--double-space));
+	max-width: 900px;
+	max-width: var(--content-width);
 }
 
 article > div {
@@ -471,6 +461,13 @@ article li > a {
 	font-weight: bolder;
 	opacity: 0.8;
 	word-wrap: break-word;
+}
+
+h1 > a,
+h2 > a,
+h3 > a {
+	color: inherit;
+	display: block;
 }
 
 a:hover,
@@ -585,9 +582,11 @@ ol ol {
 }
 
 li {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
 	padding: 0;
+}
+
+li + li {
+	margin-top: 0.25rem;
 }
 
 article > ul,
@@ -1124,8 +1123,6 @@ figure {
 
 .app-header__title,
 .app-header__description {
-	line-height: inherit;
-	font-weight: inherit;
 	margin: 0 0.5rem;
 }
 
@@ -1133,29 +1130,26 @@ figure {
 	padding-top: 0.5rem;
 }
 
-hr.is-style-wide {
+hr.is-style-wide.is-style-wide {
 	width: 100%;
-	max-width: none;
+	max-width: 100%;
+	border-bottom-width: 2px;
 }
 
 hr.is-style-dots.is-style-dots {
 	background: none;
 	border-width: 0;
-	height: auto;
-	line-height: 1;
+	height: 1rem;
+	line-height: inherit;
 	text-align: center;
+	width: 9rem;
+	background-image: radial-gradient(currentColor 10%, transparent 10%);
+	background-position: 0;
+	background-size: 3rem 3rem;
 }
 
 hr.is-style-dots.is-style-dots::before {
-	content: "\00b7 \00b7 \00b7";
-	color: inherit;
-	font-family: serif;
-	font-size: 2rem;
-	font-size: var(--h2);
-	letter-spacing: 2rem;
-	letter-spacing: var(--h2);
-	padding-left: 2rem;
-	padding-left: var(--h2);
+	content: none;
 }
 
 .wp-block-media-text__content > * {
@@ -1363,6 +1357,8 @@ table.has-fixed-layout {
 	background-color: rgba(33, 37, 41, 0.9);
 	background-color: var(--color-tint-4);
 	min-height: 25rem;
+	margin-bottom: 1.5rem;
+	margin-bottom: var(--base-space);
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -1460,6 +1456,19 @@ table.has-fixed-layout {
 	color: var(--color-silver);
 	background-color: rgba(33, 37, 41, 0.9);
 	background-color: var(--color-tint-4);
+}
+
+.wp-block-preformatted {
+	background-color: transparent;
+	padding: 0;
+}
+
+.wp-block-verse {
+	font-size: 1.25rem;
+	font-size: var(--h5);
+	font-style: italic;
+	background-color: transparent;
+	padding: 0;
 }
 
 .wp-block-file {
@@ -1699,6 +1708,10 @@ table.has-fixed-layout {
 	}
 }
 
+.wp-block-column :last-child {
+	margin-bottom: 0;
+}
+
 .has-2-columns .wp-block-column {
 	width: calc(100% / 2 - 2rem);
 }
@@ -1748,16 +1761,6 @@ table.has-fixed-layout {
 	max-width: var(--content-wide);
 }
 
-.wp-block-cover-text p {
-	color: inherit;
-	font-size: 2rem;
-	font-size: var(--h2);
-}
-
-.entry__content h4:first-child {
-	margin-top: 0;
-}
-
 .icon {
 	height: 1em;
 }
@@ -1766,25 +1769,13 @@ table.has-fixed-layout {
 	background-position-x: 0;
 }
 
-.wp-block-preformatted {
-	background-color: transparent;
-	padding: 0;
-}
-
-.wp-block-verse {
-	font-size: 1.25rem;
-	font-size: var(--h5);
-	font-style: italic;
-	background-color: transparent;
-	padding: 0;
-}
-
-.wp-block-column :last-child {
-	margin-bottom: 0;
-}
-
 p.has-background {
 	padding: 0.75rem 1rem;
+}
+
+.wp-block-image {
+	margin-bottom: 1.5rem;
+	margin-bottom: var(--base-space);
 }
 
 .u-fit {
@@ -3519,10 +3510,10 @@ body.admin-bar {
 }
 
 .alignwide {
-	width: calc(900px + 20vw);
-	width: var(--content-wide);
-	max-width: calc(100% - 1.5rem);
-	max-width: calc(100% - var(--base-space));
+	width: calc(100% - 1.5rem);
+	width: calc(100% - var(--base-space));
+	max-width: calc(900px + 20vw);
+	max-width: var(--content-wide);
 }
 
 .alignfull {

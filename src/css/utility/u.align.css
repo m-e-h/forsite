@@ -24,8 +24,8 @@
 }
 
 .alignwide {
-	width: var(--content-wide);
-	max-width: calc(100% - var(--base-space));
+	width: calc(100% - var(--base-space));
+	max-width: var(--content-wide);
 }
 
 .alignfull {

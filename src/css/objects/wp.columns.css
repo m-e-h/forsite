@@ -23,6 +23,9 @@
 	}
 }
 
+.wp-block-column :last-child {
+	margin-bottom: 0;
+}
 
 .has-2-columns .wp-block-column {
 	width: calc(100% / 2 - 2rem);

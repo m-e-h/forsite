@@ -2,3 +2,15 @@
 	color: var(--color-silver);
 	background-color: var(--color-tint-4);
 }
+
+.wp-block-preformatted {
+	background-color: transparent;
+	padding: 0;
+}
+
+.wp-block-verse {
+	font-size: var(--h5);
+	font-style: italic;
+	background-color: transparent;
+	padding: 0;
+}

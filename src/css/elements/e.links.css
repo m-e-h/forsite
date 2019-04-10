@@ -22,6 +22,11 @@ a {
 	overflow-wrap: break-word;
 }
 
+:matches(h1, h2, h3) > a {
+	color: inherit;
+	display: block;
+}
+
 a:matches(:hover, :focus) {
 	box-shadow: inset 0 0 0 2em var(--color-shade-2);
 	opacity: 1;
