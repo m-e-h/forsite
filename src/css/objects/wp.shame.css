@@ -24,4 +24,5 @@ p.has-background {
 
 .wp-block-image {
 	margin-bottom: var(--base-space);
+	max-width: var(--content-width);
 }

@@ -1776,6 +1776,8 @@ p.has-background {
 .wp-block-image {
 	margin-bottom: 1.5rem;
 	margin-bottom: var(--base-space);
+	max-width: 900px;
+	max-width: var(--content-width);
 }
 
 .u-fit {
