@@ -43,12 +43,12 @@
 	--max-font-size: 1.125rem;
 
 	--h0: 3.5rem;
-	--h1: 2.5rem;
-	--h2: 2rem;
+	--h1: 3rem;
+	--h2: 2.25rem;
 	--h3: 1.75rem;
 	--h4: 1.5rem;
 	--h5: 1.25rem;
-	--h6: 0.8125rem;
+	--h6: 0.875rem;
 
 	--space-05: 0.5rem;
 	--space-1: 1rem;
@@ -215,55 +215,6 @@ p {
 	margin-bottom: var(--base-space);
 }
 
-h1 {
-	font-size: 2rem;
-	font-size: var(--h2);
-}
-
-h2 {
-	font-size: 2rem;
-	font-size: var(--h2);
-}
-
-h3 {
-	font-size: 1.75rem;
-	font-size: var(--h3);
-}
-
-h4 {
-	font-size: 1.5rem;
-	font-size: var(--h4);
-}
-
-h5 {
-	font-size: 1.25rem;
-	font-size: var(--h5);
-}
-
-h6 {
-	font-size: 1.25rem;
-	font-size: var(--h5);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 1.36;
-	line-height: var(--heading-line-height);
-	margin-top: 0;
-	margin-bottom: 1rem;
-	clear: both;
-}
-
-article h1,
-article h2,
-article h3 {
-	margin-bottom: 0.6em;
-}
-
 abbr[title],
 abbr[data-original-title] {
 	-webkit-text-decoration: underline dotted;
@@ -318,7 +269,7 @@ hr {
 figcaption {
 	color: #868e96;
 	color: var(--color-text-muted);
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-size: var(--h6);
 	margin: 0;
 	padding: 0.25rem;
@@ -342,6 +293,55 @@ caption {
 	caption-side: bottom;
 }
 
+h1 {
+	font-size: 3rem;
+	font-size: var(--h1);
+}
+
+h2 {
+	font-size: 2.25rem;
+	font-size: var(--h2);
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-size: var(--h3);
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-size: var(--h4);
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-size: var(--h5);
+}
+
+h6 {
+	font-size: 0.875rem;
+	font-size: var(--h6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.36;
+	line-height: var(--heading-line-height);
+	margin-top: 0;
+	margin-bottom: 1rem;
+	clear: both;
+}
+
+article h1,
+article h2,
+article h3 {
+	margin-bottom: 0.6em;
+}
+
 header,
 footer,
 main,
@@ -360,7 +360,7 @@ body > header {
 	color: var(--header-text-color);
 	background-color: var(--header-bg-color);
 	display: flex;
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-size: var(--h6);
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -537,7 +537,7 @@ input[type="submit"] {
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
-	min-height: 2.5rem;
+	min-height: 3rem;
 	min-height: var(--h1);
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -863,7 +863,7 @@ input,
 select,
 textarea {
 	max-width: 100%;
-	min-height: 2.5rem;
+	min-height: 3rem;
 	min-height: var(--h1);
 	border-radius: 3px;
 	border-radius: var(--border-radius);
@@ -1180,7 +1180,7 @@ img.emoji {
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
-	min-height: 2.5rem;
+	min-height: 3rem;
 	min-height: var(--h1);
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -1289,9 +1289,9 @@ table.has-fixed-layout {
 	padding: 0;
 	margin: 0.25rem;
 	margin-left: auto;
-	height: 2.5rem;
+	height: 3rem;
 	height: var(--h1);
-	width: 2.5rem;
+	width: 3rem;
 	width: var(--h1);
 	line-height: 1;
 }
@@ -1303,7 +1303,7 @@ table.has-fixed-layout {
 }
 
 .breadcrumbs {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 
 	font-size: var(--h6);
 	font-style: italic;
@@ -1349,7 +1349,7 @@ table.has-fixed-layout {
 
 .wp-block-cover {
 	color: #fff;
-	font-size: 2rem;
+	font-size: 2.25rem;
 	font-size: var(--h2);
 	position: relative;
 	background-size: cover;
@@ -1496,7 +1496,7 @@ table.has-fixed-layout {
 	vertical-align: middle;
 	cursor: pointer;
 	box-shadow: none;
-	min-height: 2.5rem;
+	min-height: 3rem;
 	min-height: var(--h1);
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -1538,7 +1538,7 @@ table.has-fixed-layout {
 	);
 	bottom: 0;
 	color: #fff;
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-size: var(--h6);
 	max-height: 100%;
 	overflow: auto;
@@ -2747,7 +2747,7 @@ p.has-background {
 
 .u-h6,
 .has-small-font-size {
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-size: var(--h6);
 }
 
@@ -2765,7 +2765,7 @@ p.has-background {
 
 .u-h2,
 .has-large-font-size {
-	font-size: 2rem;
+	font-size: 2.25rem;
 	font-size: var(--h2);
 	line-height: 1.36;
 	line-height: var(--heading-line-height);
@@ -2774,7 +2774,7 @@ p.has-background {
 .u-h1,
 .has-larger-font-size,
 .has-huge-font-size {
-	font-size: 2.5rem;
+	font-size: 3rem;
 	font-size: var(--h1);
 	line-height: 1.36;
 	line-height: var(--heading-line-height);
@@ -3649,7 +3649,7 @@ article .gform_wrapper {
 	margin: 0;
 	border-color: #2982b9;
 	border-color: var(--color-1);
-	font-size: 0.8125rem;
+	font-size: 0.875rem;
 	font-size: var(--h6);
 }
 

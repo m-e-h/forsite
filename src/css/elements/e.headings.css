@@ -1,5 +1,5 @@
 h1 {
-	font-size: var(--h2);
+	font-size: var(--h1);
 }
 
 h2 {
@@ -19,7 +19,7 @@ h5 {
 }
 
 h6 {
-	font-size: var(--h5);
+	font-size: var(--h6);
 }
 
 h1,
