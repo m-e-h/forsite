@@ -37,9 +37,12 @@
 	--content-width: 900px;
 	--content-wide: calc(var(--content-width) + 20vw);
 	--fluid-font: calc(
-		var(--min-font-size) + (1.125 - 0.95) * ((100vw - 21em) / (90 - 21))
+		var(--min-font-size) + (var(--max-font) - var(--min-font)) *
+			((100vw - 21em) / (90 - 21))
 	);
+	--min-font: 0.95;
 	--min-font-size: 0.95rem;
+	--max-font: 1.125;
 	--max-font-size: 1.125rem;
 
 	--h0: 3.5rem;
@@ -125,6 +128,8 @@
 
 	--opacity: 0.7;
 
+	--hover-color: var(--color-tint-1);
+	--hover-shadow: inset 0 -10em 0 0 var(--hover-color);
 	--timing: 0.16s;
 	--timing-open: 0.25s;
 	--timing-close: 0.2s;
@@ -172,6 +177,13 @@ body {
 ::selection {
 	background: #b3d4fc;
 	text-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001s !important;
+		transition-duration: 0.001s !important;
+	}
 }
 
 html {
@@ -437,8 +449,8 @@ aside > section {
 }
 
 a {
-	color: rgb(39, 86, 116);
-	color: rgb(39, 86, 116);
+	color: rgb(39, 94, 129);
+	color: rgb(39, 94, 129);
 	text-decoration: none;
 	background-color: transparent;
 	transition-duration: 0.16s;
@@ -454,15 +466,6 @@ nav a {
 	color: inherit;
 }
 
-article p > a,
-article li > a {
-	box-shadow: inset 0 -1px 0 rgba(222, 226, 230, 0.9);
-	box-shadow: inset 0 -1px 0 var(--color-shade-4);
-	font-weight: bolder;
-	opacity: 0.8;
-	word-wrap: break-word;
-}
-
 h1 > a,
 h2 > a,
 h3 > a {
@@ -470,10 +473,19 @@ h3 > a {
 	display: block;
 }
 
+article p > a,
+article li > a {
+	box-shadow: inset 0 -0.2em 0 0 rgba(33, 37, 41, 0.1);
+	box-shadow: inset 0 -0.2em 0 0 var(--hover-color);
+	font-weight: bolder;
+	opacity: 0.8;
+	word-wrap: break-word;
+}
+
 a:hover,
 a:focus {
-	box-shadow: inset 0 0 0 2em rgba(222, 226, 230, 0.3);
-	box-shadow: inset 0 0 0 2em var(--color-shade-2);
+	box-shadow: inset 0 -10em 0 0 rgba(33, 37, 41, 0.1);
+	box-shadow: var(--hover-shadow);
 	opacity: 1;
 	color: inherit;
 }
@@ -543,7 +555,8 @@ input[type="submit"] {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: all;
+	transition-property: color, box-shadow, opacity, background-color,
+		border-color;
 }
 
 button:hover,
@@ -554,10 +567,10 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	box-shadow: inset 0 0 0 2em rgba(33, 37, 41, 0.1);
-	box-shadow: inset 0 0 0 2em var(--color-tint-1);
+	box-shadow: inset 0 -10em 0 0 rgba(33, 37, 41, 0.1);
+	box-shadow: var(--hover-shadow);
 	border-color: rgba(33, 37, 41, 0.1);
-	border-color: var(--color-tint-1);
+	border-color: var(--hover-color);
 }
 
 ::-webkit-file-upload-button {
@@ -863,8 +876,8 @@ input,
 select,
 textarea {
 	max-width: 100%;
-	min-height: 3rem;
-	min-height: var(--h1);
+	min-height: 2.25rem;
+	min-height: var(--h2);
 	border-radius: 3px;
 	border-radius: var(--border-radius);
 	border-width: 1px;
@@ -1186,7 +1199,8 @@ img.emoji {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: all;
+	transition-property: color, box-shadow, opacity, background-color,
+		border-color;
 }
 
 .btn:hover,
@@ -1195,10 +1209,10 @@ img.emoji {
 .button:focus,
 .wp-block-button__link:hover,
 .wp-block-button__link:focus {
-	box-shadow: inset 0 0 0 2em rgba(33, 37, 41, 0.1);
-	box-shadow: inset 0 0 0 2em var(--color-tint-1);
+	box-shadow: inset 0 -10em 0 0 rgba(33, 37, 41, 0.1);
+	box-shadow: var(--hover-shadow);
 	border-color: rgba(33, 37, 41, 0.1);
-	border-color: var(--color-tint-1);
+	border-color: var(--hover-color);
 }
 
 .wp-block-button {
@@ -1502,15 +1516,16 @@ table.has-fixed-layout {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: all;
+	transition-property: color, box-shadow, opacity, background-color,
+		border-color;
 }
 
 .wp-block-file__button:hover,
 .wp-block-file__button:focus {
-	box-shadow: inset 0 0 0 2em rgba(33, 37, 41, 0.1);
-	box-shadow: inset 0 0 0 2em var(--color-tint-1);
+	box-shadow: inset 0 -10em 0 0 rgba(33, 37, 41, 0.1);
+	box-shadow: var(--hover-shadow);
 	border-color: rgba(33, 37, 41, 0.1);
-	border-color: var(--color-tint-1);
+	border-color: var(--hover-color);
 }
 
 * + .wp-block-file__button {

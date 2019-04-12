@@ -46,7 +46,7 @@ input,
 select,
 textarea {
 	max-width: 100%;
-	min-height: var(--h1);
+	min-height: var(--h2);
 	border-radius: var(--border-radius);
 	border-width: 1px;
 	border-color: var(--color-shade-2);
