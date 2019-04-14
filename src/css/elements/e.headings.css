@@ -30,10 +30,14 @@ h5,
 h6 {
 	line-height: var(--heading-line-height);
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: var(--gutter-half);
 	clear: both;
 }
 
-article :matches(h1, h2, h3) {
-	margin-bottom: 0.6em;
+header {
+	margin-bottom: var(--gutter-half);
+}
+
+header > :matches(h1, h2, h3) {
+	margin-bottom: 0;
 }

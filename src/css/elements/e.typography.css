@@ -57,6 +57,12 @@ strong {
 	font-weight: bolder;
 }
 
+i,
+cite,
+em {
+	font-style: italic;
+}
+
 small {
 	font-size: 80%;
 }
@@ -75,18 +81,6 @@ sub {
 
 sup {
 	top: -0.5em;
-}
-
-hr {
-	color: inherit;
-	margin-top: 1rem;
-	margin-bottom: var(--gutter);
-	border-width: 0;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	border-bottom-color: currentColor;
-	opacity: 0.3;
-	box-sizing: content-box;
 }
 
 figcaption {

@@ -6,6 +6,6 @@ img.emoji {
 	vertical-align: -0.1em;
 }
 
-/* .alignfull img {
-	width: 100vw;
-} */
+.icon {
+	height: 1em;
+}

@@ -4,7 +4,7 @@ table {
 	border-spacing: 0;
 	table-layout: auto;
 	border-collapse: collapse;
-	margin-bottom: var(--gutter);
+	margin-bottom: var(--base-space);
 }
 
 td,

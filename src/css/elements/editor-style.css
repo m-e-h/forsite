@@ -1,6 +1,7 @@
+@import "e.typography";
+@import "e.headings";
 @import "e.layout";
 @import "e.links";
-@import "e.typography";
 @import "e.code";
 @import "e.buttons";
 @import "e.lists";

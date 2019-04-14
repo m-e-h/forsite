@@ -1,13 +1,2 @@
 @import "e.global";
-@import "e.typography";
-@import "e.headings";
-@import "e.layout";
-@import "e.links";
-@import "e.code";
-@import "e.buttons";
-@import "e.lists";
-@import "e.nav";
-@import "e.tables";
-@import "e.quotes";
-@import "e.forms";
-@import "e.images";
+@import "editor-style";

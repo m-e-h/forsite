@@ -32,25 +32,11 @@ hr.is-style-dots.is-style-dots {
 	background-position: 0;
 	background-size: 3rem 3rem;
 
-	/* height: auto;
-	line-height: 1;
-	text-align: center;
-	width: 100%; */
-
 	&::before {
 		content: none;
-
-		/* content: "\00b7 \00b7 \00b7";
-		color: inherit;
-		font-family: serif;
-		font-size: var(--h2);
-		letter-spacing: var(--h2);
-		padding-left: var(--h2); */
 	}
 }
 
-.wp-block-media-text__content > * {
-	max-width: 700px;
-	margin-left: auto;
-	margin-right: auto;
+p.has-background {
+	padding: 0.75rem 1rem;
 }

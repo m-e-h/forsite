@@ -1,6 +1,7 @@
 .wp-block-columns {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: var(--half-space);
 }
 
 .wp-block-column.wp-block-column {

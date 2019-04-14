@@ -3,7 +3,7 @@
 -------------------------------------------------------------- */
 
 form {
-	margin-bottom: var(--base-space);
+	margin-bottom: var(--gutter);
 	max-width: var(--content-width);
 }
 

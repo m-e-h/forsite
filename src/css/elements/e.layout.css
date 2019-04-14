@@ -7,6 +7,18 @@ section {
 	position: relative;
 }
 
+hr {
+	color: inherit;
+	margin-top: 1rem;
+	margin-bottom: var(--base-space);
+	border-width: 0;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: currentColor;
+	opacity: 0.3;
+	box-sizing: content-box;
+}
+
 header {
 	width: 100%;
 }
@@ -44,7 +56,7 @@ article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: var(--base-space);
+	margin-bottom: var(--gutter);
 }
 
 article > * {
@@ -52,8 +64,8 @@ article > * {
 	max-width: var(--content-width);
 }
 
-article > div {
-	margin-bottom: var(--base-space);
+article > :matches(p, div, figure, blockquote, table, ul, pre, hr, nav, section, aside) {
+	margin-bottom: var(--gutter);
 }
 
 article > *:last-child {

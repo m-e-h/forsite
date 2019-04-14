@@ -22,10 +22,6 @@
 	}
 }
 
-.wp-block-quote.is-style-large {
-	font-size: var(--h4);
-}
-
 .wp-block-pullquote.wp-block-pullquote p
 .wp-block-quote.wp-block-quote p {
 	font-style: inherit;
