@@ -7,7 +7,7 @@ File block.
 */
 
 .wp-block-file {
-	margin-bottom: var(--base-space);
+	margin-bottom: var(--gutter);
 
 	&.aligncenter {
 		text-align: center;
@@ -18,9 +18,13 @@ File block.
 	}
 }
 
-.wp-block-file__button {
+.wp-block-file__button.wp-block-file__button.wp-block-file__button {
 
 	@extend %e_button;
+
+	&:hover {
+		color: inherit;
+	}
 }
 
 /* Give the file block button some spacing if element precedes it. */

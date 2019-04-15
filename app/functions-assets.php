@@ -31,9 +31,9 @@ add_action(
 
 		// Enqueue theme styles.
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_style( 'theme-style', get_parent_theme_file_uri( 'style.css' ), false );
+			wp_enqueue_style( 'theme-style', asset( 'style.css' ), false, null );
 		} else {
-			wp_enqueue_style( 'theme-style', get_parent_theme_file_uri( 'dist/main.css' ), false );
+			wp_enqueue_style( 'theme-style', asset( 'dist/main.css' ), false, null );
 		}
 
 		if ( is_child_theme() ) {
@@ -64,3 +64,27 @@ add_action(
 
 	}
 );
+
+/**
+ * Helper function for cache busting. If used when you enqueue a script
+ * or style, it'll append an ID to the filename.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $path  A relative path/file to append to the `public` folder.
+ * @return string
+ */
+function asset( $path ) {
+
+	// Make sure to trim any slashes from the front of the path.
+	$path = '/' . ltrim( $path, '/' );
+
+	// Cache the filetime so that we only read it in once.
+	static $filechange = null;
+
+	if ( null === $filechange ) {
+		$filechange = filemtime( get_parent_theme_file_path( $path ));
+	}
+
+	return get_parent_theme_file_uri( "{$path}?id={$filechange}" );
+}

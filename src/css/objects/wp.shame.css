@@ -18,7 +18,7 @@
  * .wp-block-image { max-width: 100%; margin-bottom: 1em
  */
 .wp-block-image {
-	margin-bottom: var(--base-space);
+	margin-bottom: var(--gutter);
 	max-width: var(--content-width);
 }
 

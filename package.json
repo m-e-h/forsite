@@ -8,12 +8,12 @@
 	"scripts": {
 		"build": "run-s lint:css css pretty:css js",
 		"dev": "run-p watch:*",
-    "css": "run-p css:*",
-    "js": "run-p \"js:* {@}\" -- --mode production",
+		"css": "run-p css:*",
+		"js": "run-p \"js:* {@}\" -- --mode production",
 		"lint": "run-s lint:*",
 		"watch:css": "run-p \"css:* {@}\" -- --watch",
-    "watch:js": "run-p \"js:* {@}\" -- --mode development -w",
-    "css:meta": "postcss src/css/main.css -o ./style.css --env development",
+		"watch:js": "run-p \"js:* {@}\" -- --mode development -w",
+		"css:meta": "postcss src/css/main.css -o ./style.css --env development",
 		"css:main": "postcss src/css/main.css -d dist --env production",
 		"css:editor": "postcss src/css/editor-style.css -d dist --env editor",
 		"js:main": "webpack --module-bind js=babel-loader src/js/index.js",
@@ -36,7 +36,7 @@
 		"babel-loader": "^8.0.5",
 		"browser-sync": "^2.26.3",
 		"browserslist": "^4.5.4",
-		"cssnano":"^4.1.10",
+		"cssnano": "^4.1.10",
 		"eslint": "^5.16.0",
 		"eslint-config-wordpress": "^2.0.0",
 		"npm-run-all": "^4.1.5",
@@ -45,25 +45,44 @@
 		"postcss-discard-empty": "^4.0.1",
 		"postcss-editor-styles": "^0.1.4",
 		"postcss-extend-rule": "^2.0.0",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "4.1.2",
+		"postcss-import": "^12.0.1",
+		"postcss-nested": "4.1.2",
 		"postcss-preset-env": "^6.6.0",
 		"postcss-simple-vars": "^5.0.2",
-		"prettier": "^1.16.4",
-		"stylelint": "^9.10.1",
-		"stylelint-config-wordpress": "^13.1.0",
-		"webpack": "^4.29.6",
+		"prettier": "^1.17.0",
+		"stylelint": "^10.0.0",
+		"stylelint-config-standard": "^18.3.0",
+		"webpack": "^4.30.0",
 		"webpack-cli": "^3.3.0",
 		"theme-claim": "^0.2.0"
 	},
 	"babel": {
-		"presets": [
-			"@babel/env"
-		]
+		"presets": [ "@babel/env" ]
 	},
 	"stylelint": {
 		"defaultSeverity": "warning",
-		"extends": "stylelint-config-wordpress"
+		"extends": "stylelint-config-standard",
+		"rules": {
+			"indentation": "tab",
+      "at-rule-no-unknown": null,
+      "max-nesting-depth": [ 1, {
+        "ignore": ["pseudo-classes"],
+        "ignoreAtRules": ["/^extend/", "media"]
+  } ],
+			"at-rule-empty-line-before": [
+				"always",
+				{
+					"except": [ "blockless-after-blockless" ],
+					"ignore": [ "after-comment" ]
+				}
+			],
+			"rule-empty-line-before": [
+				"always",
+				{
+					"ignore": [ "after-comment" ]
+				}
+			]
+		}
 	},
 	"eslintConfig": {
 		"extends": "wordpress",

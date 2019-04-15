@@ -2,7 +2,7 @@
  * Theme Name:   Forsite
  * Theme URI:    https://github.com/m-e-h/forsite
  * Description:  A started starter theme for WordPress
- * Version:      0.8.0
+ * Version:      0.8.1
  * Author:       Marty Helmick
  * Author URI:   https://github.com/m-e-h
  * GitHub Theme URI: m-e-h/forsite
@@ -20,10 +20,8 @@
 	--double-space: calc(var(--base-space) * 2);
 	--gutter: calc(var(--base-space) * 1.5);
 	--gutter-half: calc(var(--base-space) * 0.75);
-
 	--line-height: 1.6;
-	--heading-line-height: 1.36;
-
+	--heading-line-height: 1.25;
 	--font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
 		"Helvetica Neue", "Liberation Sans", arial, "Noto Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
@@ -34,7 +32,6 @@
 	--font-bold: 600;
 	--font-light: 300;
 	--font-normal: 400;
-
 	--content-width: 900px;
 	--content-wide: calc(var(--content-width) + 20vw);
 	--fluid-font: calc(
@@ -45,7 +42,6 @@
 	--min-font-size: 0.95rem;
 	--max-font: 1.125;
 	--max-font-size: 1.125rem;
-
 	--h0: 3.5rem;
 	--h1: 3rem;
 	--h2: 2.25rem;
@@ -53,7 +49,6 @@
 	--h4: 1.5rem;
 	--h5: 1.25rem;
 	--h6: 0.875rem;
-
 	--primary: hsla(
 		var(--primary-hue),
 		var(--primary-saturation),
@@ -64,7 +59,6 @@
 	--primary-saturation: 100%;
 	--primary-lightness: 50%;
 	--primary-alpha: 1;
-
 	--border-radius: 3px;
 	--site-bg: #fff;
 	--color-text: #24292e;
@@ -78,7 +72,6 @@
 	--color-2: #29b960;
 	--color-2-light: #88d8a7;
 	--color-2-dark: #20924c;
-
 	--color-info: #62a3cb;
 	--color-info-light: #cce1ee;
 	--color-info-dark: #123b54;
@@ -90,7 +83,6 @@
 	--color-warning-dark: #54121a;
 	--color-links: #1f2d8f;
 	--color-links-hover: #293ab9;
-
 	--color-frost-1: rgba(241, 243, 245, 0.15);
 	--color-frost-2: rgba(241, 243, 245, 0.3);
 	--color-frost-3: rgba(241, 243, 245, 0.5);
@@ -103,7 +95,6 @@
 	--color-tint-2: rgba(33, 37, 41, 0.3);
 	--color-tint-3: rgba(33, 37, 41, 0.5);
 	--color-tint-4: rgba(33, 37, 41, 0.9);
-
 	--shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	--shadow-1: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
 		0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -115,9 +106,7 @@
 		0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 	--shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 		0 19px 29px 2px rgba(0, 0, 0, 0.14), 0 7px 36px 6px rgba(0, 0, 0, 0.12);
-
 	--opacity: 0.7;
-
 	--hover-color: var(--color-tint-1);
 	--hover-shadow: inset 0 -10em 0 0 var(--hover-color);
 	--timing: 0.16s;
@@ -268,7 +257,7 @@ figcaption {
 	font-size: var(--h6);
 	margin: 0;
 	padding: 0.25rem;
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -324,7 +313,7 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 	margin-top: 0;
 	margin-bottom: calc(1.5rem * 0.75);
@@ -827,7 +816,7 @@ blockquote {
 	padding: 0 1em;
 	font-size: 1.25rem;
 	font-size: var(--h5);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 	border-left: 0.2rem solid currentColor;
 	margin-top: 0;
@@ -1333,7 +1322,6 @@ table.has-fixed-layout {
 
 .breadcrumbs {
 	font-size: 0.875rem;
-
 	font-size: var(--h6);
 	font-style: italic;
 	margin-bottom: calc(1.5rem * 1.5);
@@ -1386,8 +1374,8 @@ table.has-fixed-layout {
 	background-color: rgba(33, 37, 41, 0.9);
 	background-color: var(--color-tint-4);
 	min-height: 25rem;
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -1501,8 +1489,8 @@ table.has-fixed-layout {
 }
 
 .wp-block-file {
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
 }
 
 .wp-block-file.aligncenter {
@@ -1513,7 +1501,7 @@ table.has-fixed-layout {
 	text-align: right;
 }
 
-.wp-block-file__button {
+.wp-block-file__button.wp-block-file__button.wp-block-file__button {
 	color: inherit;
 	background: transparent;
 	background-color: #dee2e6;
@@ -1535,12 +1523,16 @@ table.has-fixed-layout {
 		border-color;
 }
 
-.wp-block-file__button:hover,
-.wp-block-file__button:focus {
+.wp-block-file__button.wp-block-file__button.wp-block-file__button:hover,
+.wp-block-file__button.wp-block-file__button.wp-block-file__button:focus {
 	box-shadow: inset 0 -10em 0 0 rgba(33, 37, 41, 0.1);
 	box-shadow: var(--hover-shadow);
 	border-color: rgba(33, 37, 41, 0.1);
 	border-color: var(--hover-color);
+}
+
+.wp-block-file__button.wp-block-file__button.wp-block-file__button:hover {
+	color: inherit;
 }
 
 * + .wp-block-file__button {
@@ -1795,8 +1787,8 @@ table.has-fixed-layout {
 }
 
 .wp-block-image {
-	margin-bottom: 1.5rem;
-	margin-bottom: var(--base-space);
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
 	max-width: 900px;
 	max-width: var(--content-width);
 }
@@ -1809,7 +1801,7 @@ blockquote.wp-block-quote.wp-block-quote {
 	padding: 0 1em;
 	font-size: 1.25rem;
 	font-size: var(--h5);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 	border-left: 0.2rem solid currentColor;
 	margin-bottom: calc(1.5rem * 1.5);
@@ -2819,7 +2811,7 @@ blockquote.wp-block-quote.wp-block-quote p {
 .has-large-font-size {
 	font-size: 2.25rem;
 	font-size: var(--h2);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -2828,28 +2820,28 @@ blockquote.wp-block-quote.wp-block-quote p {
 .has-huge-font-size {
 	font-size: 3rem;
 	font-size: var(--h1);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h0 {
 	font-size: 3.5rem;
 	font-size: var(--h0);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h3 {
 	font-size: 1.75rem;
 	font-size: var(--h3);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h4 {
 	font-size: 1.5rem;
 	font-size: var(--h4);
-	line-height: 1.36;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
