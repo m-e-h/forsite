@@ -7,6 +7,8 @@
 
 	<body <?= Hybrid\Attr\render( 'body' ); ?>>
 
+		<?php wp_body_open(); ?>
+
 		<?= Hybrid\View\render( 'header' ); ?>
 
 		<main id="main" class="app-main">
