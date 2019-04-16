@@ -22,7 +22,11 @@ File block.
 
 	@extend %e_button;
 
-	&:hover {
+	font-size: var(--h6);
+
+	&:hover,
+	&:focus {
+		opacity: 1;
 		color: inherit;
 	}
 }

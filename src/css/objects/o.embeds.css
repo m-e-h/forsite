@@ -53,9 +53,7 @@
 /**
 * Fit the content to the aspect ratio
 */
-.is-type-video iframe,
-.is-type-video object,
-.is-type-video embed {
+.is-type-video :matches(iframe, object, embed) {
 	position: absolute;
 	top: 0;
 	left: 0;

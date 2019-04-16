@@ -60,7 +60,7 @@ article {
 }
 
 article > * {
-	width: calc(100% - var(--double-space));
+	width: calc(100% - var(--base-double));
 	max-width: var(--content-width);
 }
 

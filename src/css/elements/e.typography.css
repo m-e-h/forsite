@@ -94,9 +94,14 @@ time {
 }
 
 caption {
-	padding-top: var(--half-space);
-	padding-bottom: var(--half-space);
-	color: #6c757d;
+	padding-top: var(--base-half);
+	padding-bottom: var(--base-half);
+	color: var(--color-text-muted);
 	text-align: left;
 	caption-side: bottom;
+}
+
+mark {
+	padding: 0.2em;
+	background-color: $yellow1;
 }

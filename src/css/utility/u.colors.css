@@ -170,39 +170,39 @@
 }
 
 .has-pale-pink-background-color {
-	background-color: #f78da7;
+	background-color: $pink2;
 }
 
 .has-vivid-red-background-color {
-	background-color: #cf2e2e;
+	background-color: $red5;
 }
 
 .has-luminous-vivid-orange-background-color {
-	background-color: #ff6900;
+	background-color: $orange5;
 }
 
 .has-luminous-vivid-amber-background-color {
-	background-color: #fcb900;
+	background-color: $yellow5;
 }
 
 .has-light-green-cyan-background-color {
-	background-color: #7bdcb5;
+	background-color: $cyan3;
 }
 
 .has-vivid-green-cyan-background-color {
-	background-color: #00d084;
+	background-color: $teal4;
 }
 
 .has-pale-cyan-blue-background-color {
-	background-color: #8ed1fc;
+	background-color: $blue2;
 }
 
 .has-vivid-cyan-blue-background-color {
-	background-color: #0693e3;
+	background-color: $blue5;
 }
 
 .has-very-light-gray-background-color {
-	background-color: #eee;
+	background-color: $gray1;
 }
 
 .has-cyan-bluish-gray-background-color {
@@ -210,43 +210,43 @@
 }
 
 .has-very-dark-gray-background-color {
-	background-color: #313131;
+	background-color: $gray8;
 }
 
 .has-pale-pink-color {
-	color: #f78da7;
+	color: $pink2;
 }
 
 .has-vivid-red-color {
-	color: #cf2e2e;
+	color: $red5;
 }
 
 .has-luminous-vivid-orange-color {
-	color: #ff6900;
+	color: $orange5;
 }
 
 .has-luminous-vivid-amber-color {
-	color: #fcb900;
+	color: $yellow5;
 }
 
 .has-light-green-cyan-color {
-	color: #7bdcb5;
+	color: $cyan3;
 }
 
 .has-vivid-green-cyan-color {
-	color: #00d084;
+	color: $teal4;
 }
 
 .has-pale-cyan-blue-color {
-	color: #8ed1fc;
+	color: $blue2;
 }
 
 .has-vivid-cyan-blue-color {
-	color: #0693e3;
+	color: $blue5;
 }
 
 .has-very-light-gray-color {
-	color: #eee;
+	color: $gray1;
 }
 
 .has-cyan-bluish-gray-color {
@@ -254,5 +254,5 @@
 }
 
 .has-very-dark-gray-color {
-	color: #313131;
+	color: $gray8;
 }

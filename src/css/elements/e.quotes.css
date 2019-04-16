@@ -7,7 +7,7 @@ blockquote {
 	line-height: var(--heading-line-height);
 	border-left: 0.2rem solid currentColor;
 	margin-top: 0;
-	margin-bottom: var(--gutter);
+	margin-bottom: var(--base-space);
 
 	p {
 		font-size: inherit;

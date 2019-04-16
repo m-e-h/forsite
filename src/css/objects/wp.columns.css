@@ -1,11 +1,11 @@
 .wp-block-columns {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: var(--half-space);
+	margin-bottom: var(--base-half);
 }
 
 .wp-block-column.wp-block-column {
-	margin: 0 var(--half-space) var(--base-space);
+	margin: 0 var(--base-half) var(--base-space);
 	overflow-wrap: break-word;
 	flex: auto;
 	width: calc(100% - var(--base-space));

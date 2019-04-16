@@ -65,14 +65,6 @@
 	justify-content: center;
 }
 
-.u-flex-js {
-	justify-content: flex-start;
-}
-
-.u-flex-je {
-	justify-content: flex-end;
-}
-
 .u-flexed-start {
 	align-self: flex-start;
 }
@@ -95,14 +87,6 @@
 
 .u-flexed-auto {
 	flex: 1 1 auto;
-}
-
-.u-flexed-grow {
-	flex: 1 0 auto;
-}
-
-.u-flexed-s0 {
-	flex-shrink: 0;
 }
 
 .u-flexed-none {

@@ -11,6 +11,10 @@
 
 .wp-block-button {
 	color: inherit;
+
+	&:first-child {
+		padding-left: 0;
+	}
 }
 
 input[type="reset"],

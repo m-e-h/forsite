@@ -1,10 +1,10 @@
-/* ////
-/// Cover image block.
-///
-/// @group  Blocks
-/// @author Marty Helmick <info@martyhelmick.com>
-/// @link   https://github.com/m-e-h/forsite
-//// */
+/*
+ * Cover image block.
+ *
+ * @group  Blocks
+ * @author Marty Helmick <info@martyhelmick.com>
+ * @link   https://github.com/m-e-h/forsite
+ */
 
 .wp-block-cover {
 	color: #fff;
@@ -20,7 +20,7 @@
 	justify-content: center;
 	align-items: center;
 
-	/* // Background dim. */
+	/* Background dim. */
 	&.has-background-dim::before {
 		content: "";
 		position: absolute;
@@ -72,7 +72,6 @@
 		opacity: 1;
 	}
 
-	/* // Left/Right text content. */
 	&.has-left-content {
 		justify-content: flex-start;
 	}
@@ -82,7 +81,6 @@
 	}
 }
 
-/* // Paragraph of text shown within the cover image element. */
 .wp-block-cover-text.wp-block-cover-text {
 	color: inherit;
 	font-size: inherit;
