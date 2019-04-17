@@ -4,13 +4,14 @@
 blockquote {
 	padding: 0 1em;
 	font-size: var(--h5);
-	line-height: var(--heading-line-height);
+	line-height: 1.4;
 	border-left: 0.2rem solid currentColor;
 	margin-top: 0;
 	margin-bottom: var(--base-space);
 
 	p {
 		font-size: inherit;
+		line-height: inherit;
 	}
 }
 

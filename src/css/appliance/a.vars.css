@@ -1,6 +1,6 @@
 /* Custom media queries */
-@custom-media --xs (width <= 20em);
-@custom-media --sm (width >= 21em);
+@custom-media --sm_down (width <= 30em);
+@custom-media --sm (width >= 31em);
 @custom-media --md_down (width <= 40em);
 @custom-media --md (width >= 40em);
 @custom-media --lg (width >= 64em);
@@ -9,32 +9,39 @@
 /* global vars */
 :root {
 	/* spacing */
-	--base-space: 1.5rem;
-	--base-half: calc(var(--base-space) * 0.5); /* 0.75 */
-	--base-double: calc(var(--base-space) * 2); /* 3 */
-	--gutter: calc(var(--base-space) * 1.5); /* 2.25 */
-	--gutter-half: calc(var(--base-space) * 0.75); /* 1.125 */
+	--base-line: 1.5;
+	--base-space: calc(var(--base-line) * 1rem);
+	--base-half: calc(var(--base-line) * 0.5rem); /* 0.75 */
+	--base-double: calc(var(--base-line) * 2rem); /* 3 */
+	--gutter: calc(var(--base-line) * 1.5rem); /* 2.25 */
+	--gutter-half: calc(var(--base-line) * 0.75rem); /* 1.125 */
 
 	/* text sizing */
 	--h0: 3.5rem;
-	--h1: 3rem; /* base x 2 */
-	--h2: 2.25rem; /* base x 1.5 = --gutter */
-	--h3: 1.875rem; /* base x 1.25 */
-	--h4: 1.5rem; /* base */
-	--h5: 1.125rem; /* gutter-half */
+	--h1: var(--base-double); /* 3 */
+	--h2: var(--gutter); /* 2.25 */
+	--h3: calc(var(--base-line) * 1.25rem); /* 1.875 */
+	--h4: var(--base-space); /* 1.5 */
+	--h5: var(--gutter-half); /* 1.125 */
 	--h6: 0.875rem;
-	--line-height: 1.5;
-	--heading-line-height: 1.25;
+	--line-height: var(--base-line);
+	--heading-line-height: calc(var(--base-line) * 0.75);
 
-	/**
-	 * Fluid sizing =
-	 * calc(minPX + (max - min) * ((100vw - sm-mqPX) / (xlMQ - sm-mq)))
-	 */
-	--fluid-font: calc(var(--min-font-size) + (var(--max-font) - var(--min-font)) * ((100vw - 21em) / (90 - 21)));
+	@media (--sm_down) {
+		--h0: 2.5rem;
+		--h1: 2.25rem; /* 3 */
+		--h2: 2rem;
+		--h3: 1.75rem;
+	}
+
+	/* Fluid sizing */
 	--min-font: 0.95;
 	--min-font-size: 0.95rem;
-	--max-font: 1.125;
-	--max-font-size: 1.125rem;
+	--max-font: 1.1875;
+	--max-font-size: 1.1875rem;
+
+	/* calc(minPX + (max - min)*((100vw - sm-mqPX)/(xlMQ - sm-mq))) */
+	--fluid-font: calc(var(--min-font-size) + (var(--max-font) - var(--min-font)) * ((100vw - 21em) / (90 - 21)));
 
 	/* font */
 	--font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", "Liberation Sans", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
