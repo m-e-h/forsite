@@ -1,13 +1,16 @@
 h1 {
 	font-size: var(--h1);
+	line-height: var(--heading-line-height);
 }
 
 h2 {
 	font-size: var(--h2);
+	line-height: var(--heading-line-height);
 }
 
 h3 {
 	font-size: var(--h3);
+	line-height: var(--heading-line-height);
 }
 
 h4 {
@@ -28,16 +31,16 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: var(--heading-line-height);
 	margin-top: 0;
 	margin-bottom: var(--gutter-half);
 	clear: both;
 }
 
-header {
-	margin-bottom: var(--gutter-half);
-}
-
 header > :matches(h1, h2, h3) {
 	margin-bottom: 0;
+}
+
+main > header,
+article > header {
+	margin-bottom: var(--gutter);
 }

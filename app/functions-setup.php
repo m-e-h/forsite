@@ -161,12 +161,12 @@ add_action(
 			'after_title'   => '</h3>',
 		];
 
-		register_sidebar(
-			[
-				'id'   => 'primary',
-				'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' ),
-			] + $args
-		);
+		// register_sidebar(
+		// 	[
+		// 		'id'   => 'primary',
+		// 		'name' => esc_html_x( 'Primary', 'sidebar', 'forsite' ),
+		// 	] + $args
+		// );
 
 		register_sidebar(
 			[

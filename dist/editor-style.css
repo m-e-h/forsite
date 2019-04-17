@@ -198,16 +198,22 @@
 .editor-styles-wrapper h1{
 	font-size:3rem;
 	font-size:var(--h1);
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 }
 
 .editor-styles-wrapper h2{
 	font-size:2.25rem;
 	font-size:var(--h2);
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 }
 
 .editor-styles-wrapper h3{
 	font-size:1.875rem;
 	font-size:var(--h3);
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 }
 
 .editor-styles-wrapper h4{
@@ -231,21 +237,20 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6{
-	line-height:1.25;
-	line-height:var(--heading-line-height);
 	margin-top:0;
 	margin-bottom:calc(1.5rem * 0.75);
 	margin-bottom:var(--gutter-half);
 	clear:both;
 }
 
-.editor-styles-wrapper header{
-	margin-bottom:calc(1.5rem * 0.75);
-	margin-bottom:var(--gutter-half);
-}
-
 .editor-styles-wrapper header > h1, .editor-styles-wrapper header > h2, .editor-styles-wrapper header > h3{
 	margin-bottom:0;
+}
+
+.editor-styles-wrapper main > header,
+.editor-styles-wrapper article > header{
+	margin-bottom:calc(1.5rem * 1.5);
+	margin-bottom:var(--gutter);
 }
 
 .editor-styles-wrapper header,
@@ -259,7 +264,7 @@
 
 .editor-styles-wrapper hr{
 	color:inherit;
-	margin-top:1rem;
+	margin-top:0;
 	margin-bottom:1.5rem;
 	margin-bottom:var(--base-space);
 	border-width:0;
@@ -318,8 +323,8 @@
 }
 
 .editor-styles-wrapper article > *{
-	width:calc(100% - calc(1.5rem * 2));
-	width:calc(100% - var(--base-double));
+	width:calc(100% - calc(1.5rem * 1.5));
+	width:calc(100% - var(--gutter));
 	max-width:900px;
 	max-width:var(--content-width);
 }
@@ -327,6 +332,11 @@
 .editor-styles-wrapper article > p, .editor-styles-wrapper article > div, .editor-styles-wrapper article > figure, .editor-styles-wrapper article > blockquote, .editor-styles-wrapper article > table, .editor-styles-wrapper article > ul, .editor-styles-wrapper article > pre, .editor-styles-wrapper article > hr, .editor-styles-wrapper article > nav, .editor-styles-wrapper article > section, .editor-styles-wrapper article > aside{
 	margin-bottom:calc(1.5rem * 1.5);
 	margin-bottom:var(--gutter);
+}
+
+.editor-styles-wrapper article > p + p{
+	margin-top:calc(-1 * calc(1.5rem * 0.75));
+	margin-top:calc(-1 * var(--gutter-half));
 }
 
 .editor-styles-wrapper article > *:last-child{
@@ -997,6 +1007,10 @@
 	padding-top:0.5rem;
 }
 
+.editor-styles-wrapper .archive-entry__header{
+	margin-bottom:0;
+}
+
 .editor-styles-wrapper hr.is-style-wide.is-style-wide{
 	width:100%;
 	max-width:100%;
@@ -1522,6 +1536,7 @@
 	max-width:100%;
 	text-align:inherit;
 	margin:0;
+	border-width:0;
 }
 
 .editor-styles-wrapper .wp-block-pullquote.alignleft,
@@ -1663,14 +1678,8 @@
 	margin-bottom:var(--gutter);
 }
 
-.editor-styles-wrapper .u-fit{
-	max-width:100%;
-	white-space:normal;
-}
-
 .editor-styles-wrapper .u-max-width{
-	max-width:calc(900px + 20vw);
-	max-width:var(--content-wide);
+	max-width:100%;
 }
 
 .editor-styles-wrapper .u-text-wrap{
@@ -1681,7 +1690,8 @@
 }
 
 .editor-styles-wrapper .u-content-width{
-	width:100%;
+	width:calc(100% - calc(1.5rem * 1.5));
+	width:calc(100% - var(--gutter));
 	max-width:900px;
 	max-width:var(--content-width);
 	margin-left:auto;
@@ -1689,7 +1699,8 @@
 }
 
 .editor-styles-wrapper .u-content-wide{
-	width:100%;
+	width:calc(100% - calc(1.5rem * 0.75));
+	width:calc(100% - var(--gutter-half));
 	max-width:calc(900px + 20vw);
 	max-width:var(--content-wide);
 	margin-left:auto;
@@ -2683,6 +2694,8 @@
 }
 
 .editor-styles-wrapper .u-content-wrap > *{
+	width:calc(100% - calc(1.5rem * 1.5));
+	width:calc(100% - var(--gutter));
 	max-width:900px;
 	max-width:var(--content-width);
 	margin-left:auto;
@@ -2690,6 +2703,8 @@
 }
 
 .editor-styles-wrapper .u-content-wrap--wide > *{
+	width:calc(100% - calc(1.5rem * 0.75));
+	width:calc(100% - var(--gutter-half));
 	max-width:calc(900px + 20vw);
 	max-width:var(--content-wide);
 	margin-left:auto;
@@ -3215,8 +3230,8 @@
 }
 
 .editor-styles-wrapper .alignwide{
-	width:calc(100% - 1.5rem);
-	width:calc(100% - var(--base-space));
+	width:calc(100% - calc(1.5rem * 0.75));
+	width:calc(100% - var(--gutter-half));
 	max-width:calc(900px + 20vw);
 	max-width:var(--content-wide);
 }

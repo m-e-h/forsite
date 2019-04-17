@@ -287,16 +287,22 @@ mark {
 h1 {
 	font-size: 3rem;
 	font-size: var(--h1);
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 }
 
 h2 {
 	font-size: 2.25rem;
 	font-size: var(--h2);
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 }
 
 h3 {
 	font-size: 1.875rem;
 	font-size: var(--h3);
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 }
 
 h4 {
@@ -320,23 +326,22 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.25;
-	line-height: var(--heading-line-height);
 	margin-top: 0;
 	margin-bottom: calc(1.5rem * 0.75);
 	margin-bottom: var(--gutter-half);
 	clear: both;
 }
 
-header {
-	margin-bottom: calc(1.5rem * 0.75);
-	margin-bottom: var(--gutter-half);
-}
-
 header > h1,
 header > h2,
 header > h3 {
 	margin-bottom: 0;
+}
+
+main > header,
+article > header {
+	margin-bottom: calc(1.5rem * 1.5);
+	margin-bottom: var(--gutter);
 }
 
 header,
@@ -350,7 +355,7 @@ section {
 
 hr {
 	color: inherit;
-	margin-top: 1rem;
+	margin-top: 0;
 	margin-bottom: 1.5rem;
 	margin-bottom: var(--base-space);
 	border-width: 0;
@@ -408,8 +413,8 @@ article {
 }
 
 article > * {
-	width: calc(100% - calc(1.5rem * 2));
-	width: calc(100% - var(--base-double));
+	width: calc(100% - calc(1.5rem * 1.5));
+	width: calc(100% - var(--gutter));
 	max-width: 900px;
 	max-width: var(--content-width);
 }
@@ -427,6 +432,11 @@ article > section,
 article > aside {
 	margin-bottom: calc(1.5rem * 1.5);
 	margin-bottom: var(--gutter);
+}
+
+article > p + p {
+	margin-top: calc(-1 * calc(1.5rem * 0.75));
+	margin-top: calc(-1 * var(--gutter-half));
 }
 
 article > *:last-child {
@@ -1139,6 +1149,10 @@ figure {
 	padding-top: 0.5rem;
 }
 
+.archive-entry__header {
+	margin-bottom: 0;
+}
+
 hr.is-style-wide.is-style-wide {
 	width: 100%;
 	max-width: 100%;
@@ -1688,6 +1702,7 @@ table.has-fixed-layout {
 	max-width: 100%;
 	text-align: inherit;
 	margin: 0;
+	border-width: 0;
 }
 
 .wp-block-pullquote.alignleft,
@@ -1828,14 +1843,8 @@ blockquote.wp-block-quote.wp-block-quote p {
 	margin-bottom: var(--gutter);
 }
 
-.u-fit {
-	max-width: 100%;
-	white-space: normal;
-}
-
 .u-max-width {
-	max-width: calc(900px + 20vw);
-	max-width: var(--content-wide);
+	max-width: 100%;
 }
 
 .u-text-wrap {
@@ -1846,7 +1855,8 @@ blockquote.wp-block-quote.wp-block-quote p {
 }
 
 .u-content-width {
-	width: 100%;
+	width: calc(100% - calc(1.5rem * 1.5));
+	width: calc(100% - var(--gutter));
 	max-width: 900px;
 	max-width: var(--content-width);
 	margin-left: auto;
@@ -1854,7 +1864,8 @@ blockquote.wp-block-quote.wp-block-quote p {
 }
 
 .u-content-wide {
-	width: 100%;
+	width: calc(100% - calc(1.5rem * 0.75));
+	width: calc(100% - var(--gutter-half));
 	max-width: calc(900px + 20vw);
 	max-width: var(--content-wide);
 	margin-left: auto;
@@ -2840,6 +2851,8 @@ body.admin-bar {
 }
 
 .u-content-wrap > * {
+	width: calc(100% - calc(1.5rem * 1.5));
+	width: calc(100% - var(--gutter));
 	max-width: 900px;
 	max-width: var(--content-width);
 	margin-left: auto;
@@ -2847,6 +2860,8 @@ body.admin-bar {
 }
 
 .u-content-wrap--wide > * {
+	width: calc(100% - calc(1.5rem * 0.75));
+	width: calc(100% - var(--gutter-half));
 	max-width: calc(900px + 20vw);
 	max-width: var(--content-wide);
 	margin-left: auto;
@@ -3371,8 +3386,8 @@ body.admin-bar {
 }
 
 .alignwide {
-	width: calc(100% - 1.5rem);
-	width: calc(100% - var(--base-space));
+	width: calc(100% - calc(1.5rem * 0.75));
+	width: calc(100% - var(--gutter-half));
 	max-width: calc(900px + 20vw);
 	max-width: var(--content-wide);
 }

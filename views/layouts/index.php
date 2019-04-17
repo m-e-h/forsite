@@ -2,7 +2,7 @@
 
 	<?= Hybrid\View\render( 'components', 'featured-image' ); ?>
 
-	<header class="archive-entry__header u-m05">
+	<header class="archive-entry__header">
 		<?= Hybrid\Post\render_title( [ 'class' => 'entry__title u-h3' ] ); ?>
 	</header>
 

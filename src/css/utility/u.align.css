@@ -24,7 +24,7 @@
 }
 
 .alignwide {
-	width: calc(100% - var(--base-space));
+	width: calc(100% - var(--gutter-half));
 	max-width: var(--content-wide);
 }
 

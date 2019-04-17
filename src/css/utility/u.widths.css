@@ -1,10 +1,5 @@
-.u-fit {
-	max-width: 100%;
-	white-space: normal;
-}
-
 .u-max-width {
-	max-width: var(--content-wide);
+	max-width: 100%;
 }
 
 .u-text-wrap {
@@ -14,14 +9,14 @@
 }
 
 .u-content-width {
-	width: 100%;
+	width: calc(100% - var(--gutter));
 	max-width: var(--content-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-content-wide {
-	width: 100%;
+	width: calc(100% - var(--gutter-half));
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;

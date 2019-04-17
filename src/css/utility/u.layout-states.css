@@ -6,12 +6,14 @@ body.admin-bar {
 }
 
 .u-content-wrap > * {
+	width: calc(100% - var(--gutter));
 	max-width: var(--content-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .u-content-wrap--wide > * {
+	width: calc(100% - var(--gutter-half));
 	max-width: var(--content-wide);
 	margin-left: auto;
 	margin-right: auto;

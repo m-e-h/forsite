@@ -9,7 +9,7 @@ section {
 
 hr {
 	color: inherit;
-	margin-top: 1rem;
+	margin-top: 0;
 	margin-bottom: var(--base-space);
 	border-width: 0;
 	border-bottom-width: 2px;
@@ -60,12 +60,16 @@ article {
 }
 
 article > * {
-	width: calc(100% - var(--base-double));
+	width: calc(100% - var(--gutter));
 	max-width: var(--content-width);
 }
 
 article > :matches(p, div, figure, blockquote, table, ul, pre, hr, nav, section, aside) {
 	margin-bottom: var(--gutter);
+}
+
+article > p + p {
+	margin-top: calc(-1 * var(--gutter-half));
 }
 
 article > *:last-child {

@@ -54,6 +54,7 @@
 	max-width: 100%;
 	text-align: inherit;
 	margin: 0;
+	border-width: 0;
 }
 
 .wp-block-pullquote.alignleft,
