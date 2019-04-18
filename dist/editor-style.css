@@ -582,7 +582,7 @@
 
 .editor-styles-wrapper nav li{
 	display:inline-block;
-	flex:1 auto;
+	flex:0.1 1 auto;
 	position:relative;
 	margin:0;
 }
@@ -604,7 +604,7 @@
 .editor-styles-wrapper header nav > ul{
 		flex-direction:row;
 		text-align:center;
-		justify-content:space-around
+		justify-content:flex-end
 }
 	}
 
@@ -3340,8 +3340,108 @@
 
 @media print{
 
-	.editor-styles-wrapper body > *:not(main){
-		display:none;
+	.editor-styles-wrapper a:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]),
+	.editor-styles-wrapper *,
+	.editor-styles-wrapper *::before,
+	.editor-styles-wrapper *::after{
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+
+	:root{
+		font-size:100%;
+	}
+
+	.editor-styles-wrapper,
+	.editor-styles-wrapper article{
+		min-width:992px !important;
+		font-size:16px;
+	}
+
+	.editor-styles-wrapper .u-print-none,
+	.editor-styles-wrapper body > *:not(main),
+	.editor-styles-wrapper nav{
+		display:none !important;
+	}
+
+	.editor-styles-wrapper p,
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper h3{
+		orphans:3;
+		widows:3;
+	}
+
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper h3{
+		page-break-after:avoid;
+	}
+
+	.editor-styles-wrapper h1,
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper h3,
+	.editor-styles-wrapper h4,
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper h6,
+	.editor-styles-wrapper .u-h1,
+	.editor-styles-wrapper .u-h2,
+	.editor-styles-wrapper .u-h3,
+	.editor-styles-wrapper .u-h4,
+	.editor-styles-wrapper .u-h5,
+	.editor-styles-wrapper .u-h6{
+		margin-bottom:0.5rem;
+		font-weight:500;
+	}
+
+	.editor-styles-wrapper h1{
+		font-size:2.25rem !important;
+	}
+
+	.editor-styles-wrapper h2{
+		font-size:2rem !important;
+	}
+
+	.editor-styles-wrapper h3{
+		font-size:1.5rem !important;
+	}
+
+	.editor-styles-wrapper h4{
+		font-size:1.25rem !important;
+	}
+
+	.editor-styles-wrapper h5{
+		font-size:0.875rem !important;
+	}
+
+	.editor-styles-wrapper h6{
+		font-size:0.85rem !important;
+	}
+
+	.editor-styles-wrapper abbr[title]::after{
+		content:" (" attr(title) ")";
+	}
+
+	.editor-styles-wrapper pre{
+		white-space:pre-wrap !important;
+	}
+
+	.editor-styles-wrapper pre,
+	.editor-styles-wrapper blockquote{
+		page-break-inside:avoid;
+	}
+
+	.editor-styles-wrapper thead{
+		display:table-header-group;
+	}
+
+	.editor-styles-wrapper tr,
+	.editor-styles-wrapper img{
+		page-break-inside:avoid;
+	}
+
+	@page{
+		size:a3;
 	}
 }
 

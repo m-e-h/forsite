@@ -1,6 +1,106 @@
 @media print {
 
-	body > *:not(main) {
-		display: none;
+	a,
+	*,
+	*::before,
+	*::after {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	:root {
+		font-size: 100%;
+	}
+
+	body,
+	article {
+		min-width: 992px !important;
+		font-size: 16px;
+	}
+
+	.u-print-none,
+	body > *:not(main),
+	nav {
+		display: none !important;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.u-h1,
+	.u-h2,
+	.u-h3,
+	.u-h4,
+	.u-h5,
+	.u-h6 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+	}
+
+	h1 {
+		font-size: 2.25rem !important;
+	}
+
+	h2 {
+		font-size: 2rem !important;
+	}
+
+	h3 {
+		font-size: 1.5rem !important;
+	}
+
+	h4 {
+		font-size: 1.25rem !important;
+	}
+
+	h5 {
+		font-size: 0.875rem !important;
+	}
+
+	h6 {
+		font-size: 0.85rem !important;
+	}
+
+	abbr[title]::after {
+		content: " (" attr(title) ")";
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+	}
+
+	pre,
+	blockquote {
+		page-break-inside: avoid;
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	@page {
+		size: a3;
 	}
 }
