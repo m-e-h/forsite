@@ -10,7 +10,7 @@ nav ul {
 
 nav li {
 	display: inline-block;
-	flex: 1 auto;
+	flex: 0.1 1 auto;
 	position: relative;
 	margin: 0;
 }
@@ -29,7 +29,7 @@ header nav > ul {
 	@media (--md) {
 		flex-direction: row;
 		text-align: center;
-		justify-content: space-around;
+		justify-content: flex-end;
 	}
 }
 
