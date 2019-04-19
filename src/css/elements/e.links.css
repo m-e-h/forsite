@@ -7,7 +7,7 @@ a {
 	background-color: transparent;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
-	transition-property: color, box-shadow, opacity;
+	transition-property: color, background-color, box-shadow, opacity;
 }
 
 :matches(header, nav) a {
