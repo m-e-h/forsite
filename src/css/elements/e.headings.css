@@ -34,6 +34,8 @@ h3,
 h4,
 h5,
 h6 {
+	/* font-family: var(--display-font-family); */
+	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: var(--gutter-half);
 	clear: both;

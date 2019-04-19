@@ -20,7 +20,7 @@
 	--max-font-size:1.1875rem;
 	--fluid-font:calc(var(--min-font-size) + (var(--max-font) - var(--min-font)) * ((100vw - 21em) / (90 - 21)));
 	--font-family:-apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", "Liberation Sans", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--display-font-family:"Liberation Serif", "Times", "Times New Roman", serif;
+	--display-font-family:"Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif", serif;
 	--monospace-font-family:sfmono-regular, "Roboto Mono", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
 	--font-bold:700;
 	--font-light:300;
@@ -126,6 +126,10 @@
 .editor-styles-wrapper p{
 	margin-top:0;
 	margin-bottom:1rem;
+	line-height:1.5;
+	line-height:var(--line-height);
+
+	--line-height:1.6;
 }
 
 .editor-styles-wrapper abbr[title],
@@ -250,6 +254,7 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6{
+	font-weight:500;
 	margin-top:0;
 	margin-bottom:calc(1.5 * 0.75rem);
 	margin-bottom:var(--gutter-half);
@@ -1686,7 +1691,8 @@
 .editor-styles-wrapper :root:root p:not([class]){
 	font-size:inherit;
 	font-style:inherit;
-	line-height:inherit;
+	line-height:1.5;
+	line-height:var(--line-height);
 }
 
 .editor-styles-wrapper :not(#someid) input, .editor-styles-wrapper :not(#someid) textarea{
@@ -2643,7 +2649,8 @@
 
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter{
 	float:left;
-	font-family:Baskerville, Palatino, "Palatino Linotype", serif;
+	font-family:"Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif", serif;
+	font-family:var(--display-font-family);
 	font-style:normal;
 	font-weight:400;
 	font-size:4.4em;
@@ -2662,7 +2669,7 @@
 }
 
 .editor-styles-wrapper .u-text-display{
-	font-family:"Liberation Serif", "Times", "Times New Roman", serif;
+	font-family:"Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif", serif;
 	font-family:var(--display-font-family);
 }
 

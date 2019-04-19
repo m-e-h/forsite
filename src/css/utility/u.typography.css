@@ -116,7 +116,7 @@
 
 .has-drop-cap:not(:focus)::first-letter {
 	float: left;
-	font-family: Baskerville, Palatino, "Palatino Linotype", serif;
+	font-family: var(--display-font-family);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 4.4em;

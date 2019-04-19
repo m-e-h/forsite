@@ -42,7 +42,8 @@
 		"Helvetica Neue", "Liberation Sans", arial, "Noto Sans", sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
-	--display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
+	--display-font-family: "Palatino", "Palatino Linotype", "Book Antiqua",
+		"FreeSerif", serif;
 	--monospace-font-family: sfmono-regular, "Roboto Mono", menlo, monaco,
 		consolas, "Liberation Mono", "Courier New", monospace;
 	--font-bold: 700;
@@ -214,6 +215,10 @@ body {
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
+	line-height: 1.5;
+	line-height: var(--line-height);
+
+	--line-height: 1.6;
 }
 
 abbr[title],
@@ -338,6 +343,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: calc(1.5 * 0.75rem);
 	margin-bottom: var(--gutter-half);
@@ -1850,7 +1856,8 @@ blockquote.wp-block-quote.wp-block-quote.is-style-large {
 :root:root p:not([class]) {
 	font-size: inherit;
 	font-style: inherit;
-	line-height: inherit;
+	line-height: 1.5;
+	line-height: var(--line-height);
 }
 
 :not(#someid) input,
@@ -2808,7 +2815,9 @@ blockquote.wp-block-quote.wp-block-quote.is-style-large {
 
 .has-drop-cap:not(:focus)::first-letter {
 	float: left;
-	font-family: Baskerville, Palatino, "Palatino Linotype", serif;
+	font-family: "Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif",
+		serif;
+	font-family: var(--display-font-family);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 4.4em;
@@ -2827,7 +2836,8 @@ blockquote.wp-block-quote.wp-block-quote.is-style-large {
 }
 
 .u-text-display {
-	font-family: "Liberation Serif", "Times", "Times New Roman", serif;
+	font-family: "Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif",
+		serif;
 	font-family: var(--display-font-family);
 }
 

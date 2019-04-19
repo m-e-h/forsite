@@ -45,7 +45,7 @@
 
 	/* font */
 	--font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", "Liberation Sans", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--display-font-family: "Liberation Serif", "Times", "Times New Roman", serif;
+	--display-font-family: "Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif", serif;
 	--monospace-font-family: sfmono-regular, "Roboto Mono", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
 	--font-bold: 700;
 	--font-light: 300;

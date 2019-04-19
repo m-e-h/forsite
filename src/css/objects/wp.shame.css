@@ -57,7 +57,7 @@ blockquote.wp-block-quote.wp-block-quote {
 :root:root p:not([class]) {
 	font-size: inherit;
 	font-style: inherit;
-	line-height: inherit;
+	line-height: var(--line-height);
 }
 
 /* mostly for the editor post-title */
