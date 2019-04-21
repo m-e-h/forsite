@@ -37,7 +37,7 @@ add_action(
 		}
 
 		if ( is_child_theme() ) {
-			wp_enqueue_style( 'child-style', child_asset( 'style.css' ), [ 'theme-style' ], null );
+			wp_enqueue_style( 'child-style', get_theme_file_uri( 'style.css' ), [ 'theme-style' ] );
 		}
 
 		// Load WordPress' comment-reply script where appropriate.
@@ -66,7 +66,7 @@ add_action(
 );
 
 /**
- * Helper functions for cache busting. If used when you enqueue a script
+ * Helper function for cache busting. If used when you enqueue a script
  * or style, it'll append an ID to the filename.
  *
  * @since  1.0.0
@@ -87,19 +87,4 @@ function asset( $path ) {
 	}
 
 	return get_parent_theme_file_uri( "{$path}?id={$filechange}" );
-}
-
-function child_asset( $path ) {
-
-	// Make sure to trim any slashes from the front of the path.
-	$path = '/' . ltrim( $path, '/' );
-
-	// Cache the filetime so that we only read it in once.
-	static $filechange = null;
-
-	if ( null === $filechange ) {
-		$filechange = filemtime( get_theme_file_path( $path ));
-	}
-
-	return get_theme_file_uri( "{$path}?id={$filechange}" );
 }
