@@ -1,6 +1,6 @@
 <?php if ( is_singular() || is_front_page() ) { return; } ?>
 
-<header class="archive__header u-content-width">
+<header class="archive__header">
 
 	<h1 class="archive__title u-h1"><?php the_archive_title() ?></h1>
 

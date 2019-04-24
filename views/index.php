@@ -7,11 +7,7 @@
 
 	<body <?= Hybrid\Attr\render( 'body' ); ?>>
 
-		<?php
-		if ( function_exists( 'wp_body_open' ) ) {
-			wp_body_open();
-		}
-		?>
+		<?php wp_body_open(); ?>
 
 		<?= Hybrid\View\render( 'header' ); ?>
 
