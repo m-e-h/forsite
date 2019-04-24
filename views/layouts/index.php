@@ -6,19 +6,7 @@
 		<?= Hybrid\Post\render_title( [ 'class' => 'entry__title u-h3' ] ); ?>
 	</header>
 
-	<?php
-	the_content(
-		sprintf(
-			wp_kses(
-				__( '<span class="ellipsis-more">&#8230;</span><span class="screen-reader-text"> "%s"</span>', '_s' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		)
-	);
-	?>
+	<div class="archive-entry__content">
+		<?php the_excerpt(); ?>
+	</div>
 </article>

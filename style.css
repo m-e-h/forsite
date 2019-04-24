@@ -1167,21 +1167,51 @@ figure {
 	padding-top: 0.5rem;
 }
 
-.archive-entry__header {
-	padding-bottom: 0.5rem;
-}
-
-.archive-entry {
+.archive main {
 	max-width: 900px;
 	max-width: var(--content-width);
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
 
-	--hover-shadow: inset 0 -20em 0 0 var(--color-shade-1);
+.archive__header {
+	max-width: 900px;
+	max-width: var(--content-width);
+}
+
+.archive-entry__header {
+	margin: 0;
+	padding-bottom: 0.5rem;
+}
+
+.post-thumbnail + .archive-entry__header {
+	padding-top: 0.5rem;
+}
+
+.archive-entry {
+	min-width: 200px;
+	margin-left: calc(1.5 * 0.5rem);
+	margin-left: var(--base-half);
+	margin-right: calc(1.5 * 0.5rem);
+	margin-right: var(--base-half);
+	flex: 1;
+}
+
+@media (min-width: 40em) {
+	.archive-entry {
+		max-width: calc(100% / 3 - calc(1.5 * 1rem));
+		max-width: calc(100% / 3 - var(--base-space));
+	}
 }
 
 .archive-entry > * {
-	max-width: unset;
+	width: 100%;
+}
+
+.archive-entry__content > :last-child {
+	margin-bottom: 0;
 }
 
 .archive-entry .more-link {
@@ -1244,6 +1274,14 @@ img.emoji {
 
 .icon {
 	height: 1em;
+}
+
+.entry__image {
+	width: 100%;
+}
+
+a.post-thumbnail {
+	box-shadow: none;
 }
 
 .btn,
@@ -1801,23 +1839,28 @@ table.has-fixed-layout {
 }
 
 .has-2-columns .wp-block-column {
-	width: calc(100% / 2 - 2rem);
+	width: calc(100% / 2 - calc(1.5 * 1rem));
+	width: calc(100% / 2 - var(--base-space));
 }
 
 .has-3-columns .wp-block-column {
-	width: calc(100% / 3 - 2rem);
+	width: calc(100% / 3 - calc(1.5 * 1rem));
+	width: calc(100% / 3 - var(--base-space));
 }
 
 .has-4-columns .wp-block-column {
-	width: calc(100% / 4 - 2rem);
+	width: calc(100% / 4 - calc(1.5 * 1rem));
+	width: calc(100% / 4 - var(--base-space));
 }
 
 .has-5-columns .wp-block-column {
-	width: calc(100% / 5 - 2rem);
+	width: calc(100% / 5 - calc(1.5 * 1rem));
+	width: calc(100% / 5 - var(--base-space));
 }
 
 .has-6-columns .wp-block-column {
-	width: calc(100% / 6 - 2rem);
+	width: calc(100% / 6 - calc(1.5 * 1rem));
+	width: calc(100% / 6 - var(--base-space));
 }
 
 .wp-block-media-text__media {

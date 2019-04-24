@@ -13,3 +13,7 @@ img.emoji {
 .entry__image {
 	width: 100%;
 }
+
+a.post-thumbnail {
+	box-shadow: none;
+}
