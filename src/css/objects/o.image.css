@@ -9,3 +9,7 @@ img.emoji {
 .icon {
 	height: 1em;
 }
+
+.entry__image {
+	width: 100%;
+}
