@@ -271,7 +271,7 @@ figcaption {
 	font-size: 0.875rem;
 	font-size: var(--h6);
 	margin: 0;
-	padding: 0.25rem;
+	padding: 0.5rem 0.25em;
 	line-height: calc(1.5 * 0.75);
 	line-height: var(--heading-line-height);
 }

@@ -30,7 +30,7 @@ add_action(
 		wp_enqueue_script( 'forsite-script', get_theme_file_uri( 'dist/main.js' ), false, false, true );
 
 		// Enqueue theme styles.
-		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		if ( is_script_debug() ) {
 			wp_enqueue_style( 'forsite-style', asset( 'style.css' ), false, null );
 		} else {
 			wp_enqueue_style( 'forsite-style', asset( 'dist/main.css' ), false, null );
@@ -76,11 +76,19 @@ function asset( $path ) {
 	$path = '/' . ltrim( $path, '/' );
 
 	// Cache the filetime so that we only read it in once.
-	static $filechange = null;
+	static $file_ver = null;
 
-	if ( null === $filechange ) {
-		$filechange = filemtime( get_parent_theme_file_path( $path ) );
+	if ( null === $file_ver ) {
+		if ( ! is_child_theme() || is_script_debug() ) {
+			$file_ver = filemtime( get_parent_theme_file_path( $path ) );
+		} else {
+			$file_ver = wp_get_theme()->get( 'Version' );
+		}
 	}
 
-	return get_parent_theme_file_uri( "{$path}?id={$filechange}" );
+	return get_parent_theme_file_uri( "{$path}?ver={$file_ver}" );
+}
+
+function is_script_debug() {
+	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
 }
