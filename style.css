@@ -1176,9 +1176,9 @@ figure {
 	flex-wrap: wrap;
 }
 
+.breadcrumbs,
 .archive__header {
-	max-width: 900px;
-	max-width: var(--content-width);
+	max-width: 100%;
 }
 
 .archive-entry__header {

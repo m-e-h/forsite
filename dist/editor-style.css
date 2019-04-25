@@ -1034,9 +1034,9 @@
 	flex-wrap:wrap;
 }
 
+.editor-styles-wrapper .breadcrumbs,
 .editor-styles-wrapper .archive__header{
-	max-width:900px;
-	max-width:var(--content-width);
+	max-width:100%;
 }
 
 .editor-styles-wrapper .archive-entry__header{

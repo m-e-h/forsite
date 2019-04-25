@@ -21,20 +21,11 @@
 	margin-right: auto;
 	display: flex;
 	flex-wrap: wrap;
-
-	/* display: grid;
-	grid-template-columns: repeat(auto-fit, 33%);
-	grid-auto-columns: minmax(300px, auto);
-	column-gap: 0.75rem; */
 }
 
+.breadcrumbs,
 .archive__header {
-	max-width: var(--content-width);
-
-	/* grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 3;
-	grid-row-end: 3; */
+	max-width: 100%;
 }
 
 .archive .breadcrumbs {
