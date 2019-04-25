@@ -11,16 +11,8 @@
  * @link      https://github.com/m-e-h/forsite
  */
 
-// Useful global constants.
-define( 'FORSITE_VERSION', '0.1.0' );
-define( 'FORSITE_DIR_URL', get_parent_theme_file_uri() . '/' );
-define( 'FORSITE_CHILD_URL', get_theme_file_uri() . '/' );
-define( 'FORSITE_DIR_PATH', get_parent_theme_file_path() . '/' );
-define( 'FORSITE_CHILD_PATH', get_theme_file_path() . '/' );
-define( 'FORSITE_INCLUDES', FORSITE_DIR_PATH . 'app/' );
-
 // Bootstrap the theme.
-require_once FORSITE_INCLUDES . 'bootstrap-autoload.php';
+require_once( get_parent_theme_file_path( 'app/bootstrap-autoload.php' ) );
 
 // Create a new application.
 $forsite = new \Hybrid\Core\Application();

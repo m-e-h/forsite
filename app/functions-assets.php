@@ -27,17 +27,13 @@ add_action(
 	function() {
 
 		// Enqueue theme scripts.
-		wp_enqueue_script( 'theme-script', FORSITE_CHILD_URL . 'dist/main.js', false, false, true );
+		wp_enqueue_script( 'forsite-script', get_theme_file_uri( 'dist/main.js' ), false, false, true );
 
 		// Enqueue theme styles.
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_style( 'theme-style', asset( 'style.css' ), false, null );
+			wp_enqueue_style( 'forsite-style', asset( 'style.css' ), false, null );
 		} else {
-			wp_enqueue_style( 'theme-style', asset( 'dist/main.css' ), false, null );
-		}
-
-		if ( is_child_theme() ) {
-			wp_enqueue_style( 'child-style', FORSITE_CHILD_URL . 'style.css', [ 'theme-style' ] );
+			wp_enqueue_style( 'forsite-style', asset( 'dist/main.css' ), false, null );
 		}
 
 		// Load WordPress' comment-reply script where appropriate.
@@ -60,7 +56,7 @@ add_action(
 	function() {
 
 		// Enqueue theme editor styles.
-		wp_enqueue_style( 'theme-editor-style', FORSITE_DIR_URL . 'dist/editor-style.css', false );
+		wp_enqueue_style( 'forsite-editor-style', get_parent_theme_file_uri( 'dist/editor-style.css' ), false );
 
 	}
 );
@@ -83,8 +79,8 @@ function asset( $path ) {
 	static $filechange = null;
 
 	if ( null === $filechange ) {
-		$filechange = filemtime( FORSITE_DIR_PATH . $path );
+		$filechange = filemtime( get_parent_theme_file_path( $path ) );
 	}
 
-	return FORSITE_DIR_URL . "{$path}?id={$filechange}";
+	return get_parent_theme_file_uri( "{$path}?id={$filechange}" );
 }
