@@ -22,7 +22,7 @@ add_filter(
 );
 
 add_filter(
-	'login_headertitle',
+	'login_headertext',
 	function() {
 		return get_bloginfo( 'name' );
 	}
