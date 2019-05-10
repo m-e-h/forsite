@@ -21,6 +21,7 @@
 	margin-right: auto;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .breadcrumbs,
@@ -45,13 +46,16 @@
 }
 
 .archive-entry {
+	flex: 1;
+	align-items: baseline;
+	max-width: calc(33% - var(--base-space));
+	flex-basis: calc(33% - var(--base-space));
 	min-width: 200px;
 	margin-left: var(--base-half);
 	margin-right: var(--base-half);
-	flex: 1;
 
-	@media (--md) {
-		max-width: calc(100% / 3 - var(--base-space));
+	@media (--lg) {
+		max-width: calc(100% / 4 - var(--base-space));
 	}
 }
 

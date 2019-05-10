@@ -9,7 +9,7 @@ samp {
 
 code {
 	font-family: var(--monospace-font-family);
-	padding: 1px 0.2em;
+	padding: 1px 0.2em 0;
 	font-size: var(--h6);
 }
 

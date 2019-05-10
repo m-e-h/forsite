@@ -5,7 +5,7 @@
 	color: var(--color-text-muted);
 	font-size: var(--h6);
 	margin: 0;
-	padding: 0.5rem 0.25em;
+	padding: 0.5rem 0.125em;
 	line-height: var(--heading-line-height);
 }
 
@@ -38,9 +38,7 @@ body {
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
-	line-height: var(--line-height);
-
-	--line-height: 1.6;
+	line-height: var(--reading-line-height);
 }
 
 abbr[title],

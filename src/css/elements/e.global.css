@@ -33,6 +33,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	text-size-adjust: 100%;
 }
 
 ::-moz-selection {

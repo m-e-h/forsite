@@ -28,16 +28,6 @@
 	}
 }
 
-.breadcrumbs a {
-	color: inherit;
-	opacity: 0.9;
-	padding: 0.25rem 0.5rem;
-
-	&:hover {
-		opacity: 1;
-	}
-}
-
 .breadcrumbs li:last-of-type {
 	padding-left: 0.5rem;
 	opacity: 0.5;

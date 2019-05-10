@@ -2,33 +2,31 @@
 \*------------------------------------ */
 
 a {
-	color: color-mod(var(--color-text) blend(var(--color-1) 60%));
-	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
 	background-color: transparent;
+	overflow-wrap: break-word;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
-	transition-property: color, background-color, box-shadow, opacity;
+	transition-property: color, opacity, border-color, background;
+	border-radius: var(--border-radius);
 }
 
-:matches(header, nav) a {
-	opacity: 1;
-	color: inherit;
+a[class],
+:matches(header,footer) a {
+	font-weight: inherit;
+	text-decoration: none;
 }
 
 :matches(h1, h2, h3) > a {
-	color: inherit;
 	display: block;
 }
 
-:matches(article p, article li) > a {
-	box-shadow: inset 0 -0.2em 0 0 var(--hover-color);
-	font-weight: bolder;
-	opacity: 0.8;
-	overflow-wrap: break-word;
+a:matches(:hover, :focus) {
+	color: var(--color-link);
 }
 
-a:matches(:hover, :focus) {
-	box-shadow: var(--hover-shadow);
-	opacity: 1;
+:matches(header,footer, nav) a:matches(:hover, :focus) {
 	color: inherit;
+	background-image: linear-gradient(var(--hover-color), var(--hover-color));
 }

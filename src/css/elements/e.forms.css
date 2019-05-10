@@ -42,17 +42,19 @@ textarea {
 	margin: 0; /* 1 */
 }
 
+input {
+	line-height: var(--heading-line-height);
+}
+
 input,
 select,
 textarea {
 	max-width: 100%;
-	min-height: var(--h2);
 	border-radius: var(--border-radius);
 	border-width: 1px;
 	border-color: var(--color-shade-2);
 	border-style: solid;
-	padding: 0.5em 0.625em;
-	line-height: 1.5;
+	padding: var(--button-padding);
 	background-color: var(--color-shade-2);
 	color: inherit;
 	vertical-align: middle;
@@ -116,7 +118,6 @@ input[type="radio"] {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
-	min-height: unset;
 }
 
 input[type="number"] {
@@ -153,7 +154,6 @@ input[type="search"] {
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;
-	min-height: 0;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
@@ -229,8 +229,8 @@ dialog:not([open]) {
 }
 
 label {
-	font-size: 0.875rem;
-	line-height: 1;
+	font-size: var(--h6);
+	line-height: var(--heading-line-height);
 	display: block;
 	margin: 0.25rem 0 !important;
 }

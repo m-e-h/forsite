@@ -19,7 +19,7 @@
 }
 
 .blocks-gallery-item figcaption:not(.block-editor-rich-text__editable) {
-	background: linear-gradient(0deg, var(--color-tint-4), var(--color-tint-3) 70%, transparent);
+	background: linear-gradient(rgba(0, 0, 0, 0), var(--color-tint-4));
 	bottom: 0;
 	color: #fff;
 	font-size: var(--h6);

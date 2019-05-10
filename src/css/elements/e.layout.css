@@ -41,14 +41,9 @@ body > footer {
 }
 
 main {
-	text-align: center;
 	display: block;
 	width: 100%;
 	padding-top: var(--gutter);
-}
-
-main > * {
-	text-align: left;
 }
 
 article {

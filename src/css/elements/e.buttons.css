@@ -2,19 +2,22 @@
 	color: inherit;
 	background: transparent;
 	background-color: var(--color-gray);
-	font-size: 1rem;
-	padding: 0.8rem 2em;
-	border: 2px solid transparent;
-	border-radius: 0.25rem;
+	font-size: 0.9rem;
+	padding: var(--button-padding);
+	border-width: 2px;
+	border-style: solid;
+	border-color: transparent;
+	border-radius: var(--border-radius);
 	display: inline-block;
+	line-height: var(--heading-line-height);
 	vertical-align: middle;
 	cursor: pointer;
-	box-shadow: none;
-	min-height: var(--h2);
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: color, border-color, background;
 
 	&:hover,
 	&:focus {
-		box-shadow: none;
 		background-image: linear-gradient(var(--hover-color), var(--hover-color));
 	}
 }
@@ -25,9 +28,4 @@ input[type="reset"],
 input[type="submit"] {
 
 	@extend %e_button;
-}
-
-::-webkit-file-upload-button {
-	font: inherit;
-	-webkit-appearance: button;
 }

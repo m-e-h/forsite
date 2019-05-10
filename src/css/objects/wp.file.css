@@ -8,6 +8,9 @@ File block.
 
 .wp-block-file {
 	margin-bottom: var(--gutter);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 
 	&.aligncenter {
 		text-align: center;
@@ -18,20 +21,13 @@ File block.
 	}
 }
 
-.wp-block-file__button.wp-block-file__button.wp-block-file__button {
-
-	@extend %e_button;
-
-	font-size: var(--h6);
-
-	&:hover,
-	&:focus {
-		opacity: 1;
-		color: inherit;
-	}
+.wp-block-file a:not([class]) {
+	text-decoration: none;
+	margin-right: var(--base-space);
 }
 
-/* Give the file block button some spacing if element precedes it. */
-* + .wp-block-file__button {
-	margin-left: 1rem;
+:root:root:root .wp-block-file__button:any-link {
+	opacity: 1;
+	color: inherit;
+	margin: 0;
 }

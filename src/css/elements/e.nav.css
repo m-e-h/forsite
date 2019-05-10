@@ -18,7 +18,8 @@ nav li {
 nav a {
 	display: block;
 	text-decoration: none;
-	padding: 1em 1rem;
+	padding: var(--button-padding);
+	line-height: var(--heading-line-height);
 }
 
 header nav > ul {
@@ -48,17 +49,6 @@ header nav > ul {
 	box-shadow: var(--shadow);
 }
 
-/* [aria-expanded="true"] + nav ul {
-	display: flex;
-	right: 0;
-	background-color: #fff;
-	width: 100%;
-	z-index: 999;
-	text-align: left;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-} */
-
 @media (--md) {
 
 	header > nav {
@@ -73,7 +63,7 @@ header nav li > ul {
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--shadow);
 	z-index: 99999;
 	width: 100%;
 	visibility: visible;
@@ -93,30 +83,45 @@ header nav li:not(:hover):not(:focus) > ul {
 	transition: visibility 0.32s, opacity 0.16s cubic-bezier(0.4, 0, 1, 1);
 }
 
-:root a[href="#main"] {
-	border: 0;
-	background-color: var(--color-frost-4);
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
+:root:root a[href="#main"] {
+	position: fixed;
 
-	&:active,
-	&:focus {
-		top: 0.5rem;
-		left: 0.5rem;
-		clip: auto;
-		height: auto;
-		margin: 0;
-		padding: 0.5rem;
-		box-shadow: var(--shadow-3);
-		overflow: visible;
-		width: auto;
-		white-space: inherit;
-		z-index: 100000;
-	}
+	/* keep it on viewport */
+	top: 0;
+	left: 0;
+
+	/* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
+	   before allowing buttons to be activated. */
+	width: 2px;
+	height: 2px;
+
+	/* visually hide it with overflow and opacity */
+	opacity: 0;
+	overflow: hidden;
+
+	/* remove any margin or padding */
+	border: none;
+	margin: 0;
+	padding: 0;
+
+	/* ensure no other style sets display to none */
+	display: block;
+	visibility: visible;
+
+	/* reset WP conventions */
+	clip: auto;
+	white-space: inherit;
+	background-color: var(--color-frost-4);
+}
+
+:root:root a[href="#main"]:matches(:active, :focus) {
+	height: auto;
+	width: auto;
+	margin: 0;
+	overflow: visible;
+	opacity: 1;
+	z-index: 100000;
+	left: 45%;
+	padding: 0.5rem;
+	box-shadow: var(--shadow-3);
 }

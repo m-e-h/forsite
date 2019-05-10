@@ -61,6 +61,6 @@ blockquote.wp-block-quote.wp-block-quote {
 }
 
 /* mostly for the editor post-title */
-:not(#someid) :matches(input, textarea) {
+.editor-post-title__block .editor-post-title__input:matches(input, textarea) {
 	font-family: var(--font-family);
 }

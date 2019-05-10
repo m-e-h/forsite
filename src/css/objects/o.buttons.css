@@ -4,7 +4,8 @@
 
 .btn,
 .button,
-.wp-block-button__link {
+.wp-block-button__link,
+:root:root .wp-block-file__button {
 
 	@extend %e_button;
 }
@@ -20,8 +21,6 @@
 input[type="reset"],
 input[type="button"],
 .is-style-outline .wp-block-button__link {
-	background-color: transparent;
-	border-width: 2px;
 
 	&:hover,
 	&:focus {

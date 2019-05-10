@@ -1,10 +1,10 @@
-/* ////
+/**
 /// Latest posts block.
 ///
 /// @group  Blocks
 /// @author Marty Helmick <info@martyhelmick.com>
 /// @link   https://github.com/m-e-h/forsite
-//// */
+*/
 
 .wp-block-latest-posts.is-grid {
 	display: flex;
@@ -22,6 +22,6 @@
 .wp-block-latest-posts__post-date {
 	color: var(--color-text-muted);
 	display: block;
-	font-size: 0.9em;
+	font-size: var(--h6);
 	font-style: italic;
 }
