@@ -42,8 +42,12 @@ textarea {
 	margin: 0; /* 1 */
 }
 
-input {
-	line-height: var(--heading-line-height);
+input,
+select {
+	display: inline-flex;
+	align-items: center;
+	line-height: normal;
+	min-height: var(--input-height);
 }
 
 input,
@@ -52,17 +56,19 @@ textarea {
 	max-width: 100%;
 	border-radius: var(--border-radius);
 	border-width: 1px;
-	border-color: var(--color-shade-2);
+	border-color: var(--color-gray);
 	border-style: solid;
-	padding: var(--button-padding);
-	background-color: var(--color-shade-2);
+	padding: var(--input-padding);
+	background-color: var(--color-shade-1);
 	color: inherit;
 	vertical-align: middle;
+	font-size: 0.9rem;
 }
 
 select {
 	appearance: none;
-	line-height: 2 !important;
+
+	/* line-height: 2 !important; */
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235e6e78' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 7.5l9 9 9-9z'/%3E%3C/svg%3E");
 	background-origin: content-box;
 	background-position: right -1.1rem center;
@@ -115,6 +121,7 @@ legend {
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0;
+	min-height: 16px;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;

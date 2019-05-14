@@ -1,16 +1,14 @@
 %e_button {
 	color: inherit;
-	background: transparent;
 	background-color: var(--color-gray);
 	font-size: 0.9rem;
 	padding: var(--button-padding);
-	border-width: 2px;
-	border-style: solid;
-	border-color: transparent;
+	min-height: var(--input-height);
+	border: 2px solid transparent;
 	border-radius: var(--border-radius);
-	display: inline-block;
-	line-height: var(--heading-line-height);
-	vertical-align: middle;
+	display: inline-flex;
+	align-items: center;
+	line-height: normal;
 	cursor: pointer;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);

@@ -3,6 +3,37 @@ article .gform_wrapper {
 	margin: 0 auto;
 }
 
+:root:root:root:root .gform_button[type="submit"] {
+
+	@extend %e_button;
+}
+
+:root:root .gform_body {
+	font-size: 0.9rem;
+}
+
+:root .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+:root:root .gform_wrapper select {
+	padding: var(--input-padding);
+	line-height: normal;
+}
+
+:root:root:root li.gfield input[type=radio] {
+	margin-top: 0;
+}
+
+:root:root .gform_wrapper a.chosen-single {
+	background: var(--color-shade-1);
+	box-shadow: none;
+	border-color: var(--color-gray);
+	height: 2rem;
+	padding: 0.5em;
+}
+
+:root:root .gform_wrapper .chosen-container {
+	font-size: 0.9em;
+}
+
 .ui-datepicker.ui-datepicker {
 	font-family: inherit;
 	font-size: 0.7rem;
