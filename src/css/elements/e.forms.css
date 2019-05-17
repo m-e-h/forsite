@@ -27,8 +27,6 @@ textarea {
 input,
 button {
 	overflow: visible;
-	transition-duration: var(--timing);
-	transition-timing-function: var(--ease);
 }
 
 /**
@@ -55,26 +53,25 @@ select,
 textarea {
 	max-width: 100%;
 	border-radius: var(--border-radius);
-	border-width: 1px;
+	border-width: 2px;
 	border-color: var(--color-gray);
 	border-style: solid;
 	padding: var(--input-padding);
-	background-color: var(--color-shade-1);
+	background-color: var(--input-bg-color);
 	color: inherit;
 	vertical-align: middle;
 	font-size: 0.9rem;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
 }
 
 select {
 	appearance: none;
-
-	/* line-height: 2 !important; */
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235e6e78' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 7.5l9 9 9-9z'/%3E%3C/svg%3E");
-	background-origin: content-box;
-	background-position: right -1.1rem center;
+	background-image: var(--chevron-bg-image);
+	background-position: center right 0.5rem;
 	background-repeat: no-repeat;
 	background-size: 0.9rem;
-	padding-right: 1.5rem !important;
 }
 
 :matches(input, select, textarea):focus {
@@ -149,7 +146,7 @@ progress {
 input[type="search"] {
 	outline-offset: -2px;
 	-webkit-appearance: none;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23495057' viewBox='0 0 24 24'%3E%3Cpath d='M21 19l-5.154-5.154C16.574 12.742 17 11.42 17 10c0-3.866-3.134-7-7-7s-7 3.134-7 7 3.134 7 7 7c1.42 0 2.742-.426 3.846-1.154L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z'/%3E%3C/svg%3E");
+	background-image: var(--search-bg-image);
 	background-repeat: no-repeat;
 	display: inline-block;
 	background-size: 1.5rem;

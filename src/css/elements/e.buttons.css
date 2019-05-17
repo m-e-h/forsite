@@ -1,6 +1,6 @@
 %e_button {
 	color: inherit;
-	background-color: var(--color-gray);
+	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
 	padding: var(--button-padding);
 	min-height: var(--input-height);
@@ -12,11 +12,12 @@
 	cursor: pointer;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, background;
+	transition-property: var(--transition-props);
 
 	&:hover,
 	&:focus {
-		background-image: linear-gradient(var(--hover-color), var(--hover-color));
+		background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
+		border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
 	}
 }
 

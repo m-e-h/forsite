@@ -1,19 +1,28 @@
-/* https://palx.jxnblk.com/2980b9
-*  ─────────────────────────────────── */
-
+/* grays from https://github.com/yeun/open-color */
 $gray0: #f8f9fa;
+$gray0_rgb: 248, 249, 250;
 $gray1: #f1f3f5;
+$gray1_rgb: 241, 243, 245;
 $gray2: #e9ecef;
+$gray2_rgb: 233, 236, 239;
 $gray3: #dee2e6;
+$gray3_rgb: 222, 226, 230;
 $gray4: #ced4da;
+$gray4_rgb: 206, 212, 218;
 $gray5: #adb5bd;
+$gray5_rgb: 173, 181, 189;
 $gray6: #868e96;
+$gray6_rgb: 134, 142, 150;
 $gray7: #495057;
+$gray7_rgb: 73, 80, 87;
 $gray8: #343a40;
+$gray8_rgb: 52, 58, 64;
 $gray9: #212529;
+$gray9_rgb: 33, 37, 41;
 
+/* https://palx.jxnblk.com/2980b9 */
 $base: #2980b9;
-$black: #212629;
+$black: $gray9;
 
 $blue0: #e7f1f7;
 $blue1: #cce1ee;

@@ -71,7 +71,7 @@
 	--header-text-color: inherit;
 	--color-link: var(--color-1);
 	--color-text-muted: #868e96;
-	--color-gray: #dee2e6;
+	--color-gray: #ced4da;
 	--color-silver: #f8f9fa;
 	--color-1: #2982b9;
 	--color-1-light: #8cbcd9;
@@ -90,12 +90,13 @@
 	--color-warning-dark: #54121a;
 	--color-links: #1f2d8f;
 	--color-links-hover: #293ab9;
+	--input-bg-color: var(--color-shade-1);
 	--opacity: 0.7;
 	--color-frost-1: rgba(248, 249, 250, 0.15);
 	--color-frost-2: rgba(248, 249, 250, 0.3);
 	--color-frost-3: rgba(248, 249, 250, 0.5);
 	--color-frost-4: rgba(248, 249, 250, 0.9);
-	--color-shade-1: rgba(206, 212, 218, 0.15);
+	--color-shade-1: rgba(206, 212, 218, 0.1);
 	--color-shade-2: rgba(206, 212, 218, 0.3);
 	--color-shade-3: rgba(206, 212, 218, 0.5);
 	--color-shade-4: rgba(206, 212, 218, 0.9);
@@ -115,7 +116,7 @@
 		0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 	--shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 		0 19px 29px 2px rgba(0, 0, 0, 0.14), 0 7px 36px 6px rgba(0, 0, 0, 0.12);
-	--hover-color: var(--color-tint-1);
+	--hover-color: var(--color-shade-2);
 	--hover-shadow: inset 0 -20em 0 0 var(--hover-color);
 	--timing: 0.16s;
 	--timing-open: 0.25s;
@@ -123,6 +124,9 @@
 	--ease: cubic-bezier(0.4, 0, 0.2, 1);
 	--ease-enter: cubic-bezier(0, 0, 0.2, 1);
 	--ease-exit: cubic-bezier(0.4, 0, 1, 1);
+	--transition-props: color, border-color, opacity, background;
+	--chevron-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
+	--search-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23adb5bd' stroke-width='2' stroke-linecap='round'%0A%3E%3Ccircle cx='10' cy='10' r='7' /%3E%3Cline x1='21' y1='21' x2='15' y2='15' /%3E%3C/svg%3E");
 }
 
 @media (max-width: 30em) {
@@ -171,11 +175,6 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
-}
-
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -495,14 +494,16 @@ a {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, opacity, border-color, background;
+	transition-property: color, border-color, opacity, background;
+	transition-property: var(--transition-props);
 	border-radius: 3px;
 	border-radius: var(--border-radius);
 }
 
 a[class],
 header a,
-footer a {
+footer a,
+nav a {
 	font-weight: inherit;
 	text-decoration: none;
 }
@@ -520,15 +521,13 @@ a:focus {
 }
 
 header a:hover,
-footer a:hover,
 nav a:hover,
 header a:focus,
-footer a:focus,
 nav a:focus {
 	color: inherit;
 	background-image: linear-gradient(
-		rgba(52, 58, 64, 0.1),
-		rgba(52, 58, 64, 0.1)
+		rgba(206, 212, 218, 0.3),
+		rgba(206, 212, 218, 0.3)
 	);
 	background-image: linear-gradient(var(--hover-color), var(--hover-color));
 }
@@ -592,8 +591,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	color: inherit;
-	background-color: #dee2e6;
-	background-color: var(--color-gray);
+	background-color: rgba(206, 212, 218, 0.9);
+	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
 	padding: 0.65em 1em;
 	padding: var(--button-padding);
@@ -610,7 +609,8 @@ input[type="submit"] {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, background;
+	transition-property: color, border-color, opacity, background;
+	transition-property: var(--transition-props);
 }
 
 button:hover,
@@ -622,10 +622,16 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
 	background-image: linear-gradient(
-		rgba(52, 58, 64, 0.1),
-		rgba(52, 58, 64, 0.1)
+		rgba(248, 249, 250, 0.15),
+		rgba(52, 58, 64, 0.05)
 	);
-	background-image: linear-gradient(var(--hover-color), var(--hover-color));
+	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
+	border-image: linear-gradient(
+			rgba(248, 249, 250, 0.15),
+			rgba(52, 58, 64, 0.05)
+		)
+		1;
+	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
 }
 
 ul,
@@ -917,10 +923,6 @@ textarea {
 input,
 button {
 	overflow: visible;
-	transition-duration: 0.16s;
-	transition-duration: var(--timing);
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-timing-function: var(--ease);
 }
 
 input,
@@ -946,29 +948,34 @@ textarea {
 	max-width: 100%;
 	border-radius: 3px;
 	border-radius: var(--border-radius);
-	border-width: 1px;
-	border-color: #dee2e6;
+	border-width: 2px;
+	border-color: #ced4da;
 	border-color: var(--color-gray);
 	border-style: solid;
 	padding: 0.65em 0.5em;
 	padding: var(--input-padding);
-	background-color: rgba(206, 212, 218, 0.15);
-	background-color: var(--color-shade-1);
+	background-color: rgba(206, 212, 218, 0.1);
+	background-color: var(--input-bg-color);
 	color: inherit;
 	vertical-align: middle;
 	font-size: 0.9rem;
+	transition-duration: 0.16s;
+	transition-duration: var(--timing);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-timing-function: var(--ease);
+	transition-property: color, border-color, opacity, background;
+	transition-property: var(--transition-props);
 }
 
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235e6e78' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 7.5l9 9 9-9z'/%3E%3C/svg%3E");
-	background-origin: content-box;
-	background-position: right -1.1rem center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
+	background-image: var(--chevron-bg-image);
+	background-position: center right 0.5rem;
 	background-repeat: no-repeat;
 	background-size: 0.9rem;
-	padding-right: 1.5rem !important;
 }
 
 input:focus,
@@ -1046,7 +1053,8 @@ progress {
 input[type="search"] {
 	outline-offset: -2px;
 	-webkit-appearance: none;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23495057' viewBox='0 0 24 24'%3E%3Cpath d='M21 19l-5.154-5.154C16.574 12.742 17 11.42 17 10c0-3.866-3.134-7-7-7s-7 3.134-7 7 3.134 7 7 7c1.42 0 2.742-.426 3.846-1.154L19 21l2-2zM5 10c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23adb5bd' stroke-width='2' stroke-linecap='round'%0A%3E%3Ccircle cx='10' cy='10' r='7' /%3E%3Cline x1='21' y1='21' x2='15' y2='15' /%3E%3C/svg%3E");
+	background-image: var(--search-bg-image);
 	background-repeat: no-repeat;
 	display: inline-block;
 	background-size: 1.5rem;
@@ -1316,10 +1324,10 @@ a.post-thumbnail {
 .btn,
 .button,
 .wp-block-button__link,
-:root:root .wp-block-file__button {
+:root:root .wp-block-file .wp-block-file__button {
 	color: inherit;
-	background-color: #dee2e6;
-	background-color: var(--color-gray);
+	background-color: rgba(206, 212, 218, 0.9);
+	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
 	padding: 0.65em 1em;
 	padding: var(--button-padding);
@@ -1336,7 +1344,8 @@ a.post-thumbnail {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, background;
+	transition-property: color, border-color, opacity, background;
+	transition-property: var(--transition-props);
 }
 
 .btn:hover,
@@ -1345,13 +1354,19 @@ a.post-thumbnail {
 .button:focus,
 .wp-block-button__link:hover,
 .wp-block-button__link:focus,
-:root:root .wp-block-file__button:hover,
-:root:root .wp-block-file__button:focus {
+:root:root .wp-block-file .wp-block-file__button:hover,
+:root:root .wp-block-file .wp-block-file__button:focus {
 	background-image: linear-gradient(
-		rgba(52, 58, 64, 0.1),
-		rgba(52, 58, 64, 0.1)
+		rgba(248, 249, 250, 0.15),
+		rgba(52, 58, 64, 0.05)
 	);
-	background-image: linear-gradient(var(--hover-color), var(--hover-color));
+	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
+	border-image: linear-gradient(
+			rgba(248, 249, 250, 0.15),
+			rgba(52, 58, 64, 0.05)
+		)
+		1;
+	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
 }
 
 .wp-block-button {
@@ -1369,6 +1384,7 @@ input[type="button"]:focus,
 .is-style-outline .wp-block-button__link:hover,
 .is-style-outline .wp-block-button__link:focus {
 	border-color: currentColor;
+	border-image: none;
 }
 
 table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1) {
@@ -3176,7 +3192,7 @@ body.admin-bar {
 }
 
 .u-text-gray {
-	color: #dee2e6;
+	color: #ced4da;
 	color: var(--color-gray);
 }
 
@@ -3249,7 +3265,7 @@ body.admin-bar {
 }
 
 .u-bg-gray {
-	background-color: #dee2e6;
+	background-color: #ced4da;
 	background-color: var(--color-gray);
 }
 
@@ -3699,8 +3715,8 @@ article .gform_wrapper {
 
 :root:root:root:root .gform_button[type="submit"] {
 	color: inherit;
-	background-color: #dee2e6;
-	background-color: var(--color-gray);
+	background-color: rgba(206, 212, 218, 0.9);
+	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
 	padding: 0.65em 1em;
 	padding: var(--button-padding);
@@ -3717,16 +3733,23 @@ article .gform_wrapper {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, background;
+	transition-property: color, border-color, opacity, background;
+	transition-property: var(--transition-props);
 }
 
 :root:root:root:root .gform_button[type="submit"]:hover,
 :root:root:root:root .gform_button[type="submit"]:focus {
 	background-image: linear-gradient(
-		rgba(52, 58, 64, 0.1),
-		rgba(52, 58, 64, 0.1)
+		rgba(248, 249, 250, 0.15),
+		rgba(52, 58, 64, 0.05)
 	);
-	background-image: linear-gradient(var(--hover-color), var(--hover-color));
+	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
+	border-image: linear-gradient(
+			rgba(248, 249, 250, 0.15),
+			rgba(52, 58, 64, 0.05)
+		)
+		1;
+	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
 }
 
 :root:root .gform_body {
@@ -3747,17 +3770,30 @@ article .gform_wrapper {
 }
 
 :root:root .gform_wrapper a.chosen-single {
-	background: rgba(206, 212, 218, 0.15);
-	background: var(--color-shade-1);
+	background: rgba(206, 212, 218, 0.1);
+	background: var(--input-bg-color);
 	box-shadow: none;
-	border-color: #dee2e6;
+	border-color: #ced4da;
 	border-color: var(--color-gray);
-	height: 2rem;
+	height: 2.25rem;
 	padding: 0.5em;
+	border-width: 2px;
 }
 
 :root:root .gform_wrapper .chosen-container {
 	font-size: 0.9em;
+}
+
+:root:root .gform_wrapper .chosen-container-single .chosen-single div {
+	width: 2rem;
+}
+
+:root:root .gform_wrapper .chosen-container-single .chosen-single div b {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E") !important;
+	background-image: var(--chevron-bg-image) !important;
+	background-position: center right 0.5em;
+	background-repeat: no-repeat;
+	background-size: 0.9rem !important;
 }
 
 .ui-datepicker.ui-datepicker {
@@ -3766,12 +3802,12 @@ article .gform_wrapper {
 }
 
 .ui-datepicker.ui-datepicker tbody tr td {
-	border-color: #dee2e6;
+	border-color: #ced4da;
 	border-color: var(--color-gray);
 }
 
 .ui-datepicker.ui-datepicker .ui-datepicker-unselectable.ui-state-disabled {
-	background-color: #dee2e6;
+	background-color: #ced4da;
 	background-color: var(--color-gray);
 }
 

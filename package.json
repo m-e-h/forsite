@@ -8,6 +8,8 @@
 	"scripts": {
 		"build": "run-s lint:css css pretty:css js",
 		"dev": "run-p watch:*",
+		"sync": "run-p watch:* bs:proxy",
+		"bs:proxy": "browser-sync 'http://one.wordpress.test' 'dist' 'src' 'app' 'views' -w",
 		"css": "run-p css:*",
 		"js": "run-p \"js:* {@}\" -- --mode production",
 		"lint": "run-s lint:*",
@@ -57,9 +59,7 @@
 		"theme-claim": "^0.2.0"
 	},
 	"babel": {
-		"presets": [
-			"@babel/env"
-		]
+		"presets": [ "@babel/env" ]
 	},
 	"stylelint": {
 		"defaultSeverity": "warning",
@@ -70,32 +70,21 @@
 			"max-nesting-depth": [
 				1,
 				{
-					"ignore": [
-						"pseudo-classes"
-					],
-					"ignoreAtRules": [
-						"/^extend/",
-						"media"
-					]
+					"ignore": [ "pseudo-classes" ],
+					"ignoreAtRules": [ "/^extend/", "media" ]
 				}
 			],
 			"at-rule-empty-line-before": [
 				"always",
 				{
-					"except": [
-						"blockless-after-blockless"
-					],
-					"ignore": [
-						"after-comment"
-					]
+					"except": [ "blockless-after-blockless" ],
+					"ignore": [ "after-comment" ]
 				}
 			],
 			"rule-empty-line-before": [
 				"always",
 				{
-					"ignore": [
-						"after-comment"
-					]
+					"ignore": [ "after-comment" ]
 				}
 			]
 		}

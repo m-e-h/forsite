@@ -36,16 +36,6 @@ body {
 	text-size-adjust: 100%;
 }
 
-::-moz-selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	text-shadow: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
 
 	* {

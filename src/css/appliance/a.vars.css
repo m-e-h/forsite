@@ -71,7 +71,7 @@
 	--header-text-color: inherit;
 	--color-link: var(--color-1);
 	--color-text-muted: $gray6;
-	--color-gray: $gray3;
+	--color-gray: $gray4;
 	--color-silver: $gray0;
 	--color-1: $blue5;
 	--color-1-light: $blue3;
@@ -90,22 +90,23 @@
 	--color-warning-dark: $red9;
 	--color-links: $indigo7;
 	--color-links-hover: $indigo5;
+	--input-bg-color: var(--color-shade-1);
 
 	/* tints */
 	--opacity: 0.7;
-	--color-frost-1: color-mod($gray0 a(0.15));
-	--color-frost-2: color-mod($gray0 a(0.3));
-	--color-frost-3: color-mod($gray0 a(0.5));
-	--color-frost-4: color-mod($gray0 a(0.9));
-	--color-shade-1: color-mod($gray4 a(0.15));
-	--color-shade-2: color-mod($gray4 a(0.3));
-	--color-shade-3: color-mod($gray4 a(0.5));
-	--color-shade-4: color-mod($gray4 a(0.9));
-	--color-tint: color-mod($gray8 a(0.05));
-	--color-tint-1: color-mod($gray8 a(0.1));
-	--color-tint-2: color-mod($gray8 a(0.3));
-	--color-tint-3: color-mod($gray8 a(0.5));
-	--color-tint-4: color-mod($gray8 a(0.9));
+	--color-frost-1: rgba($gray0_rgb, 0.15);
+	--color-frost-2: rgba($gray0_rgb, 0.3);
+	--color-frost-3: rgba($gray0_rgb, 0.5);
+	--color-frost-4: rgba($gray0_rgb, 0.9);
+	--color-shade-1: rgba($gray4_rgb, 0.1);
+	--color-shade-2: rgba($gray4_rgb, 0.3);
+	--color-shade-3: rgba($gray4_rgb, 0.5);
+	--color-shade-4: rgba($gray4_rgb, 0.9);
+	--color-tint: rgba($gray8_rgb, 0.05);
+	--color-tint-1: rgba($gray8_rgb, 0.1);
+	--color-tint-2: rgba($gray8_rgb, 0.3);
+	--color-tint-3: rgba($gray8_rgb, 0.5);
+	--color-tint-4: rgba($gray8_rgb, 0.9);
 	--shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	--shadow-1:
 		0 3px 1px -2px rgba(0, 0, 0, 0.2),
@@ -127,7 +128,7 @@
 		0 9px 12px -6px rgba(0, 0, 0, 0.2),
 		0 19px 29px 2px rgba(0, 0, 0, 0.14),
 		0 7px 36px 6px rgba(0, 0, 0, 0.12);
-	--hover-color: var(--color-tint-1);
+	--hover-color: var(--color-shade-2);
 	--hover-shadow: inset 0 -20em 0 0 var(--hover-color);
 
 	/* animation */
@@ -137,4 +138,9 @@
 	--ease: cubic-bezier(0.4, 0, 0.2, 1);
 	--ease-enter: cubic-bezier(0, 0, 0.2, 1);
 	--ease-exit: cubic-bezier(0.4, 0, 1, 1);
+	--transition-props: color, border-color, opacity, background;
+
+	/* svg */
+	--chevron-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
+	--search-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23adb5bd' stroke-width='2' stroke-linecap='round'%0A%3E%3Ccircle cx='10' cy='10' r='7' /%3E%3Cline x1='21' y1='21' x2='15' y2='15' /%3E%3C/svg%3E");
 }
