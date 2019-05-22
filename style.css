@@ -48,8 +48,8 @@
 		"Noto Color Emoji";
 	--display-font-family: "Palatino", "Palatino Linotype", "Book Antiqua",
 		"FreeSerif", serif;
-	--monospace-font-family: sfmono-regular, "Roboto Mono", menlo, monaco,
-		consolas, "Liberation Mono", "Courier New", monospace;
+	--monospace-font-family: "Roboto Mono", menlo, monaco, consolas,
+		"Liberation Mono", monospace;
 	--font-bold: 700;
 	--font-light: 300;
 	--font-normal: 400;
@@ -69,7 +69,7 @@
 	--primary-alpha: 1;
 	--border-radius: 3px;
 	--header-text-color: inherit;
-	--color-link: var(--color-1);
+	--color-link: var(--color-2);
 	--color-text-muted: #868e96;
 	--color-gray: #ced4da;
 	--color-silver: #f8f9fa;
@@ -116,7 +116,7 @@
 		0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 	--shadow-5: 0 9px 12px -6px rgba(0, 0, 0, 0.2),
 		0 19px 29px 2px rgba(0, 0, 0, 0.14), 0 7px 36px 6px rgba(0, 0, 0, 0.12);
-	--hover-color: var(--color-shade-2);
+	--hover-color: var(--color-tint-1);
 	--hover-shadow: inset 0 -20em 0 0 var(--hover-color);
 	--timing: 0.16s;
 	--timing-open: 0.25s;
@@ -124,7 +124,8 @@
 	--ease: cubic-bezier(0.4, 0, 0.2, 1);
 	--ease-enter: cubic-bezier(0, 0, 0.2, 1);
 	--ease-exit: cubic-bezier(0.4, 0, 1, 1);
-	--transition-props: color, border-color, opacity, background;
+	--transition-props: color, border-color, opacity, background-color,
+		box-shadow;
 	--chevron-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
 	--search-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23adb5bd' stroke-width='2' stroke-linecap='round'%0A%3E%3Ccircle cx='10' cy='10' r='7' /%3E%3Cline x1='21' y1='21' x2='15' y2='15' /%3E%3C/svg%3E");
 }
@@ -487,17 +488,25 @@ aside > section {
 
 a {
 	color: inherit;
-	font-weight: 600;
+	text-decoration: none;
+	font-weight: 500;
 	background-color: transparent;
 	word-wrap: break-word;
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, opacity, background;
+	transition-property: color, border-color, opacity, background-color,
+		box-shadow;
 	transition-property: var(--transition-props);
-	border-radius: 3px;
-	border-radius: var(--border-radius);
+	background-image: linear-gradient(
+		0deg,
+		transparent,
+		transparent 1px,
+		currentColor 0,
+		currentColor 2px,
+		transparent 0
+	);
 }
 
 a[class],
@@ -505,7 +514,7 @@ header a,
 footer a,
 nav a {
 	font-weight: inherit;
-	text-decoration: none;
+	background-image: none;
 }
 
 h1 > a,
@@ -516,20 +525,15 @@ h3 > a {
 
 a:hover,
 a:focus {
-	color: #2982b9;
+	color: #29b960;
 	color: var(--color-link);
 }
 
-header a:hover,
 nav a:hover,
-header a:focus,
 nav a:focus {
 	color: inherit;
-	background-image: linear-gradient(
-		rgba(206, 212, 218, 0.3),
-		rgba(206, 212, 218, 0.3)
-	);
-	background-image: linear-gradient(var(--hover-color), var(--hover-color));
+	box-shadow: inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow: var(--hover-shadow);
 }
 
 code,
@@ -545,10 +549,10 @@ samp {
 }
 
 code {
-	font-family: sfmono-regular, "Roboto Mono", menlo, monaco, consolas,
-		"Liberation Mono", "Courier New", monospace;
+	font-family: "Roboto Mono", menlo, monaco, consolas, "Liberation Mono",
+		monospace;
 	font-family: var(--monospace-font-family);
-	padding: 1px 0.2em 0;
+	padding: 0.1em 0.15em 0;
 	font-size: 0.875rem;
 	font-size: var(--h6);
 }
@@ -609,7 +613,8 @@ input[type="submit"] {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, opacity, background;
+	transition-property: color, border-color, opacity, background-color,
+		box-shadow;
 	transition-property: var(--transition-props);
 }
 
@@ -621,17 +626,10 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	background-image: linear-gradient(
-		rgba(248, 249, 250, 0.15),
-		rgba(52, 58, 64, 0.05)
-	);
-	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
-	border-image: linear-gradient(
-			rgba(248, 249, 250, 0.15),
-			rgba(52, 58, 64, 0.05)
-		)
-		1;
-	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
+	box-shadow: inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow: var(--hover-shadow);
+	border-color: rgba(52, 58, 64, 0.1);
+	border-color: var(--hover-color);
 }
 
 ul,
@@ -963,7 +961,8 @@ textarea {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, opacity, background;
+	transition-property: color, border-color, opacity, background-color,
+		box-shadow;
 	transition-property: var(--transition-props);
 }
 
@@ -1344,7 +1343,8 @@ a.post-thumbnail {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, opacity, background;
+	transition-property: color, border-color, opacity, background-color,
+		box-shadow;
 	transition-property: var(--transition-props);
 }
 
@@ -1356,17 +1356,10 @@ a.post-thumbnail {
 .wp-block-button__link:focus,
 :root:root .wp-block-file .wp-block-file__button:hover,
 :root:root .wp-block-file .wp-block-file__button:focus {
-	background-image: linear-gradient(
-		rgba(248, 249, 250, 0.15),
-		rgba(52, 58, 64, 0.05)
-	);
-	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
-	border-image: linear-gradient(
-			rgba(248, 249, 250, 0.15),
-			rgba(52, 58, 64, 0.05)
-		)
-		1;
-	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
+	box-shadow: inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow: var(--hover-shadow);
+	border-color: rgba(52, 58, 64, 0.1);
+	border-color: var(--hover-color);
 }
 
 .wp-block-button {
@@ -3733,23 +3726,17 @@ article .gform_wrapper {
 	transition-duration: var(--timing);
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-timing-function: var(--ease);
-	transition-property: color, border-color, opacity, background;
+	transition-property: color, border-color, opacity, background-color,
+		box-shadow;
 	transition-property: var(--transition-props);
 }
 
 :root:root:root:root .gform_button[type="submit"]:hover,
 :root:root:root:root .gform_button[type="submit"]:focus {
-	background-image: linear-gradient(
-		rgba(248, 249, 250, 0.15),
-		rgba(52, 58, 64, 0.05)
-	);
-	background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
-	border-image: linear-gradient(
-			rgba(248, 249, 250, 0.15),
-			rgba(52, 58, 64, 0.05)
-		)
-		1;
-	border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
+	box-shadow: inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow: var(--hover-shadow);
+	border-color: rgba(52, 58, 64, 0.1);
+	border-color: var(--hover-color);
 }
 
 :root:root .gform_body {

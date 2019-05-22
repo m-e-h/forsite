@@ -16,8 +16,8 @@
 
 	&:hover,
 	&:focus {
-		background-image: linear-gradient(var(--color-frost-1), var(--color-tint));
-		border-image: linear-gradient(var(--color-frost-1), var(--color-tint)) 1;
+		box-shadow: var(--hover-shadow);
+		border-color: var(--hover-color);
 	}
 }
 

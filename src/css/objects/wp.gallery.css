@@ -76,3 +76,8 @@
 		width: calc(100% / 6 - 1vw);
 	}
 }
+
+/* .blocks-gallery-item:nth-last-of-type(2),
+.blocks-gallery-item:nth-child(3n-1):last-child {
+	flex-grow: 1;
+} */

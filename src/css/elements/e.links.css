@@ -3,19 +3,20 @@
 
 a {
 	color: inherit;
-	font-weight: 600;
+	text-decoration: none;
+	font-weight: 500;
 	background-color: transparent;
 	overflow-wrap: break-word;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
 	transition-property: var(--transition-props);
-	border-radius: var(--border-radius);
+	background-image: linear-gradient(0deg, transparent, transparent 1px, currentColor 0, currentColor 2px, transparent 0);
 }
 
 a[class],
 :matches(header, footer, nav) a {
 	font-weight: inherit;
-	text-decoration: none;
+	background-image: none;
 }
 
 :matches(h1, h2, h3) > a {
@@ -26,7 +27,7 @@ a:matches(:hover, :focus) {
 	color: var(--color-link);
 }
 
-:matches(header, nav) a:matches(:hover, :focus) {
+nav a:matches(:hover, :focus) {
 	color: inherit;
-	background-image: linear-gradient(var(--hover-color), var(--hover-color));
+	box-shadow: var(--hover-shadow);
 }
