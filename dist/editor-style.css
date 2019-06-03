@@ -40,7 +40,7 @@
 	--primary-alpha:1;
 	--border-radius:3px;
 	--header-text-color:inherit;
-	--color-link:var(--color-2);
+	--color-link:var(--color-1);
 	--color-text-muted:#868e96;
 	--color-gray:#ced4da;
 	--color-silver:#f8f9fa;
@@ -93,7 +93,7 @@
 		0 19px 29px 2px rgba(0, 0, 0, 0.14),
 		0 7px 36px 6px rgba(0, 0, 0, 0.12);
 	--hover-color:var(--color-tint-1);
-	--hover-shadow:inset 0 -20em 0 0 var(--hover-color);
+	--hover-shadow:inset 0 -10em 0 0 var(--hover-color);
 	--timing:0.16s;
 	--timing-open:0.25s;
 	--timing-close:0.2s;
@@ -347,7 +347,6 @@
 .editor-styles-wrapper a:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]){
 	color:inherit;
 	text-decoration:none;
-	font-weight:500;
 	background-color:transparent;
 	word-wrap:break-word;
 	transition-duration:0.16s;
@@ -356,22 +355,22 @@
 	transition-timing-function:var(--ease);
 	transition-property:color, border-color, opacity, background-color, box-shadow;
 	transition-property:var(--transition-props);
-	background-image:linear-gradient(0deg, transparent, transparent 1px, currentColor 0, currentColor 2px, transparent 0);
+	background-image:linear-gradient(0deg, transparent, transparent 1px, #2982b9 0, #2982b9 2px, transparent 0);
+	background-image:linear-gradient(0deg, transparent, transparent 1px, var(--color-link) 0, var(--color-link) 2px, transparent 0);
 }
 .editor-styles-wrapper a[class], .editor-styles-wrapper header a, .editor-styles-wrapper footer a, .editor-styles-wrapper nav a{
-	font-weight:inherit;
 	background-image:none;
 }
 .editor-styles-wrapper h1 > a, .editor-styles-wrapper h2 > a, .editor-styles-wrapper h3 > a{
 	display:block;
 }
 .editor-styles-wrapper a:hover, .editor-styles-wrapper a:focus{
-	color:#29b960;
+	color:#2982b9;
 	color:var(--color-link);
 }
 .editor-styles-wrapper nav a:hover, .editor-styles-wrapper nav a:focus{
 	color:inherit;
-	box-shadow:inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
 	box-shadow:var(--hover-shadow);
 }
 .editor-styles-wrapper code,
@@ -445,7 +444,7 @@
 	transition-property:var(--transition-props);
 }
 .editor-styles-wrapper button:hover, .editor-styles-wrapper button:focus, .editor-styles-wrapper input[type="button"]:hover, .editor-styles-wrapper input[type="button"]:focus, .editor-styles-wrapper input[type="reset"]:hover, .editor-styles-wrapper input[type="reset"]:focus, .editor-styles-wrapper input[type="submit"]:hover, .editor-styles-wrapper input[type="submit"]:focus{
-	box-shadow:inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
 	box-shadow:var(--hover-shadow);
 	border-color:rgba(52, 58, 64, 0.1);
 	border-color:var(--hover-color);
@@ -1039,7 +1038,7 @@
 	transition-property:var(--transition-props);
 }
 .editor-styles-wrapper .btn:hover, .editor-styles-wrapper .btn:focus, .editor-styles-wrapper .button:hover, .editor-styles-wrapper .button:focus, .editor-styles-wrapper .wp-block-button__link:hover, .editor-styles-wrapper .wp-block-button__link:focus, .editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:hover, .editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:focus{
-	box-shadow:inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
 	box-shadow:var(--hover-shadow);
 	border-color:rgba(52, 58, 64, 0.1);
 	border-color:var(--hover-color);
@@ -3013,7 +3012,7 @@
 	transition-property:var(--transition-props);
 }
 .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:hover, .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:focus{
-	box-shadow:inset 0 -20em 0 0 rgba(52, 58, 64, 0.1);
+	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
 	box-shadow:var(--hover-shadow);
 	border-color:rgba(52, 58, 64, 0.1);
 	border-color:var(--hover-color);

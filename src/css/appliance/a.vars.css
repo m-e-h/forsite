@@ -69,7 +69,7 @@
 	--primary-alpha: 1;
 	--border-radius: 3px;
 	--header-text-color: inherit;
-	--color-link: var(--color-2);
+	--color-link: var(--color-1);
 	--color-text-muted: $gray6;
 	--color-gray: $gray4;
 	--color-silver: $gray0;
@@ -131,7 +131,7 @@
 
 	/* Link effects */
 	--hover-color: var(--color-tint-1);
-	--hover-shadow: inset 0 -20em 0 0 var(--hover-color);
+	--hover-shadow: inset 0 -10em 0 0 var(--hover-color);
 
 	/* animation */
 	--timing: 0.16s;

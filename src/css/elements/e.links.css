@@ -4,18 +4,16 @@
 a {
 	color: inherit;
 	text-decoration: none;
-	font-weight: 500;
 	background-color: transparent;
 	overflow-wrap: break-word;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);
 	transition-property: var(--transition-props);
-	background-image: linear-gradient(0deg, transparent, transparent 1px, currentColor 0, currentColor 2px, transparent 0);
+	background-image: linear-gradient(0deg, transparent, transparent 1px, var(--color-link) 0, var(--color-link) 2px, transparent 0);
 }
 
 a[class],
 :matches(header, footer, nav) a {
-	font-weight: inherit;
 	background-image: none;
 }
 
