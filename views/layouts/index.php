@@ -1,4 +1,4 @@
-<article <?= Hybrid\Attr\render( 'archive-entry' ); ?>>
+<article <?= Hybrid\Attr\render( 'entry', 'archive', [ 'class' => 'archive-entry' ] ); ?>>
 
 	<?= Hybrid\View\render( 'components', 'featured-image' ); ?>
 

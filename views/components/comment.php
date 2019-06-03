@@ -1,7 +1,7 @@
-<li <?php Hybrid\Attr\display( 'comment' ) ?>>
+<li <?= Hybrid\Attr\render( 'comment' ) ?>>
 
 	<header class="comment__meta">
-		<?php echo get_avatar( $data->comment, $data->args['avatar_size'], '', '', [ 'class' => 'comment__avatar' ] ) ?>
+		<?= get_avatar( $data->comment, $data->args['avatar_size'], '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
 		<?php Hybrid\Comment\display_author( [ 'after' => '<br />' ] ) ?>
 		<?php Hybrid\Comment\display_permalink( [
