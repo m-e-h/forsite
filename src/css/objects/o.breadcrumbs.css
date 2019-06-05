@@ -3,31 +3,34 @@
 
 .breadcrumbs {
 	font-size: var(--h6);
-	font-style: italic;
-	margin-bottom: var(--gutter);
-	width: 100%;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+	color: var(--color-text-muted);
+	letter-spacing: 0.065em;
 
 	ol {
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
-		justify-content: center;
 	}
 
 	li {
 		display: inline-flex;
 		align-items: center;
 		flex: 0 1 auto;
-
-		&:not(:last-of-type)::after {
-			margin: 0 0.3em -0.05em;
-			content: "/";
-			font-size: 1.25em;
-		}
+		margin-right: 0.5em;
 	}
-}
 
-.breadcrumbs li:last-of-type {
-	padding-left: 0.5rem;
-	opacity: 0.5;
+	li + li::before {
+		content: "";
+		display: inline-block;
+		width: 0.5em;
+		height: 0.5em;
+		margin-right: 0.75em;
+		border-width: 0 0.125em 0.125em 0;
+		transform: rotate(-45deg);
+	}
+
+	a {
+		padding: 0;
+	}
 }

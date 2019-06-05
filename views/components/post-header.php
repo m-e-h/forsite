@@ -2,15 +2,9 @@
 
 <header class="entry__header u-content-width">
 
-	<?= Hybrid\Post\render_terms(
-		[
-			'taxonomy' => 'category',
-			'sep'      => ' &middot; ',
-			'class'    => 'entry__terms entry__terms--category u-caps u-h6 u-text-muted',
-		]
-	) ?>
+	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
 
-	<?= Hybrid\Post\render_title( [ 'class' => 'entry__title u-h1' ] ); ?>
+	<?= Hybrid\Post\render_title( [ 'class' => 'entry__title u-h2' ] ); ?>
 
 	<?php if ( is_singular( 'post' ) ) : ?>
 

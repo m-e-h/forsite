@@ -6,6 +6,10 @@
 	color: inherit;
 }
 
+.u-link.u-link {
+	background-image: linear-gradient(0deg, transparent, transparent 1px, var(--color-link) 0, var(--color-link) 2px, transparent 0);
+}
+
 /* Opacity */
 .u-opacity {
 	opacity: var(--opacity);
@@ -30,7 +34,7 @@
  * element needs to have a defined size and be on viewport otherwise TalkBack
  * does not allow activation of buttons.
  *
- * https://github.com/ampproject/amphtml/blob/master/css/amp.css
+ * https://github.com/ampproject/amphtml/blob/master/css/ampshared.css
  */
 .screen-reader-text.screen-reader-text {
 	position: fixed;

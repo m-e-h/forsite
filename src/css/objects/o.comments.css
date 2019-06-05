@@ -1,0 +1,22 @@
+.comment-respond__reply-title {
+	font-size: var(--h4);
+}
+
+ul.children {
+	padding-left: var(--base-space);
+}
+
+.comment {
+	margin-top: var(--base-space);
+	margin-bottom: var(--base-double);
+}
+
+.comment__meta,
+.avatar {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.comment__meta {
+	margin: 0 1rem;
+}

@@ -2,6 +2,8 @@
 
 <header class="archive__header">
 
+	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+
 	<h1 class="archive__title u-h4"><?php the_archive_title() ?></h1>
 
 	<?php if ( ! is_paged() && get_the_archive_description() ) : ?>

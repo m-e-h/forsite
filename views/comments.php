@@ -6,7 +6,7 @@
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="comments__title"><?php comments_number() ?></h2>
+		<h2 class="comments__title u-h4"><?php comments_number() ?></h2>
 
 		<?= Hybrid\View\render( 'components', 'comments-pagination' ) ?>
 

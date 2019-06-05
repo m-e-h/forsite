@@ -5,6 +5,7 @@
 @import "o.embeds";
 @import "o.nav";
 @import "o.breadcrumbs";
+@import "o.comments";
 
 /* WP core blocks. */
 @import "wp.cover";

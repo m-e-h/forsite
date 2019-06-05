@@ -24,16 +24,9 @@
 	justify-content: center;
 }
 
-.breadcrumbs,
 .archive__header {
 	max-width: 100%;
-}
-
-.archive .breadcrumbs {
-	/* grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 1;
-	grid-row-end: 3; */
+	order: -3;
 }
 
 .archive-entry__header {
@@ -113,4 +106,8 @@ hr.is-style-dots.is-style-dots {
 
 p.has-background {
 	padding: 0.75rem 1rem;
+}
+
+.entry__info {
+	margin-top: 0.5rem;
 }

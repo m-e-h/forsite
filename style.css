@@ -1213,9 +1213,9 @@ figure {
 	justify-content: center;
 }
 
-.breadcrumbs,
 .archive__header {
 	max-width: 100%;
+	order: -3;
 }
 
 .archive-entry__header {
@@ -1306,6 +1306,10 @@ p.has-background {
 	padding: 0.75rem 1rem;
 }
 
+.entry__info {
+	margin-top: 0.5rem;
+}
+
 img.wp-smiley,
 img.emoji {
 	display: inline-block;
@@ -1324,6 +1328,10 @@ img.emoji {
 
 a.post-thumbnail {
 	box-shadow: none;
+}
+
+.avatar {
+	border-radius: 50%;
 }
 
 .btn,
@@ -1470,34 +1478,64 @@ table.has-fixed-layout {
 .breadcrumbs {
 	font-size: 0.875rem;
 	font-size: var(--h6);
-	font-style: italic;
-	margin-bottom: calc(1.5 * 1.5rem);
-	margin-bottom: var(--gutter);
-	width: 100%;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+	color: #868e96;
+	color: var(--color-text-muted);
+	letter-spacing: 0.065em;
 }
 
 .breadcrumbs ol {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
 }
 
 .breadcrumbs li {
 	display: inline-flex;
 	align-items: center;
 	flex: 0 1 auto;
+	margin-right: 0.5em;
 }
 
-.breadcrumbs li:not(:last-of-type)::after {
-	margin: 0 0.3em -0.05em;
-	content: "/";
-	font-size: 1.25em;
+.breadcrumbs li + li::before {
+	content: "";
+	display: inline-block;
+	width: 0.5em;
+	height: 0.5em;
+	margin-right: 0.75em;
+	border-width: 0 0.125em 0.125em 0;
+	transform: rotate(-45deg);
 }
 
-.breadcrumbs li:last-of-type {
-	padding-left: 0.5rem;
-	opacity: 0.5;
+.breadcrumbs a {
+	padding: 0;
+}
+
+.comment-respond__reply-title {
+	font-size: calc(1.5 * 1rem);
+	font-size: var(--h4);
+}
+
+ul.children {
+	padding-left: calc(1.5 * 1rem);
+	padding-left: var(--base-space);
+}
+
+.comment {
+	margin-top: calc(1.5 * 1rem);
+	margin-top: var(--base-space);
+	margin-bottom: calc(1.5 * 2rem);
+	margin-bottom: var(--base-double);
+}
+
+.comment__meta,
+.avatar {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.comment__meta {
+	margin: 0 1rem;
 }
 
 .wp-block-cover {
@@ -3520,6 +3558,25 @@ body.admin-bar {
 .u-color-inherit,
 .u-color-inherit * {
 	color: inherit;
+}
+
+.u-link.u-link {
+	background-image: linear-gradient(
+		0deg,
+		transparent,
+		transparent 1px,
+		#2982b9 0,
+		#2982b9 2px,
+		transparent 0
+	);
+	background-image: linear-gradient(
+		0deg,
+		transparent,
+		transparent 1px,
+		var(--color-link) 0,
+		var(--color-link) 2px,
+		transparent 0
+	);
 }
 
 .u-opacity {

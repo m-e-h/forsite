@@ -8,7 +8,7 @@
 
 		<?= Hybrid\View\render( 'components', 'post-pagination' ); ?>
 
-	<?php edit_post_link( __( 'Edit &#x270F;', 'textdomain' ), '<div class="edit-link-container u-print-none u-bold u-opacity u-content-width u-px1 u-text-right">', '</div>' ); ?>
+	<?php edit_post_link( __( 'Edit &#x270E;' ), '<div class="edit-link-container u-print-none u-content-width u-px1 u-text-right">', '</div>', null, 'post-edit-link u-link u-h6' ); ?>
 
 	<?= Hybrid\View\render( 'components', 'post-footer' ); ?>
 

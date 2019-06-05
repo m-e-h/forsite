@@ -17,3 +17,7 @@ img.emoji {
 a.post-thumbnail {
 	box-shadow: none;
 }
+
+.avatar {
+	border-radius: 50%;
+}

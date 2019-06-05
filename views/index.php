@@ -13,8 +13,6 @@
 
 		<main id="main" class="app-main">
 
-			<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
-
 			<?= Hybrid\View\render( 'components', 'posts-header' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
