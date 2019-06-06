@@ -15,6 +15,7 @@
 	font-style: inherit;
 	border-width: 0;
 	border-style: solid;
+	max-width: 100%;
 }
 
 html {

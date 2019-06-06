@@ -1,3 +1,7 @@
+ul.menu__items {
+	margin: 0;
+}
+
 .menu-toggle {
 	display: inline-block;
 	background-color: transparent;

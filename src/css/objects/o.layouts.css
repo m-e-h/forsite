@@ -4,11 +4,13 @@
 
 .app-header__title {
 	font-size: var(--h4);
+	font-weight: normal;
 }
 
 .app-header__title,
 .app-header__description {
 	margin: 0 0.5rem;
+	line-height: var(--heading-line-height);
 }
 
 .app-header__logo {

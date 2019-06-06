@@ -1,3 +1,21 @@
+.comment-respond__form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment-respond__form > * {
+	width: 100%;
+}
+
+.comment-respond__field--author {
+	margin-right: auto;
+}
+
+.comment-respond__field--author,
+.comment-respond__field--email {
+	width: auto;
+}
+
 .comment-respond__reply-title {
 	font-size: var(--h4);
 }
