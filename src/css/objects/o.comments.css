@@ -16,6 +16,10 @@
 	width: auto;
 }
 
+.comment-respond__field--submit {
+	text-align: right;
+}
+
 .comment-respond__reply-title {
 	font-size: var(--h4);
 }

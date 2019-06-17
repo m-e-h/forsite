@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb
+class ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d
 {
     public static $files = array (
         '77c7b76f4dcd3556a40cd339441c5cce' => __DIR__ . '/..' . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
@@ -48,8 +48,8 @@ class ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit36dbd3e21f4a6c232b847e7d0d48aefb::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

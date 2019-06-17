@@ -113,3 +113,25 @@ function default_header_bg_color( $color = 0 ) {
 		sanitize_hex_color_add_hash( $color )
 	);
 }
+
+add_filter( 'hybrid/attr/post/class/taxonomy', function( $taxonomies ) {
+
+    $taxonomies[] = 'category';
+
+    return $taxonomies;
+} );
+
+
+add_filter( 'post_class', function( $classes ) {
+
+    $author_class = sprintf( 'entry--author-%s', get_the_author_meta( 'user_nicename' ) );
+
+    $key = array_search( $author_class, $classes );
+
+    if ( $key ) {
+        unset( $classes[ $key ] );
+    }
+
+    return $classes;
+
+} );
