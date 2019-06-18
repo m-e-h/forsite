@@ -68,15 +68,22 @@ textarea {
 
 select {
 	appearance: none;
-	background-image: var(--chevron-bg-image);
-	background-position: center right 0.5rem;
-	background-repeat: no-repeat;
-	background-size: 0.9rem;
+	background-image: var(--chevron-bg-image), linear-gradient(to bottom, #fff 0%, var(--input-bg-color) 100%);
+	background-position: center right 0.5em, 0 0;
+	background-repeat: no-repeat, repeat;
+	background-size: 0.8em auto, 100%;
+	font-size: 16px;
+	padding-right: 1.5rem;
+}
+
+select option {
+	font-weight: normal;
 }
 
 :matches(input, select, textarea):focus {
 	background-color: #fff;
 	border-color: var(--color-1);
+	box-shadow: 0 0 1px 0 var(--color-1);
 }
 
 input[type="file"] {

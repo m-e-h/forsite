@@ -740,16 +740,23 @@
 	-webkit-appearance:none;
 	   -moz-appearance:none;
 	        appearance:none;
-	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
-	background-image:var(--chevron-bg-image);
-	background-position:center right 0.5rem;
-	background-repeat:no-repeat;
-	background-size:0.9rem;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E"), linear-gradient(to bottom, #fff 0%, rgba(206, 212, 218, 0.1) 100%);
+	background-image:var(--chevron-bg-image), linear-gradient(to bottom, #fff 0%, var(--input-bg-color) 100%);
+	background-position:center right 0.5em, 0 0;
+	background-repeat:no-repeat, repeat;
+	background-size:0.8em auto, 100%;
+	font-size:16px;
+	padding-right:1.5rem;
+}
+.editor-styles-wrapper select option{
+	font-weight:normal;
 }
 .editor-styles-wrapper input:focus, .editor-styles-wrapper select:focus, .editor-styles-wrapper textarea:focus{
 	background-color:#fff;
 	border-color:#2982b9;
 	border-color:var(--color-1);
+	box-shadow:0 0 1px 0 #2982b9;
+	box-shadow:0 0 1px 0 var(--color-1);
 }
 .editor-styles-wrapper input[type="file"]{
 	border:none;
