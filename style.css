@@ -1535,6 +1535,11 @@ ul.menu__items {
 	padding: 0;
 }
 
+.comments {
+	margin-top: calc(1.5 * 1.5rem);
+	margin-top: var(--gutter);
+}
+
 .comment-respond__form {
 	display: flex;
 	flex-wrap: wrap;

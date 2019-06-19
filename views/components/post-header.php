@@ -1,6 +1,6 @@
 <?php if ( is_home() || is_front_page() ) {	return; } ?>
 
-<header class="entry__header u-content-width">
+<header class="entry__header">
 
 	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
 

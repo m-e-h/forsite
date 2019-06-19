@@ -2,7 +2,7 @@
 	return;
 } ?>
 
-<section id="comments" class="comments u-content-wrap">
+<section id="comments" class="comments">
 
 	<?php if ( have_comments() ) : ?>
 

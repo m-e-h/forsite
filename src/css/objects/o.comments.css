@@ -1,3 +1,7 @@
+.comments {
+	margin-top: var(--gutter);
+}
+
 .comment-respond__form {
 	display: flex;
 	flex-wrap: wrap;

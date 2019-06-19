@@ -12,6 +12,6 @@
 
 	<?= Hybrid\View\render( 'components', 'post-footer' ); ?>
 
-</article>
+	<?php comments_template() ?>
 
-<?php comments_template() ?>
+</article>

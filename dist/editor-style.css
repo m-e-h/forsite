@@ -1180,6 +1180,10 @@
 .editor-styles-wrapper .breadcrumbs a{
 		padding:0;
 	}
+.editor-styles-wrapper .comments{
+	margin-top:calc(1.5 * 1.5rem);
+	margin-top:var(--gutter);
+}
 .editor-styles-wrapper .comment-respond__form{
 	display:flex;
 	flex-wrap:wrap;
