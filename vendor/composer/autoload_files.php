@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '77c7b76f4dcd3556a40cd339441c5cce' => $vendorDir . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
+    'c63d25cb66ea792ddf16ba3c9336aa4c' => $vendorDir . '/justintadlock/hybrid-font/src/bootstrap-font.php',
 );

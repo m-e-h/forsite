@@ -8,6 +8,7 @@ class ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d
 {
     public static $files = array (
         '77c7b76f4dcd3556a40cd339441c5cce' => __DIR__ . '/..' . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
+        'c63d25cb66ea792ddf16ba3c9336aa4c' => __DIR__ . '/..' . '/justintadlock/hybrid-font/src/bootstrap-font.php',
     );
 
     public static $prefixLengthsPsr4 = array (

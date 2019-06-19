@@ -211,5 +211,49 @@
         "keywords": [
             "wordpress"
         ]
+    },
+    {
+        "name": "justintadlock/hybrid-font",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/justintadlock/hybrid-font.git",
+            "reference": "c30c5431c659fb77b95b759dea8a4a8374c8bc8a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/justintadlock/hybrid-font/zipball/c30c5431c659fb77b95b759dea8a4a8374c8bc8a",
+            "reference": "c30c5431c659fb77b95b759dea8a4a8374c8bc8a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "time": "2019-05-15T15:17:21+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/bootstrap-font.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Justin Tadlock",
+                "email": "justintadlock@gmail.com",
+                "homepage": "http://justintadlock.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Helper functions for loading font stylesheets in WordPress themes.",
+        "homepage": "https://github.com/justintadlock/hybrid-font",
+        "keywords": [
+            "wordpress"
+        ]
     }
 ]
