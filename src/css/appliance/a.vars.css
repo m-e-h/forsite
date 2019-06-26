@@ -26,10 +26,10 @@
 	--h6: 0.875rem;
 	--line-height: var(--base-line);
 	--reading-line-height: 1.625;
-	--heading-line-height: normal;
-	--input-height: 2.5rem;
-	--button-padding: 0.65em 1em;
-	--input-padding: 0.65em 0.5em;
+	--heading-line-height: 1.25;
+	--input-height: 2.5em;
+	--input-padding: 0.625em;
+	--button-padding: var(--input-padding) calc(var(--input-padding) * 2);
 
 	@media (--sm_down) {
 		--h0: 2.5rem;

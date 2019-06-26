@@ -6,9 +6,8 @@
 	min-height: var(--input-height);
 	border: 2px solid transparent;
 	border-radius: var(--border-radius);
-	display: inline-flex;
-	align-items: center;
-	line-height: normal;
+	display: inline-block;
+	line-height: var(--heading-line-height);
 	cursor: pointer;
 	transition-duration: var(--timing);
 	transition-timing-function: var(--ease);

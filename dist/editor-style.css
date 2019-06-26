@@ -14,10 +14,10 @@
 	--h6:0.875rem;
 	--line-height:var(--base-line);
 	--reading-line-height:1.625;
-	--heading-line-height:normal;
-	--input-height:2.5rem;
-	--button-padding:0.65em 1em;
-	--input-padding:0.65em 0.5em;
+	--heading-line-height:1.25;
+	--input-height:2.5em;
+	--input-padding:0.625em;
+	--button-padding:var(--input-padding) calc(var(--input-padding) * 2);
 	--min-font:0.95;
 	--min-font-size:0.95rem;
 	--max-font:1.1875;
@@ -175,7 +175,7 @@
 	font-size:var(--h6);
 	margin:0;
 	padding:0.5rem 0.125em;
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper time{
@@ -200,25 +200,25 @@
 .editor-styles-wrapper h1{
 	font-size:calc(1.5 * 2rem);
 	font-size:var(--h1);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper h2{
 	font-size:calc(1.5 * 1.5rem);
 	font-size:var(--h2);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper h3{
 	font-size:calc(1.5 * 1.25rem);
 	font-size:var(--h3);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper h4{
 	font-size:calc(1.5 * 1rem);
 	font-size:var(--h4);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper h5{
@@ -392,7 +392,7 @@
 .editor-styles-wrapper code{
 	font-family:"Roboto Mono", menlo, monaco, consolas, "Liberation Mono", monospace;
 	font-family:var(--monospace-font-family);
-	padding:0.1em 0.15em 0;
+	padding:0.1em 0.15em;
 	font-size:0.875rem;
 	font-size:var(--h6);
 }
@@ -430,16 +430,16 @@
 	background-color:rgba(206, 212, 218, 0.9);
 	background-color:var(--color-shade-4);
 	font-size:0.9rem;
-	padding:0.65em 1em;
+	padding:0.625em calc(0.625em * 2);
 	padding:var(--button-padding);
-	min-height:2.5rem;
+	min-height:2.5em;
 	min-height:var(--input-height);
 	border:2px solid transparent;
 	border-radius:3px;
 	border-radius:var(--border-radius);
-	display:inline-flex;
-	align-items:center;
-	line-height:normal;
+	display:inline-block;
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 	cursor:pointer;
 	transition-duration:0.16s;
 	transition-duration:var(--timing);
@@ -499,23 +499,24 @@
 	display:block;
 	border:2px solid rgba(248, 249, 250, 0.9);
 	border:2px solid var(--color-frost-4);
-	padding-left:1em;
+	padding-left:1rem;
 	margin-bottom:calc(1.5 * 1rem);
 	margin-bottom:var(--base-space);
 }
 .editor-styles-wrapper details[open]{
-	padding-bottom:0.5em;
+	padding-bottom:0.5rem;
 }
 .editor-styles-wrapper summary{
 	display:list-item;
 	background-color:rgba(248, 249, 250, 0.5);
 	background-color:var(--color-frost-3);
 	font-weight:bolder;
-	padding:0.5em 1em;
-	margin-left:-1em;
+	padding:0.5rem 1rem;
+	margin-left:-1rem;
+	max-width:calc(100% + 1rem);
 }
 .editor-styles-wrapper details[open] summary{
-	margin-bottom:0.5em;
+	margin-bottom:0.5rem;
 }
 .editor-styles-wrapper nav ol,
 .editor-styles-wrapper nav ul{
@@ -532,9 +533,9 @@
 .editor-styles-wrapper nav a{
 	display:block;
 	text-decoration:none;
-	padding:0.65em 1em;
+	padding:0.625em calc(0.625em * 2);
 	padding:var(--button-padding);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper header nav > ul{
@@ -709,7 +710,7 @@
 	display:inline-flex;
 	align-items:center;
 	line-height:normal;
-	min-height:2.5rem;
+	min-height:2.5em;
 	min-height:var(--input-height);
 }
 .editor-styles-wrapper input:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]),
@@ -722,7 +723,7 @@
 	border-color:#ced4da;
 	border-color:var(--color-gray);
 	border-style:solid;
-	padding:0.65em 0.5em;
+	padding:0.625em;
 	padding:var(--input-padding);
 	background-color:rgba(206, 212, 218, 0.1);
 	background-color:var(--input-bg-color);
@@ -869,7 +870,7 @@
 .editor-styles-wrapper label:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]){
 	font-size:0.875rem;
 	font-size:var(--h6);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 	display:block;
 	margin:0.25rem 0 !important;
@@ -920,7 +921,7 @@
 .editor-styles-wrapper .app-header__title,
 .editor-styles-wrapper .app-header__description{
 	margin:0 0.5rem;
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .app-header__logo{
@@ -1040,16 +1041,16 @@
 	background-color:rgba(206, 212, 218, 0.9);
 	background-color:var(--color-shade-4);
 	font-size:0.9rem;
-	padding:0.65em 1em;
+	padding:0.625em calc(0.625em * 2);
 	padding:var(--button-padding);
-	min-height:2.5rem;
+	min-height:2.5em;
 	min-height:var(--input-height);
 	border:2px solid transparent;
 	border-radius:3px;
 	border-radius:var(--border-radius);
-	display:inline-flex;
-	align-items:center;
-	line-height:normal;
+	display:inline-block;
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 	cursor:pointer;
 	transition-duration:0.16s;
 	transition-duration:var(--timing);
@@ -1222,6 +1223,10 @@
 }
 .editor-styles-wrapper .comment__meta{
 	margin:0 1rem;
+}
+.editor-styles-wrapper .comment-reply-link{
+	font-size:0.875rem;
+	font-size:var(--h6);
 }
 .editor-styles-wrapper .wp-block-cover{
 	color:#fff;
@@ -2328,7 +2333,7 @@
 .editor-styles-wrapper .has-large-font-size{
 	font-size:calc(1.5 * 1.5rem);
 	font-size:var(--h2);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .u-h1,
@@ -2336,25 +2341,25 @@
 .editor-styles-wrapper .has-huge-font-size{
 	font-size:calc(1.5 * 2rem);
 	font-size:var(--h1);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .u-h0{
 	font-size:3.5rem;
 	font-size:var(--h0);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .u-h3{
 	font-size:calc(1.5 * 1.25rem);
 	font-size:var(--h3);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .u-h4{
 	font-size:calc(1.5 * 1rem);
 	font-size:var(--h4);
-	line-height:normal;
+	line-height:1.25;
 	line-height:var(--heading-line-height);
 }
 .editor-styles-wrapper .u-lh-1{
@@ -3100,16 +3105,16 @@
 	background-color:rgba(206, 212, 218, 0.9);
 	background-color:var(--color-shade-4);
 	font-size:0.9rem;
-	padding:0.65em 1em;
+	padding:0.625em calc(0.625em * 2);
 	padding:var(--button-padding);
-	min-height:2.5rem;
+	min-height:2.5em;
 	min-height:var(--input-height);
 	border:2px solid transparent;
 	border-radius:3px;
 	border-radius:var(--border-radius);
-	display:inline-flex;
-	align-items:center;
-	line-height:normal;
+	display:inline-block;
+	line-height:1.25;
+	line-height:var(--heading-line-height);
 	cursor:pointer;
 	transition-duration:0.16s;
 	transition-duration:var(--timing);
@@ -3129,7 +3134,7 @@
 }
 .editor-styles-wrapper :root .gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
 .editor-styles-wrapper :root:root .gform_wrapper select{
-	padding:0.65em 0.5em;
+	padding:0.625em;
 	padding:var(--input-padding);
 	line-height:normal;
 }

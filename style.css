@@ -27,10 +27,10 @@
 	--h6: 0.875rem;
 	--line-height: var(--base-line);
 	--reading-line-height: 1.625;
-	--heading-line-height: normal;
-	--input-height: 2.5rem;
-	--button-padding: 0.65em 1em;
-	--input-padding: 0.65em 0.5em;
+	--heading-line-height: 1.25;
+	--input-height: 2.5em;
+	--input-padding: 0.625em;
+	--button-padding: var(--input-padding) calc(var(--input-padding) * 2);
 	--min-font: 0.95;
 	--min-font-size: 0.95rem;
 	--max-font: 1.1875;
@@ -276,7 +276,7 @@ figcaption {
 	font-size: var(--h6);
 	margin: 0;
 	padding: 0.5rem 0.125em;
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -305,28 +305,28 @@ mark {
 h1 {
 	font-size: calc(1.5 * 2rem);
 	font-size: var(--h1);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 h2 {
 	font-size: calc(1.5 * 1.5rem);
 	font-size: var(--h2);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 h3 {
 	font-size: calc(1.5 * 1.25rem);
 	font-size: var(--h3);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 h4 {
 	font-size: calc(1.5 * 1rem);
 	font-size: var(--h4);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -558,7 +558,7 @@ code {
 	font-family: "Roboto Mono", menlo, monaco, consolas, "Liberation Mono",
 		monospace;
 	font-family: var(--monospace-font-family);
-	padding: 0.1em 0.15em 0;
+	padding: 0.1em 0.15em;
 	font-size: 0.875rem;
 	font-size: var(--h6);
 }
@@ -604,16 +604,16 @@ input[type="submit"] {
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
-	padding: 0.65em 1em;
+	padding: 0.625em calc(0.625em * 2);
 	padding: var(--button-padding);
-	min-height: 2.5rem;
+	min-height: 2.5em;
 	min-height: var(--input-height);
 	border: 2px solid transparent;
 	border-radius: 3px;
 	border-radius: var(--border-radius);
-	display: inline-flex;
-	align-items: center;
-	line-height: normal;
+	display: inline-block;
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 	cursor: pointer;
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -702,13 +702,13 @@ details {
 	display: block;
 	border: 2px solid rgba(248, 249, 250, 0.9);
 	border: 2px solid var(--color-frost-4);
-	padding-left: 1em;
+	padding-left: 1rem;
 	margin-bottom: calc(1.5 * 1rem);
 	margin-bottom: var(--base-space);
 }
 
 details[open] {
-	padding-bottom: 0.5em;
+	padding-bottom: 0.5rem;
 }
 
 summary {
@@ -716,12 +716,13 @@ summary {
 	background-color: rgba(248, 249, 250, 0.5);
 	background-color: var(--color-frost-3);
 	font-weight: bolder;
-	padding: 0.5em 1em;
-	margin-left: -1em;
+	padding: 0.5rem 1rem;
+	margin-left: -1rem;
+	max-width: calc(100% + 1rem);
 }
 
 details[open] summary {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.5rem;
 }
 
 nav ol,
@@ -741,9 +742,9 @@ nav li {
 nav a {
 	display: block;
 	text-decoration: none;
-	padding: 0.65em 1em;
+	padding: 0.625em calc(0.625em * 2);
 	padding: var(--button-padding);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -942,7 +943,7 @@ select {
 	display: inline-flex;
 	align-items: center;
 	line-height: normal;
-	min-height: 2.5rem;
+	min-height: 2.5em;
 	min-height: var(--input-height);
 }
 
@@ -956,7 +957,7 @@ textarea {
 	border-color: #ced4da;
 	border-color: var(--color-gray);
 	border-style: solid;
-	padding: 0.65em 0.5em;
+	padding: 0.625em;
 	padding: var(--input-padding);
 	background-color: rgba(206, 212, 218, 0.1);
 	background-color: var(--input-bg-color);
@@ -1143,7 +1144,7 @@ dialog:not([open]) {
 label {
 	font-size: 0.875rem;
 	font-size: var(--h6);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 	display: block;
 	margin: 0.25rem 0 !important;
@@ -1208,7 +1209,7 @@ figure {
 .app-header__title,
 .app-header__description {
 	margin: 0 0.5rem;
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -1355,16 +1356,16 @@ a.post-thumbnail {
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
-	padding: 0.65em 1em;
+	padding: 0.625em calc(0.625em * 2);
 	padding: var(--button-padding);
-	min-height: 2.5rem;
+	min-height: 2.5em;
 	min-height: var(--input-height);
 	border: 2px solid transparent;
 	border-radius: 3px;
 	border-radius: var(--border-radius);
-	display: inline-flex;
-	align-items: center;
-	line-height: normal;
+	display: inline-block;
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 	cursor: pointer;
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -1587,6 +1588,11 @@ ul.children {
 
 .comment__meta {
 	margin: 0 1rem;
+}
+
+.comment-reply-link {
+	font-size: 0.875rem;
+	font-size: var(--h6);
 }
 
 .wp-block-cover {
@@ -2922,7 +2928,7 @@ blockquote.wp-block-quote.wp-block-quote.is-style-large {
 .has-large-font-size {
 	font-size: calc(1.5 * 1.5rem);
 	font-size: var(--h2);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -2931,28 +2937,28 @@ blockquote.wp-block-quote.wp-block-quote.is-style-large {
 .has-huge-font-size {
 	font-size: calc(1.5 * 2rem);
 	font-size: var(--h1);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h0 {
 	font-size: 3.5rem;
 	font-size: var(--h0);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h3 {
 	font-size: calc(1.5 * 1.25rem);
 	font-size: var(--h3);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
 .u-h4 {
 	font-size: calc(1.5 * 1rem);
 	font-size: var(--h4);
-	line-height: normal;
+	line-height: 1.25;
 	line-height: var(--heading-line-height);
 }
 
@@ -3865,16 +3871,16 @@ article .gform_wrapper {
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
-	padding: 0.65em 1em;
+	padding: 0.625em calc(0.625em * 2);
 	padding: var(--button-padding);
-	min-height: 2.5rem;
+	min-height: 2.5em;
 	min-height: var(--input-height);
 	border: 2px solid transparent;
 	border-radius: 3px;
 	border-radius: var(--border-radius);
-	display: inline-flex;
-	align-items: center;
-	line-height: normal;
+	display: inline-block;
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
 	cursor: pointer;
 	transition-duration: 0.16s;
 	transition-duration: var(--timing);
@@ -3901,7 +3907,7 @@ article .gform_wrapper {
 	.gform_wrapper
 	input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
 :root:root .gform_wrapper select {
-	padding: 0.65em 0.5em;
+	padding: 0.625em;
 	padding: var(--input-padding);
 	line-height: normal;
 }

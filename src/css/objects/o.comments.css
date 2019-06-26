@@ -46,3 +46,7 @@ ul.children {
 .comment__meta {
 	margin: 0 1rem;
 }
+
+.comment-reply-link {
+	font-size: var(--h6);
+}

@@ -54,22 +54,23 @@ dfn {
 details {
 	display: block;
 	border: 2px solid var(--color-frost-4);
-	padding-left: 1em;
+	padding-left: 1rem;
 	margin-bottom: var(--base-space);
 }
 
 details[open] {
-	padding-bottom: 0.5em;
+	padding-bottom: 0.5rem;
 }
 
 summary {
 	display: list-item;
 	background-color: var(--color-frost-3);
 	font-weight: bolder;
-	padding: 0.5em 1em;
-	margin-left: -1em;
+	padding: 0.5rem 1rem;
+	margin-left: -1rem;
+	max-width: calc(100% + 1rem);
 }
 
 details[open] summary {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.5rem;
 }
