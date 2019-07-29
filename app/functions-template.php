@@ -57,7 +57,7 @@ add_action(
 	function( $templates ) {
 
 		$templates->add(
-			'full-width.php',
+			'template-full-width.php',
 			[
 				'label'      => __( 'Full Width' ),
 			]
