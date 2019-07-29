@@ -1099,7 +1099,6 @@ dialog {
 	color: #24292e;
 	color: var(--color-text);
 	display: block;
-	height: -moz-fit-content;
 	height: -webkit-fit-content;
 	height: fit-content;
 	left: 0;
@@ -1107,7 +1106,6 @@ dialog {
 	padding: 1em;
 	position: absolute;
 	right: 0;
-	width: -moz-fit-content;
 	width: -webkit-fit-content;
 	width: fit-content;
 }
@@ -1128,11 +1126,11 @@ dialog:not([open]) {
 	cursor: pointer;
 }
 
-:disabled,
-[readonly],
-[aria-disabled="true"],
-[disabled],
-[readonly]:focus {
+*:disabled,
+*[readonly],
+*[aria-disabled="true"],
+*[disabled],
+*[readonly]:focus {
 	cursor: not-allowed;
 	pointer-events: none;
 	border-color: transparent !important;
@@ -1428,6 +1426,15 @@ table.is-style-stripes.is-style-stripes {
 
 table.has-fixed-layout {
 	table-layout: fixed;
+}
+
+.dataTables_wrapper {
+	overflow-x: auto;
+}
+
+.dataTable {
+	font-size: 0.875rem;
+	font-size: var(--h6);
 }
 
 .wp-block-embed__wrapper {
