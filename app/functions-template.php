@@ -52,6 +52,20 @@ add_action(
 	}
 );
 
+add_action(
+	'hybrid/templates/register',
+	function( $templates ) {
+
+		$templates->add(
+			'full-width.php',
+			[
+				'label'      => __( 'Full Width' ),
+			]
+		);
+
+	}
+);
+
 function render_if( $condition = false, $is = true, $class = false ) {
 	if ( $condition == $is ) {
 		return $class;
@@ -114,24 +128,30 @@ function default_header_bg_color( $color = 0 ) {
 	);
 }
 
-add_filter( 'hybrid/attr/post/class/taxonomy', function( $taxonomies ) {
+add_filter(
+	'hybrid/attr/post/class/taxonomy',
+	function( $taxonomies ) {
 
-    $taxonomies[] = 'category';
+		$taxonomies[] = 'category';
 
-    return $taxonomies;
-} );
+		return $taxonomies;
+	}
+);
 
 
-add_filter( 'post_class', function( $classes ) {
+add_filter(
+	'post_class',
+	function( $classes ) {
 
-    $author_class = sprintf( 'entry--author-%s', get_the_author_meta( 'user_nicename' ) );
+		$author_class = sprintf( 'entry--author-%s', get_the_author_meta( 'user_nicename' ) );
 
-    $key = array_search( $author_class, $classes );
+		$key = array_search( $author_class, $classes );
 
-    if ( $key ) {
-        unset( $classes[ $key ] );
-    }
+		if ( $key ) {
+			unset( $classes[ $key ] );
+		}
 
-    return $classes;
+		return $classes;
 
-} );
+	}
+);
