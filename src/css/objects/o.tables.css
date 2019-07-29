@@ -10,3 +10,11 @@ table.is-style-stripes.is-style-stripes {
 table.has-fixed-layout {
 	table-layout: fixed;
 }
+
+.dataTables_wrapper {
+	overflow-x: auto;
+}
+
+.dataTable {
+	font-size: var(--h6);
+}

@@ -425,7 +425,10 @@
 	border:1px solid rgba(52, 58, 64, 0.5);
 	border:1px solid var(--color-tint-3);
 }
-.editor-styles-wrapper button:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]), .editor-styles-wrapper input[type="button"], .editor-styles-wrapper input[type="reset"], .editor-styles-wrapper input[type="submit"]{
+.editor-styles-wrapper button:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]),
+.editor-styles-wrapper input[type="button"],
+.editor-styles-wrapper input[type="reset"],
+.editor-styles-wrapper input[type="submit"]{
 	color:inherit;
 	background-color:rgba(206, 212, 218, 0.9);
 	background-color:var(--color-shade-4);
@@ -448,11 +451,18 @@
 	transition-property:color, border-color, opacity, background-color, box-shadow;
 	transition-property:var(--transition-props);
 }
-.editor-styles-wrapper button:hover, .editor-styles-wrapper button:focus, .editor-styles-wrapper input[type="button"]:hover, .editor-styles-wrapper input[type="button"]:focus, .editor-styles-wrapper input[type="reset"]:hover, .editor-styles-wrapper input[type="reset"]:focus, .editor-styles-wrapper input[type="submit"]:hover, .editor-styles-wrapper input[type="submit"]:focus{
-	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
-	box-shadow:var(--hover-shadow);
-	border-color:rgba(52, 58, 64, 0.1);
-	border-color:var(--hover-color);
+.editor-styles-wrapper button:hover,
+.editor-styles-wrapper button:focus,
+.editor-styles-wrapper input[type="button"]:hover,
+.editor-styles-wrapper input[type="button"]:focus,
+.editor-styles-wrapper input[type="reset"]:hover,
+.editor-styles-wrapper input[type="reset"]:focus,
+.editor-styles-wrapper input[type="submit"]:hover,
+.editor-styles-wrapper input[type="submit"]:focus{
+		box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
+		box-shadow:var(--hover-shadow);
+		border-color:rgba(52, 58, 64, 0.1);
+		border-color:var(--hover-color);
 }
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol,
@@ -843,7 +853,6 @@
 	color:#24292e;
 	color:var(--color-text);
 	display:block;
-	height:-moz-fit-content;
 	height:-webkit-fit-content;
 	height:fit-content;
 	left:0;
@@ -851,7 +860,6 @@
 	padding:1em;
 	position:absolute;
 	right:0;
-	width:-moz-fit-content;
 	width:-webkit-fit-content;
 	width:fit-content;
 }
@@ -866,6 +874,18 @@
 }
 .editor-styles-wrapper [aria-controls]{
 	cursor:pointer;
+}
+.editor-styles-wrapper *:disabled,
+.editor-styles-wrapper *[readonly],
+.editor-styles-wrapper *[aria-disabled="true"],
+.editor-styles-wrapper *[disabled],
+.editor-styles-wrapper *[readonly]:focus{
+	cursor:not-allowed;
+	pointer-events:none;
+	border-color:transparent !important;
+	background-color:rgba(248, 249, 250, 0.9) !important;
+	background-color:var(--color-frost-4) !important;
+	opacity:0.5;
 }
 .editor-styles-wrapper label:not([class^="components-"]):not([class^="editor-"]):not([class^="block-"]):not([aria-owns]):not([id^="mceu_"]){
 	font-size:0.875rem;
@@ -1036,7 +1056,10 @@
 .editor-styles-wrapper .avatar{
 	border-radius:50%;
 }
-.editor-styles-wrapper .btn, .editor-styles-wrapper .button, .editor-styles-wrapper .wp-block-button__link, .editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button{
+.editor-styles-wrapper .btn,
+.editor-styles-wrapper .button,
+.editor-styles-wrapper .wp-block-button__link,
+.editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button{
 	color:inherit;
 	background-color:rgba(206, 212, 218, 0.9);
 	background-color:var(--color-shade-4);
@@ -1059,11 +1082,18 @@
 	transition-property:color, border-color, opacity, background-color, box-shadow;
 	transition-property:var(--transition-props);
 }
-.editor-styles-wrapper .btn:hover, .editor-styles-wrapper .btn:focus, .editor-styles-wrapper .button:hover, .editor-styles-wrapper .button:focus, .editor-styles-wrapper .wp-block-button__link:hover, .editor-styles-wrapper .wp-block-button__link:focus, .editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:hover, .editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:focus{
-	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
-	box-shadow:var(--hover-shadow);
-	border-color:rgba(52, 58, 64, 0.1);
-	border-color:var(--hover-color);
+.editor-styles-wrapper .btn:hover,
+.editor-styles-wrapper .btn:focus,
+.editor-styles-wrapper .button:hover,
+.editor-styles-wrapper .button:focus,
+.editor-styles-wrapper .wp-block-button__link:hover,
+.editor-styles-wrapper .wp-block-button__link:focus,
+.editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:hover,
+.editor-styles-wrapper :root:root .wp-block-file .wp-block-file__button:focus{
+		box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
+		box-shadow:var(--hover-shadow);
+		border-color:rgba(52, 58, 64, 0.1);
+		border-color:var(--hover-color);
 }
 .editor-styles-wrapper .btn:hover, .editor-styles-wrapper .button:hover, .editor-styles-wrapper .btn:focus, .editor-styles-wrapper .button:focus{
 	color:inherit;
@@ -1094,6 +1124,13 @@
 }
 .editor-styles-wrapper table.has-fixed-layout{
 	table-layout:fixed;
+}
+.editor-styles-wrapper .dataTables_wrapper{
+	overflow-x:auto;
+}
+.editor-styles-wrapper .dataTable{
+	font-size:0.875rem;
+	font-size:var(--h6);
 }
 .editor-styles-wrapper .wp-block-embed__wrapper{
 	position:relative;
@@ -3124,10 +3161,10 @@
 	transition-property:var(--transition-props);
 }
 .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:hover, .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:focus{
-	box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
-	box-shadow:var(--hover-shadow);
-	border-color:rgba(52, 58, 64, 0.1);
-	border-color:var(--hover-color);
+		box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
+		box-shadow:var(--hover-shadow);
+		border-color:rgba(52, 58, 64, 0.1);
+		border-color:var(--hover-color);
 }
 .editor-styles-wrapper :root:root .gform_body{
 	font-size:0.9rem;

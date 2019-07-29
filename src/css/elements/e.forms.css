@@ -227,11 +227,11 @@ dialog:not([open]) {
   * inoperable elements in all browsers (opinionated).
   */
 
-:disabled,
-[readonly],
-[aria-disabled="true"],
-[disabled],
-[readonly]:focus {
+*:disabled,
+*[readonly],
+*[aria-disabled="true"],
+*[disabled],
+*[readonly]:focus {
 	cursor: not-allowed;
 	pointer-events: none;
 	border-color: transparent !important;
