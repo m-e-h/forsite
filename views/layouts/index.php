@@ -7,6 +7,6 @@
 	</header>
 
 	<div class="archive-entry__content">
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	</div>
 </article>
