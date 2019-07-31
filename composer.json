@@ -1,29 +1,28 @@
 {
-	"name": "martyhelmick/forsite",
-	"type": "wordpress-theme",
-	"description": "A started starter theme for WordPress",
-	"keywords": [
-		"wordpress"
-	],
-	"homepage": "https://github.com/m-e-h/forsite",
-	"license": "GPL-2.0-or-later",
-	"authors": [
-		{
-			"name": "Marty Helmick",
-			"email": "info@martyhelmick.com",
-			"homepage": "https://github.com/m-e-h"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Forsite\\": "app/"
-		}
-	},
-	"require": {
-		"php": ">=5.6",
-		"composer/installers": "~1.0",
-		"justintadlock/hybrid-core": "^5.0.0",
+  "name": "martyhelmick/forsite",
+  "type": "wordpress-theme",
+  "description": "A started starter theme for WordPress",
+  "keywords": [
+    "wordpress"
+  ],
+  "homepage": "https://github.com/m-e-h/forsite",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Marty Helmick",
+      "email": "info@martyhelmick.com",
+      "homepage": "https://github.com/m-e-h"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Forsite\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+    "justintadlock/hybrid-core": "^5.1",
     "justintadlock/hybrid-breadcrumbs": "^1.0",
-    "justintadlock/hybrid-font": "^1.0"
-	}
+    "justintadlock/hybrid-font": "^1.1"
+  }
 }

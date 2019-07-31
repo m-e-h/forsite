@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d
+class ComposerStaticInit8375040387a840c6790d0fbcae131fb9
 {
     public static $files = array (
         '77c7b76f4dcd3556a40cd339441c5cce' => __DIR__ . '/..' . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
@@ -21,10 +21,6 @@ class ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d
         array (
             'Forsite\\' => 8,
         ),
-        'C' => 
-        array (
-            'Composer\\Installers\\' => 20,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -40,17 +36,13 @@ class ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-        'Composer\\Installers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit73cfed49f316cd89c4d40feddfb2c04d::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8375040387a840c6790d0fbcae131fb9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8375040387a840c6790d0fbcae131fb9::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
