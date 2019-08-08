@@ -1,4 +1,4 @@
-module.exports = ctx => ({
+module.exports = ( ctx ) => ( {
 	map: 'development' === ctx.env ? { inline: false } : false,
 	plugins: {
 		'postcss-import': {},
@@ -8,11 +8,14 @@ module.exports = ctx => ({
 			stage: 0,
 			features: {
 				'color-mod-function': true,
-				'all-property': false
-			}
+				'all-property': false,
+			},
 		},
 		'postcss-extend-rule': {},
-		'postcss-discard-comments': 'production' === ctx.env ? { removeAll: true } : { removeAll: false },
+		'postcss-discard-comments':
+			'production' === ctx.env ?
+				{ removeAll: true } :
+				{ removeAll: false },
 		'postcss-discard-empty': {},
 		'postcss-editor-styles':
 			'editor' === ctx.env ?
@@ -21,10 +24,10 @@ module.exports = ctx => ({
 						'html',
 						':disabled',
 						'[readonly]',
-						'[disabled]'
-					]
+						'[disabled]',
+					],
 				} :
 				false,
-		cssnano: 'production' === ctx.env ? { preset: 'default' } : false
-	}
-});
+		cssnano: 'production' === ctx.env ? { preset: 'default' } : false,
+	},
+} );

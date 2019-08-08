@@ -12,6 +12,7 @@
 namespace Forsite;
 
 use Hybrid\App;
+use function Hybrid\Font\enqueue as enqueue_font;
 
 /**
  * Enqueue scripts/styles for the front end.
@@ -40,6 +41,14 @@ add_action(
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		// Hybrid Fonts https://github.com/justintadlock/hybrid-font
+		enqueue_font( 'forsite', [
+			'family' => [
+				'open-sans'      => 'Open+Sans:300,300i,400,400i,600,600i,700,700i'
+			],
+			'display' => 'swap'
+		] );
 
 	}
 );

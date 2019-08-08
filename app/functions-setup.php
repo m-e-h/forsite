@@ -42,7 +42,7 @@ add_action(
 		add_theme_support( 'title-tag' );
 
 		// Automatically add feed links to `<head>`.
-		add_theme_support( 'automatic-feed-links' );
+		// add_theme_support( 'automatic-feed-links' );
 
 		// Adds featured image support.
 		add_theme_support( 'post-thumbnails' );
@@ -70,17 +70,23 @@ add_action(
 			[
 				'height'      => 180,
 				'width'       => 180,
-				'flex-width'  => false,
-				'flex-height' => false,
+				'flex-width'  => true,
+				'flex-height' => true,
+				'header-text' => [
+					'app-header__title',
+					'app-header__description',
+				],
 			]
 		);
 
-		add_theme_support(
-			'custom-header',
-			[
-				'default-text-color' => '24292e',
-			]
-		);
+		// add_theme_support(
+		// 	'custom-header',
+		// 	[
+		// 		'default-text-color' => '24292e',
+		// 		'uploads'                => false,
+		// 		'header-text'            => true,
+		// 	]
+		// );
 
 		add_theme_support(
 			'custom-background',
@@ -91,7 +97,7 @@ add_action(
 				'default-size'       => 'cover',
 				'default-repeat'     => 'no-repeat',
 				'default-attachment' => 'fixed',
-				'default-color'      => 'ffffff',
+				'default-color'      => default_background_color(),
 			]
 		);
 
@@ -107,9 +113,9 @@ add_action(
 					'comment'    => '.entry__comments-count',
 				],
 				'featured-images' => [
-					'archive'    => true,
-					'post'       => true,
-					'page'       => true,
+					'archive' => true,
+					'post'    => true,
+					'page'    => true,
 				],
 			]
 		);

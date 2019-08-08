@@ -1,66 +1,78 @@
-const siteBranding = document.querySelector( '.app-header__branding' );
+const siteHeader = document.querySelector( '.app-header' );
 const siteTitle = document.querySelector( '.app-header__title' );
 const siteDesc = document.querySelector( '.app-header__description' );
 const siteCrumbs = document.querySelector( '.breadcrumbs' );
 
-let root = document.documentElement;
+const root = document.documentElement;
 
 // Site title.
-wp.customize( 'blogname', value => {
-	value.bind( to => {
+wp.customize( 'blogname', ( value ) => {
+	value.bind( ( to ) => {
 		siteTitle.textContent = to;
-	});
-});
+	} );
+} );
 
 // Site description.
-wp.customize( 'blogdescription', value => {
-	value.bind( to => {
+wp.customize( 'blogdescription', ( value ) => {
+	value.bind( ( to ) => {
 		siteDesc.textContent = to;
-	});
-});
+	} );
+} );
 
 // Primary color.
-wp.customize( 'header_bg_color', value => {
-	value.bind( to => {
+wp.customize( 'header_bg_color', ( value ) => {
+	value.bind( ( to ) => {
 		root.style.setProperty( '--header-bg-color', to );
-	});
-});
+	} );
+} );
+
+wp.customize( 'foreground_color', ( value ) => {
+	value.bind( ( to ) => {
+		root.style.setProperty( '--foreground_color', to );
+	} );
+} );
 
 // Primary color.
-wp.customize( 'primary_color', value => {
-	value.bind( to => {
+wp.customize( 'primary_color', ( value ) => {
+	value.bind( ( to ) => {
 		root.style.setProperty( '--color-1', to );
-	});
-});
+	} );
+} );
 
 // Secondary color.
-wp.customize( 'accent_color', value => {
-	value.bind( to => {
+wp.customize( 'accent_color', ( value ) => {
+	value.bind( ( to ) => {
 		root.style.setProperty( '--color-2', to );
-	});
-});
+	} );
+} );
 
 // Header text.
-wp.customize( 'header_textcolor', value => {
-	value.bind( to => {
-		if ( 'blank' === to ) {
-			siteTitle.classList.add( 'screen-reader-text' );
-			siteDesc.classList.add( 'screen-reader-text' );
+wp.customize( 'header_color', ( value ) => {
+	value.bind( ( to ) => {
+		siteHeader.style.setProperty( '--header-text-color', to );
+	} );
+} );
+
+// Header text.
+wp.customize( 'header_text', ( value ) => {
+	value.bind( ( to ) => {
+		if ( false === to ) {
+			siteTitle.style.cssText = 'clip:rect(0 0 0 0);position:absolute';
+			siteDesc.style.cssText = 'clip:rect(0 0 0 0);position:absolute';
 		} else {
-			siteTitle.classList.remove( 'screen-reader-text' );
-			siteDesc.classList.remove( 'screen-reader-text' );
-			root.style.setProperty( '--header-text-color', to );
+			siteTitle.style.cssText = 'clip:unset;position:relative';
+			siteDesc.style.cssText = 'clip:unset;position:relative';
 		}
-	});
-});
+	} );
+} );
 
 // Header Breadcrumbs.
-wp.customize( 'forsite_breadcrumbs', value => {
-	value.bind( to => {
+wp.customize( 'forsite_breadcrumbs', ( value ) => {
+	value.bind( ( to ) => {
 		if ( false === to ) {
 			siteCrumbs.classList.add( 'screen-reader-text' );
 		} else {
 			siteCrumbs.classList.remove( 'screen-reader-text' );
 		}
-	});
-});
+	} );
+} );

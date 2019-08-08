@@ -30,7 +30,6 @@ add_action(
 
 		add_theme_support( 'align-wide' );
 
-		// Editor block font sizes.
 		add_theme_support(
 			'editor-font-sizes',
 			[
@@ -63,6 +62,67 @@ add_action(
 					'shortName' => __( 'XL' ),
 					'size'      => 40,
 					'slug'      => 'huge',
+				],
+			]
+		);
+
+		add_theme_support(
+			'editor-color-palette',
+			[
+				[
+					'name'  => __( 'Primary' ),
+					'slug'  => 'theme-primary',
+					'color' => get_theme_mod( 'primary_color', default_primary_color() ),
+				],
+				[
+					'name'  => __( 'Accent' ),
+					'slug'  => 'theme-secondary',
+					'color' => get_theme_mod( 'accent_color', default_accent_color() ),
+				],
+				[
+					'name'  => __( 'Site Background' ),
+					'slug'  => 'theme-background',
+					'color' => get_background_hex(),
+				],
+				[
+					'name'  => __( 'Site Foreground' ),
+					'slug'  => 'theme-foreground',
+					'color' => get_theme_mod( 'foreground_color', default_foreground_color() ),
+				],
+				[
+					'name'  => __( 'Red' ),
+					'slug'  => 'vivid-red',
+					'color' => '#e57278',
+				],
+				[
+					'name'  => __( 'Green' ),
+					'slug'  => 'vivid-green-cyan',
+					'color' => '#00cc55',
+				],
+				[
+					'name'  => __( 'Blue' ),
+					'slug'  => 'vivid-cyan-blue',
+					'color' => '#66b7f5',
+				],
+				[
+					'name'  => __( 'Yellow' ),
+					'slug'  => 'luminous-vivid-amber',
+					'color' => '#ffef79',
+				],
+				[
+					'name'  => __( 'Silver' ),
+					'slug'  => 'theme-silver',
+					'color' => '#dee2e6',
+				],
+				[
+					'name'  => __( 'Gray' ),
+					'slug'  => 'theme-gray',
+					'color' => '#adb5bd',
+				],
+				[
+					'name'  => __( 'Slate' ),
+					'slug'  => 'theme-slate',
+					'color' => '#495057',
 				],
 			]
 		);

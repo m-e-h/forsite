@@ -13,6 +13,7 @@ use Hybrid\Contracts\Bootable;
 use function Forsite\default_primary_color;
 use function Forsite\default_accent_color;
 use function Forsite\default_header_bg_color;
+use function Forsite\default_foreground_color;
 
 /**
  * Handles setting up everything we need for the customizer.
@@ -47,6 +48,28 @@ class Customize implements Bootable {
 	 */
 	public function registerControls( WP_Customize_Manager $wp_customize ) {
 
+		// Foreground text color.
+		$wp_customize->add_setting(
+			'foreground_color',
+			[
+				'default'           => default_foreground_color(),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'foreground_color',
+				[
+					'label'    => __( 'Foreground Color (text)' ),
+					'section'  => 'colors',
+					'settings' => 'foreground_color',
+				]
+			)
+		);
+
 		//Primary color.
 		$wp_customize->add_setting(
 			'primary_color',
@@ -62,7 +85,7 @@ class Customize implements Bootable {
 				$wp_customize,
 				'primary_color',
 				[
-					'label'    => __( 'Primary Theme Color' ),
+					'label'    => __( 'Primary Color' ),
 					'section'  => 'colors',
 					'settings' => 'primary_color',
 				]
@@ -113,6 +136,28 @@ class Customize implements Bootable {
 			)
 		);
 
+		// Header text color.
+		$wp_customize->add_setting(
+			'header_color',
+			[
+				'default'           => get_theme_mod( 'foreground_color', default_foreground_color() ),
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_hex_color',
+			]
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'header_color',
+				[
+					'label'    => __( 'Header Text Color' ),
+					'section'  => 'colors',
+					'settings' => 'header_color',
+				]
+			)
+		);
+
 		if ( ! $wp_customize->get_section( 'jetpack_content_options' ) ) {
 			$wp_customize->add_section(
 				'jetpack_content_options',
@@ -136,9 +181,9 @@ class Customize implements Bootable {
 		$wp_customize->add_control(
 			'forsite_breadcrumbs',
 			[
-				'label'    => __( 'Display Breadcrumbs' ),
-				'type'     => 'checkbox',
-				'section'  => 'jetpack_content_options',
+				'label'   => __( 'Display Breadcrumbs' ),
+				'type'    => 'checkbox',
+				'section' => 'jetpack_content_options',
 			]
 		);
 
@@ -153,9 +198,9 @@ class Customize implements Bootable {
 	 */
 	public function registerPartials( WP_Customize_Manager $wp_customize ) {
 
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'header_text' )->transport     = 'postMessage';
 
 		if ( ! isset( $wp_customize->selective_refresh ) ) {
 			return;

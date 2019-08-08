@@ -174,7 +174,7 @@
 }
 
 .has-vivid-red-background-color {
-	background-color: $red5;
+	background-color: var(--theme-red);
 }
 
 .has-luminous-vivid-orange-background-color {
@@ -182,7 +182,7 @@
 }
 
 .has-luminous-vivid-amber-background-color {
-	background-color: $yellow5;
+	background-color: var(--theme-yellow);
 }
 
 .has-light-green-cyan-background-color {
@@ -198,19 +198,23 @@
 }
 
 .has-vivid-cyan-blue-background-color {
-	background-color: $blue5;
+	background-color: var(--theme-blue);
+}
+
+.has-vivid-purple-background-color {
+	background-color: $violet5;
 }
 
 .has-very-light-gray-background-color {
-	background-color: $gray1;
+	background-color: var(--theme-silver);
 }
 
 .has-cyan-bluish-gray-background-color {
-	background-color: #abb8c3;
+	background-color: var(--theme-gray);
 }
 
 .has-very-dark-gray-background-color {
-	background-color: $gray8;
+	background-color: var(--theme-slate);
 }
 
 .has-pale-pink-color {

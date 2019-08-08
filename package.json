@@ -1,123 +1,123 @@
 {
-	"name": "forsite",
-	"version": "0.9.0",
-	"description": "A started starter theme for WordPress",
-	"author": "Marty Helmick",
-	"license": "GPL-2.0+",
-	"homepage": "https://github.com/m-e-h/forsite",
-	"scripts": {
-		"build": "run-s lint:css css pretty:css js",
-		"dev": "run-p watch:*",
-		"sync": "run-p watch:* bs:proxy",
-		"bs:proxy": "browser-sync 'http://one.wordpress.test' 'dist' 'src' 'app' 'views' -w",
-		"css": "run-p css:*",
-		"js": "run-p \"js:* -- --mode=production\"",
-		"lint": "run-s lint:*",
-		"watch:css": "run-p \"css:* -- --watch\"",
-		"watch:js": "run-p \"js:* -- --mode development -w\"",
-		"css:meta": "postcss src/css/main.css -o ./style.css --env development",
-		"css:main": "postcss src/css/main.css -d dist --env production",
-		"css:editor": "postcss src/css/editor-style.css -d dist --env editor",
-		"js:main": "webpack --module-bind js=babel-loader src/js/index.js",
-		"js:customizer": "webpack --module-bind js=babel-loader src/js/customize-view.js -o dist/customize-view.js",
-		"lint:css": "stylelint './src/css/**/*.css' --fix",
-		"lint:js": "eslint './src/js/**/*.js' --fix",
-		"pretty:css": "prettier --write 'style.css'",
-		"rename": "theme-claim"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/m-e-h/forsite.git"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.5.5",
-		"@babel/core": "^7.5.5",
-		"@babel/plugin-transform-runtime": "^7.5.5",
-		"@babel/preset-env": "^7.5.5",
-		"@wordpress/eslint-plugin": "^2.3.0",
-		"babel-eslint": "^10.0.2",
-		"babel-loader": "^8.0.6",
-		"browser-sync": "^2.26.7",
-		"browserslist": "^4.6.6",
-		"cssnano": "^4.1.10",
-		"eslint": "^6.1.0",
-		"npm-run-all": "^4.1.5",
-		"postcss-cli": "^6.1.3",
-		"postcss-discard-comments": "^4.0.2",
-		"postcss-discard-empty": "^4.0.1",
-		"postcss-editor-styles": "^0.1.5",
-		"postcss-extend-rule": "^3.0.0",
-		"postcss-import": "^12.0.1",
-		"postcss-nested": "4.1.2",
-		"postcss-preset-env": "^6.7.0",
-		"postcss-simple-vars": "^5.0.2",
-		"prettier": "^1.18.2",
-		"stylelint": "^10.1.0",
-		"stylelint-config-standard": "^18.3.0",
-		"theme-claim": "^0.2.0",
-		"webpack": "^4.38.0",
-		"webpack-cli": "^3.3.6"
-	},
-	"babel": {
-		"presets": [
-			"@babel/env"
-		]
-	},
-	"stylelint": {
-		"defaultSeverity": "warning",
-		"extends": "stylelint-config-standard",
-		"rules": {
-			"indentation": "tab",
-			"at-rule-no-unknown": null,
-			"max-nesting-depth": [
-				1,
-				{
-					"ignore": [
-						"pseudo-classes"
-					],
-					"ignoreAtRules": [
-						"/^extend/",
-						"media"
-					]
-				}
-			],
-			"at-rule-empty-line-before": [
-				"always",
-				{
-					"except": [
-						"blockless-after-blockless"
-					],
-					"ignore": [
-						"after-comment"
-					]
-				}
-			],
-			"rule-empty-line-before": [
-				"always",
-				{
-					"ignore": [
-						"after-comment"
-					]
-				}
-			]
-		}
-	},
-	"eslintConfig": {
-		"extends": [
+  "name": "forsite",
+  "version": "0.9.0",
+  "description": "A started starter theme for WordPress",
+  "author": "Marty Helmick",
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/m-e-h/forsite",
+  "scripts": {
+    "build": "run-s lint:css css pretty:css js",
+    "dev": "run-p watch:*",
+    "sync": "run-p watch:* bs:proxy",
+    "bs:proxy": "browser-sync 'http://one.wordpress.test' 'dist' 'src' 'app' 'views' -w",
+    "css": "run-p css:*",
+    "js": "run-p \"js:* -- --mode=production\"",
+    "lint": "run-s lint:*",
+    "watch:css": "run-p \"css:* -- --watch\"",
+    "watch:js": "run-p \"js:* -- --mode development -w\"",
+    "css:meta": "postcss src/css/main.css -o ./style.css --env development",
+    "css:main": "postcss src/css/main.css -d dist --env production",
+    "css:editor": "postcss src/css/editor-style.css -d dist --env editor",
+    "js:main": "webpack --module-bind js=babel-loader src/js/index.js",
+    "js:customizer": "webpack --module-bind js=babel-loader src/js/customize-view.js -o dist/customize-view.js",
+    "lint:css": "stylelint './src/css/**/*.css' --fix",
+    "lint:js": "eslint './src/js/**/*.js' --fix",
+    "pretty:css": "prettier --write 'style.css'",
+    "rename": "theme-claim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-e-h/forsite.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@wordpress/eslint-plugin": "^2.4.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.6.6",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-editor-styles": "^0.1.5",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "4.1.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-simple-vars": "^5.0.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "theme-claim": "^0.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "stylelint": {
+    "defaultSeverity": "warning",
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": "tab",
+      "at-rule-no-unknown": null,
+      "max-nesting-depth": [
+        1,
+        {
+          "ignore": [
+            "pseudo-classes"
+          ],
+          "ignoreAtRules": [
+            "/^extend/",
+            "media"
+          ]
+        }
+      ],
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "blockless-after-blockless"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
+      "rule-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": [
       "plugin:@wordpress/eslint-plugin/recommended"
     ],
-		"parser": "babel-eslint"
-	},
-	"browserslist": [
-		"> 2%",
-		"ie >= 11",
-		"last 1 Android versions",
-		"last 1 ChromeAndroid versions",
-		"last 2 Chrome versions",
-		"last 2 Firefox versions",
-		"last 2 Safari versions",
-		"last 2 iOS versions",
-		"last 2 Edge versions",
-		"last 2 Opera versions"
-	]
+    "parser": "babel-eslint"
+  },
+  "browserslist": [
+    "> 2%",
+    "ie >= 11",
+    "last 1 Android versions",
+    "last 1 ChromeAndroid versions",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions",
+    "last 2 Opera versions"
+  ]
 }

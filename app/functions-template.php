@@ -27,16 +27,21 @@ add_action(
 
 		$content_width = isset( $GLOBALS['content_width'] ) ? $GLOBALS['content_width'] : '900';
 
+		$foreground_color  = get_theme_mod( 'foreground_color', default_foreground_color() );
+		$background_color  = get_background_color();
+		$background_color  = sanitize_hex_color_add_hash( $background_color );
 		$primary_color     = get_theme_mod( 'primary_color', default_primary_color() );
 		$accent_color      = get_theme_mod( 'accent_color', default_accent_color() );
-		$header_text_color = get_theme_mod( 'header_textcolor' );
+		$header_text_color = get_theme_mod( 'header_color', $foreground_color );
 		$header_text_color = sanitize_hex_color_add_hash( $header_text_color );
 		$header_bg_color   = get_theme_mod( 'header_bg_color', default_header_bg_color() );
 
 		$style_var  = '';
+		$style_var .= "--background_color:{$background_color};";
+		$style_var .= "--foreground_color:{$foreground_color};";
 		$style_var .= "--color-1:{$primary_color};";
 		$style_var .= "--color-2:{$accent_color};";
-		$style_var .= display_header_text() ? "--header-text-color:{$header_text_color};" : '';
+		$style_var .= "--header-text-color:{$header_text_color};";
 		$style_var .= "--header-bg-color:{$header_bg_color};";
 		$style_var .= "--content-width:{$content_width}px;";
 
@@ -59,7 +64,7 @@ add_action(
 		$templates->add(
 			'template-full-width.php',
 			[
-				'label'      => __( 'Full Width' ),
+				'label' => __( 'Full Width' ),
 			]
 		);
 
@@ -106,6 +111,33 @@ function default_accent_color( $color = 0 ) {
 
 	return apply_filters(
 		'forsite/accent_color',
+		sanitize_hex_color_add_hash( $color )
+	);
+}
+
+function get_background_hex() {
+
+	$color = get_background_color();
+
+	return sanitize_hex_color_add_hash( $color );
+}
+
+function default_background_color( $color = 0 ) {
+
+	$color = $color ?: '#ffffff';
+
+	return apply_filters(
+		'forsite/background_color',
+		sanitize_hex_color_add_hash( $color )
+	);
+}
+
+function default_foreground_color( $color = 0 ) {
+
+	$color = $color ?: '#3b3f43';
+
+	return apply_filters(
+		'forsite/foreground_color',
 		sanitize_hex_color_add_hash( $color )
 	);
 }
