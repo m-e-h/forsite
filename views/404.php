@@ -7,19 +7,19 @@
 
 	<body <?= Hybrid\Attr\render( 'body' ); ?>>
 
-		<?= Hybrid\View\render( 'header' ); ?>
+		<?= $engine->render( 'header' ); ?>
 
 		<main id="main" class="app-main">
 
-			<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+			<?= $engine->render( 'components', 'breadcrumbs' ); ?>
 
-			<?= Hybrid\View\render( 'layouts', '404' ); ?>
+			<?= $engine->render( 'layouts', '404' ); ?>
 
 		</main>
 
-		<?= Hybrid\View\render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
+		<?= $engine->render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
 
-		<?= Hybrid\View\render( 'footer' ); ?>
+		<?= $engine->render( 'footer' ); ?>
 
 	</body>
 

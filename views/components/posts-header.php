@@ -2,7 +2,7 @@
 
 <header class="archive__header">
 
-	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+	<?= $engine->render( 'components', 'breadcrumbs' ); ?>
 
 	<h1 class="archive__title u-h2"><?php the_archive_title() ?></h1>
 

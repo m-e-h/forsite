@@ -1,6 +1,6 @@
-<footer class="app-footer">
+<footer id="footer" class="app-footer">
 
-	<?= Hybrid\View\render( 'sidebar', 'footer', [ 'sidebar' => 'footer' ] ); ?>
+	<?= $engine->render( 'sidebar', 'footer', [ 'sidebar' => 'footer' ] ); ?>
 
 	<div class="site-info u-1of1 u-p1 u-text-center">
 		<?php

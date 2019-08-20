@@ -2,8 +2,8 @@
 
 <header class="app-header">
 
-	<?= Hybrid\View\render( 'components', 'header-branding' ); ?>
+	<?= $engine->render( 'components', 'header-branding' ); ?>
 
-	<?= Hybrid\View\render( 'components', 'menu', [ 'location' => 'primary' ] ); ?>
+	<?= $engine->render( 'components', 'menu', [ 'location' => 'primary' ] ); ?>
 
 </header>

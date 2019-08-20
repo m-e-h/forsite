@@ -16,7 +16,7 @@ if ( wp_attachment_is( 'audio' ) ) {
 
 <article <?= Hybrid\Attr\render( 'entry' ); ?>>
 
-	<?= Hybrid\View\render( 'components', 'post-header' ); ?>
+	<?= $engine->render( 'components', 'post-header' ); ?>
 
 	<div class="entry__content">
 
@@ -29,7 +29,7 @@ if ( wp_attachment_is( 'audio' ) ) {
 			<h3 class="media-meta__title"><?php esc_html_e( 'Info', 'forsite' ); ?></h3>
 
 			<ul class="media-meta__items">
-				<?= Hybrid\View\render( 'components', 'media-meta' ); ?>
+				<?= $engine->render( 'components', 'media-meta' ); ?>
 			</ul>
 
 		</div>

@@ -1,34 +1,39 @@
+<?php
+$engine = Hybrid\App::resolve( 'view/engine' );
+$color = get_theme_mod( 'primary_color', Forsite\default_primary_color() );
+?>
 <!doctype html>
-<html <?= Hybrid\Attr\render( 'html' ); ?>>
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="<?= $color ?>">
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
 
-	<head>
-		<?php wp_head(); ?>
-	</head>
+	<?php wp_body_open(); ?>
 
-	<body <?= Hybrid\Attr\render( 'body' ); ?>>
+	<?= $engine->render( 'header' ); ?>
 
-		<?php wp_body_open(); ?>
+	<main id="main" class="app-main">
 
-		<?= Hybrid\View\render( 'header' ); ?>
+		<?= $engine->render( 'components', 'posts-header' ); ?>
 
-		<main id="main" class="app-main">
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?= Hybrid\View\render( 'components', 'posts-header' ); ?>
+			<?= $engine->render( 'layouts', Hybrid\Template\hierarchy() ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php endwhile ?>
 
-				<?= Hybrid\View\render( 'layouts', Hybrid\Template\hierarchy() ); ?>
+		<?= $engine->render( 'components', 'posts-pagination' ); ?>
 
-			<?php endwhile ?>
+	</main>
 
-			<?= Hybrid\View\render( 'components', 'posts-pagination' ); ?>
+	<?= $engine->render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
 
-		</main>
+	<?= $engine->render( 'footer' ); ?>
 
-		<?= Hybrid\View\render( 'sidebar', 'primary', [ 'sidebar' => 'primary' ] ); ?>
-
-		<?= Hybrid\View\render( 'footer' ); ?>
-
-	</body>
+</body>
 
 </html>

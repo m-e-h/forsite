@@ -2,13 +2,13 @@
 
 <header class="entry__header">
 
-	<?= Hybrid\View\render( 'components', 'breadcrumbs' ); ?>
+	<?= $engine->render( 'components', 'breadcrumbs' ); ?>
 
 	<?= Hybrid\Post\render_title( [ 'class' => 'entry__title u-h2' ] ); ?>
 
 	<?php if ( is_singular( 'post' ) ) : ?>
 
-		<?= Hybrid\View\render( 'components', 'post-info' ); ?>
+		<?= $engine->render( 'components', 'post-info' ); ?>
 
 	<?php endif; ?>
 
