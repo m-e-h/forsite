@@ -34,10 +34,3 @@ add_filter(
 		return 'views';
 	}
 );
-
-// Fallback for the wp_body_open() function that was added in 5.2.
-if ( ! function_exists( 'wp_body_open' ) ) {
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
-	}
-}

@@ -32,3 +32,15 @@ input[type="button"],
 		border-image: none;
 	}
 }
+
+.post-password-form label,
+.post-password-form input[type="submit"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 1em 0;
+	text-align: left;
+}
+
+.post-password-form {
+	text-align: center;
+}

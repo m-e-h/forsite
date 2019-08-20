@@ -14,6 +14,8 @@
 
 namespace Forsite;
 
+use Forsite\Customize;
+
 use function Forsite\sanitize_hex_color_add_hash;
 /**
  * Set the content-width as a CSS custom property.
@@ -71,11 +73,9 @@ add_action(
 	}
 );
 
-function render_if( $condition = false, $is = true, $class = false ) {
-	if ( $condition == $is ) {
-		return $class;
-	}
-	return;
+function forsite_content() {
+	$content = get_theme_mod( 'forsite_archive_excerpt', 'content' );
+	return $content === 'content' ? get_the_content() : get_the_excerpt();
 }
 
 
@@ -187,3 +187,10 @@ add_filter(
 
 	}
 );
+
+// Fallback for the wp_body_open() function that was added in 5.2.
+if ( ! function_exists( 'wp_body_open' ) ) {
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}

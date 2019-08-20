@@ -3,6 +3,11 @@ article .gform_wrapper {
 	margin: 0 auto;
 }
 
+.gv-field-label {
+	font-weight: bold;
+}
+
+.gv-back-link a,
 :root:root:root:root .gform_button[type="submit"] {
 
 	@extend %e_button;
@@ -18,7 +23,7 @@ article .gform_wrapper {
 	line-height: normal;
 }
 
-:root:root:root li.gfield input[type=radio] {
+:root:root:root li.gfield input[type="radio"] {
 	margin-top: 0;
 }
 
@@ -49,6 +54,7 @@ article .gform_wrapper {
 .ui-datepicker.ui-datepicker {
 	font-family: inherit;
 	font-size: 0.7rem;
+	background-color: #fff;
 
 	tbody tr td {
 		border-color: var(--color-gray);
@@ -67,12 +73,13 @@ article .gform_wrapper {
 	}
 
 	.ui-datepicker-title select {
+		min-width: 70px;
 		margin: 2px 1px;
-		background-color: var(--color-frost-3);
+		background-color: var(--color-frost-4);
 		font-size: 0.8rem;
 		min-height: 1rem;
 		padding: 1px;
-		border-color: var(--color-frost-3);
+		border-color: var(--color-frost-4);
 	}
 
 	.ui-datepicker-calendar .ui-state-default {

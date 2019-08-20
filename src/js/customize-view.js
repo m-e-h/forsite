@@ -2,6 +2,7 @@ const siteHeader = document.querySelector( '.app-header' );
 const siteTitle = document.querySelector( '.app-header__title' );
 const siteDesc = document.querySelector( '.app-header__description' );
 const siteCrumbs = document.querySelector( '.breadcrumbs' );
+const archThumbs = document.querySelectorAll( '.post-thumbnail' );
 
 const root = document.documentElement;
 
@@ -67,12 +68,27 @@ wp.customize( 'header_text', ( value ) => {
 } );
 
 // Header Breadcrumbs.
-wp.customize( 'forsite_breadcrumbs', ( value ) => {
+wp.customize( 'forsite_breadcrumbs_display', ( value ) => {
 	value.bind( ( to ) => {
 		if ( false === to ) {
 			siteCrumbs.classList.add( 'screen-reader-text' );
 		} else {
 			siteCrumbs.classList.remove( 'screen-reader-text' );
+		}
+	} );
+} );
+
+// Archive thumbnails.
+wp.customize( 'forsite_archive_img', ( value ) => {
+	value.bind( ( to ) => {
+		if ( false === to ) {
+			archThumbs.forEach( thumb => {
+				thumb.classList.add( 'screen-reader-text' );
+			});
+		} else {
+			archThumbs.forEach( thumb => {
+				thumb.classList.remove( 'screen-reader-text' );
+			});
 		}
 	} );
 } );

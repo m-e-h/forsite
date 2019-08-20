@@ -48,15 +48,15 @@ function hex_to_rgb( $hex ) {
 		$b = hexdec( $color[4] . $color[5] );
 		$a = hexdec( $color[6] . $color[7] );
 
-		return array( $r, $g, $b, $a );
+		return [ $r, $g, $b, $a ];
 
 	} else {
 
-		return array();
+		return [];
 
 	}
 
-	return array( $r, $g, $b );
+	return [ $r, $g, $b ];
 }
 
 /**
@@ -65,7 +65,7 @@ function hex_to_rgb( $hex ) {
  * @param string    rgb
  * @return array    hsl value
  */
-function rgbToHsl( $rgb = array() ) {
+function rgbToHsl( $rgb = [] ) {
 
 		// Make sure it's RGB
 	if ( empty( $rgb ) || ! isset( $rgb['R'] ) || ! isset( $rgb['G'] ) || ! isset( $rgb['B'] ) ) {

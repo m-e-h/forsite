@@ -1287,6 +1287,18 @@
 		border-image:none;
 	}
 
+.editor-styles-wrapper .post-password-form label,
+.editor-styles-wrapper .post-password-form input[type="submit"]{
+	display:inline-block;
+	vertical-align:middle;
+	margin:1em 0;
+	text-align:left;
+}
+
+.editor-styles-wrapper .post-password-form{
+	text-align:center;
+}
+
 .editor-styles-wrapper table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1){
 	background-color:rgba(206, 212, 218, 0.3);
 	background-color:var(--color-shade-2);
@@ -3743,6 +3755,11 @@
 	margin:0 auto;
 }
 
+.editor-styles-wrapper .gv-field-label{
+	font-weight:bold;
+}
+
+.editor-styles-wrapper .gv-back-link a,
 .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]{
 	color:inherit;
 	background-color:rgba(206, 212, 218, 0.9);
@@ -3767,7 +3784,10 @@
 	transition-property:var(--transition-props);
 }
 
-.editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:hover, .editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:focus{
+.editor-styles-wrapper .gv-back-link a:hover,
+.editor-styles-wrapper .gv-back-link a:focus,
+.editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:hover,
+.editor-styles-wrapper :root:root:root:root .gform_button[type="submit"]:focus{
 		box-shadow:inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
 		box-shadow:var(--hover-shadow);
 		border-color:rgba(52, 58, 64, 0.1);
@@ -3785,7 +3805,7 @@
 	line-height:normal;
 }
 
-.editor-styles-wrapper :root:root:root li.gfield input[type=radio]{
+.editor-styles-wrapper :root:root:root li.gfield input[type="radio"]{
 	margin-top:0;
 }
 
@@ -3819,6 +3839,7 @@
 .editor-styles-wrapper .ui-datepicker.ui-datepicker{
 	font-family:inherit;
 	font-size:0.7rem;
+	background-color:#fff;
 }
 
 .editor-styles-wrapper .ui-datepicker.ui-datepicker tbody tr td{
@@ -3841,14 +3862,15 @@
 	}
 
 .editor-styles-wrapper .ui-datepicker.ui-datepicker .ui-datepicker-title select{
+		min-width:70px;
 		margin:2px 1px;
-		background-color:rgba(248, 249, 250, 0.5);
-		background-color:var(--color-frost-3);
+		background-color:rgba(248, 249, 250, 0.9);
+		background-color:var(--color-frost-4);
 		font-size:0.8rem;
 		min-height:1rem;
 		padding:1px;
-		border-color:rgba(248, 249, 250, 0.5);
-		border-color:var(--color-frost-3);
+		border-color:rgba(248, 249, 250, 0.9);
+		border-color:var(--color-frost-4);
 	}
 
 .editor-styles-wrapper .ui-datepicker.ui-datepicker .ui-datepicker-calendar .ui-state-default{

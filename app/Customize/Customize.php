@@ -48,6 +48,74 @@ class Customize implements Bootable {
 	 */
 	public function registerControls( WP_Customize_Manager $wp_customize ) {
 
+		// $wp_customize->add_section(
+		// 	'fonts',
+		// 	[
+		// 		'title'    => __( 'Fonts' ),
+		// 		'priority' => 40,
+		// 	]
+		// );
+
+		// $wp_customize->add_setting(
+		// 	'primary_font',
+		// 	[
+		// 		'default'           => 'Open Sans',
+		// 		'sanitize_callback' => 'wp_kses_post',
+		// 	]
+		// );
+
+		// $wp_customize->add_control(
+		// 	'primary_font',
+		// 	array(
+		// 		'label'   => __( 'Primary Font' ),
+		// 		'section' => 'fonts',
+		// 		'type'    => 'select',
+		// 		'choices' => [
+		// 			'Josefin Sans',
+		// 			'Lato',
+		// 			'Merriweather',
+		// 			'Open Sans',
+		// 			'PT Sans',
+		// 			'Roboto',
+		// 			'Source Sans Pro',
+		// 			'Source Serif Pro',
+		// 			'Ubuntu',
+		// 		],
+		// 	)
+		// );
+
+		// $wp_customize->add_setting(
+		// 	'display_font',
+		// 	[
+		// 		'default'           => 'Raleway',
+		// 		'sanitize_callback' => 'wp_kses_post',
+		// 	]
+		// );
+
+		// $wp_customize->add_control(
+		// 	'display_font',
+		// 	array(
+		// 		'label'   => __( 'Display Font' ),
+		// 		'section' => 'fonts',
+		// 		'type'    => 'select',
+		// 		'choices' => [
+		// 			'Architects Daughter',
+		// 			'Asap',
+		// 			'Cabin',
+		// 			'Josefin Sans',
+		// 			'Lato',
+		// 			'Merriweather',
+		// 			'Montserrat',
+		// 			'Oswald',
+		// 			'Playfair Display',
+		// 			'Raleway',
+		// 			'Roboto',
+		// 			'Roboto Slab',
+		// 			'Ubuntu',
+		// 		],
+		// 	)
+		// );
+
 		// Foreground text color.
 		$wp_customize->add_setting(
 			'foreground_color',
@@ -158,19 +226,75 @@ class Customize implements Bootable {
 			)
 		);
 
-		if ( ! $wp_customize->get_section( 'jetpack_content_options' ) ) {
-			$wp_customize->add_section(
-				'jetpack_content_options',
-				array(
-					'title'    => esc_html__( 'Content Options' ),
-					'priority' => 90,
-				)
-			);
-		}
+		$wp_customize->add_panel(
+			'forsite_options',
+			[
+				'title'    => __( 'Theme Settings' ),
+				'priority' => 160,
+			]
+		);
+
+		$wp_customize->add_section(
+			'forsite_content',
+			[
+				'title'    => esc_html__( 'Post Content' ),
+				'priority' => 90,
+				'panel'    => 'forsite_options',
+			]
+		);
+
+		$wp_customize->add_section(
+			'forsite_breadcrumbs',
+			[
+				'title'    => esc_html__( 'Breadcrumbs' ),
+				'priority' => 90,
+				'panel'    => 'forsite_options',
+			]
+		);
+
+		$wp_customize->add_setting(
+			'forsite_archive_excerpt',
+			[
+				'default'           => 'content',
+				'sanitize_callback' => 'wp_kses_post',
+			]
+		);
+
+		$wp_customize->add_control(
+			'forsite_archive_excerpt',
+			[
+				'label'   => __( 'Post Archive Content' ),
+				'section' => 'forsite_content',
+				'type'    => 'radio',
+				'choices' => [
+					'content' => 'Full Post Content',
+					'excerpt' => 'Post Excerpt',
+				],
+			]
+		);
 
 		// Breadcrumbs.
 		$wp_customize->add_setting(
-			'forsite_breadcrumbs',
+			'forsite_archive_img',
+			[
+				'default'           => false,
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'absint',
+			]
+		);
+
+		$wp_customize->add_control(
+			'forsite_archive_img',
+			[
+				'label'   => __( 'Display the featured image on archive pages?' ),
+				'type'    => 'checkbox',
+				'section' => 'forsite_content',
+			]
+		);
+
+		// Breadcrumbs.
+		$wp_customize->add_setting(
+			'forsite_breadcrumbs_display',
 			[
 				'default'           => true,
 				'transport'         => 'postMessage',
@@ -179,11 +303,11 @@ class Customize implements Bootable {
 		);
 
 		$wp_customize->add_control(
-			'forsite_breadcrumbs',
+			'forsite_breadcrumbs_display',
 			[
 				'label'   => __( 'Display Breadcrumbs' ),
 				'type'    => 'checkbox',
-				'section' => 'jetpack_content_options',
+				'section' => 'forsite_breadcrumbs',
 			]
 		);
 

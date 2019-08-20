@@ -1422,6 +1422,18 @@ input[type="button"]:focus,
 	border-image: none;
 }
 
+.post-password-form label,
+.post-password-form input[type="submit"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 1em 0;
+	text-align: left;
+}
+
+.post-password-form {
+	text-align: center;
+}
+
 table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1) {
 	background-color: rgba(206, 212, 218, 0.3);
 	background-color: var(--color-shade-2);
@@ -3892,6 +3904,11 @@ article .gform_wrapper {
 	margin: 0 auto;
 }
 
+.gv-field-label {
+	font-weight: bold;
+}
+
+.gv-back-link a,
 :root:root:root:root .gform_button[type="submit"] {
 	color: inherit;
 	background-color: rgba(206, 212, 218, 0.9);
@@ -3917,6 +3934,8 @@ article .gform_wrapper {
 	transition-property: var(--transition-props);
 }
 
+.gv-back-link a:hover,
+.gv-back-link a:focus,
 :root:root:root:root .gform_button[type="submit"]:hover,
 :root:root:root:root .gform_button[type="submit"]:focus {
 	box-shadow: inset 0 -10em 0 0 rgba(52, 58, 64, 0.1);
@@ -3972,6 +3991,7 @@ article .gform_wrapper {
 .ui-datepicker.ui-datepicker {
 	font-family: inherit;
 	font-size: 0.7rem;
+	background-color: #fff;
 }
 
 .ui-datepicker.ui-datepicker tbody tr td {
@@ -3994,14 +4014,15 @@ article .gform_wrapper {
 }
 
 .ui-datepicker.ui-datepicker .ui-datepicker-title select {
+	min-width: 70px;
 	margin: 2px 1px;
-	background-color: rgba(248, 249, 250, 0.5);
-	background-color: var(--color-frost-3);
+	background-color: rgba(248, 249, 250, 0.9);
+	background-color: var(--color-frost-4);
 	font-size: 0.8rem;
 	min-height: 1rem;
 	padding: 1px;
-	border-color: rgba(248, 249, 250, 0.5);
-	border-color: var(--color-frost-3);
+	border-color: rgba(248, 249, 250, 0.9);
+	border-color: var(--color-frost-4);
 }
 
 .ui-datepicker.ui-datepicker .ui-datepicker-calendar .ui-state-default {

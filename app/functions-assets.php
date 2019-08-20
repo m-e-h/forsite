@@ -12,7 +12,8 @@
 namespace Forsite;
 
 use Hybrid\App;
-use function Hybrid\Font\enqueue as enqueue_font;
+use function Hybrid\is_script_debug;
+// use function Hybrid\Font\enqueue as enqueue_font;
 
 /**
  * Enqueue scripts/styles for the front end.
@@ -43,12 +44,15 @@ add_action(
 		}
 
 		// Hybrid Fonts https://github.com/justintadlock/hybrid-font
-		enqueue_font( 'forsite', [
-			'family' => [
-				'open-sans'      => 'Open+Sans:300,300i,400,400i,600,600i,700,700i'
-			],
-			'display' => 'swap'
-		] );
+		// enqueue_font(
+		// 	'forsite',
+		// 	[
+		// 		'family'  => [
+		// 			'open-sans' => 'Open+Sans:300,400',
+		// 		],
+		// 		'display' => 'swap',
+		// 	]
+		// );
 
 	}
 );
@@ -98,6 +102,16 @@ function asset( $path ) {
 	return get_parent_theme_file_uri( "{$path}?ver={$file_ver}" );
 }
 
-function is_script_debug() {
-	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
-}
+/**
+ * JavaScript detection.
+ *
+ * Adds a `js` class to the root `<html>` element when JavaScript is detected.
+ *
+ * @return void
+ */
+add_action(
+	'wp_head',
+	function() {
+		echo "<script>(function(html){html.className = 'js'})(document.documentElement);</script>\n";
+	}
+);

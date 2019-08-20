@@ -1,4 +1,4 @@
-<?php if ( is_singular() || is_front_page() ) { return; } ?>
+<?php if ( is_singular() ) { return; } ?>
 
 <?php
 Hybrid\Pagination\display( 'posts', [
