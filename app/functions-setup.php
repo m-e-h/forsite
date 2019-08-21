@@ -113,7 +113,6 @@ add_action(
 					'comment'    => '.entry__comments-count',
 				],
 				'featured-images' => [
-					'archive' => true,
 					'post'    => true,
 					'page'    => true,
 				],

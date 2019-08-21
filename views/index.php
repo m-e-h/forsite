@@ -26,6 +26,10 @@ $color = get_theme_mod( 'primary_color', Forsite\default_primary_color() );
 
 		<?php endwhile ?>
 
+		<?php if ( ! have_posts() ) : ?>
+			<?= $engine->render( 'layouts', '404' ); ?>
+		<?php endif ?>
+
 		<?= $engine->render( 'components', 'posts-pagination' ); ?>
 
 	</main>

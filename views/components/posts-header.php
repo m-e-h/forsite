@@ -1,4 +1,4 @@
-<?php if ( is_singular() || is_front_page() ) { return; } ?>
+<?php if ( ! Hybrid\is_plural() || is_front_page() ) { return; } ?>
 
 <header class="archive__header">
 
