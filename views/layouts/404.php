@@ -3,7 +3,7 @@
 	<header class="entry__header u-text-center u-1of1 u-p u-mt u-mb">
 
 		<h1 class="entry__title u-h0 u-text-muted">
-			<?php esc_html_e( '404' ); ?>
+			<?php __( '404' ); ?>
 		</h1>
 
 	</header>

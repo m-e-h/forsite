@@ -11,7 +11,7 @@ if ( is_singular() ) {
 	</div>
 
 	<?php
-} elseif ( get_theme_mod( 'forsite_archive_img' ) || is_customize_preview() ) {
+} else {
 	?>
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 		<?php

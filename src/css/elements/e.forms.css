@@ -45,13 +45,13 @@ select {
 	display: inline-flex;
 	align-items: center;
 	line-height: normal;
-	min-height: var(--input-height);
 }
 
 input,
 select,
 textarea {
 	max-width: 100%;
+	min-height: var(--input-height);
 	border-radius: var(--border-radius);
 	border-width: 2px;
 	border-color: var(--color-gray);

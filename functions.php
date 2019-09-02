@@ -31,6 +31,6 @@ $forsite->boot();
 add_filter(
 	'hybrid/template/path',
 	function( $path ) {
-		return 'views';
+		return;
 	}
 );

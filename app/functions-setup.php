@@ -36,7 +36,7 @@ add_action(
 		$GLOBALS['content_width'] = apply_filters( 'forsite_content_width', 900 );
 
 		// Load theme translations.
-		load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'dist/lang' ) );
+		// load_theme_textdomain( 'forsite', get_parent_theme_file_path( 'dist/lang' ) );
 
 		// Automatically add the `<title>` tag.
 		add_theme_support( 'title-tag' );
@@ -104,6 +104,10 @@ add_action(
 		add_theme_support(
 			'jetpack-content-options',
 			[
+				'blog-display'    => [
+					'content',
+					'excerpt',
+				],
 				'post-details'    => [
 					'stylesheet' => 'forsite-mainCSS',
 					'date'       => '.entry__posted-on',
@@ -113,8 +117,9 @@ add_action(
 					'comment'    => '.entry__comments-count',
 				],
 				'featured-images' => [
-					'post'    => true,
-					'page'    => true,
+					'archive'         => true,
+					'post'            => true,
+					'page'            => true,
 				],
 			]
 		);

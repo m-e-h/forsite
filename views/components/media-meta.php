@@ -1,44 +1,54 @@
+<?php if ( false === $type ) {
+	return; } ?>
+
 <ul class="media-meta__items">
 
-	<?php // Image
-	if ( wp_attachment_is( 'image' ) ) {
+	<?php
+	// Image
+	if ( 'image' === $type ) {
 		Hybrid\Media\display_meta(
-			'created_timestamp', [
+			'created_timestamp',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Date', 'forsite' ),
 			]
 		);
 
 		Hybrid\Media\display_meta(
-			'camera', [
+			'camera',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Camera', 'forsite' ),
 			]
 		);
 
 		Hybrid\Media\display_meta(
-			'aperture', [
+			'aperture',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Aperture', 'forsite' ),
 			]
 		);
 
 		Hybrid\Media\display_meta(
-			'focal_length', [
+			'focal_length',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Focal Length', 'forsite' ),
 			]
 		);
 
 		Hybrid\Media\display_meta(
-			'iso', [
+			'iso',
+			[
 				'tag'   => 'li',
 				'label' => __( 'ISO', 'forsite' ),
 			]
 		);
 
 		Hybrid\Media\display_meta(
-			'shutter_speed', [
+			'shutter_speed',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Shutter Speed', 'forsite' ),
 			]
@@ -46,19 +56,23 @@
 	}
 	?>
 
-	<?php // Video & Image
-	if ( wp_attachment_is( 'image' ) || wp_attachment_is( 'video' )) {
+	<?php
+	// Video & Image
+	if ( 'video' === $type || 'image' === $type ) {
 		Hybrid\Media\display_meta(
-			'dimensions', [
+			'dimensions',
+			[
 				'tag'   => 'li',
 				'label' => __( 'Dimensions', 'forsite' ),
 			]
 		);
-	} ?>
+	}
+	?>
 
 
-	<?php // Video & Audio
-	if ( wp_attachment_is( 'audio' ) || wp_attachment_is( 'video' )) {
+	<?php
+	// Video & Audio
+	if ( 'video' === $type || 'audio' === $type ) {
 		Hybrid\Media\display_meta(
 			'length_formatted',
 			[
@@ -66,10 +80,12 @@
 				'label' => __( 'Run Time', 'forsite' ),
 			]
 		);
-	} ?>
+	}
+	?>
 
-	<?php // Audio
-	if ( wp_attachment_is( 'audio' ) ) {
+	<?php
+	// Audio
+	if ( 'audio' === $type ) {
 		Hybrid\Media\display_meta(
 			'artist',
 			[
@@ -109,9 +125,11 @@
 				'label' => __( 'Genre', 'forsite' ),
 			]
 		);
-	} ?>
+	}
+	?>
 
-	<?php // All
+	<?php
+	// All
 	Hybrid\Media\display_meta(
 		'file_name',
 		[

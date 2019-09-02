@@ -8,13 +8,13 @@
 
 		<h2 class="comments__title u-h4"><?php comments_number() ?></h2>
 
-		<?= $engine->render( 'components', 'comments-pagination' ) ?>
+		<?= Hybrid\View\render( 'views/components', 'nav-pagination', [ 'type' => 'comments' ] ) ?>
 
 		<ol class="comments__list">
 
 			<?php wp_list_comments( [
 				'callback' => function( $comment, $args, $depth ) {
-					$engine->display( 'components', Hybrid\Comment\hierarchy(), compact( 'comment', 'args', 'depth' ) );
+					Hybrid\View\display( 'views/components', Hybrid\Comment\hierarchy(), compact( 'comment', 'args', 'depth' ) );
 				}
 			] ) ?>
 

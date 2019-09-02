@@ -226,71 +226,15 @@ class Customize implements Bootable {
 			)
 		);
 
-		$wp_customize->add_panel(
-			'forsite_options',
-			[
-				'title'    => __( 'Theme Settings' ),
-				'priority' => 160,
-			]
-		);
-
-		$wp_customize->add_section(
-			'forsite_content',
-			[
-				'title'    => esc_html__( 'Post Content' ),
-				'priority' => 90,
-				'panel'    => 'forsite_options',
-			]
-		);
-
-		$wp_customize->add_section(
-			'forsite_breadcrumbs',
-			[
-				'title'    => esc_html__( 'Breadcrumbs' ),
-				'priority' => 90,
-				'panel'    => 'forsite_options',
-			]
-		);
-
-		$wp_customize->add_setting(
-			'forsite_archive_excerpt',
-			[
-				'default'           => 'content',
-				'sanitize_callback' => 'wp_kses_post',
-			]
-		);
-
-		$wp_customize->add_control(
-			'forsite_archive_excerpt',
-			[
-				'label'   => __( 'Post Archive Content' ),
-				'section' => 'forsite_content',
-				'type'    => 'radio',
-				'choices' => [
-					'content' => 'Full Post Content',
-					'excerpt' => 'Post Excerpt',
-				],
-			]
-		);
-
-		// Breadcrumbs.
-		$wp_customize->add_setting(
-			'forsite_archive_img',
-			[
-				'default'           => false,
-				'transport'         => 'postMessage',
-				'sanitize_callback' => 'absint',
-			]
-		);
-
-		$wp_customize->add_control(
-			'forsite_archive_img',
-			[
-				'label'   => __( 'Display the featured image on archive pages?' ),
-				'type'    => 'checkbox',
-				'section' => 'forsite_content',
-			]
-		);
+		if ( ! $wp_customize->get_section( 'jetpack_content_options' ) ) {
+			$wp_customize->add_section(
+				'jetpack_content_options',
+				[
+					'title'    => esc_html__( 'Content Options' ),
+					'priority' => 90,
+				]
+			);
+		}
 
 		// Breadcrumbs.
 		$wp_customize->add_setting(
@@ -307,7 +251,7 @@ class Customize implements Bootable {
 			[
 				'label'   => __( 'Display Breadcrumbs' ),
 				'type'    => 'checkbox',
-				'section' => 'forsite_breadcrumbs',
+				'section' => 'jetpack_content_options',
 			]
 		);
 

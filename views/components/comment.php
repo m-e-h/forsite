@@ -4,7 +4,7 @@
 		<?= get_avatar( $data->comment, '60', '', '', [ 'class' => 'comment__avatar' ] ) ?>
 
 		<div class="comment__meta">
-			<?php Hybrid\Comment\display_author( [ 'after' => '<br />' ] ) ?>
+			<?php Hybrid\Comment\display_author( [ 'after' => '<br>' ] ) ?>
 			<?php Hybrid\Comment\display_permalink( [
 				'text' => sprintf(
 					// Translators: 1 is the comment date and 2 is the time.

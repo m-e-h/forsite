@@ -73,11 +73,6 @@ add_action(
 	}
 );
 
-function forsite_content() {
-	$content = get_theme_mod( 'forsite_archive_excerpt', 'content' );
-	return $content === 'content' ? get_the_content() : get_the_excerpt();
-}
-
 
 /**
  * Returns the primary color.

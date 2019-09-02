@@ -1,11 +1,10 @@
 <?php
-/**
- * Index template.
- *
- * This template should never be loaded on a site unless a plugin is doing
- * something that it shouldn't be doing or something weird is going on. We're
- * leaving the below code as an absolue fallback in case this file is loaded.
- * All it does is correctly load up our `views/index.php` template.
- */
+$engine = Hybrid\App::resolve( 'view/engine' );
+$color1 = get_theme_mod( 'primary_color', Forsite\default_primary_color() );
+?>
 
-Hybrid\View\display( 'index' );
+<?= $engine->render( false, 'header', [ 'color1' => $color1 ] ); ?>
+
+<?= $engine->render( 'views', Hybrid\Template\hierarchy() ); ?>
+
+<?= $engine->render( 'footer' ); ?>
