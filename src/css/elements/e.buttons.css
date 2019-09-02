@@ -1,5 +1,6 @@
 %e_button {
 	color: inherit;
+	text-decoration: none;
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
 	padding: var(--button-padding);

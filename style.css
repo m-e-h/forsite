@@ -495,7 +495,13 @@ aside > section {
 
 a {
 	color: inherit;
-	text-decoration: none;
+	text-decoration: underline;
+	-webkit-text-decoration-color: #66b7f5;
+	text-decoration-color: #66b7f5;
+	-webkit-text-decoration-color: var(--color-link);
+	text-decoration-color: var(--color-link);
+	text-decoration-thickness: 0.0125em;
+	text-underline-offset: 0.125em;
 	background-color: transparent;
 	word-wrap: break-word;
 	transition-duration: 0.16s;
@@ -507,28 +513,9 @@ a {
 	transition-property: var(--transition-props);
 }
 
-article a {
-	background-image: linear-gradient(
-		0deg,
-		transparent,
-		transparent 1px,
-		#66b7f5 0,
-		#66b7f5 2px,
-		transparent 0
-	);
-	background-image: linear-gradient(
-		0deg,
-		transparent,
-		transparent 1px,
-		var(--color-link) 0,
-		var(--color-link) 2px,
-		transparent 0
-	);
-}
-
 header a,
 a[class] {
-	background-image: none;
+	text-decoration: none;
 }
 
 a:hover,
@@ -610,6 +597,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	color: inherit;
+	text-decoration: none;
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
@@ -952,14 +940,14 @@ select {
 	display: inline-flex;
 	align-items: center;
 	line-height: normal;
-	min-height: 2.5em;
-	min-height: var(--input-height);
 }
 
 input,
 select,
 textarea {
 	max-width: 100%;
+	min-height: 2.5em;
+	min-height: var(--input-height);
 	border-radius: 3px;
 	border-radius: var(--border-radius);
 	border-width: 2px;
@@ -1360,6 +1348,7 @@ a.post-thumbnail {
 .wp-block-button__link,
 :root:root .wp-block-file .wp-block-file__button {
 	color: inherit;
+	text-decoration: none;
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;
@@ -1526,6 +1515,24 @@ ul.menu__items {
 	.menu-toggle {
 		display: none;
 	}
+}
+
+.pagination {
+	text-align: center;
+}
+
+.pagination__anchor--current {
+	font-weight: bold;
+	padding: 0.625em calc(0.625em * 2);
+	padding: var(--button-padding);
+	line-height: 1.25;
+	line-height: var(--heading-line-height);
+}
+
+.nav-links {
+	display: flex;
+	opacity: 0.7;
+	justify-content: space-between;
 }
 
 .breadcrumbs {
@@ -3911,6 +3918,7 @@ article .gform_wrapper {
 .gv-back-link a,
 :root:root:root:root .gform_button[type="submit"] {
 	color: inherit;
+	text-decoration: none;
 	background-color: rgba(206, 212, 218, 0.9);
 	background-color: var(--color-shade-4);
 	font-size: 0.9rem;

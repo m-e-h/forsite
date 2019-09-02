@@ -3,7 +3,10 @@
 
 a {
 	color: inherit;
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: var(--color-link);
+	text-decoration-thickness: 0.0125em;
+	text-underline-offset: 0.125em;
 	background-color: transparent;
 	overflow-wrap: break-word;
 	transition-duration: var(--timing);
@@ -11,13 +14,9 @@ a {
 	transition-property: var(--transition-props);
 }
 
-article a {
-	background-image: linear-gradient(0deg, transparent, transparent 1px, var(--color-link) 0, var(--color-link) 2px, transparent 0);
-}
-
 header a,
 a[class] {
-	background-image: none;
+	text-decoration: none;
 }
 
 /* :matches(h1, h2, h3) > a {
