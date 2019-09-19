@@ -54,13 +54,11 @@
 }
 
 .u-py05 {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding-block: 0.5rem;
 }
 
 .u-py1 {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-block: 1rem;
 }
 
 .u-px1 {
@@ -76,8 +74,7 @@
 }
 
 .u-py2 {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-block: 2rem;
 }
 
 .u-px2 {
@@ -97,8 +94,7 @@
 }
 
 .u-py3 {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-block: 3rem;
 }
 
 .u-px3 {
@@ -118,8 +114,7 @@
 }
 
 .u-py4 {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	padding-block: 4rem;
 }
 
 .u-px4 {
@@ -135,8 +130,7 @@
 }
 
 .u-py0 {
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-block: 0;
 }
 
 .u-px0 {

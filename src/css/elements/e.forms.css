@@ -73,7 +73,7 @@ select {
 	background-repeat: no-repeat, repeat;
 	background-size: 0.8em auto, 100%;
 	font-size: 16px;
-	padding-right: 1.5rem;
+	padding-right: 1.5rem !important;
 }
 
 select option {

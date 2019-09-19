@@ -1,4 +1,4 @@
-.comments {
+/* .comments {
 	margin-top: var(--gutter);
 }
 
@@ -33,8 +33,7 @@ ul.children {
 }
 
 .comment {
-	margin-top: var(--base-space);
-	margin-bottom: var(--base-double);
+	margin-block: var(--base-space) var(--base-double);
 }
 
 .comment__meta,
@@ -49,4 +48,4 @@ ul.children {
 
 .comment-reply-link {
 	font-size: var(--h6);
-}
+} */

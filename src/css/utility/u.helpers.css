@@ -36,30 +36,30 @@
  *
  * https://github.com/ampproject/amphtml/blob/master/css/ampshared.css
  */
-.screen-reader-text.screen-reader-text {
+.screen-reader-text.screen-reader-text:not(:active):not(:focus) {
 	position: fixed;
 
 	/* keep it on viewport */
-	top: 0;
-	left: 0;
+	top: 0 !important;
+	left: 0 !important;
 
-	/* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
-	   before allowing buttons to be activated. */
+	/* give it non-zero size, VoiceOver on Safari requires at least 2
+	   pixels before allowing buttons to be activated. */
 	width: 2px;
 	height: 2px;
 
 	/* visually hide it with overflow and opacity */
-	opacity: 0;
-	overflow: hidden;
+	opacity: 0 !important;
+	overflow: hidden !important;
 
 	/* remove any margin or padding */
-	border: none;
-	margin: 0;
-	padding: 0;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
 
 	/* ensure no other style sets display to none */
-	display: block;
-	visibility: visible;
+	display: block !important;
+	visibility: visible !important;
 
 	/* reset WP conventions */
 	clip: auto;

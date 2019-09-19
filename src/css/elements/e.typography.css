@@ -36,8 +36,7 @@ body {
 }
 
 p {
-	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-block: 0 1rem;
 	line-height: var(--reading-line-height);
 }
 
@@ -95,8 +94,7 @@ time {
 }
 
 caption {
-	padding-top: var(--base-half);
-	padding-bottom: var(--base-half);
+	padding-block: var(--base-half);
 	color: var(--color-text-muted);
 	text-align: left;
 	caption-side: bottom;

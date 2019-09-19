@@ -40,6 +40,16 @@ article .gform_wrapper {
 	font-size: 0.9em;
 }
 
+.gform_wrapper .chosen-container-multi .chosen-choices li.search-choice {
+	padding: 0.4rem 1rem 0.4rem 0.4rem;
+}
+
+.gform_wrapper .chosen-container-multi .chosen-choices {
+	background: var(--input-bg-color);
+	border-color: var(--color-gray);
+	border-radius: var(--border-radius);
+}
+
 :root:root .gform_wrapper .chosen-container-single .chosen-single div {
 	width: 2rem;
 }

@@ -136,39 +136,6 @@
 	background-color: var(--color-tint-4);
 }
 
-.u-hover-frost:hover {
-	background-color: var(--color-frost-2);
-}
-
-.u-hover-tint:hover {
-	background-color: var(--color-tint-2);
-}
-
-/* Fill Colors */
-.u-fill-1 {
-	fill: var(--color-1);
-}
-
-.u-fill-2 {
-	fill: var(--color-2);
-}
-
-.u-fill-1-light {
-	background-color: var(--color-1-light);
-}
-
-.u-fill-2-light {
-	background-color: var(--color-2-light);
-}
-
-.u-fill-1-dark {
-	background-color: var(--color-1-dark);
-}
-
-.u-fill-2-dark {
-	background-color: var(--color-2-dark);
-}
-
 .has-pale-pink-background-color {
 	background-color: $pink2;
 }

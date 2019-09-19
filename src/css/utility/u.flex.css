@@ -100,27 +100,3 @@
 .u-flexed-last {
 	order: 99999;
 }
-
-/* small */
-@media (--xs) {
-
-	.u-flex-col-sm {
-		flex-direction: column;
-	}
-}
-
-/* medium */
-@media (--md) {
-
-	.u-flex-row-md {
-		flex-direction: row;
-	}
-}
-
-/* large */
-@media (--lg) {
-
-	.u-flex-row-lg {
-		flex-direction: row;
-	}
-}

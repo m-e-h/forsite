@@ -13,8 +13,7 @@
 	border-width: 0;
 
 	blockquote {
-		padding-top: var(--base-space);
-		padding-bottom: var(--base-space);
+		padding-block: var(--base-space);
 		margin: 0;
 		border-width: 0.2rem 0;
 		border-style: solid;

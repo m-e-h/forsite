@@ -10,10 +10,6 @@
 	@extend %e_button;
 }
 
-:matches(.btn, .button):matches(:hover, :focus) {
-	color: inherit;
-}
-
 .wp-block-button {
 	color: inherit;
 
@@ -31,16 +27,4 @@ input[type="button"],
 		border-color: currentColor;
 		border-image: none;
 	}
-}
-
-.post-password-form label,
-.post-password-form input[type="submit"] {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 1em 0;
-	text-align: left;
-}
-
-.post-password-form {
-	text-align: center;
 }

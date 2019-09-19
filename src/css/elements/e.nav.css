@@ -10,7 +10,7 @@ nav ul {
 
 nav li {
 	display: inline-block;
-	flex: 0.1 1 auto;
+	flex: 0 auto;
 	position: relative;
 	margin: 0;
 }

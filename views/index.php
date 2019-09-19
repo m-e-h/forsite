@@ -3,20 +3,26 @@
 <?= $engine->render( 'views/components', 'header-posts' ); ?>
 
 <?php
-if ( have_posts() ) {
+have_posts() ?
 
-	while ( have_posts() ) {
-		the_post();
-		$engine->display( 'views/layouts', Hybrid\Template\hierarchy() );
-	}
+$engine->display( 'views/components', 'post-loop' ) :
 
-	$engine->display( 'views/components', 'nav-pagination', [ 'type' => 'posts' ] );
+$engine->display( 'views/layouts', '404' );
 
-} else {
+// if ( have_posts() ) {
 
-	$engine->display( 'views/layouts', '404' );
+// 	while ( have_posts() ) {
+// 		the_post();
+// 		$engine->display( 'views/layouts', Hybrid\Template\hierarchy() );
+// 	}
 
-}
+// 	$engine->display( 'views/components', 'nav-pagination', [ 'type' => 'posts' ] );
+
+// } else {
+
+// 	$engine->display( 'views/layouts', '404' );
+
+// }
 ?>
 
 </main>

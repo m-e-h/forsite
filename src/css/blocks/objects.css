@@ -1,0 +1,110 @@
+/* o.layouts */
+.entry__info {
+	font-size: var(--h6);
+	margin-top: 0.5rem;
+	color: var(--color-text-muted);
+}
+
+/* o.image */
+
+
+/* o.buttons */
+:matches(.btn, .button):matches(:hover, :focus) {
+	color: inherit;
+}
+
+.post-password-form label,
+.post-password-form input[type="submit"] {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 1em 0;
+	text-align: left;
+}
+
+.post-password-form {
+	text-align: center;
+}
+
+
+/* o.tables */
+
+
+/* o.embeds */
+
+
+/* o.nav */
+
+
+/* o.breadcrumbs */
+.breadcrumbs {
+	font-size: var(--h6);
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+	color: var(--color-text-muted);
+	letter-spacing: 0.065em;
+
+	ol {
+	}
+
+	li {
+	}
+
+	li + li::before {
+	}
+
+	a {
+	}
+}
+
+/* o.comments */
+.comments {
+	margin-top: var(--gutter);
+}
+
+.comment-respond__form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comment-respond__form > * {
+	width: 100%;
+}
+
+.comment-respond__field--author {
+	margin-right: auto;
+}
+
+.comment-respond__field--author,
+.comment-respond__field--email {
+	width: auto;
+}
+
+.comment-respond__field--submit {
+	text-align: right;
+}
+
+.comment-respond__reply-title {
+	font-size: var(--h4);
+}
+
+ul.children {
+	padding-left: var(--base-space);
+}
+
+.comment {
+	margin-block: var(--base-space) var(--base-double);
+}
+
+.comment__meta,
+.avatar {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.comment__meta {
+	margin: 0 1rem;
+}
+
+.comment-reply-link {
+	font-size: var(--h6);
+}
