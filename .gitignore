@@ -8,3 +8,4 @@
 package-lock.json
 /.cache*
 *.code-workspace
+.DS_Store
