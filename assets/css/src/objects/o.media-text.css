@@ -1,0 +1,47 @@
+:root .has-media-on-the-right .wp-block-media-text__content {
+	padding-left: 0;
+	padding-right: var(--base-space);
+}
+
+.wp-block-media-text__content > * {
+	max-width: 700px;
+}
+
+.wp-block-media-text__media > img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.wp-block-media-text__content p {
+	margin-left: 0;
+}
+
+:root:root .is-style-offset-right {
+
+	@media (--content) {
+		padding-left: var(--fluid-offset-right);
+	}
+
+	@media (--full) {
+		padding-left: 9.8125rem;
+	}
+}
+
+:root .is-style-offset-right .wp-block-media-text__media {
+
+	@media (--tab) {
+		max-width: 50vw;
+		max-height: 50vw;
+	}
+}
+
+:root .is-style-offset-right .wp-block-media-text__content {
+	padding: 0;
+
+	/* max-width: 293px; */
+	margin-left: auto;
+}
+
+/* :root .is-style-pad-contain {
+	padding: var(--gutter);
+} */

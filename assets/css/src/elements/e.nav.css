@@ -1,0 +1,129 @@
+/* e.nav
+-------------------------------------------- */
+nav ol,
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	position: relative;
+	margin: 0;
+}
+
+nav a {
+	display: block;
+	padding: var(--button-padding);
+	line-height: var(--heading-line-height);
+}
+
+header nav > ul {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	@media (--content) {
+		flex-direction: row;
+		text-align: center;
+		justify-content: flex-end;
+	}
+}
+
+[aria-expanded="false"] + nav {
+	display: none;
+
+	@media (--content) {
+		display: block;
+	}
+}
+
+[aria-expanded="true"] + nav {
+	display: block;
+	width: 100%;
+	padding-top: 1rem;
+	box-shadow: var(--shadow);
+}
+
+@media (--content) {
+
+	header > nav {
+		width: auto;
+		flex: 1;
+		margin: 0;
+		box-shadow: none;
+	}
+}
+
+header nav li > ul {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background_color);
+	color: var(--foreground_color);
+	z-index: 99999;
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity 0.16s cubic-bezier(0, 0, 0.2, 1);
+
+	@media (--read) {
+		box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+	}
+
+	@media (--content) {
+		position: absolute;
+		top: 99%;
+	}
+}
+
+header nav li:not(:hover):not(:focus) > ul {
+	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+	height: 1px;
+	visibility: hidden;
+	transition: visibility 0.32s, opacity 0.16s cubic-bezier(0.4, 0, 1, 1);
+}
+
+:root:root a[href="#main"] {
+	position: fixed;
+
+	/* keep it on viewport */
+	top: 0;
+	left: 0;
+
+	/* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
+	   before allowing buttons to be activated. */
+	width: 2px;
+	height: 2px;
+
+	/* visually hide it with overflow and opacity */
+	opacity: 0;
+	overflow: hidden;
+
+	/* remove any margin or padding */
+	border: none;
+	margin: 0;
+	padding: 0;
+
+	/* ensure no other style sets display to none */
+	display: block;
+	visibility: visible;
+
+	/* reset WP conventions */
+	clip: auto;
+	white-space: inherit;
+	background-color: var(--color-frost-4);
+}
+
+:root:root a[href="#main"]:matches(:active, :focus) {
+	height: auto;
+	width: auto;
+	margin: 0;
+	overflow: visible;
+	opacity: 1;
+	z-index: 100000;
+	left: 45%;
+	padding: 0.5rem;
+	box-shadow: var(--shadow-3);
+}

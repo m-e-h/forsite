@@ -1,0 +1,210 @@
+/* #WHITE SPACE
+\*------------------------------------ */
+:root:root:root .u-p-base,
+:root:root:root .u-p {
+	padding: var(--base-space);
+}
+
+:root:root:root .u-p-half {
+	padding: var(--base-half);
+}
+
+:root:root:root .u-pt-base,
+:root:root:root .u-pt {
+	padding-top: var(--base-space);
+}
+
+:root:root:root .u-pb-base,
+:root:root:root .u-pb {
+	padding-bottom: var(--base-space);
+}
+
+:root:root:root .u-pr-base,
+:root:root:root .u-pr {
+	padding-right: var(--base-space);
+}
+
+:root:root:root .u-pl-base,
+:root:root:root .u-pl {
+	padding-left: var(--base-space);
+}
+
+:root:root:root .u-px {
+	padding-inline: var(--base-space);
+}
+
+:root:root:root .u-py {
+	padding-block: var(--base-space);
+}
+
+:root:root:root .u-pt-half {
+	padding-top: var(--base-half);
+}
+
+:root:root:root .u-pb-half {
+	padding-bottom: var(--base-half);
+}
+
+:root:root:root .u-pl-half {
+	padding-left: var(--base-half);
+}
+
+:root:root:root .u-pr-half {
+	padding-right: var(--base-half);
+}
+
+:root:root:root .u-pt1 {
+	padding-top: 1rem;
+}
+
+:root:root:root .u-pb1 {
+	padding-bottom: 1rem;
+}
+
+:root:root:root .u-pr1 {
+	padding-right: 1rem;
+}
+
+:root:root:root .u-pl1 {
+	padding-left: 1rem;
+}
+
+:root:root:root .u-pt-gutter {
+	padding-top: var(--gutter);
+}
+
+:root:root:root .u-pb-gutter {
+	padding-bottom: var(--gutter);
+}
+
+:root:root:root .u-pr-gutter {
+	padding-right: var(--gutter);
+}
+
+:root:root:root .u-pl-gutter {
+	padding-left: var(--gutter);
+}
+
+:root:root:root .u-pt-sm {
+	padding-top: var(--gutter-sm);
+}
+
+:root:root:root .u-pt-md {
+	padding-top: var(--gutter-md);
+}
+
+:root:root:root .u-pt-lg {
+	padding-top: var(--gutter-lg);
+}
+
+:root:root:root .u-pt-xl {
+	padding-top: var(--gutter-xl);
+}
+
+:root:root:root .u-pt-xxl {
+	padding-top: var(--gutter-xxl);
+}
+
+:root:root:root .u-pt-xxxl {
+	padding-top: var(--gutter-xxxl);
+}
+
+:root:root:root .u-pr-sm {
+	padding-right: var(--gutter-sm);
+}
+
+:root:root:root .u-pr-md {
+	padding-right: var(--gutter-md);
+}
+
+:root:root:root .u-pr-lg {
+	padding-right: var(--gutter-lg);
+}
+
+:root:root:root .u-pr-xl {
+	padding-right: var(--gutter-xl);
+}
+
+:root:root:root .u-pr-xxl {
+	padding-right: var(--gutter-xxl);
+}
+
+:root:root:root .u-pr-xxxl {
+	padding-right: var(--gutter-xxxl);
+}
+
+:root:root:root .u-pb-sm {
+	padding-bottom: var(--gutter-sm);
+}
+
+:root:root:root .u-pb-md {
+	padding-bottom: var(--gutter-md);
+}
+
+:root:root:root .u-pb-lg {
+	padding-bottom: var(--gutter-lg);
+}
+
+:root:root:root .u-pb-xl {
+	padding-bottom: var(--gutter-xl);
+}
+
+:root:root:root .u-pb-xxl {
+	padding-bottom: var(--gutter-xxl);
+}
+
+:root:root:root .u-pb-xxxl {
+	padding-bottom: var(--gutter-xxxl);
+}
+
+:root:root:root .u-pl-sm {
+	padding-left: var(--gutter-sm);
+}
+
+:root:root:root .u-pl-md {
+	padding-left: var(--gutter-md);
+}
+
+:root:root:root .u-pl-lg {
+	padding-left: var(--gutter-lg);
+}
+
+:root:root:root .u-pl-xl {
+	padding-left: var(--gutter-xl);
+}
+
+:root:root:root .u-pl-xxl {
+	padding-left: var(--gutter-xxl);
+}
+
+:root:root:root .u-pl-xxxl {
+	padding-left: var(--gutter-xxxl);
+}
+
+:root:root:root .u-p0 {
+	padding: 0;
+}
+
+:root:root:root .u-py0 {
+	padding-block: 0;
+}
+
+:root:root:root .u-px0 {
+	padding-inline: 0;
+}
+
+:root:root:root .u-pt0 {
+	padding-top: 0;
+}
+
+:root:root:root .u-pr0 {
+	padding-right: 0;
+}
+
+:root:root:root .u-pb0 {
+	padding-bottom: 0;
+}
+
+:root:root:root .u-pl0 {
+	padding-left: 0;
+}

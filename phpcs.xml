@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Theme Coding Standards">
+
+	<!-- Set a description for this ruleset. -->
+	<description>A custom set of code standard rules to check for WordPress themes.</description>
+
+	<!-- Exclude patterns -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/tests/*</exclude-pattern>
+
+	<!-- Only check the PHP files. -->
+	<arg name="extensions" value="php"/>
+
+	<rule ref="NeutronRuleset"/>
+
+	<!-- Include the WordPress ruleset, with exclusions. WordPress-Extra Includes WordPress-Core. -->
+	<rule ref="WordPress-Extra">
+		<!-- Forget about file names -->
+		<exclude name="WordPress.Files.FileName"/>
+
+		<!-- Allow short open tags. -->
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+
+		<!-- Allow short array syntax. -->
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+
+		<!-- Allow short ternary syntax. -->
+		<exclude name="WordPress.PHP.DisallowShortTernary"/>
+
+		<!-- Allow same line control structures e.g. if ( true ) { echo 1; } -->
+		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+
+		<!-- Comment punctuation doesn't matter -->
+		<exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+
+		<exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
+
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+
+		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion"/>
+
+		<exclude name="WordPress.Security.EscapeOutput"/>
+	</rule>
+
+	<rule ref="WordPress-Core">
+		<!-- Allow short open tags. -->
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+	</rule>
+
+	<!-- Include the WordPress Docs ruleset. -->
+	<rule ref="WordPress-Docs"/>
+
+	<!-- Doc block alignments -->
+	<rule ref="Squiz.Commenting.DocCommentAlignment" />
+
+	<!-- Allow for theme specific exceptions to the file name rules based on the theme hierarchy. -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true"/>
+		</properties>
+	</rule>
+
+	<!-- Change some errors to warnings. -->
+	<!-- <rule ref="Generic.WhiteSpace.ScopeIndent.IncorrectExact">
+		<type>warning</type>
+	</rule> -->
+
+	<!-- <rule ref="Generic.WhiteSpace.ScopeIndent.Incorrect">
+		<type>warning</type>
+	</rule> -->
+
+	<!-- <rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<type>warning</type>
+	</rule> -->
+
+	<!-- <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<type>warning</type>
+	</rule> -->
+
+	<rule ref="WordPress.WP.EnqueuedResourceParameters.NoExplicitVersion">
+		<type>warning</type>
+	</rule>
+
+	<rule ref="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
+		<type>warning</type>
+	</rule>
+
+<!-- https://github.com/Automattic/phpcs-neutron-ruleset -->
+	<!-- <rule ref="Generic.Formatting.MultipleStatementAlignment.NotSameWarning">
+		<severity>0</severity>
+	</rule> -->
+	<rule ref="Generic.Commenting.DocComment.SpacingBeforeTags">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.PHP.YodaConditions.NotYoda">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterCloseParenthesis">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.DB.DirectDatabaseQuery.NoCaching">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.PHP.StrictInArray.MissingTrueStrict">
+		<type>error</type>
+	</rule>
+	<rule ref="Generic.Commenting.DocComment.MissingShort">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.PHP.StrictComparisons.LooseComparison">
+		<type>error</type>
+	</rule>
+	<rule ref="WordPress.DB.DirectDatabaseQuery.DirectQuery">
+		<severity>0</severity>
+	</rule>
+	<rule ref="WordPress.DB.PreparedSQL.NotPrepared">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.Security.EscapeOutput.OutputNotEscaped">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n.MissingTranslatorsComment">
+		<severity>0</severity>
+	</rule>
+
+	<rule ref="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
+		<severity>0</severity>
+	</rule>
+
+	<!-- WordPress Coding Standard -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+
+	<!-- <rule ref="PEAR.Functions.FunctionCallSignature.MultipleArguments">
+		<type>warning</type>
+	</rule> -->
+
+	<!-- <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+		<type>warning</type>
+	</rule> -->
+</ruleset>

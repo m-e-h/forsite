@@ -1,21 +1,36 @@
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package forsite
+ */
+
+namespace Forsite;
+
+?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="<?= $color1 ?>">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'forsite' ); ?></a>
 
-	<?php wp_body_open(); ?>
+	<header id="masthead" class="site-header">
+		<?php get_template_part( 'template-parts/header/custom_header' ); ?>
 
-	<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'forsite' ); ?></a>
+		<?php get_template_part( 'template-parts/header/branding' ); ?>
 
-	<header class="app-header">
-
-		<?= $engine->render( 'views/components', 'header-branding' ); ?>
-
-		<?= $engine->render( 'views/components', 'nav-menu', [ 'location' => 'primary' ] ); ?>
-
-	</header>
+		<?php get_template_part( 'template-parts/header/navigation' ); ?>
+	</header><!-- #masthead -->

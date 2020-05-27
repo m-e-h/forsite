@@ -1,0 +1,125 @@
+:root:root .alignleft {
+	float: left;
+	margin-right: var(--base-space);
+}
+
+:root:root .alignright {
+	float: right;
+	margin-left: var(--base-space);
+}
+
+:root:root .aligncenter {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+}
+
+:root:root figure.aligncenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+:root:root .alignwide {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--content-wide);
+	margin-inline: auto;
+}
+
+:root:root .alignfull {
+	width: 100%;
+	max-width: 100%;
+}
+
+
+
+/* :root .alignleft {
+	float: left;
+	margin-right: var(--base-space);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-start;
+}
+
+:root .alignright {
+	float: right;
+	margin-left: var(--base-space);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-end;
+}
+
+:root .aligncenter {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+}
+
+:root .alignwide {
+	max-width: var(--content-wide);
+}
+
+:root .alignfull {
+	width: 100%;
+	max-width: none;
+	margin-inline: 0;
+} */
+
+/* :root .has-intro-font-size {
+
+	@media (--read) {
+		align-self: flex-start;
+	}
+} */
+
+/* .entry > p,
+.entry > *,
+:root .has-intro-font-size,
+:root .wp-block-cover__inner-container,
+:root .alignwide
+*/
+
+/* .entry > p {
+	align-self: flex-start;
+	margin-inline: 1rem;
+
+	@media (--tab) {
+		margin-inline: var(--tab-margin);
+	}
+
+	@media (--read) {
+		margin-inline: auto;
+
+		margin-inline: calc((100vw - var(--content-wide)) * 0.5);
+	}
+} */
+
+/* .entry > p {
+	max-width: var(--reading-width);
+} */
+
+/* @media (--content) {
+
+	.entry > *,
+	.entry > p {
+		margin-inline: calc((100vw - var(--content-width)) * 0.5);
+	}
+}
+
+@media (--wide) {
+
+	:root .has-intro-font-size,
+	:root .alignwide {
+		margin-inline: calc((100vw - var(--content-wide)) * 0.5);
+	}
+} */

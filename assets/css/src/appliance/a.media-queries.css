@@ -1,0 +1,26 @@
+/**
+ * Custom Media Queries
+ * Works like Custom Properties, except for media queries.
+ *
+ * @link: https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ **/
+
+@custom-media --sm_down (width < 30em);
+@custom-media --sm (width >= 30em);
+@custom-media --md_down (width < 57em);
+@custom-media --md (width >= 57em);
+@custom-media --lg (width >= 64em);
+@custom-media --xl (width >= 90em);
+@custom-media --mobile_down (width < 30em);
+@custom-media --mobile (width >= 320px); /* 20em */
+@custom-media --phab (width >= 480px);
+@custom-media --phab_down (width < 480px);
+@custom-media --tab_down (width < 770px);
+@custom-media --tab (width >= 770px);
+@custom-media --read_down (width < 920px);
+@custom-media --read (width >= 920px);
+@custom-media --content_down (width < 1224px);
+@custom-media --content (width >= 1224px); /* 76em */
+@custom-media --wide_down (width < 1534px);
+@custom-media --wide (width >= 1534px);
+@custom-media --full (width >= 1921px);

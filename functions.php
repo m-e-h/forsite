@@ -1,36 +1,24 @@
 <?php
 /**
- * Theme functions file.
+ * Forsite functions and definitions
  *
- * This file is used to bootstrap the theme.
+ * This file must be parseable by PHP 5.2.
  *
- * @package   Forsite
- * @author    Marty Helmick <info@martyhelmick.com>
- * @copyright 2018 Marty Helmick
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://github.com/m-e-h/forsite
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package forsite
  */
 
-// Bootstrap the theme.
-require_once( get_parent_theme_file_path( 'app/bootstrap-autoload.php' ) );
+// Include WordPress shims.
+require get_template_directory() . '/inc/wordpress-shims.php';
 
-// Create a new application.
-$forsite = new \Hybrid\Core\Application();
+// Setup autoloader (via Composer or custom).
+if ( file_exists( get_template_directory() . '/vendor/autoload.php' ) ) {
+	require get_template_directory() . '/vendor/autoload.php';
+}
 
-// Register service providers with the application.
-$forsite->provider( \Forsite\Customize\Provider::class );
+// Load the `forsite()` entry point function.
+require get_template_directory() . '/inc/functions.php';
 
-// Creates an action hook for child themes (or plugins).
-// Passes application instance to the action callback.
-do_action( 'forsite/bootstrap', $forsite );
-
-// Bootstrap the application.
-$forsite->boot();
-
-// Move views/ to a top level folder.
-add_filter(
-	'hybrid/template/path',
-	function( $path ) {
-		return;
-	}
-);
+// Initialize the theme.
+call_user_func( 'Forsite\forsite' );

@@ -1,0 +1,92 @@
+@import "appliance";
+@import "elements/editor-style.css";
+@import "objects";
+@import "vendors";
+@import "utility";
+
+/* @import "pages"; */
+
+.editor-block-list__layout {
+	font-family: var(--font-family);
+}
+
+/**
+ * Add a max-width back to the editor.
+ */
+
+/* .block-editor-block-list__block-edit .wp-block-image {
+	max-width: 100%;
+} */
+
+/* for all the a tags that WP styled */
+
+:root a:not([class]) {
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+	color: var(--color-links);
+	text-decoration: var(--link-decoration);
+	opacity: 0.8;
+}
+
+.block-editor-block-list__block[data-type="core/paragraph"] p {
+	line-height: var(--reading-line-height);
+}
+
+/* mostly for the editor post-title */
+:root:root textarea.editor-post-title__input {
+	font-family: var(--font-family);
+}
+
+/* .wp-block-cover .block-editor-block-list__block {
+	color: inherit;
+} */
+
+/**
+ * Width styles for the editor's unique markup.
+ */
+
+.wp-block {
+	max-width: var(--content-width);
+}
+
+.wp-block[data-align="wide"] {
+	max-width: var(--content-wide);
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* EDITOR Homepage */
+
+.wp-block-group.cat-thumbs .block-editor-block-list__layout .block-editor-block-list__block {
+	display: inline-block;
+}
+
+.wp-block-columns.gallery-offset img {
+	height: 13vw;
+	width: 13vw;
+	object-fit: cover;
+}
+
+:root:root .editor-styles-wrapper .u-max-width-md,
+:root:root .editor-styles-wrapper .u-max-width-lg,
+:root:root .editor-styles-wrapper .u-max-width-reading,
+:root:root .editor-styles-wrapper .u-content-width,
+:root:root .editor-styles-wrapper .u-content-wide,
+:root:root .editor-styles-wrapper .is-style-reading-width,
+:root:root .editor-styles-wrapper .u-reading-width {
+	width: 100%;
+}
+
+
+/* About Us */
+.wp-block-columns.is-style-thumb-row .wp-block-cover {
+	min-height: 0;
+}
+
+:root:root:root .is-style-thumb-row.team-row {
+	margin-top: -5vw;
+	display: block;
+}

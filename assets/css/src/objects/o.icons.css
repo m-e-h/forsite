@@ -1,0 +1,20 @@
+:root:root .is-style-logos-only li {
+	width: 1em;
+	height: 1em;
+	font-size: 1.5rem;
+	padding: 0;
+	border-radius: 0;
+	display: inline-block;
+}
+
+.is-style-logos-only .wp-social-link a {
+	padding: 0;
+	line-height: 1;
+	display: block;
+	transition-property: var(--transition-props);
+}
+
+:root:root .is-style-logos-only .wp-social-link svg {
+	width: 1em;
+	height: 1em;
+}

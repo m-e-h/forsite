@@ -1,28 +1,43 @@
 {
-  "name": "martyhelmick/forsite",
+  "name": "m-e-h/forsite",
+  "description": "Starter theme for WordPress.",
   "type": "wordpress-theme",
-  "description": "A started starter theme for WordPress",
-  "keywords": [
-    "wordpress"
-  ],
-  "homepage": "https://github.com/m-e-h/forsite",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Marty Helmick",
-      "email": "info@martyhelmick.com",
-      "homepage": "https://github.com/m-e-h"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Forsite\\": "app/"
+  "license": "GPL-3.0-or-later",
+	"require": {
+		"php": ">=7.2",
+		"justintadlock/hybrid-carbon": "^1.0",
+		"johnbillion/extended-cpts": "^4.3"
+	},
+  "require-dev": {
+		"automattic/phpcs-neutron-ruleset": "^3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+		"wp-cli/i18n-command": "^2.2"
+  },
+  "config": {
+    "platform": {
+      "php": "7.2"
     }
   },
-  "require": {
-    "php": ">=5.6",
-    "justintadlock/hybrid-core": "^5.1",
-    "justintadlock/hybrid-breadcrumbs": "^1.0",
-    "justintadlock/hybrid-font": "^1.1"
+  "autoload": {
+    "psr-4": {
+      "Forsite\\": "inc"
+    }
+  },
+  "scripts": {
+		"install-codestandards": [
+			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+		],
+		"post-install-cmd": [
+			"@install-codestandards"
+		],
+		"phpcbf-dev": "\"vendor/bin/phpcbf\"",
+		"run-phpcbf": [
+			"@phpcbf-dev"
+		],
+		"phpcs-dev": "\"vendor/bin/phpcs\"",
+		"run-phpcs": [
+			"@phpcs-dev"
+		],
+		"make-pot": "wp i18n make-pot . languages/_s.pot"
   }
 }

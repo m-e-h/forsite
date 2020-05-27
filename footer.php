@@ -1,15 +1,24 @@
-<footer id="footer" class="app-footer">
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package forsite
+ */
 
-	<?= $engine->render( 'sidebar', 'footer', [ 'sidebar' => 'footer' ] ); ?>
+namespace Forsite;
 
-	<div class="site-info u-1of1 u-p1 u-text-center">
-		&#169; <?= date( 'Y' ) ?> <a class="site-link" href="<?= esc_url( get_home_url() ); ?>" rel="home"><?= get_bloginfo( 'name' ); ?></a>
-	</div>
+?>
 
-</footer>
+	<footer id="colophon" class="site-footer">
+		<?php get_template_part( 'template-parts/footer/info' ); ?>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
-
 </html>

@@ -1,7 +1,21 @@
-<?php if ( ! is_active_sidebar( $data->sidebar ) ) { return; } ?>
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package forsite
+ */
 
-<aside <?= Hybrid\Attr\render( 'sidebar', $data->sidebar ); ?>>
+namespace Forsite;
 
-	<?php dynamic_sidebar( $data->sidebar ); ?>
+if ( ! forsite()->is_primary_sidebar_active() ) {
+	return;
+}
 
-</aside>
+forsite()->print_styles( 'forsite-sidebar', 'forsite-widgets' );
+
+?>
+<aside id="secondary" class="primary-sidebar widget-area">
+	<?php forsite()->display_primary_sidebar(); ?>
+</aside><!-- #secondary -->

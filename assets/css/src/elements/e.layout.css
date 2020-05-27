@@ -1,0 +1,53 @@
+/* e.layout
+-------------------------------------------- */
+header,
+footer,
+main,
+article,
+aside,
+section {
+	position: relative;
+}
+
+header,
+main,
+article,
+footer {
+	width: 100%;
+}
+
+body > header {
+	color: var(--header-text-color);
+	background-color: var(--header-bg-color);
+	display: flex;
+	font-size: var(--h6);
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@media (--md) {
+		align-items: center;
+	}
+}
+
+section {
+	margin-bottom: var(--gutter-half);
+}
+
+/* aside {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+} */
+
+aside > section {
+	min-width: calc(200px - var(--base-space));
+}
+
+h3[id] {
+	scroll-margin-top: var(--base-space);
+}
+
+hr {
+	width: 100%;
+}

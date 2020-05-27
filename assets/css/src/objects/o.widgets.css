@@ -1,0 +1,14 @@
+/* .widget__title {
+	font-weight: normal;
+} */
+
+.search-field--blog {
+	font-size: 1rem;
+	background-image: var(--search-submit-icon);
+	background-color: transparent;
+	display: inline-block;
+	background-size: 1.5rem;
+	background-position: 0.625em, center;
+	padding-left: 3rem;
+	vertical-align: top;
+}

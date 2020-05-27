@@ -1,0 +1,158 @@
+/* #COLORS
+\*------------------ */
+
+:root:root .u-bg-frost {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: var(--color-text);
+}
+
+:root:root .u-bg-shade {
+	background-color: rgba(0, 0, 0, 0.9);
+	color: var(--color-text);
+}
+
+:root:root .u-bg-transparent {
+	background-color: transparent;
+}
+
+/* Text Colors */
+:root:root .u-text-color {
+	color: var(--color-text);
+}
+
+:root:root .u-text-white {
+	color: #fff;
+}
+
+:root:root .u-text-muted {
+	opacity: 0.5;
+}
+
+:root:root .has-theme-primary-color {
+	color: var(--color-1);
+}
+
+:root:root .has-theme-primary-dark-color {
+	color: var(--color-1-dark);
+}
+
+:root:root .has-theme-secondary-color {
+	color: var(--color-2);
+}
+
+:root:root .has-theme-background-color {
+	color: var(--background_color);
+}
+
+:root:root .has-theme-foreground-color {
+	color: var(--foreground_color);
+}
+
+:root:root .has-theme-gray-light-color {
+	color: var(--theme_gray_light);
+}
+
+:root:root .has-theme-gray-color {
+	color: var(--theme_gray);
+}
+
+:root:root .has-theme-gray-dark-color {
+	color: var(--theme_gray_dark);
+}
+
+:root:root .has-theme-warning-color {
+	color: var(--color-warning);
+}
+
+:root:root .has-theme-info-color {
+	color: var(--color-info);
+}
+
+:root:root .has-theme-error-color {
+	color: var(--color-error);
+}
+
+:root:root .has-theme-success-color {
+	color: var(--color-success);
+}
+
+/* Background Colors */
+:root:root .has-theme-primary-background-color {
+	--color-bg: var(--color-1);
+
+	background-color: var(--color-1);
+	color: #fff;
+}
+
+:root:root .has-theme-primary-dark-background-color {
+	--color-bg: var(--color-1-dark);
+
+	background-color: var(--color-1-dark);
+	color: #fff;
+}
+
+:root:root .has-theme-secondary-background-color {
+	--color-bg: var(--color-2);
+
+	background-color: var(--color-2);
+	color: #fff;
+}
+
+:root:root .has-theme-background-background-color {
+	background-color: var(--background_color);
+	color: var(--foreground_color);
+}
+
+:root:root .has-theme-foreground-background-color {
+	--color-bg: var(--foreground_color);
+
+	background-color: var(--foreground_color);
+	color: var(--background_color, #fff);
+}
+
+:root:root .has-theme-gray-background-color {
+	background-color: var(--theme_gray);
+}
+
+:root:root .has-theme-gray-light-background-color {
+	--color-bg: var(--theme_gray_light);
+
+	background-color: var(--theme_gray_light);
+	color: #000;
+}
+
+:root:root .has-theme-gray-dark-background-color {
+	--color-bg: var(--theme_gray_dark);
+
+	background-color: var(--theme_gray_dark);
+	color: #fff;
+}
+
+:root:root .has-theme-warning-background-color {
+	--color-bg: var(--color-warning);
+
+	background-color: var(--color-warning);
+}
+
+:root:root .has-theme-info-background-color {
+	--color-bg: var(--color-info);
+
+	background-color: var(--color-info);
+}
+
+:root:root .has-theme-error-background-color {
+	--color-bg: var(--color-error);
+
+	background-color: var(--color-error);
+}
+
+:root:root .has-theme-success-background-color {
+	--color-bg: var(--color-success);
+
+	background-color: var(--color-success);
+}
+
+:root:root .is-style-primary-gradient-bg {
+	background: var(--linear_gradient);
+	color: var(--background_color, #fff);
+}

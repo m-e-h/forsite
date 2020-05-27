@@ -1,0 +1,40 @@
+/* e.links
+-------------------------------------------- */
+a {
+	font-weight: inherit;
+	background-color: transparent;
+	overflow-wrap: break-word;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+a:matches(:focus, :hover) {
+	opacity: 0.7;
+}
+
+figure a:matches(:focus, :hover) {
+	opacity: 1;
+}
+
+article > a,
+.single-entry--post a {
+	color: var(--link-color);
+	text-decoration: var(--link-decoration);
+	text-decoration-color: var(--link-decoration-color);
+
+	&:matches(:focus, :hover) {
+		color: var(--link-hover-color);
+		text-decoration: var(--link-hover-decoration);
+		text-decoration-color: var(--link-decoration-color);
+	}
+}
+
+:root article h1 a,
+:root article h2 a,
+:root article h3 a,
+:root article h4 a,
+.single-entry--post > header a {
+	text-decoration: none;
+	color: inherit;
+}

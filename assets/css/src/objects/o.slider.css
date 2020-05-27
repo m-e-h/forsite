@@ -1,0 +1,79 @@
+.entry-wrapper {
+	margin: 0 1rem;
+}
+
+.carousel {
+	margin-bottom: var(--gutter);
+}
+
+.flickity-viewport {
+	margin-bottom: 1.5rem;
+}
+
+:root:root .flickity-prev-next-button {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 19 10'%3E%3Cpath stroke='%2374B74A' stroke-linecap='round' stroke-linejoin='round' d='M17.558 5.313H.578m0 0l4.36-4.063M.578 5.313l4.36 4.062'/%3E%3C/svg%3E");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	min-height: unset;
+	height: 40px;
+	width: 40px;
+	border: 1px solid var(--color-1);
+	border-radius: 50%;
+	background-color: transparent;
+	color: var(--color-1);
+	top: 100%;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		box-shadow: 0 0 0 2px var(--color-1);
+	}
+}
+
+.flickity-prev-next-button.previous {
+	left: 0;
+	transform: translateY(0);
+}
+
+.flickity-prev-next-button.next {
+	left: calc(40px + 12px);
+	transform: rotate(-180deg);
+	right: unset;
+}
+
+svg.flickity-button-icon {
+	display: none;
+}
+
+.flickity-page-dots {
+	display: flex;
+	justify-content: space-around;
+	width: calc(100% - 150px);
+	right: 0;
+	background-color: transparent;
+	height: 2px;
+}
+
+.flickity-page-dots .dot.is-selected,
+.flickity-page-dots .dot {
+	width: auto;
+	margin: 0;
+	flex: 1;
+	border-radius: 0;
+	height: 100%;
+	background-color: var(--color-1);
+	opacity: 1;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+.dot.is-selected ~ * {
+	opacity: 0.2;
+	background-color: currentColor;
+}
+
+.wp-block-products-carousel .entry__title {
+	text-transform: capitalize;
+}

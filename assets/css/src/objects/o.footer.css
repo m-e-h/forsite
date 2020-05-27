@@ -1,0 +1,70 @@
+footer {
+	font-size: 16px;
+}
+
+.app-footer {
+	padding: rfs(88px) 0 rfs(67px);
+}
+
+.app-footer li a {
+	padding: 0.65rem 0;
+	display: block;
+}
+
+.widget__title--footer {
+	font-size: var(--h5);
+	line-height: var(--heading-line-height);
+	font-family: var(--display-font-family);
+}
+
+.widget__title--footer::after,
+.u-hr-sep::before {
+	content: "";
+	display: block;
+	border-top: 1px solid;
+	margin: 2rem 0;
+	width: 3rem;
+	opacity: 0.3;
+}
+
+.tandp-links a {
+	text-decoration: underline;
+}
+
+.tip-cred {
+	margin-left: 2.25rem;
+}
+
+footer .v-tip-logo {
+	font-size: 2.1rem;
+}
+
+.nearest-location p:not(.location-charlotte) {
+	display: none;
+}
+
+body[class*="nearest-"] .nearest-location .wp-block-button {
+	display: none;
+}
+
+:root body {
+	&.nearest-Charlotte .location-charlotte {
+		display: block;
+	}
+
+	&.nearest-Columbia .location-columbia {
+		display: block;
+	}
+
+	&.nearest-Greensboro .location-greensboro {
+		display: block;
+	}
+
+	&.nearest-Raleigh .location-raleigh {
+		display: block;
+	}
+
+	&.nearest-Winston .location-winston {
+		display: block;
+	}
+}

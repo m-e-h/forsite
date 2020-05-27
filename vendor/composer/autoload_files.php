@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '77c7b76f4dcd3556a40cd339441c5cce' => $vendorDir . '/justintadlock/hybrid-core/src/bootstrap-hybrid.php',
-    'c63d25cb66ea792ddf16ba3c9336aa4c' => $vendorDir . '/justintadlock/hybrid-font/src/bootstrap-font.php',
+    '8cd2fca4db21bffce1ad0612f7caeec4' => $vendorDir . '/ramsey/array_column/src/array_column.php',
+    '3937806105cc8e221b8fa8db5b70d2f2' => $vendorDir . '/wp-cli/mustangostang-spyc/includes/functions.php',
+    'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
+    'a2c48002d05f7782d8b603bd2bcb5252' => $vendorDir . '/johnbillion/extended-cpts/extended-cpts.php',
+    'fa89abcef9a74fe8927100fa21dc25d5' => $vendorDir . '/johnbillion/extended-template-parts/extended-template-parts.php',
+    'ffb465a494c3101218c4417180c2c9a2' => $vendorDir . '/wp-cli/i18n-command/i18n-command.php',
 );

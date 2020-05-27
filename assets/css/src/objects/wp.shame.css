@@ -1,0 +1,260 @@
+body:not(.single-post) strong {
+	font-weight: inherit;
+}
+
+body:not(.single-post) p > strong {
+	font-weight: bolder;
+}
+
+body:not(.single-post) blockquote strong {
+	font-weight: bolder;
+}
+
+/**
+ * Override WP giving all .wp-block-image a max-width and margin-bottom.
+ * .wp-block-image { max-width: 100%; margin-bottom: 1em
+ */
+.wp-block-image {
+	margin-bottom: var(--base-space);
+	max-width: var(--content-width);
+}
+
+.wp-block-image > figure {
+	margin-bottom: 0;
+}
+
+.wp-block-embed {
+	margin-bottom: var(--gutter);
+}
+
+/**
+ * Repeat blockquote style with specificity to override WP.
+ * .wp-block-quote.is-style-large p {
+ */
+blockquote.wp-block-quote.wp-block-quote {
+	margin-bottom: var(--gutter);
+
+	&.is-style-large {
+		font-size: var(--h4);
+	}
+}
+
+.wp-block-pullquote.wp-block-pullquote blockquote p {
+	margin-bottom: var(--gutter-half);
+}
+
+/* Block Style variations */
+
+.wp-block-button.is-style-fill-container {
+	display: block;
+	height: 100%;
+	margin: 0;
+}
+
+.wp-block-column .wp-block-button {
+	margin: 0;
+}
+
+.is-style-fill-container > .wp-block-button__link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/** Customizer CSS */
+
+.u-1of1.u-rel.products-search-form.has-theme-gray-light-background-color {
+	margin-bottom: var(--base-double);
+}
+
+/* ### Customizer 2-03-20 */
+
+.cat-item {
+	text-transform: capitalize;
+}
+
+#infinite-footer .container {
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 68px;
+	max-height: 68px;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0.2;
+}
+
+:root #infinite-handle span {
+	display: inline-block;
+	padding: 0;
+	font-size: 1rem;
+	border-radius: var(--button-radius);
+	font-family: var(--display-font-family);
+	font-weight: var(--dispay-bold);
+	background-color: var(--color-1);
+	color: #fff;
+}
+
+.page-id-61 .v-patterns.v-flag {
+	width: auto;
+	bottom: 10%;
+	top: unset;
+	left: -2px;
+}
+
+.wp-block-columns.under-color-col {
+	position: absolute;
+	bottom: 0;
+	height: 50%;
+}
+
+.wp-block-column.is-vertically-aligned-center.is-style-primary-gradient-bg.u-pt-xl.u-mb_-sm {
+	z-index: 1;
+}
+
+header + .wp-block-cover {
+	padding-top: 73px;
+}
+
+footer,
+.site-search--products {
+	overflow-x: hidden;
+}
+
+h5,
+.has-small-font-size {
+	margin: 0;
+}
+
+div > .wp-block-image {
+	margin-bottom: 1rem;
+}
+
+.page-template-template-header-image .app-header {
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.15),
+		rgba(0, 0, 0, 0.2) 60%,
+		rgba(0, 0, 0, 0.1),
+		transparent
+	);
+}
+
+:root {
+	--input-padding: 0.85rem;
+	--chevron-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpolyline points='3,7.5 12,16.5 21,7.5' /%3E%3C/svg%3E");
+}
+
+.v-patterns.sail.u-width-auto.v-image.v-sail {
+	opacity: 0.2;
+	left: -220px;
+}
+
+.flickity-page-dots {
+	display: flex;
+	justify-content: space-around;
+	width: calc(100% - 150px);
+	right: 0;
+	background-color: transparent;
+	height: 2px;
+}
+
+.flickity-page-dots .dot {
+	width: auto;
+	margin: 0;
+	flex: 1;
+	border-radius: 0;
+	height: 100%;
+	background-color: var(--color-1);
+	opacity: 1;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+.dot.is-selected ~ * {
+	opacity: 0.2;
+	background-color: currentColor;
+}
+
+.we-do.flag.right-side.flip-x.v-image.v-flag {
+	bottom: 0;
+	top: unset;
+}
+
+.wp-block-rss__item {
+	border-bottom: 1px solid;
+	border-color: var(--theme_gray);
+}
+
+.wp-block-rss__item-title {
+	margin: 1rem 0;
+	font-weight: var(--font-bold);
+}
+
+@media (min-width: 1220px) {
+	.u-gray-light-bottom {
+		background-image: linear-gradient(
+			to top,
+			var(--theme_gray_light) var(--gutter-xl),
+			transparent 0
+		);
+	}
+}
+
+.staff-profile {
+	cursor: pointer;
+}
+
+.v-image.v-search {
+	width: 1.5em;
+}
+
+.profile-content-window > .profile-content {
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+.page-id-61 .v-patterns.sail.v-image.v-sail {
+	width: auto;
+	right: -200px;
+	left: unset;
+	opacity: 0.1;
+}
+
+.wp-block-group.u-pl-base.u-pr-base.u-border.u-pt-base {
+	border-color: #d1d1d1;
+}
+
+.u-flex.u-flex-jb.is-style-display-font.u-mb1 {
+	text-transform: capitalize;
+}
+
+p {
+	margin-top: 0;
+}
+
+main {
+	overflow: hidden;
+}
+
+:root:root .megamenu {
+	max-width: 83vw;
+}
+
+.app-header__nav.is-active .megamenu .wp-block-group.has-theme-background-background-color {
+	background-color: var(--color-1-dark);
+	color: #fff;
+}
+
+:root .app-header__nav.is-active .megamenu {
+	width: 100vw;
+	max-width: 100%;
+}
+
+header .is-active .wc-block-product-categories-list,
+footer .is-active .wc-block-product-categories-list {
+	columns: 3;
+	columns: auto;
+}

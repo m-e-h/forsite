@@ -1,10 +1,44 @@
 <?php
-$engine = Hybrid\App::resolve( 'view/engine' );
-$color1 = get_theme_mod( 'primary_color', Forsite\default_primary_color() );
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package forsite
+ */
+
+namespace Forsite;
+
+get_header();
+
+forsite()->print_styles( 'forsite-content' );
+
 ?>
+	<main id="primary" class="site-main">
+		<?php
+		if ( have_posts() ) {
 
-<?= $engine->render( false, 'header', [ 'color1' => $color1 ] ); ?>
+			get_template_part( 'template-parts/content/page_header' );
 
-<?= $engine->render( 'views', Hybrid\Template\hierarchy() ); ?>
+			while ( have_posts() ) {
+				the_post();
 
-<?= $engine->render( 'footer' ); ?>
+				get_template_part( 'template-parts/content/entry', get_post_type() );
+			}
+
+			if ( ! is_singular() ) {
+				get_template_part( 'template-parts/content/pagination' );
+			}
+		} else {
+			get_template_part( 'template-parts/content/error' );
+		}
+		?>
+	</main><!-- #primary -->
+<?php
+get_sidebar();
+get_footer();

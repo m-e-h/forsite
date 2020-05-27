@@ -1,0 +1,8 @@
+<svg class="emoji-neutral" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="13" cy="13" r="12" fill="#fdcc49"/>
+    <g transform="matrix(1.5 0 0 1.5 1 1)">
+        <path d="M3.5 11a.563.5 0 01.563-.5h7.875a.563.5 0 010 1H4.061A.563.5 0 013.5 11z" opacity=".8"/>
+        <circle cx="5" cy="6" r="1" opacity=".8"/>
+        <circle cx="11" cy="6" r="1" opacity=".8"/>
+    </g>
+</svg>

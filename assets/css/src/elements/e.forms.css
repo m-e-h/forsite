@@ -1,0 +1,202 @@
+/* e.forms
+-------------------------------------------- */
+form {
+	margin-bottom: var(--gutter);
+	max-width: var(--content-width);
+}
+
+input,
+select,
+textarea {
+	font-size: var(--text-small);
+	margin-bottom: 1rem;
+	max-width: 100%;
+	min-height: var(--input-height);
+	border-radius: var(--border-radius);
+	border-width: 1px;
+	border-color: var(--input-border-color);
+
+	/* border-style: solid; */
+	padding: var(--input-padding);
+	background-color: var(--input-bg-color);
+
+	/* color: var(--color-text); */
+	vertical-align: middle;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	min-height: 220px;
+}
+
+input,
+select {
+	display: inline-flex;
+	align-items: center;
+	line-height: normal;
+	font-weight: normal;
+}
+
+form p:focus-within label {
+	color: var(--color-1);
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+select:not([multiple]):not([size]) {
+	appearance: none;
+	background-image: var(--chevron-bg-image),
+		linear-gradient(to bottom, #fff 0%, var(--input-bg-color) 100%);
+	background-position: center right 0.5em, 0 0;
+	background-repeat: no-repeat, repeat;
+	background-size: 0.8em auto, 100%;
+	padding-right: 1.5rem !important;
+}
+
+:matches(input, select, textarea):focus {
+	background-color: #fff;
+	outline: none;
+	border-color: var(--color-1);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+	box-shadow: inset 0 0 0 0.063rem var(----color-warning) !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0;
+	min-height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0.5em 0 0;
+}
+
+input[type="number"] {
+	width: auto; /* Firefox 36+ */
+	padding-inline: 0.25rem;
+	margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+	opacity: 1;
+}
+
+[type="search"] {
+	margin: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::placeholder {
+	color: inherit;
+	opacity: 0.5;
+}
+
+input[type="search"]:not(:focus)::placeholder {
+	opacity: 1;
+}
+
+:not(:focus)::placeholder {
+	opacity: 0.5;
+}
+
+:root :focus::placeholder {
+	opacity: 0.3;
+}
+
+/*
+  * Add the correct styles in Edge, IE, and Safari.
+  */
+
+dialog {
+	background-color: #fff;
+	color: var(--color-text);
+	display: block;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	width: fit-content;
+	position: fixed;
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: 3;
+
+	&::after {
+		content: "";
+		background: rgba(0, 0, 0, 0.5);
+		max-width: 100%;
+		width: 100%;
+		pointer-events: auto;
+		z-index: 2;
+	}
+}
+
+dialog:not([open]) {
+	display: none;
+}
+
+[aria-busy="true"] {
+	cursor: progress;
+}
+
+[aria-controls] {
+	cursor: pointer;
+}
+
+:disabled,
+[readonly],
+[aria-disabled="true"],
+[disabled],
+[readonly]:focus {
+	cursor: not-allowed;
+	pointer-events: none;
+	border-color: transparent !important;
+	opacity: 0.5;
+}
+
+label {
+	font-size: var(--text-small);
+	line-height: 1.5;
+	display: block;
+	margin: 0 0 0.5rem;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 0.5px;
+}
+
+:matches(input[type="checkbox"], input[type="radio"]) + label {
+	display: inline-block;
+	margin: 0;
+}
+
+label:not(.screen-reader-text) + input,
+label:not(.screen-reader-text) + select,
+:matches(input:not([type="checkbox"]):not([type="radio"]), select) + label:not(.screen-reader-text) {
+	margin-bottom: 1rem;
+}

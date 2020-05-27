@@ -1,0 +1,66 @@
+:root {
+	/* headings */
+	--fluid-h0: 1.75rem; /* 1.1 Archivo / Bold / 89px / 98px / -3px */
+	--fluid-h1: 1.75rem; /* 1.19 Archivo / Bold / 67px / 80px / -2px */
+	--fluid-h2: 1.5rem; /* 1.2 Archivo / Bold / 50px / 60px / -2px */
+	--fluid-h3: 1.3125rem; /* 1.46 Archivo / Bold / 37px / 54px / -2px */
+	--fluid-h4: 1.25rem; /* 1.5 Archivo / Bold / 28px / 42px / -1px */
+	--product-thumb-width: 5.187rem;
+
+	/* calc(minPX + (max - min)*((100vw - sm-mqPX)/(xlMQ - sm-mq))) */
+	--base-space: 1.5rem;
+	--gutter: 1.5rem;
+	--gutter-sm: 1.5rem; /* 64px -4 */
+	--gutter-md: 1.5rem; /* 80px -5 */
+	--gutter-lg: 1.5rem; /* 96px -6 */
+	--gutter-xl: 1.5rem; /* 112px -7 */
+	--gutter-xxl: 1.5rem; /* 128px -8 */
+	--gutter-xxxl: 1.5rem; /* 160px -10 */
+
+	@media (--mobile) {
+		/* headings */
+		--fluid-h0: calc(28px + (89 - 28) * ((100vw - 320px) / (920 - 320)));
+		--fluid-h1: calc(28px + (67 - 28) * ((100vw - 320px) / (920 - 320)));
+		--fluid-h2: calc(24px + (50 - 24) * ((100vw - 320px) / (920 - 320)));
+		--fluid-h3: calc(21px + (37 - 21) * ((100vw - 320px) / (920 - 320)));
+		--fluid-h4: calc(20px + (28 - 20) * ((100vw - 320px) / (920 - 320)));
+
+		/* category page thumbs */
+
+		/* --product-thumb-width: calc(5.2rem + (8.5 - 5.187) * ((100vw - 20rem) / (96 - 20))); */
+
+		/* fluid gutters */
+		--gutter: calc(1.5rem + (2.5 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-sm: calc(1.5rem + (4 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-md: calc(1.5rem + (5 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-lg: calc(1.5rem + (6 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-xl: calc(1.5rem + (7 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-xxl: calc(1.5rem + (8 - 1.5) * ((100vw - 20rem) / 56));
+		--gutter-xxxl: calc(1.5rem + (10 - 1.5) * ((100vw - 20rem) / 56));
+	}
+
+	@media (--read) {
+		/* --product-thumb-width: 4rem; */
+
+		/* headings */
+		--fluid-h0: 5.5625rem; /* 1.1 Archivo / Bold / 89px / 98px / -3px */
+		--fluid-h1: 4.1875rem; /* 1.19 Archivo / Bold / 67px / 80px / -2px */
+		--fluid-h2: 3.125rem; /* 1.2 Archivo / Bold / 50px / 60px / -2px */
+		--fluid-h3: 2.3125rem; /* 1.46 Archivo / Bold / 37px / 54px / -2px */
+		--fluid-h4: 1.75rem; /* 1.5 Archivo / Bold / 28px / 42px / -1px */
+	}
+
+	@media (--content) {
+		--gutter: 2.5rem;
+		--gutter-sm: 4rem; /* 64px */
+		--gutter-md: 5rem; /* 80px */
+		--gutter-lg: 6rem; /* 96px */
+		--gutter-xl: 7rem; /* 112px */
+		--gutter-xxl: 8rem; /* 128px */
+		--gutter-xxxl: 10rem; /* 160px */
+	}
+
+	@media (--wide) {
+		--product-thumb-width: 8.5rem;
+	}
+}

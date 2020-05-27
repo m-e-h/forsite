@@ -1,0 +1,33 @@
+/* e.images
+-------------------------------------------- */
+audio,
+canvas,
+iframe,
+img,
+video {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	border-style: none;
+}
+
+a > img {
+	transition: inherit;
+	backface-visibility: hidden;
+}
+
+svg {
+	pointer-events: none;
+}
+
+main svg {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+figure {
+	padding: 0;
+}

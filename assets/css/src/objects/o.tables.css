@@ -1,0 +1,12 @@
+table.is-style-stripes.is-style-stripes tr:nth-of-type(2n + 1) {
+	background-color: var(--color-shade-2);
+}
+
+table.is-style-stripes.is-style-stripes {
+	border-bottom-width: 1px;
+	border-bottom-color: var(--color-shade-3);
+}
+
+table.has-fixed-layout {
+	table-layout: fixed;
+}

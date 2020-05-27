@@ -1,0 +1,99 @@
+/* #UTILITY LAYOUT
+\*------------------------------------ */
+
+:root .u-inline {
+	display: inline;
+}
+
+:root .u-block {
+	display: block;
+}
+
+:root .u-inline-block {
+	display: inline-block;
+}
+
+:root .u-hyphenate {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+:root .u-abs {
+	position: absolute;
+}
+
+:root .u-rel {
+	position: relative;
+}
+
+:root:root .u-static {
+	position: static;
+}
+
+:root .u-left {
+	float: left;
+}
+
+:root .u-right {
+	float: right;
+}
+
+:root .u-top0 {
+	top: 0;
+}
+
+:root .u-bottom0 {
+	bottom: 0;
+}
+
+:root .u-left0 {
+	left: 0;
+}
+
+:root .u-right0 {
+	right: 0;
+}
+
+.u-flip-x {
+	transform: scaleX(-1);
+}
+
+.u-flip-y {
+	transform: scaleY(-1);
+}
+
+.u-top-left {
+	top: -1px;
+	left: -1px;
+}
+
+.u-top-center {
+	top: -1px;
+}
+
+.u-top-right {
+	top: -1px;
+	right: -1px;
+}
+
+.u-bottom-left {
+	bottom: -1px;
+	left: -1px;
+}
+
+.u-bottom-center {
+	bottom: -1px;
+}
+
+.u-bottom-right {
+	bottom: -1px;
+	right: -1px;
+}
+
+.u-left-middle {
+	left: -1px;
+}
+
+.u-right-middle {
+	right: -1px;
+}

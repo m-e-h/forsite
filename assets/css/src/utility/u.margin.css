@@ -1,0 +1,470 @@
+/* #WHITE SPACE
+\*------------------------------------ */
+:root:root:root .u-m-base,
+:root:root:root .u-m {
+	margin: var(--base-space);
+}
+
+:root:root:root .u-mt-base,
+:root:root:root .u-mt {
+	margin-top: var(--base-space);
+}
+
+:root:root:root .u-mb-base,
+:root:root:root .u-mb {
+	margin-bottom: var(--base-space);
+}
+
+:root:root:root .u-mr-base,
+:root:root:root .u-mr {
+	margin-right: var(--base-space);
+}
+
+:root:root:root .u-ml-base,
+:root:root:root .u-ml {
+	margin-left: var(--base-space);
+}
+
+:root:root:root .u-mx {
+	margin-inline: var(--base-space);
+}
+
+:root:root:root .u-my {
+	margin-block: var(--base-space);
+}
+
+:root:root:root .u-m-half {
+	margin: var(--base-half);
+}
+
+:root:root:root .u-mt-half {
+	margin-top: var(--base-half);
+}
+
+:root:root:root .u-mb-half {
+	margin-bottom: var(--base-half);
+}
+
+:root:root:root .u-ml-half {
+	margin-left: var(--base-half);
+}
+
+:root:root:root .u-mr-half {
+	margin-right: var(--base-half);
+}
+
+:root:root:root .u-ml-auto {
+	margin-left: auto;
+}
+
+:root:root:root .u-mr-auto {
+	margin-right: auto;
+}
+
+:root:root:root .u-mt-auto {
+	margin-top: auto;
+}
+
+:root:root:root .u-mb-auto {
+	margin-bottom: auto;
+}
+
+:root:root:root .u-mx-auto {
+	margin-inline: auto;
+}
+
+:root:root:root .u-mt05 {
+	margin-top: 0.5rem;
+}
+
+:root:root:root .u-mb05 {
+	margin-bottom: 0.5rem;
+}
+
+:root:root:root .u-mr05 {
+	margin-right: 0.5rem;
+}
+
+:root:root:root .u-ml05 {
+	margin-left: 0.5rem;
+}
+
+:root:root:root .u-mt1 {
+	margin-top: 1rem;
+}
+
+:root:root:root .u-mb1 {
+	margin-bottom: 1rem;
+}
+
+:root:root:root .u-mr1 {
+	margin-right: 1rem;
+}
+
+:root:root:root .u-ml1 {
+	margin-left: 1rem;
+}
+
+:root:root:root .u-mt-gutter {
+	margin-top: var(--gutter);
+}
+
+:root:root:root .u-mb-gutter {
+	margin-bottom: var(--gutter);
+}
+
+:root:root:root .u-mr-gutter {
+	margin-right: var(--gutter);
+}
+
+:root:root:root .u-ml-gutter {
+	margin-left: var(--gutter);
+}
+
+:root:root:root .u-mt_-sm {
+	margin-top: calc(var(--gutter-sm) * -1);
+}
+
+:root:root:root .u-mt_-md {
+	margin-top: calc(var(--gutter-md) * -1);
+}
+
+:root:root:root .u-mt_-lg {
+	margin-top: calc(var(--gutter-lg) * -1);
+}
+
+:root:root:root .u-mt_-xl {
+	margin-top: calc(var(--gutter-xl) * -1);
+}
+
+:root:root:root .u-mt_-xxl {
+	margin-top: calc(var(--gutter-xxl) * -1);
+}
+
+:root:root:root .u-mt_-xxxl {
+	margin-top: calc(var(--gutter-xxxl) * -1);
+}
+
+:root:root:root .u-mr_-sm {
+	margin-right: calc(var(--gutter-sm) * -1);
+}
+
+:root:root:root .u-mr_-md {
+	margin-right: calc(var(--gutter-md) * -1);
+}
+
+:root:root:root .u-mr_-lg {
+	margin-right: calc(var(--gutter-lg) * -1);
+}
+
+:root:root:root .u-mr_-xl {
+	margin-right: calc(var(--gutter-xl) * -1);
+}
+
+:root:root:root .u-mr_-xxl {
+	margin-right: calc(var(--gutter-xxl) * -1);
+}
+
+:root:root:root .u-mr_-xxxl {
+	margin-right: calc(var(--gutter-xxxl) * -1);
+}
+
+:root:root:root .u-mb_-sm {
+	margin-bottom: calc(var(--gutter-sm) * -1);
+}
+
+:root:root:root .u-mb_-md {
+	margin-bottom: calc(var(--gutter-md) * -1);
+}
+
+:root:root:root .u-mb_-lg {
+	margin-bottom: calc(var(--gutter-lg) * -1);
+}
+
+:root:root:root .u-mb_-xl {
+	margin-bottom: calc(var(--gutter-xl) * -1);
+}
+
+:root:root:root .u-mb_-xxl {
+	margin-bottom: calc(var(--gutter-xxl) * -1);
+}
+
+:root:root:root .u-mb_-xxxl {
+	margin-bottom: calc(var(--gutter-xxxl) * -1);
+}
+
+:root:root:root .u-ml_-sm {
+	margin-left: calc(var(--gutter-sm) * -1);
+}
+
+:root:root:root .u-ml_-md {
+	margin-left: calc(var(--gutter-md) * -1);
+}
+
+:root:root:root .u-ml_-lg {
+	margin-left: calc(var(--gutter-lg) * -1);
+}
+
+:root:root:root .u-ml_-xl {
+	margin-left: calc(var(--gutter-xl) * -1);
+}
+
+:root:root:root .u-ml_-xxl {
+	margin-left: calc(var(--gutter-xxl) * -1);
+}
+
+:root:root:root .u-ml_-xxxl {
+	margin-left: calc(var(--gutter-xxxl) * -1);
+}
+
+:root:root:root .u-abs.u-mt_-sm {
+	top: calc(var(--gutter-sm) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mt_-md {
+	top: calc(var(--gutter-md) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mt_-lg {
+	top: calc(var(--gutter-lg) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mt_-xl {
+	top: calc(var(--gutter-xl) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mt_-xxl {
+	top: calc(var(--gutter-xxl) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mt_-xxxl {
+	top: calc(var(--gutter-xxxl) * -1);
+	margin-top: 0;
+}
+
+:root:root:root .u-abs.u-mr_-sm {
+	right: calc(var(--gutter-sm) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mr_-md {
+	right: calc(var(--gutter-md) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mr_-lg {
+	right: calc(var(--gutter-lg) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mr_-xl {
+	right: calc(var(--gutter-xl) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mr_-xxl {
+	right: calc(var(--gutter-xxl) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mr_-xxxl {
+	right: calc(var(--gutter-xxxl) * -1);
+	margin-right: 0;
+}
+
+:root:root:root .u-abs.u-mb_-sm {
+	bottom: calc(var(--gutter-sm) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-mb_-md {
+	bottom: calc(var(--gutter-md) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-mb_-lg {
+	bottom: calc(var(--gutter-lg) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-mb_-xl {
+	bottom: calc(var(--gutter-xl) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-mb_-xxl {
+	bottom: calc(var(--gutter-xxl) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-mb_-xxxl {
+	bottom: calc(var(--gutter-xxxl) * -1);
+	margin-bottom: 0;
+}
+
+:root:root:root .u-abs.u-ml_-sm {
+	left: calc(var(--gutter-sm) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-abs.u-ml_-md {
+	left: calc(var(--gutter-md) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-abs.u-ml_-lg {
+	left: calc(var(--gutter-lg) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-abs.u-ml_-xl {
+	left: calc(var(--gutter-xl) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-abs.u-ml_-xxl {
+	left: calc(var(--gutter-xxl) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-abs.u-ml_-xxxl {
+	left: calc(var(--gutter-xxxl) * -1);
+	margin-left: 0;
+}
+
+:root:root:root .u-mt-sm {
+	margin-top: var(--gutter-sm);
+}
+
+:root:root:root .u-mt-md {
+	margin-top: var(--gutter-md);
+}
+
+:root:root:root .u-mt-lg {
+	margin-top: var(--gutter-lg);
+}
+
+:root:root:root .u-mt-xl {
+	margin-top: var(--gutter-xl);
+}
+
+:root:root:root .u-mt-xxl {
+	margin-top: var(--gutter-xxl);
+}
+
+:root:root:root .u-mt-xxxl {
+	margin-top: var(--gutter-xxxl);
+}
+
+:root:root:root .u-mr-sm {
+	margin-right: var(--gutter-sm);
+}
+
+:root:root:root .u-mr-md {
+	margin-right: var(--gutter-md);
+}
+
+:root:root:root .u-mr-lg {
+	margin-right: var(--gutter-lg);
+}
+
+:root:root:root .u-mr-xl {
+	margin-right: var(--gutter-xl);
+}
+
+:root:root:root .u-mr-xxl {
+	margin-right: var(--gutter-xxl);
+}
+
+:root:root:root .u-mr-xxxl {
+	margin-right: var(--gutter-xxxl);
+}
+
+:root:root:root .u-mb-sm {
+	margin-bottom: var(--gutter-sm);
+}
+
+:root:root:root .u-mb-md {
+	margin-bottom: var(--gutter-md);
+}
+
+:root:root:root .u-mb-lg {
+	margin-bottom: var(--gutter-lg);
+}
+
+:root:root:root .u-mb-xl {
+	margin-bottom: var(--gutter-xl);
+}
+
+:root:root:root .u-mb-xxl {
+	margin-bottom: var(--gutter-xxl);
+}
+
+:root:root:root .u-mb-xxxl {
+	margin-bottom: var(--gutter-xxxl);
+}
+
+:root:root:root .u-ml-sm {
+	margin-left: var(--gutter-sm);
+}
+
+:root:root:root .u-ml-md {
+	margin-left: var(--gutter-md);
+}
+
+:root:root:root .u-ml-lg {
+	margin-left: var(--gutter-lg);
+}
+
+:root:root:root .u-ml-xl {
+	margin-left: var(--gutter-xl);
+}
+
+:root:root:root .u-ml-xxl {
+	margin-left: var(--gutter-xxl);
+}
+
+:root:root:root .u-ml-xxxl {
+	margin-left: var(--gutter-xxxl);
+}
+
+:root:root:root .is-style-margin-zero,
+:root:root:root .u-m0 {
+	margin: 0;
+}
+
+:root:root:root .u-mt0 {
+	margin-top: 0;
+}
+
+:root:root:root .u-mr0 {
+	margin-right: 0;
+}
+
+:root:root:root .u-mb0 {
+	margin-bottom: 0;
+}
+
+:root:root:root .u-ml0 {
+	margin-left: 0;
+}
+
+:root:root:root .u-mx0 {
+	margin-inline: 0;
+}
+
+@media (--tab_down) {
+
+	:root:root:root .u-ml-auto:not(.u-mr-auto) {
+		margin-right: auto;
+	}
+
+	:root:root:root .u-mr-auto:not(.u-ml-auto) {
+		margin-left: auto;
+	}
+}

@@ -1,0 +1,22 @@
+/* #SHADOWS
+\*------------------------------------ */
+
+:root .u-shadow1 {
+	box-shadow: var(--shadow-1);
+}
+
+:root .u-shadow2 {
+	box-shadow: var(--shadow-2);
+}
+
+:root .u-shadow3 {
+	box-shadow: var(--shadow-3);
+}
+
+:root .u-shadow4 {
+	box-shadow: var(--shadow-4);
+}
+
+:root .u-shadow0 {
+	box-shadow: none !important;
+}

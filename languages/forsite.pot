@@ -1,0 +1,372 @@
+# Copyright (C) 2020 Forsite
+# This file is distributed under the same license as the Forsite package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Forsite\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Marty Helmick\n"
+"Report-Msgid-Bugs-To: Forsite\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: 1: title.
+#: ../forsite/comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: ../forsite/comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../forsite/comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: ../forsite/header.php:36
+msgid "Skip to content"
+msgstr ""
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: ../forsite/inc/back-compat.php:25
+msgid "Forsite requires at least WordPress version %1$s and PHP version %2$s. You are running versions %3$s and %3$s respectively. Please update and try again."
+msgstr ""
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: ../forsite/inc/back-compat.php:30
+msgid "Forsite requires at least WordPress version %1$s. You are running version %2$s. Please update and try again."
+msgstr ""
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: ../forsite/inc/back-compat.php:35
+msgid "Forsite requires at least PHP version %1$s. You are running version %2$s. Please update and try again."
+msgstr ""
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: ../forsite/inc/Template_Tags.php:54
+msgid "The theme templating component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: template tag name
+#: ../forsite/inc/Template_Tags.php:81
+msgid "The template tag %s does not exist."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: ../forsite/inc/Template_Tags.php:110
+msgid "The template tag method %1$s registered by theme component %2$s must either be a callable or an array."
+msgstr ""
+
+#. translators: 1: template tag method name, 2: component class name
+#: ../forsite/inc/Template_Tags.php:121
+msgid "The template tag method %1$s registered by theme component %2$s conflicts with an already registered template tag of the same name."
+msgstr ""
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: ../forsite/inc/Theme.php:57
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr ""
+
+#. translators: %s: slug
+#: ../forsite/inc/Theme.php:120
+msgid "No theme component with the slug %s exists."
+msgstr ""
+
+#: ../forsite/inc/Accessibility/Component.php:69
+msgid "Expand child menu"
+msgstr ""
+
+#: ../forsite/inc/Accessibility/Component.php:70
+msgid "Collapse child menu"
+msgstr ""
+
+#: ../forsite/inc/Comments/Component.php:132
+msgid "New comment(s)"
+msgstr ""
+
+#: ../forsite/inc/Customizer/Component.php:77
+msgid "Theme Options"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:65, ../forsite/inc/Nav_Menus/Component.php:68
+msgid "Primary"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:75
+msgid "Red"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:80
+msgid "Green"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:85
+msgid "Blue"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:95
+msgid "Black"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:100
+msgid "Grey"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:105
+msgid "White"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:110
+msgid "Dusty daylight"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:115
+msgid "Dusty sun"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:132
+msgid "Small"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:133
+msgid "S"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:138
+msgid "Medium"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:139
+msgid "M"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:144
+msgid "Large"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:145
+msgid "L"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:150
+msgid "Larger"
+msgstr ""
+
+#: ../forsite/inc/Editor/Component.php:151
+msgid "XL"
+msgstr ""
+
+#: ../forsite/inc/Lazyload/Component.php:89
+msgid "Lazy-load on (default)"
+msgstr ""
+
+#: ../forsite/inc/Lazyload/Component.php:90
+msgid "Lazy-load off"
+msgstr ""
+
+#: ../forsite/inc/Lazyload/Component.php:111
+msgid "Lazy-load images"
+msgstr ""
+
+#: ../forsite/inc/Lazyload/Component.php:114
+msgid "Lazy-loading images means images are loaded only when they are in view. Improves performance, but can result in content jumping around on slower connections."
+msgstr ""
+
+#: ../forsite/inc/Sidebars/Component.php:69
+msgid "Sidebar"
+msgstr ""
+
+#: ../forsite/inc/Sidebars/Component.php:71
+msgid "Add widgets here."
+msgstr ""
+
+#. translators: %s: stylesheet handle
+#: ../forsite/inc/Styles/Component.php:235
+msgid "Invalid theme stylesheet handle: %s"
+msgstr ""
+
+#: ../forsite/template-parts/content/entry-attachment.php:33, ../forsite/template-parts/content/entry.php:32
+msgid "Previous:"
+msgstr ""
+
+#: ../forsite/template-parts/content/entry-attachment.php:43, ../forsite/template-parts/content/entry.php:33
+msgid "Next:"
+msgstr ""
+
+#: ../forsite/template-parts/content/entry-attachment.php:49
+msgid "Post navigation"
+msgstr ""
+
+#. translators: %s: post title
+#: ../forsite/template-parts/content/entry_actions.php:21
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: post title
+#: ../forsite/template-parts/content/entry_actions.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: ../forsite/template-parts/content/entry_content.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../forsite/template-parts/content/entry_content.php:31
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: post date
+#: ../forsite/template-parts/content/entry_meta.php:63
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s: post author
+#: ../forsite/template-parts/content/entry_meta.php:76
+msgctxt "post author"
+msgid "By %s"
+msgstr ""
+
+#. translators: %s: post author
+#: ../forsite/template-parts/content/entry_meta.php:79
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. translators: %s: post parent title
+#: ../forsite/template-parts/content/entry_meta.php:95
+msgctxt "post parent"
+msgid "In %s"
+msgstr ""
+
+#. translators: %s: post parent title
+#: ../forsite/template-parts/content/entry_meta.php:98
+msgctxt "post parent"
+msgid "in %s"
+msgstr ""
+
+#. translators: separator between taxonomy terms
+#: ../forsite/template-parts/content/entry_taxonomies.php:24
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: %s: list of taxonomy terms
+#: ../forsite/template-parts/content/entry_taxonomies.php:31
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: list of taxonomy terms
+#: ../forsite/template-parts/content/entry_taxonomies.php:37
+msgid "Tagged %s"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: ../forsite/template-parts/content/entry_taxonomies.php:44
+msgid "%s:"
+msgstr ""
+
+#: ../forsite/template-parts/content/error-404.php:16
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: ../forsite/template-parts/content/error-404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: ../forsite/template-parts/content/error-404.php:45
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../forsite/template-parts/content/error-500.php:14
+msgid "Oops! Something went wrong."
+msgstr ""
+
+#: ../forsite/template-parts/content/error-offline.php:14
+msgid "Oops! It looks like you&#8217;re offline."
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#: ../forsite/template-parts/content/error.php:23
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../forsite/template-parts/content/error.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: ../forsite/template-parts/content/error.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: ../forsite/template-parts/content/page_header.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../forsite/template-parts/content/page_header.php:22
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: %s: search query
+#: ../forsite/template-parts/content/page_header.php:41
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../forsite/template-parts/content/pagination.php:13
+msgctxt "previous set of search results"
+msgid "Previous"
+msgstr ""
+
+#: ../forsite/template-parts/content/pagination.php:14
+msgctxt "next set of search results"
+msgid "Next"
+msgstr ""
+
+#: ../forsite/template-parts/content/pagination.php:15
+msgid "Page navigation"
+msgstr ""
+
+#: ../forsite/template-parts/footer/info.php:13
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: ../forsite/template-parts/footer/info.php:16
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. translators: Theme name.
+#: ../forsite/template-parts/footer/info.php:22
+msgid "Theme: %s by the contributors."
+msgstr ""
+
+#: ../forsite/template-parts/header/navigation.php:16
+msgid "Main menu"
+msgstr ""
+
+#: ../forsite/template-parts/header/navigation.php:39
+msgid "Open menu"
+msgstr ""
+
+#: ../forsite/template-parts/header/navigation.php:49
+msgid "Menu"
+msgstr ""

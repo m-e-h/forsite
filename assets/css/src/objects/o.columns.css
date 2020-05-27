@@ -1,0 +1,33 @@
+main .wp-block-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wp-block-columns {
+	margin: 0;
+}
+
+:root .wp-block-column {
+	padding: 0;
+	margin-inline: 0;
+
+	@media (--tab) {
+		flex-basis: 50%;
+		flex-grow: 0;
+	}
+}
+
+main .wp-block-column.wp-block-column {
+	position: relative;
+
+	/* overflow-wrap: break-word;
+	min-width: 120px;
+	width: 100%; */
+
+	/* margin: 0 0 var(--base-half); */
+
+	@media (--mobile) {
+		flex: 1;
+		min-width: 90px;
+	}
+}

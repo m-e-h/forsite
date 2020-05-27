@@ -4,13 +4,18 @@ root = true
 charset = utf-8
 end_of_line = lf
 indent_style = tab
-insert_final_newline = true
-trim_trailing_whitespace = true
 indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 90
 
-[*.{json,md,yml,yaml}]
+[*.{js,json,jsx}]
+indent_size = 2
+
+[*.{md,yml,yaml}]
 indent_size = 2
 indent_style = space
 
 [*.md]
 trim_trailing_whitespace = false
+max_line_length = off
