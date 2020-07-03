@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Custom_Logo\Component class
  *
@@ -25,7 +26,7 @@ class Component implements Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'custom_logo';
 	}
 
@@ -73,7 +74,7 @@ class Component implements Component_Interface {
 		$upload_dir = wp_get_upload_dir();
 
 		// Strangely wp_upload_dir doesn’t return https for SSL websites.
-		$url = is_ssl() ? str_replace( 'http://', 'https://', $upload_dir['baseurl'] ) : $upload_dir['baseurl'];
+		$url = is_ssl() ? str_replace( 'http://', 'https://', $upload_dir['baseurl'] ): $upload_dir['baseurl'];
 
 		// Get the relative path for the svg so we can add it to the basedir.
 		$image_rel_path = str_replace( [ home_url( $url ), $url ], '', $image[0] );

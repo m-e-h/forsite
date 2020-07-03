@@ -1,0 +1,45 @@
+/* e.global
+-------------------------------------------- */
+:root {
+	--page-bg-image-url: '';
+}
+
+*,
+::before,
+::after {
+	background-repeat: no-repeat;
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	line-height: inherit;
+	text-transform: inherit;
+	vertical-align: inherit;
+	border-width: 0;
+	border-style: solid;
+}
+
+html {
+	font-size: 100%;
+	font-family: var(--font-sans-serif);
+	cursor: default;
+	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	* {
+		animation-duration: 0.001s !important;
+		transition-duration: 0.001s !important;
+		animation-iteration-count: 1 !important;
+	}
+}

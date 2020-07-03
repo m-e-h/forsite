@@ -1,0 +1,272 @@
+/*!
+Theme Name: Forsite
+Theme URI: https://github.com/m-e-h/forsite
+GitHub Theme URI: https://github.com/m-e-h/forsite
+Author: Marty Helmick
+Author URI: https://github.com/m-e-h/m-e-h/
+Description: A started starter theme for WordPress.
+Version: 0.1.0
+Tested up to: 5.4
+Requires PHP: 7.2
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: forsite
+*/
+
+@import "appliance";
+
+/* ============================================
+	Elements
+============================================ */
+@import "elements";
+
+/* ============================================
+	Vendors
+============================================ */
+@import "vendors";
+
+/* ============================================
+	Objects
+============================================ */
+@import "objects";
+
+/* ============================================
+	Utility
+============================================ */
+@import "utility";
+
+/* ============================================
+	Pages
+============================================ */
+@import "pages";
+
+/* mobile */
+
+@media (max-width: 480px) {
+	.home .wp-block-cover.alignfull {
+		height: calc(100vh - 320px);
+		height: 320px;
+	}
+
+	:root:root .has-jumbotron-font-size {
+		width: 100%;
+		font-size: 28px;
+		line-height: 1.5;
+		margin-bottom: 0;
+		text-shadow: 0 0 100px rgba(0, 0, 0, 0.25);
+	}
+
+	:root:root .u-max-width-lg,
+	:root:root .u-max-width-reading {
+		width: calc(100% - var(--gutter-x));
+	}
+
+	.home .u-static .wp-block-group.u-pt-md.u-max-width-lg {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.gallery-offset .wp-block-image figcaption {
+		font-size: 1rem;
+		letter-spacing: initial;
+		padding: 0.75rem;
+	}
+
+	:root:root .alignwide {
+		width: calc(100% - 2.5rem);
+	}
+
+	h3.u-pb-xl.u-max-width-sm.u-mr-auto {
+		margin-left: 0 !important;
+	}
+
+	:root:root:root .u-hide-mobile {
+		display: none;
+	}
+
+	.home .connect-callout .wp-block-columns {
+		transform: none;
+		padding-bottom: var(--gutter);
+	}
+
+	.tandp-links {
+		display: block;
+	}
+
+	.forsite-cred {
+		margin-left: 0;
+		margin-top: 0.5rem;
+		display: inline-block;
+	}
+
+	.home .wp-block-group.connect-callout {
+		margin-bottom: 0;
+		width: 100%;
+		padding: 1rem;
+	}
+
+	:root .wp-block-cover__inner-container {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.wp-block-group.u-bg-frost.u-max-width-lg {
+		width: 100%;
+	}
+
+	.wp-block-cover.alignfull.u-mb-xxxl {
+		margin-bottom: -1px !important;
+	}
+}
+
+/* Customizer 3-16-20 */
+
+/* added */
+.contact-cards h5,
+.contact-cards p {
+	margin-bottom: 0.5rem;
+}
+
+@media (pointer: coarse) {
+	:root header nav li:hover > ul {
+		overflow: hidden;
+		position: absolute;
+		opacity: 0;
+		height: 1px;
+		visibility: hidden;
+	}
+}
+
+@media (min-width: 920px) {
+	:root:root:root:root:root .is-style-thumb-row.team-row {
+		height: auto;
+		margin-top: 0;
+		transform: translateY(-50%);
+	}
+
+	.is-style-thumb-row .wp-block-cover {
+		margin-bottom: 0;
+		max-width: 293px;
+		max-height: 293px;
+		width: 18vw;
+		height: 18vw;
+	}
+}
+
+.contact-cards .wp-block-button {
+	margin-top: 1rem;
+}
+
+.connect-call {
+	max-height: calc(100% - 5rem);
+
+	> .wp-block-group__inner-container {
+		display: grid;
+		grid-template-rows: 5rem 1fr 406px 2rem;
+	}
+
+	h3 {
+		grid-row: 1;
+	}
+
+	p {
+		grid-row: 2;
+	}
+
+	.contact-cards {
+		grid-row: 3;
+	}
+}
+
+/* to add */
+.single-entry--post > p {
+	text-align: left;
+}
+
+header nav li > ul {
+	box-shadow: -30px 15px 70px -5px hsla(0, 0%, 0%, 0.03),
+		0 30px 70px 0 hsla(0, 0%, 0%, 0.03),
+		30px 15px 70px -5px hsla(0, 0%, 0%, 0.03);
+}
+
+a[href*="g.page/"],
+a[href*="goo.gl/maps/"],
+a[href*="maps.google.com"],
+a[href*="google.com/maps/"] {
+	position: relative;
+	display: inline-flex;
+
+	&::after {
+		content: var(--map-pin-white);
+		width: 1em;
+		height: 1em;
+		display: inline-block;
+		align-self: flex-end;
+		opacity: 0.6;
+		margin-left: 0.5rem;
+		height: 1rem;
+	}
+
+	~ a::after {
+		content: none;
+	}
+}
+
+.wp-block-group.connect-call.u-pt-gutter {
+	max-width: 814px;
+}
+
+/* Customizer 3-23-20 */
+#shipping_country_field {
+	display: none;
+}
+
+:root:root .quote_form_heading {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.woocommerce form .form-row label {
+	line-height: var(--reading-line-height);
+}
+
+.woocommerce form .form-row {
+	margin-bottom: 1rem;
+}
+
+.yith-ywraq-mail-form-wrapper > h3 {
+	display: none;
+}
+
+.v-table-place {
+	fill: hsla(0, 0%, 100%, 0.48);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	.home .has-jumbotron-font-size {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.side-toggle.side-toggle-more {
+		display: none;
+	}
+
+	.home h5.is-style-margin-zero {
+		font-size: 1rem;
+		max-width: 135px;
+	}
+
+	:root:root .home .wp-block-button.all-cats-btn.u-ml-auto {
+		margin-right: 0;
+	}
+
+	.wp-block-columns.alignfull.catalog-row.u-mt0.u-rel {
+		margin-bottom: 7rem;
+	}
+
+	.wp-block-columns.gallery-offset {
+		margin-bottom: var(--base-space);
+	}
+}

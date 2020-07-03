@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Object template class.
  *
@@ -7,7 +8,7 @@
  * user/author archive page, the template can be used.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
 /**
  * Creates a new object template.

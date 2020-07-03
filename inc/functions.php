@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * The `forsite()` function.
  *
@@ -14,7 +15,7 @@ namespace Forsite;
  *
  * @return Template_Tags Template tags instance exposing template tag methods.
  */
-function forsite() : Template_Tags {
+function forsite(): Template_Tags {
 	static $theme = null;
 
 	if ( null === $theme ) {

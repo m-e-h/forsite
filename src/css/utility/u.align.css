@@ -1,0 +1,54 @@
+:root:root .alignleft {
+	float: left;
+	margin-right: var(--base-space);
+}
+
+:root:root .alignright {
+	float: right;
+	margin-left: var(--base-space);
+}
+
+:root:root .aligncenter {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+}
+
+:root:root figure.aligncenter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* :root .alignleft {
+	float: left;
+	margin-right: var(--base-space);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-start;
+}
+
+:root .alignright {
+	float: right;
+	margin-left: var(--base-space);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-end;
+}
+
+:root .aligncenter {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+}
+*/

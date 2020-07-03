@@ -1,0 +1,29 @@
+/* e.tables
+-------------------------------------------- */
+table {
+	border-spacing: 0;
+	table-layout: auto;
+	width: 100%;
+	margin-bottom: var(--base-space);
+}
+
+td,
+th {
+	border-width: 1px;
+	border-color: var(--hover-color);
+	border-style: solid;
+	padding: 0.5rem 0.75rem;
+}
+
+th {
+	font-weight: 600;
+	vertical-align: bottom;
+}
+
+tfoot {
+	font-weight: 600;
+}
+
+tbody tr {
+	background-color: #fff;
+}

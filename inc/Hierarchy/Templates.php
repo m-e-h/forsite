@@ -7,9 +7,9 @@
  * collection is in fact a `Template`.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
-use TIP\Collection;
+use Forsite\Collection;
 
 /**
  * Template collection class.

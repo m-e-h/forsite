@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Comments\Component class
  *
@@ -38,7 +39,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'comments';
 	}
 
@@ -54,7 +55,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'the_comments' => [ $this, 'the_comments' ],
 		];
@@ -90,7 +91,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$args = array_merge(
 			$args,
 			[
-				'style'      => 'ol',
+				'style' => 'ol',
 				'short_ping' => true,
 			]
 		);
@@ -98,9 +99,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$amp_live_list = forsite()->using_amp_live_list_comments();
 
 		if ( $amp_live_list ) {
-			$comment_order     = get_option( 'comment_order' );
-			$comments_per_page = get_option( 'page_comments' ) ? (int) get_option( 'comments_per_page' ) : 10000;
-			$poll_inverval     = MINUTE_IN_SECONDS * 1000;
+			$comment_order = get_option( 'comment_order' );
+			$comments_per_page = get_option( 'page_comments' ) ? (int) get_option( 'comments_per_page' ): 10000;
+			$poll_inverval = MINUTE_IN_SECONDS * 1000;
 
 			?>
 			<amp-live-list
@@ -144,7 +145,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param string $markup Navigation markup.
 	 * @return string Filtered markup.
 	 */
-	public function filter_add_amp_live_list_pagination_attribute( string $markup ) : string {
+	public function filter_add_amp_live_list_pagination_attribute( string $markup ): string {
 		return preg_replace( '/(\s*<[a-z0-9_-]+)/i', '$1 pagination ', $markup, 1 );
 	}
 }

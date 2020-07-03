@@ -1,0 +1,134 @@
+/* global vars */
+:root {
+	/* spacing */
+	--base-line: 1.5;
+	--base-space: 1.5rem;
+	--base-half: 0.75rem;
+	--base-double: 3rem;
+	--gutter: 2.5rem;
+	--gutter-half: 1.25rem;
+	--gutter-x: 2rem;
+	--gutter-x-double: 4rem;
+
+	/* inputs */
+	--input-height: 3.125rem;
+	--input-sm-height: 2.5rem;
+	--input-padding: 0.85em;
+	--button-padding: var(--input-padding) 1.75em;
+
+	/* width */
+	--reading-width: 920px;
+	--content-width: 1024px;
+	--content-wide: 1534px;
+	--content-half: calc(var(--content-width) * 0.5);
+	--wide-half: calc(var(--content-wide) * 0.5);
+	--main-nav-width: 1280px;
+	--logo-width: calc(102px + (208 - 102) * ((100vw - 320px) / (1230 - 320)));
+
+	/* text sizing */
+	--h0: 3.5rem;
+	--h1: 2.5rem;
+	--h2: 2rem;
+	--h3: 1.75rem;
+	--h4: 1.5rem;
+	--h5: 1.25rem;
+	--h6: 1rem;
+	--text-body: 1rem;
+	--text-sub: 0.75rem;
+	--text-small: 0.875rem;
+	--text-large: var(--h5);
+	--text-intro: var(--h4);
+	--line-height: var(--base-line);
+	--reading-line-height: 1.5;
+	--heading-line-height: 1.2;
+
+	/* Fluid sizing */
+	--min-font: 0.95;
+	--min-font-size: 0.95rem;
+	--max-font: 1.1;
+	--max-font-size: 1.1rem;
+
+	/* calc(minPX + (max - min)*((100vw - sm-mqPX)/(xlMQ - sm-mq))) */
+	--fluid-font: calc(
+		var(--min-font-size) + (var(--max-font) - var(--min-font)) *
+		((100vw - 21em) / (97 - 21))
+	);
+
+	/* font */
+	--font-family: "Work Sans", sans-serif;
+	--font-sans-serif: system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-serif: "Literata", "Palatino", "Palatino Linotype", "Book Antiqua", "FreeSerif",
+		serif;
+	--font-mono: "Fira Code", "SFMono-Regular", "Roboto Mono", "Cascadia Code", consolas, "Liberation Mono", monospace;
+	--system-font: system-ui, sans-serif;
+	--font-bold: 700;
+	--font-light: 300;
+	--font-normal: 400;
+	--display-bold: 600;
+	--display-normal: 500;
+
+	/* color */
+	--theme_green: var(--teal-5);
+	--theme_red: var(--red-5);
+	--theme_blue: var(--blue-5);
+	--theme_gray_light: var(--gray-2);
+	--theme_gray: var(--gray-5);
+	--theme_gray_dark: var(--gray-8);
+	--white: #fff;
+	--black: #000;
+	--linear_gradient: linear-gradient(180deg, #e9ecef 0%, #ced4da 100%);
+	--background_color: #fff;
+	--site-bg: var(--background_color);
+	--color-bg-dynamic: var(--gray-7);
+	--foreground_color: var(--gray-9);
+	--color-text: var(--foreground_color);
+	--color-1: var(--theme_green);
+	--color-1-dark: var(--theme_green_dark);
+	--color-2: var(--theme_red);
+	--color-info: #66b4f5;
+	--color-success: #86c68a;
+	--color-warning: #ffef79;
+	--color-error: #e57277;
+	--link-color: var(--color-1);
+	--link-decoration: underline;
+	--link-hover-color: var(--color-1);
+	--link-hover-decoration: underline;
+	--link-decoration-color: color-mod(var(--link-color) a(40%));
+	--input-bg-color: var(--white);
+	--input-border-color: var(--theme_gray);
+	--header-text-color: inherit;
+	--header-highlighted-icon: var(--theme_green_dark);
+	--color-text-muted: var(--theme_gray);
+	--color-nav-border: color-mod(#000 a(20%));
+	--border-radius: 0;
+	--button-radius: 0;
+
+	/* shadows */
+	--opacity: 0.7;
+	--shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	--shadow-1: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	--shadow-2: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+		0 1px 8px 0 rgba(0, 0, 0, 0.12);
+
+	/* Link effects */
+	--hover-color: color-mod(var(--theme_gray_dark) a(5%));
+	--hover-shadow: inset 0 -10em 0 0 var(--hover-color);
+
+	/* animation */
+	--transition: var(--transition-props) var(--timing) var(--ease);
+	--timing: 0.18s;
+	--timing-open: 0.25s;
+	--timing-close: 0.2s;
+	--ease: cubic-bezier(0.4, 0, 0.2, 1);
+	--ease-enter: cubic-bezier(0, 0, 0.2, 1);
+	--ease-exit: cubic-bezier(0.4, 0, 1, 1);
+	--transition-props: color, transform, border-color, opacity, background-color,
+		box-shadow;
+
+	--admin-bar-height: 32px;
+
+	@media screen and (max-width: 782px) {
+		--admin-bar-height: 46px;
+	}
+}

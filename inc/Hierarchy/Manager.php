@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Template manager.
  *
@@ -6,7 +7,7 @@
  * filter hooks.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
 /**
  * Template manager class.
@@ -67,7 +68,7 @@ class Manager {
 	 */
 	public function register() {
 
-		do_action( 'tip/templates/register', $this->templates );
+		do_action( 'forsite/templates/register', $this->templates );
 	}
 
 	/**

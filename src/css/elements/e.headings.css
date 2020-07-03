@@ -1,0 +1,24 @@
+/* e.headings
+-------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: var(--heading-line-height);
+	font-weight: var(--font-bold);
+	margin-top: 0;
+	margin-bottom: 1rem;
+	clear: both;
+}
+
+article > :matches(h1, h2, h3, h4) {
+	margin-bottom: 1.1em;
+}
+
+header :matches(h1, h2, h3, h4),
+footer :matches(h1, h2, h3, h4) {
+	margin: 0;
+}

@@ -1,0 +1,48 @@
+/* e.buttons
+-------------------------------------------- */
+%e_button {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
+	font-size: 1rem;
+	padding: var(--button-padding);
+
+	/* min-height: var(--input-height); */
+	border: 1px solid transparent;
+	border-radius: var(--button-radius);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	word-break: normal;
+	overflow: hidden;
+	line-height: var(--heading-line-height);
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+
+	&:matches(:focus, :hover) {
+		opacity: 1;
+		box-shadow: var(--hover-shadow);
+		border-color: var(--hover-color);
+		outline: 0;
+	}
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@extend %e_button;
+}
+
+[type="submit"] {
+	background-color: var(--color-1);
+	color: var(--background_color);
+}
+
+button + button {
+	margin-left: 1rem;
+}

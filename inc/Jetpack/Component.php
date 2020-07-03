@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Jetpack\Component class
  *
@@ -26,7 +27,7 @@ class Component implements Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'jetpack';
 	}
 
@@ -51,14 +52,14 @@ class Component implements Component_Interface {
 			'infinite-scroll',
 			[
 				'container' => 'primary',
-				'footer'    => 'page',
-				'render'    => function() {
+				'footer' => 'page',
+				'render' => function() {
 					while ( have_posts() ) {
 						the_post();
 						if ( is_search() ) {
-							get_template_part( 'template-parts/content/entry', 'search' );
+							get_template_part( 'views/content/entry', 'search' );
 						} else {
-							get_template_part( 'template-parts/content/entry', get_post_type() );
+							get_template_part( 'views/content/entry', get_post_type() );
 						}
 					}
 				},
@@ -74,11 +75,11 @@ class Component implements Component_Interface {
 			[
 				'post-details' => [
 					'stylesheet' => 'forsite-content',
-					'date'       => '.posted-on',
+					'date' => '.posted-on',
 					'categories' => '.category-links',
-					'tags'       => '.tag-links',
-					'author'     => '.posted-by',
-					'comment'    => '.comments-link',
+					'tags' => '.tag-links',
+					'author' => '.posted-by',
+					'comment' => '.comments-link',
 				],
 			]
 		);

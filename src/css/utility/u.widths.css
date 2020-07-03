@@ -1,0 +1,119 @@
+:root .u-content-width {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--content-width);
+	margin-inline: auto;
+
+	.u-content-width,
+	.u-content-wide,
+	.u-reading-width {
+		width: 100%;
+	}
+}
+
+:root .u-content-wide,
+:root:root .alignwide {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--content-wide);
+	margin-inline: auto;
+
+	.alignwide,
+	.u-content-width,
+	.u-content-wide,
+	.u-reading-width {
+		width: 100%;
+	}
+}
+
+:root:root .alignfull {
+	width: 100%;
+	max-width: 100%;
+	margin-inline: 0;
+}
+
+:root .is-style-reading-width,
+:root .u-reading-width {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--reading-width);
+	margin-inline: auto;
+
+	.u-content-width,
+	.u-content-wide,
+	.u-reading-width {
+		width: 100%;
+	}
+}
+
+:root [class*="u-1of"],
+:root [class*="u-2of"],
+:root [class*="u-3of"],
+:root [class*="u-4of"] {
+	width: 100%;
+}
+
+:root .u-1of1 {
+	max-width: 100%;
+}
+
+:root .u-1of2 {
+	max-width: calc(50% - var(--base-space));
+}
+
+:root .u-1of3 {
+	max-width: calc(33.33% - var(--base-space));
+}
+
+:root .u-2of3 {
+	flex: 0 0 calc(66.66% - var(--base-space));
+	max-width: calc(66.66% - var(--base-space));
+}
+
+:root .u-1of4 {
+	max-width: calc(25% - var(--base-space));
+}
+
+:root .u-3of4 {
+	max-width: calc(75% - var(--base-space));
+}
+
+@media (--read) {
+
+	:root .u-1of2-md {
+		max-width: calc(50% - var(--base-space));
+	}
+
+	:root .u-1of3-md {
+		max-width: calc(33.33% - var(--base-space));
+	}
+
+	:root .u-2of3-md {
+		max-width: calc(66.66% - var(--base-space));
+	}
+
+	:root .u-1of4-md {
+		max-width: calc(25% - var(--base-space));
+	}
+
+	:root .u-3of4-md {
+		max-width: calc(75% - var(--base-space));
+	}
+}
+
+:root:root .u-max-width-sm {
+	width: 100%;
+	max-width: 300px;
+}
+
+:root:root .u-max-width-md {
+	width: calc(100% - var(--gutter));
+	max-width: var(--content-half);
+}
+
+:root:root .u-max-width-lg {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--wide-half);
+}
+
+:root:root .u-max-width-reading {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--reading-width);
+}

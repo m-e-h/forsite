@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Template hierarchy class.
  *
@@ -9,10 +10,10 @@
  * system that doesn't involve massive amounts of conditional tags within files.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
 use WP_User;
-use function TIP\tip;
+use function Forsite\forsite;
 
 /**
  * Overwrites the core WP template hierarchy.
@@ -192,7 +193,7 @@ class Hierarchy {
 		if ( is_attachment() ) {
 
 			// Split the mime type into two distinct parts.
-			$type    = get_post_mime_type( $post );
+			$type = get_post_mime_type( $post );
 			$subtype = '';
 
 			if ( false !== strpos( $type, '/' ) ) {
@@ -401,7 +402,7 @@ class Hierarchy {
 		// Make sure there are no duplicates in the hierarchy.
 		$this->hierarchy = array_unique( $this->hierarchy );
 
-		return tip()->filter_templates( $templates );
+		return forsite()->filter_templates( $templates );
 	}
 
 	/**

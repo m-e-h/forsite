@@ -1,0 +1,136 @@
+/* #TYPOGRAPHY UTILITY
+\*------------------------------------ */
+
+:root:root .u-text-read {
+	font-family: var(--font-family);
+}
+
+:root:root .is-style-display-font {
+	font-family: var(--font-serif);
+}
+
+:root:root .has-normal-font-size {
+	font-size: var(--text-body);
+}
+
+:root:root .u-sub-caps,
+:root:root .has-sub-font-size {
+	font-size: var(--text-sub);
+}
+
+:root:root:root .has-small-font-size {
+	font-size: var(--text-small);
+	font-weight: normal;
+}
+
+:root:root .has-jumbotron-font-size {
+	font-size: var(--h0);
+	line-height: 1.1;
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-h1,
+:root:root .has-large-heading-font-size {
+	font-size: var(--h1);
+	line-height: var(--heading-line-height);
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-h2 {
+	font-size: var(--h2);
+	line-height: var(--heading-line-height);
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-h3 {
+	font-size: var(--h3);
+	line-height: 1.46;
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-h4 {
+	font-size: var(--h4);
+	line-height: var(--reading-line-height);
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-h5 {
+	font-size: var(--h5);
+	line-height: 1.46;
+	font-weight: var(--font-bold);
+}
+
+:root:root .has-large-font-size {
+	font-size: var(--h5);
+}
+
+:root:root .u-h6 {
+	font-size: var(--h6);
+	line-height: var(--reading-line-height);
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-light {
+	font-weight: var(--font-light);
+}
+
+:root:root .u-bold {
+	font-weight: var(--font-bold);
+}
+
+:root:root .u-italic {
+	font-style: italic;
+}
+
+:root:root .u-sub-caps,
+:root:root .u-caps {
+	text-transform: uppercase;
+}
+
+:root:root .u-titlecase {
+	text-transform: capitalize;
+}
+
+:root:root .u-text-left {
+	text-align: left;
+}
+
+:root:root .u-text-center,
+:root:root .has-text-align-center {
+	text-align: center;
+}
+
+:root:root .u-text-right {
+	text-align: right;
+}
+
+:root:root .u-text-justify {
+	text-align: justify;
+}
+
+:root:root .u-truncate {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+:root:root .has-drop-cap:not(:focus)::first-letter {
+	float: left;
+	font-family: var(--font-serif);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 4.4em;
+	line-height: 0.84;
+	margin: 0;
+	padding-right: 0.125em;
+	padding-top: 0.1em;
+	text-transform: uppercase;
+}
+
+:root:root .has-drop-cap:not(:focus)::after {
+	display: block;
+	clear: both;
+	content: "";
+	padding: 0;
+}

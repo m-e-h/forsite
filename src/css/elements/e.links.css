@@ -1,0 +1,36 @@
+/* e.links
+-------------------------------------------- */
+a {
+	font-weight: inherit;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--ease);
+	transition-property: var(--transition-props);
+}
+
+a:matches(:focus, :hover) {
+	opacity: 0.7;
+}
+
+figure a:matches(:focus, :hover) {
+	opacity: 1;
+}
+
+article > a {
+	color: var(--link-color);
+	text-decoration: var(--link-decoration);
+	text-decoration-color: var(--link-decoration-color);
+
+	&:matches(:focus, :hover) {
+		color: var(--link-hover-color);
+		text-decoration: var(--link-hover-decoration);
+		text-decoration-color: var(--link-decoration-color);
+	}
+}
+
+article h1 a,
+article h2 a,
+article h3 a,
+article h4 a {
+	text-decoration: none;
+	color: inherit;
+}

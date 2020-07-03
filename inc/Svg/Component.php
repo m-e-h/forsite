@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Svg\Component class
  *
@@ -20,7 +21,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'svg';
 	}
 
@@ -35,7 +36,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'svg' => [ $this, 'svg' ],
 			'display_svg' => [ $this, 'display_svg' ],
@@ -50,7 +51,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Returns the SVG file contents.
 	 *
 	 * @param array $args
-	 * @return string
+	 * @return string|false
 	 */
 	public function svg( $args = [] ) {
 

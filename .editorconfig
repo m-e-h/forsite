@@ -9,10 +9,10 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 max_line_length = 90
 
-[*.{js,json,jsx}]
+[*.{js,jsx}]
 indent_size = 2
 
-[*.{md,yml,yaml}]
+[*.{json,md,yml,yaml}]
 indent_size = 2
 indent_style = space
 

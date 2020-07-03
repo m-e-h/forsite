@@ -4,55 +4,16 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7
+class ComposerStaticInit3bdf1a2a0ca9a8ad1886201eadda836f
 {
     public static $files = array (
-        '8cd2fca4db21bffce1ad0612f7caeec4' => __DIR__ . '/..' . '/ramsey/array_column/src/array_column.php',
-        '3937806105cc8e221b8fa8db5b70d2f2' => __DIR__ . '/..' . '/wp-cli/mustangostang-spyc/includes/functions.php',
-        'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
         'a2c48002d05f7782d8b603bd2bcb5252' => __DIR__ . '/..' . '/johnbillion/extended-cpts/extended-cpts.php',
-        'fa89abcef9a74fe8927100fa21dc25d5' => __DIR__ . '/..' . '/johnbillion/extended-template-parts/extended-template-parts.php',
-        'ffb465a494c3101218c4417180c2c9a2' => __DIR__ . '/..' . '/wp-cli/i18n-command/i18n-command.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'W' => 
-        array (
-            'WP_CLI\\I18n\\' => 12,
-        ),
-        'V' => 
-        array (
-            'VariableAnalysis\\' => 17,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Component\\Finder\\' => 25,
-        ),
-        'P' => 
-        array (
-            'Peast\\test\\' => 11,
-            'Peast\\' => 6,
-        ),
-        'N' => 
-        array (
-            'NeutronStandard\\' => 16,
-        ),
-        'M' => 
-        array (
-            'Mustangostang\\' => 14,
-        ),
-        'I' => 
-        array (
-            'ImportDetection\\' => 16,
-        ),
         'H' => 
         array (
             'Hybrid\\Carbon\\' => 14,
-        ),
-        'G' => 
-        array (
-            'Gettext\\Languages\\' => 18,
-            'Gettext\\' => 8,
         ),
         'F' => 
         array (
@@ -62,60 +23,12 @@ class ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7
         array (
             'ExtCPTs\\Tests\\' => 14,
         ),
-        'D' => 
-        array (
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
-        ),
-        'C' => 
-        array (
-            'Composer\\Installers\\' => 20,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WP_CLI\\I18n\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wp-cli/i18n-command/src',
-        ),
-        'VariableAnalysis\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sirbrillig/phpcs-variable-analysis/VariableAnalysis',
-        ),
-        'Symfony\\Component\\Finder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/finder',
-        ),
-        'Peast\\test\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mck89/peast/test/Peast',
-        ),
-        'Peast\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mck89/peast/lib/Peast',
-        ),
-        'NeutronStandard\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/automattic/phpcs-neutron-standard/NeutronStandard',
-        ),
-        'Mustangostang\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/wp-cli/mustangostang-spyc/src',
-        ),
-        'ImportDetection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sirbrillig/phpcs-import-detection/ImportDetection',
-        ),
         'Hybrid\\Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/justintadlock/hybrid-carbon/src',
-        ),
-        'Gettext\\Languages\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/gettext/languages/src',
-        ),
-        'Gettext\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/gettext/gettext/src',
         ),
         'Forsite\\' => 
         array (
@@ -125,53 +38,13 @@ class ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7
         array (
             0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/tests/phpunit',
         ),
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
-        ),
-        'Composer\\Installers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'c' => 
-        array (
-            'cli' => 
-            array (
-                0 => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib',
-            ),
-        ),
-        'W' => 
-        array (
-            'WP_CLI' => 
-            array (
-                0 => __DIR__ . '/..' . '/wp-cli/wp-cli/php',
-            ),
-        ),
-        'R' => 
-        array (
-            'Requests' => 
-            array (
-                0 => __DIR__ . '/..' . '/rmccue/requests/library',
-            ),
-        ),
-        'M' => 
-        array (
-            'Mustache' => 
-            array (
-                0 => __DIR__ . '/..' . '/mustache/mustache/src',
-            ),
-        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc210dd6e7814afdab0d5bd55e2141aa7::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3bdf1a2a0ca9a8ad1886201eadda836f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3bdf1a2a0ca9a8ad1886201eadda836f::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

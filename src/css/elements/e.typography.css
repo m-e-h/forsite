@@ -1,0 +1,51 @@
+/* e.typography
+-------------------------------------------- */
+%e_figcaption {
+	color: inherit;
+
+	/* opacity: 0.7; */
+	font-size: var(--h6);
+	margin: 0;
+	padding: 0.5rem 0.125em;
+	line-height: var(--heading-line-height);
+}
+
+p {
+	margin-block: var(--base-space);
+}
+
+article > p {
+	max-width: var(--reading-width);
+	margin-inline: auto;
+}
+
+p:empty {
+	display: none;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+figcaption {
+	@extend %e_figcaption;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}

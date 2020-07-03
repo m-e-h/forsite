@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Accessibility\Component class
  *
@@ -28,7 +29,7 @@ class Component implements Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'accessibility';
 	}
 
@@ -37,7 +38,6 @@ class Component implements Component_Interface {
 	 */
 	public function initialize() {
 		add_action( 'wp_enqueue_scripts', [ $this, 'action_enqueue_navigation_script' ] );
-		add_action( 'wp_print_footer_scripts', [ $this, 'action_print_skip_link_focus_fix' ] );
 		add_filter( 'nav_menu_link_attributes', [ $this, 'filter_nav_menu_link_attributes_aria_current' ], 10, 2 );
 		add_filter( 'page_menu_link_attributes', [ $this, 'filter_nav_menu_link_attributes_aria_current' ], 10, 2 );
 	}
@@ -66,35 +66,10 @@ class Component implements Component_Interface {
 			'forsite-navigation',
 			'ForsiteThemeScreenReaderText',
 			[
-				'expand'   => __( 'Expand child menu', 'forsite' ),
+				'expand' => __( 'Expand child menu', 'forsite' ),
 				'collapse' => __( 'Collapse child menu', 'forsite' ),
 			]
 		);
-	}
-
-	/**
-	 * Prints an inline script to fix skip link focus in IE11.
-	 *
-	 * The script is not enqueued because it is tiny and because it is only for IE11,
-	 * thus it does not warrant having an entire dedicated blocking script being loaded.
-	 *
-	 * Since it will never need to be changed, it is simply printed in its minified version.
-	 *
-	 * @link https://git.io/vWdr2
-	 */
-	public function action_print_skip_link_focus_fix() {
-
-		// If the AMP plugin is active, return early.
-		if ( forsite()->is_amp() ) {
-			return;
-		}
-
-		// Print the minified script.
-		?>
-		<script>
-		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-		</script>
-		<?php
 	}
 
 	/**
@@ -106,7 +81,7 @@ class Component implements Component_Interface {
 	 * @param WP_Post $item The current menu item.
 	 * @return array Modified HTML attributes
 	 */
-	public function filter_nav_menu_link_attributes_aria_current( array $atts, WP_Post $item ) : array {
+	public function filter_nav_menu_link_attributes_aria_current( array $atts, WP_Post $item ): array {
 		if ( isset( $item->current ) ) {
 			if ( $item->current ) {
 				$atts['aria-current'] = 'page';

@@ -1,0 +1,135 @@
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-content > *,
+.entry-content > *,
+.entry-summary > * {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--content-width);
+	margin-inline: auto;
+}
+
+.page-header,
+.entry-header,
+.entry-footer,
+.site-info,
+.post-navigation,
+.page-navigation,
+.comments-area {
+	margin: 1.5em auto;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	max-width: var(--content-width);
+}
+
+.single-entry > * {
+	width: calc(100% - var(--gutter-x-double));
+	max-width: var(--content-width);
+	margin-inline: auto;
+	margin-top: var(--base-space);
+	margin-bottom: var(--gutter);
+}
+
+.single-entry > :first-child,
+.single-entry > header + * {
+	margin-top: 0;
+}
+
+.app-header {
+	font-family: var(--font-serif);
+	margin-bottom: var(--gutter-md);
+}
+
+.app-header__branding {
+	font-size: 1.2rem;
+	padding: 0;
+	width: 100%;
+	max-width: 102px;
+	margin-left: 1rem;
+	margin-top: 1rem;
+
+	@media (--mobile) {
+		max-width: var(--logo-width);
+	}
+
+	@media (--content) {
+		max-width: 208px;
+		margin-left: 2rem;
+		margin-top: 2rem;
+	}
+}
+
+.app-header__logo-link {
+	width: 100%;
+	display: inline-block;
+}
+
+.app-header__title {
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0;
+}
+
+.app-header__description {
+	font-size: 0.47em;
+	font-family: var(--font-family);
+	text-transform: uppercase;
+}
+
+.app-header__title,
+.app-header__description {
+	line-height: var(--heading-line-height);
+}
+
+.app-header__logo {
+	width: 10rem;
+}
+
+hr.is-style-wide.is-style-wide {
+	width: 100%;
+	max-width: 100%;
+	border-bottom-width: 2px;
+}
+
+hr.is-style-dots.is-style-dots {
+	background: none;
+	border-width: 0;
+	height: 1rem;
+	line-height: inherit;
+	text-align: center;
+	width: 9rem;
+	background-image: radial-gradient(currentColor 10%, transparent 10%);
+	background-position: 0;
+	background-size: 3rem 3rem;
+
+	&::before {
+		content: none;
+	}
+}
+
+p.has-background {
+	padding: 0.75rem 1rem;
+}
+
+:root:root .edit-link-container {
+	margin: 0;
+	padding: 0;
+}
+
+.product .archive-entry__content {
+	display: none;
+}
+
+.archive-entry__title,
+.woocommerce-loop-product__title {
+	font-size: var(--h5);
+	font-weight: normal;
+}
+
+.entry--error {
+	max-width: 489px;
+	margin-inline: auto;
+}

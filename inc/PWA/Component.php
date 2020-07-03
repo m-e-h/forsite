@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\PWA\Component class
  *
@@ -11,6 +12,8 @@ use Forsite\Component_Interface;
 use Forsite\Templating_Component_Interface;
 use function add_action;
 use function add_theme_support;
+use function is_offline;
+use function is_500;
 
 /**
  * Class for managing PWA support.
@@ -24,7 +27,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'pwa';
 	}
 
@@ -40,24 +43,33 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'is_offline' => [ $this, 'is_type_offline' ],
 			'is_500' => [ $this, 'is_type_500' ],
 		];
 	}
 
-	public function is_type_offline() {
+	/**
+	 *
+	 * @return bool
+	 */
+	public function is_type_offline(): bool {
 		if ( function_exists( 'is_offline' ) ) {
 			return is_offline();
 		}
 		return false;
 	}
 
-	public function is_type_500() {
+	/**
+	 *
+	 * @return bool
+	 */
+	public function is_type_500(): bool {
 		if ( function_exists( 'is_500' ) ) {
 			return is_500();
 		}
+		return false;
 	}
 
 	/**

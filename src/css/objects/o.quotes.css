@@ -1,0 +1,74 @@
+:root:root blockquote p {
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+
+.wp-block-pullquote {
+	font-size: var(--h3);
+	text-align: center;
+	padding: 0;
+	margin-block: 2.5em;
+	border-width: 0;
+
+	blockquote {
+		padding-block: var(--base-space);
+		margin: 0;
+		border-width: 0.25em 0;
+	}
+
+	cite {
+		text-align: inherit;
+	}
+
+	&.is-style-solid-color blockquote {
+		color: inherit;
+		text-align: inherit;
+		max-width: 100%;
+		margin: 0;
+		border-width: 0;
+	}
+}
+
+.is-style-solid-color {
+	background-color: var(--gray-3);
+	border-radius: var(--border-radius);
+}
+
+/**
+ * Also overrides WP .wp-block-quote.is-style-large {
+ */
+:root blockquote.wp-block-quote {
+	padding: 0 1em;
+	color: var(--gray-7);
+	border-left: 0.25em solid var(--gray-3);
+	margin-block: 2.5em;
+
+	cite {
+		font-size: 0.75em;
+		text-align: right;
+	}
+
+	&.is-style-large {
+		font-size: var(--h4);
+		margin-inline: auto;
+	}
+}
+
+.alignleft blockquote,
+.alignright blockquote,
+.aligncenter blockquote {
+	width: 50%;
+	min-width: 300px;
+}
+
+.wp-block-pullquote.alignleft,
+.wp-block-pullquote.alignright {
+	max-width: none;
+}
+
+/* Hack */
+.is-style-solid-color[class*="-background-color"] blockquote {
+	background-color: transparent;
+	border-width: 0;
+}

@@ -16,11 +16,9 @@ if ( forsite()->is_offline() ) {
 
 get_header();
 
-forsite()->print_styles( 'forsite-content' );
-
 ?>
-	<main id="primary" class="site-main">
-		<?php get_template_part( 'template-parts/content/error' ); ?>
-	</main><!-- #primary -->
+	<main id="main" class="site-main">
+		<?php get_template_part( 'views/content/error' ); ?>
+	</main><!-- #main -->
 <?php
 get_footer();

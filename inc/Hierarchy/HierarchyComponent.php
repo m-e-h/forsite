@@ -1,16 +1,17 @@
 <?php
+declare( strict_types=1 );
 /**
- * TIP\Template\HierarchyComponent class
+ * Forsite\Template\HierarchyComponent class
  *
- * @package tip
+ * @package forsite
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
-use TIP\Component_Interface;
-use TIP\Templating_Component_Interface;
-use TIP\Template\Hierarchy;
-use TIP\Proxies\App;
+use Forsite\Component_Interface;
+use Forsite\Templating_Component_Interface;
+use Forsite\Template\Hierarchy;
+use Forsite\Proxies\App;
 
 /**
  * Class for managing colors.
@@ -22,7 +23,7 @@ class HierarchyComponent implements Component_Interface, Templating_Component_In
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'hierarchycomponent';
 	}
 
@@ -33,11 +34,11 @@ class HierarchyComponent implements Component_Interface, Templating_Component_In
 	}
 
 	/**
-	 * Gets template tags to expose as methods on the Template_Tags class instance, accessible through `tip()`.
+	 * Gets template tags to expose as methods on the Template_Tags class instance, accessible through `forsite()`.
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'inherit' => [ $this, 'inherit' ],
 			'locate' => [ $this, 'locate' ],
@@ -58,7 +59,7 @@ class HierarchyComponent implements Component_Interface, Templating_Component_In
 	public function inherit() {
 
 		return apply_filters(
-			'tip/template/hierarchy',
+			'forsite/template/hierarchy',
 			App::resolve( Hierarchy::class )->hierarchy()
 		);
 	}
@@ -103,7 +104,7 @@ class HierarchyComponent implements Component_Interface, Templating_Component_In
 	public function path( $file = '' ) {
 
 		$file = ltrim( $file, '/' );
-		$path = apply_filters( 'tip/template/path', '' );
+		$path = apply_filters( 'forsite/template/path', '' );
 
 		return $file ? trailingslashit( $path ) . $file : $path;
 	}
@@ -126,7 +127,7 @@ class HierarchyComponent implements Component_Interface, Templating_Component_In
 		// Add active theme path.
 		$locations = [ get_theme_file_path( $path ) ];
 
-		return (array) apply_filters( 'tip/template/locations', $locations );
+		return (array) apply_filters( 'forsite/template/locations', $locations );
 	}
 
 	/**

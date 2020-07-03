@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Custom_Header\Component class
  *
@@ -28,7 +29,7 @@ class Component implements Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'custom_header';
 	}
 
@@ -48,12 +49,12 @@ class Component implements Component_Interface {
 			apply_filters(
 				'forsite_custom_header_args',
 				[
-					'default-image'      => '',
+					'default-image' => '',
 					'default-text-color' => '000000',
-					'width'              => 1600,
-					'height'             => 250,
-					'flex-height'        => true,
-					'wp-head-callback'   => [ $this, 'wp_head_callback' ],
+					'width' => 1600,
+					'height' => 250,
+					'flex-height' => true,
+					'wp-head-callback' => [ $this, 'wp_head_callback' ],
 				]
 			)
 		);

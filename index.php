@@ -16,29 +16,27 @@ namespace Forsite;
 
 get_header();
 
-forsite()->print_styles( 'forsite-content' );
-
 ?>
-	<main id="primary" class="site-main">
+	<main id="main" class="site-main">
 		<?php
 		if ( have_posts() ) {
 
-			get_template_part( 'template-parts/content/page_header' );
+			get_template_part( 'views/content/page_header' );
 
 			while ( have_posts() ) {
 				the_post();
 
-				get_template_part( 'template-parts/content/entry', get_post_type() );
+				get_template_part( 'views/content/entry', get_post_type() );
 			}
 
 			if ( ! is_singular() ) {
-				get_template_part( 'template-parts/content/pagination' );
+				get_template_part( 'views/content/pagination' );
 			}
 		} else {
-			get_template_part( 'template-parts/content/error' );
+			get_template_part( 'views/content/error' );
 		}
 		?>
-	</main><!-- #primary -->
+	</main><!-- #main -->
 <?php
 get_sidebar();
 get_footer();

@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Nav_Menus\Component class
  *
@@ -26,14 +27,12 @@ use function wp_nav_menu;
  */
 class Component implements Component_Interface, Templating_Component_Interface {
 
-	const PRIMARY_NAV_MENU_SLUG = 'primary';
-
 	/**
 	 * Gets the unique identifier for the theme component.
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'nav_menus';
 	}
 
@@ -50,10 +49,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'is_primary_nav_menu_active' => [ $this, 'is_primary_nav_menu_active' ],
-			'display_primary_nav_menu'   => [ $this, 'display_primary_nav_menu' ],
+			'display_primary_nav_menu' => [ $this, 'display_primary_nav_menu' ],
 		];
 	}
 
@@ -63,7 +62,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	public function action_register_nav_menus() {
 		register_nav_menus(
 			[
-				static::PRIMARY_NAV_MENU_SLUG => esc_html__( 'Primary', 'forsite' ),
+				'menu-1' => esc_html__( 'Primary', 'forsite' ),
 			]
 		);
 	}
@@ -88,10 +87,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param object  $args        An object of wp_nav_menu() arguments.
 	 * @return string Modified nav menu HTML.
 	 */
-	public function filter_primary_nav_menu_dropdown_symbol( string $item_output, WP_Post $item, int $depth, $args ) : string {
+	public function filter_primary_nav_menu_dropdown_symbol( string $item_output, WP_Post $item, int $depth, $args ): string {
 
 		// Only for our primary menu location.
-		if ( empty( $args->theme_location ) || static::PRIMARY_NAV_MENU_SLUG !== $args->theme_location ) {
+		if ( empty( $args->theme_location ) || 'menu-1' !== $args->theme_location ) {
 			return $item_output;
 		}
 
@@ -108,8 +107,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return bool True if the primary navigation menu is active, false otherwise.
 	 */
-	public function is_primary_nav_menu_active() : bool {
-		return (bool) has_nav_menu( static::PRIMARY_NAV_MENU_SLUG );
+	public function is_primary_nav_menu_active(): bool {
+		return (bool) has_nav_menu( 'menu-1' );
 	}
 
 	/**
@@ -123,7 +122,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$args['container'] = 'ul';
 		}
 
-		$args['theme_location'] = static::PRIMARY_NAV_MENU_SLUG;
+		$args['theme_location'] = 'menu-1';
 
 		wp_nav_menu( $args );
 	}

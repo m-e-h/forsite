@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Template hierarchy service provider.
  *
@@ -6,10 +7,10 @@
  * the template hierarchy with the container and boot it when needed.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
-use TIP\Template\Hierarchy as TemplateHierarchy;
-use TIP\ServiceProvider;
+use Forsite\Template\Hierarchy as TemplateHierarchy;
+use Forsite\ServiceProvider;
 
 /**
  * Template hierarchy provider class.

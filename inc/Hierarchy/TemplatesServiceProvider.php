@@ -6,9 +6,9 @@
  * empty collection to the container that can later be used to register templates.
  */
 
-namespace TIP\Template;
+namespace Forsite\Template;
 
-use TIP\ServiceProvider;
+use Forsite\ServiceProvider;
 
 /**
  * Object templates provider class.

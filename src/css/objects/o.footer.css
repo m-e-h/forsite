@@ -1,0 +1,9 @@
+.app-footer li a {
+	padding: 0.65rem 0;
+	display: block;
+}
+
+.widget__title--footer {
+	font-size: var(--h5);
+	line-height: var(--heading-line-height);
+}

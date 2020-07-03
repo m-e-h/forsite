@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Base_Support\Component class
  *
@@ -34,7 +35,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'base_support';
 	}
 
@@ -55,9 +56,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
-			'get_version'       => [ $this, 'get_version' ],
+			'get_version' => [ $this, 'get_version' ],
 			'get_asset_version' => [ $this, 'get_asset_version' ],
 		];
 	}
@@ -106,7 +107,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param array $classes Classes for the body element.
 	 * @return array Filtered body classes.
 	 */
-	public function filter_body_classes_add_hfeed( array $classes ) : array {
+	public function filter_body_classes_add_hfeed( array $classes ): array {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
@@ -120,7 +121,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param array $dimensions An array of embed width and height values in pixels (in that order).
 	 * @return array Filtered dimensions array.
 	 */
-	public function filter_embed_dimensions( array $dimensions ) : array {
+	public function filter_embed_dimensions( array $dimensions ): array {
 		$dimensions['width'] = 720;
 		return $dimensions;
 	}
@@ -133,7 +134,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param array $exclusions the default directories to exclude.
 	 * @return array Filtered exclusions.
 	 */
-	public function filter_scandir_exclusions_for_optional_templates( array $exclusions ) : array {
+	public function filter_scandir_exclusions_for_optional_templates( array $exclusions ): array {
 		return array_merge(
 			$exclusions,
 			[ 'optional' ]
@@ -151,7 +152,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param string $handle The script handle.
 	 * @return string Script HTML string.
 	 */
-	public function filter_script_loader_tag( string $tag, string $handle ) : string {
+	public function filter_script_loader_tag( string $tag, string $handle ): string {
 
 		foreach ( [ 'async', 'defer' ] as $attr ) {
 			if ( ! wp_scripts()->get_data( $handle, $attr ) ) {
@@ -175,7 +176,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Theme version number.
 	 */
-	public function get_version() : string {
+	public function get_version(): string {
 		static $theme_version = null;
 
 		if ( null === $theme_version ) {
@@ -193,7 +194,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param string $filepath Asset file path.
 	 * @return string Asset version number.
 	 */
-	public function get_asset_version( string $filepath ) : string {
+	public function get_asset_version( string $filepath ): string {
 		if ( WP_DEBUG ) {
 			return (string) filemtime( $filepath );
 		}

@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Customizer\Component class
  *
@@ -25,7 +26,7 @@ class Component implements Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'customizer';
 	}
 
@@ -43,15 +44,15 @@ class Component implements Component_Interface {
 	 * @param WP_Customize_Manager $wp_customize Customizer manager instance.
 	 */
 	public function action_customize_register( WP_Customize_Manager $wp_customize ) {
-		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 		if ( isset( $wp_customize->selective_refresh ) ) {
 			$wp_customize->selective_refresh->add_partial(
 				'blogname',
 				[
-					'selector'        => '.site-title a',
+					'selector' => '.site-title a',
 					'render_callback' => function() {
 						bloginfo( 'name' );
 					},
@@ -60,7 +61,7 @@ class Component implements Component_Interface {
 			$wp_customize->selective_refresh->add_partial(
 				'blogdescription',
 				[
-					'selector'        => '.site-description',
+					'selector' => '.site-description',
 					'render_callback' => function() {
 						bloginfo( 'description' );
 					},
@@ -74,7 +75,7 @@ class Component implements Component_Interface {
 		$wp_customize->add_section(
 			'theme_options',
 			[
-				'title'    => __( 'Theme Options', 'forsite' ),
+				'title' => __( 'Theme Options', 'forsite' ),
 				'priority' => 130, // Before Additional CSS.
 			]
 		);

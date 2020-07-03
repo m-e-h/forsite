@@ -1,0 +1,86 @@
+.wp-block-image {
+	margin-bottom: var(--base-space);
+	position: relative;
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.wp-block-image.is-resized {
+	display: block;
+	margin-inline: auto;
+}
+
+.custom-logo-link {
+	display: inline-block;
+	max-width: 200px;
+}
+
+.custom-logo-link:matches(:focus, :hover) {
+	opacity: 1;
+}
+
+.widget img {
+	object-fit: cover;
+	width: 100%;
+}
+
+svg:not([fill="none"]) {
+	fill: currentColor;
+}
+
+.wp-post-image {
+	width: 100%;
+}
+
+.post-thumbnail-link {
+	padding: 0;
+}
+
+img.wp-smiley,
+img.emoji {
+	display: inline-block;
+	width: 1em;
+	margin: 0 0.1em;
+	vertical-align: -0.1em;
+}
+
+.icon {
+	height: 1em;
+}
+
+.entry__image {
+	width: 100%;
+}
+
+a.post-thumbnail {
+	box-shadow: none;
+	opacity: 1;
+}
+
+.avatar {
+	border-radius: 50%;
+	border: 0.5rem;
+	width: 6rem;
+}
+
+article > svg,
+main > svg {
+	z-index: -1;
+}
+
+:root {
+	--map-pin: var(--map-pin-black);
+}
+
+.has-theme-primary-dark-background-color {
+	--map-pin: var(--map-pin-white);
+}
+
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image.is-resized > figcaption {
+	display: block;
+}

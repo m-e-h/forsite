@@ -6,19 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WP_CLI\\I18n\\' => array($vendorDir . '/wp-cli/i18n-command/src'),
-    'VariableAnalysis\\' => array($vendorDir . '/sirbrillig/phpcs-variable-analysis/VariableAnalysis'),
-    'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
-    'Peast\\test\\' => array($vendorDir . '/mck89/peast/test/Peast'),
-    'Peast\\' => array($vendorDir . '/mck89/peast/lib/Peast'),
-    'NeutronStandard\\' => array($vendorDir . '/automattic/phpcs-neutron-standard/NeutronStandard'),
-    'Mustangostang\\' => array($vendorDir . '/wp-cli/mustangostang-spyc/src'),
-    'ImportDetection\\' => array($vendorDir . '/sirbrillig/phpcs-import-detection/ImportDetection'),
     'Hybrid\\Carbon\\' => array($vendorDir . '/justintadlock/hybrid-carbon/src'),
-    'Gettext\\Languages\\' => array($vendorDir . '/gettext/languages/src'),
-    'Gettext\\' => array($vendorDir . '/gettext/gettext/src'),
     'Forsite\\' => array($baseDir . '/inc'),
     'ExtCPTs\\Tests\\' => array($vendorDir . '/johnbillion/extended-cpts/tests/phpunit'),
-    'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => array($vendorDir . '/dealerdirect/phpcodesniffer-composer-installer/src'),
-    'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
 );

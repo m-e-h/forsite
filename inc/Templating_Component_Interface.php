@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Templating_Component_Interface interface
  *
@@ -17,5 +18,5 @@ interface Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array;
+	public function template_tags(): array;
 }

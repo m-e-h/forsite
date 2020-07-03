@@ -21,8 +21,6 @@ if ( post_password_required() ) {
 	return;
 }
 
-forsite()->print_styles( 'forsite-comments' );
-
 ?>
 <div id="comments" class="comments-area">
 	<?php

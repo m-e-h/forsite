@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Styles\Component class
  *
@@ -64,7 +65,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Component slug.
 	 */
-	public function get_slug() : string {
+	public function get_slug(): string {
 		return 'styles';
 	}
 
@@ -83,7 +84,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $method_name => $callback_info pairs.
 	 */
-	public function template_tags() : array {
+	public function template_tags(): array {
 		return [
 			'print_styles' => [ $this, 'print_styles' ],
 		];
@@ -109,7 +110,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		$css_files = $this->get_css_files();
 		foreach ( $css_files as $handle => $data ) {
-			$src     = $css_uri . $data['file'];
+			$src = $css_uri . $data['file'];
 			$version = forsite()->get_asset_version( $css_dir . $data['file'] );
 
 			/*
@@ -193,7 +194,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @param string $relation_type The relation type the URLs are printed.
 	 * @return array URLs to print for resource hints.
 	 */
-	public function filter_resource_hints( array $urls, string $relation_type ) : array {
+	public function filter_resource_hints( array $urls, string $relation_type ): array {
 		if ( 'preconnect' === $relation_type && wp_style_is( 'forsite-fonts', 'queue' ) ) {
 			$urls[] = [
 				'href' => 'https://fonts.gstatic.com',
@@ -224,7 +225,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$css_files = $this->get_css_files();
-		$handles   = array_filter(
+		$handles = array_filter(
 			$handles,
 			function( $handle ) use ( $css_files ) {
 				$is_valid = isset( $css_files[ $handle ] ) && ! $css_files[ $handle ]['global'];
@@ -269,19 +270,19 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $handle => $data pairs.
 	 */
-	protected function get_css_files() : array {
+	protected function get_css_files(): array {
 		if ( is_array( $this->css_files ) ) {
 			return $this->css_files;
 		}
 
 		$css_files = [
-			'forsite-global'     => [
+			'forsite-global' => [
 				// 'file'   => 'global.min.css',
-				'file'   => 'main.css',
+				'file' => 'main.css',
 				'global' => true,
 			],
-			'forsite-comments'   => [
-				'file'             => 'comments.min.css',
+			'forsite-comments' => [
+				'file' => 'comments.min.css',
 				'preload_callback' => function() {
 					return ! post_password_required() && is_singular() && ( comments_open() || get_comments_number() );
 				},
@@ -290,14 +291,14 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			// 	'file'             => 'content.min.css',
 			// 	'preload_callback' => '__return_true',
 			// ],
-			'forsite-sidebar'    => [
-				'file'             => 'sidebar.min.css',
+			'forsite-sidebar' => [
+				'file' => 'sidebar.min.css',
 				'preload_callback' => function() {
 					return forsite()->is_primary_sidebar_active();
 				},
 			],
-			'forsite-widgets'    => [
-				'file'             => 'widgets.min.css',
+			'forsite-widgets' => [
+				'file' => 'widgets.min.css',
 				'preload_callback' => function() {
 					return forsite()->is_primary_sidebar_active();
 				},
@@ -334,9 +335,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 			$this->css_files[ $handle ] = array_merge(
 				[
-					'global'           => false,
+					'global' => false,
 					'preload_callback' => null,
-					'media'            => 'all',
+					'media' => 'all',
 				],
 				$data
 			);
@@ -350,14 +351,14 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return array Associative array of $font_name => $font_variants pairs.
 	 */
-	protected function get_google_fonts() : array {
+	protected function get_google_fonts(): array {
 		if ( is_array( $this->google_fonts ) ) {
 			return $this->google_fonts;
 		}
 
 		$google_fonts = [
 			'Roboto Condensed' => [ '400', '400i', '700', '700i' ],
-			'Crimson Text'     => [ '400', '400i', '600', '600i' ],
+			'Crimson Text' => [ '400', '400i', '600', '600i' ],
 		];
 
 		/**
@@ -377,7 +378,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 *
 	 * @return string Google Fonts URL, or empty string if no Google Fonts should be used.
 	 */
-	protected function get_google_fonts_url() : string {
+	protected function get_google_fonts_url(): string {
 		$google_fonts = $this->get_google_fonts();
 
 		if ( empty( $google_fonts ) ) {
@@ -400,7 +401,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$query_args = [
-			'family'  => implode( '|', $font_families ),
+			'family' => implode( '|', $font_families ),
 			'display' => 'swap',
 		];
 

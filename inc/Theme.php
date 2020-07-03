@@ -1,4 +1,5 @@
 <?php
+declare( strict_types=1 );
 /**
  * Forsite\Theme class
  *
@@ -8,6 +9,9 @@
 namespace Forsite;
 
 use InvalidArgumentException;
+use Forsite\Component_Interface;
+use Forsite\Templating_Component_Interface;
+use Forsite\Template_Tags;
 
 /**
  * Main class for the theme.
@@ -98,7 +102,7 @@ class Theme {
 	 *
 	 * @return Template_Tags Template tags instance.
 	 */
-	public function template_tags() : Template_Tags {
+	public function template_tags(): Template_Tags {
 		return $this->template_tags;
 	}
 
@@ -112,7 +116,7 @@ class Theme {
 	 *
 	 * @throws InvalidArgumentException Thrown when no theme component with the given slug exists.
 	 */
-	public function component( string $slug ) : Component_Interface {
+	public function component( string $slug ): Component_Interface {
 		if ( ! isset( $this->components[ $slug ] ) ) {
 			throw new InvalidArgumentException(
 				sprintf(
@@ -133,13 +137,13 @@ class Theme {
 	 *
 	 * @return array List of theme components to use by default.
 	 */
-	protected function get_default_components() : array {
+	protected function get_default_components(): array {
 		$components = [
 			new Localization\Component(),
 			new Base_Support\Component(),
 			new Editor\Component(),
 			new Accessibility\Component(),
-			new Image_Sizes\Component(),
+			new Images\Component(),
 			new Lazyload\Component(),
 			new AMP\Component(),
 			new PWA\Component(),
@@ -150,9 +154,9 @@ class Theme {
 			new Custom_Background\Component(),
 			new Custom_Header\Component(),
 			new Custom_Logo\Component(),
-			new Post_Thumbnails\Component(),
 			new Customizer\Component(),
-			new Styles\Component(),
+			new Assets\Component(),
+			// new Styles\Component(),
 		];
 
 		if ( defined( 'JETPACK__VERSION' ) ) {

@@ -11,11 +11,9 @@ namespace Forsite;
 
 get_header();
 
-forsite()->print_styles( 'forsite-content' );
-
 ?>
-	<main id="primary" class="site-main">
-		<?php get_template_part( 'template-parts/content/error', '404' ); ?>
-	</main><!-- #primary -->
+	<main id="main" class="site-main">
+		<?php get_template_part( 'views/content/error', '404' ); ?>
+	</main><!-- #main -->
 <?php
 get_footer();
